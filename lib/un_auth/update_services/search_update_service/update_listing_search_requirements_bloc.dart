@@ -24,6 +24,12 @@ class ListingsSearchRequirementsBloc extends Bloc<ListingsSearchRequirementsEven
           );
         },
 
+        locationSearchHistoryChanged: (e) async* {
+          yield state.copyWith(
+              historyLocationSearch: e.locations
+          );
+        },
+
         locationIsSomewhereNearChanged: (e) async* {
             yield state.copyWith(
               isSomeWhereNear: e.locationBool
@@ -42,9 +48,27 @@ class ListingsSearchRequirementsBloc extends Bloc<ListingsSearchRequirementsEven
             );
         },
 
+        searchDurationTypeChanged: (e) async* {
+          yield state.copyWith(
+              durationType: e.durationInt
+          );
+        },
+
+        selectedSearchTypeChanged: (e) async* {
+          yield state.copyWith(
+              searchType: e.searchType
+          );
+        },
+
         flexibleMonthIdChanged: (e) async* {
           yield state.copyWith(
             flexibleMonthId: e.flexId
+          );
+        },
+
+        selectedTimeSlotChanged: (e) async* {
+          yield state.copyWith(
+              selectedReservationsSlots: e.slotList
           );
         },
 
@@ -71,6 +95,19 @@ class ListingsSearchRequirementsBloc extends Bloc<ListingsSearchRequirementsEven
             markers: e.newSet
           );
         },
+
+        listingsChange: (e) async* {
+          yield state.copyWith(
+            listings: e.listingList
+          );
+        },
+
+        reservationsChange: (e) async* {
+          yield state.copyWith(
+            reservation: e.resList
+          );
+        },
+
 
         isMarkersLoading: (e) async* {
           yield state.copyWith(

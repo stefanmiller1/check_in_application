@@ -16,6 +16,8 @@ dependencies:
   freezed_annotation: ^2.1.0
   firebase_core: ^2.2.0
   google_maps_flutter: ^2.2.1
+  geoflutterfire:
+    git: https://github.com/stefanmiller1/GeoFlutterFire
   phone_form_field:
     git:
       url: https://github.com/stefanmiller1/phone_form_field.git

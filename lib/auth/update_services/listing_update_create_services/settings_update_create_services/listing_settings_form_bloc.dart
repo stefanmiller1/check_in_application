@@ -260,6 +260,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
 
           updateWithSavedLocation: (e) async* {
             yield state.copyWith(
+              isEditingSettings: true,
               listingManagerForm: state.listingManagerForm.copyWith(
                     listingServiceId: state.listingManagerForm.listingServiceId,
                     listingReservationService: state.listingManagerForm.listingReservationService,
@@ -924,6 +925,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
             final bool phoneIsValid = ((state.listingManagerForm.listingProfileService.backgroundInfoServices.listingPhone != null) && state.listingManagerForm.listingProfileService.backgroundInfoServices.listingPhone!.nsn.isNotEmpty) ? state.listingManagerForm.listingProfileService.backgroundInfoServices.listingPhone!.isValid() : true;
 
             yield state.copyWith(
+                isEditingSettings: true,
                 showErrorMessageSettings: AutovalidateMode.always,
             );
 
@@ -932,6 +934,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
               failureOrSuccess = (state.isSavingSettings) ? await _listingFormFacade.updateListingForm(listingForm: state.listingManagerForm) : left(ListingFormFailure.listingServerError());
 
               yield state.copyWith(
+                  isEditingSettings: false,
                   showErrorMessageSettings: AutovalidateMode.disabled,
                   authFailureOrSuccessOptionSettingsSaving: optionOf(failureOrSuccess)
                 );
@@ -940,6 +943,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
 
               failureOrSuccess = left(ListingFormFailure.validatorError(failed: 'Cannot Save, Please Check Background Info.'));
               yield state.copyWith(
+                  isEditingSettings: false,
                   authFailureOrSuccessOptionSettingsSaving: optionOf(failureOrSuccess)
               );
             }

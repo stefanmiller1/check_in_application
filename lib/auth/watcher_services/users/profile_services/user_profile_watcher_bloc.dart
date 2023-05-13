@@ -15,7 +15,7 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
   StreamSubscription<Either<AuthFailure, ProfileNotificationItems>>? _userNotificationStreamSubscription;
   StreamSubscription<Either<AuthFailure, SocialsItem>>? _userSocialsStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<LocationModel>>>? _userLocationsStreamSubscription;
-
+  StreamSubscription<Either<AuthFailure, List<UserProfileModel>>>? _searchUserProfilesStreamSubscription;
 
   @override
   Stream<UserProfileWatcherState> mapEventToState(
@@ -155,6 +155,24 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
                   (f) => UserProfileWatcherState.loadAllProfilesFailure(f),
                   (r) => UserProfileWatcherState.loadAllUserProfilesSuccess(r)
           );
+        },
+
+
+        watchSearchedProfileStarted: (e) async* {
+          yield const UserProfileWatcherState.loadInProgress();
+          await _searchUserProfilesStreamSubscription?.cancel();
+
+          _searchUserProfilesStreamSubscription = _authFacade.searchAllUsersFromFirebase(query: e.query).listen((event) {
+            return add(UserProfileWatcherEvent.searchedProfileReceived(event));
+          });
+        },
+
+        searchedProfileReceived: (e) async* {
+          yield e.failedQuery.fold(
+              (f) => UserProfileWatcherState.loadSearchProfileFailure(f),
+              (r) => UserProfileWatcherState.loadSearchedProfileSuccess(r)
+          );
+
         },
 
 

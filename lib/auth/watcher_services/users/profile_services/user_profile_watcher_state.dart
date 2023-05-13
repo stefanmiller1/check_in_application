@@ -32,4 +32,8 @@ class UserProfileWatcherState with _$UserProfileWatcherState {
   const factory UserProfileWatcherState.loadUserProfileSessionsSuccess(List<ProfileSession> sessions) = _LoadUserProfileSessionsSuccess;
   const factory UserProfileWatcherState.loadSessionsFailure(AuthFailure failure) = _LoadSessionsFailure;
 
+  const factory UserProfileWatcherState.loadSearchedProfileSuccess(List<UserProfileModel> profiles) = _LoadSearchedProfileSuccess;
+  const factory UserProfileWatcherState.loadSearchProfileFailure(AuthFailure failure) = _LoadSearchProfileFailure;
+  
+  
 }

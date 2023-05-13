@@ -41,10 +41,9 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
             yield const ActivityManagerWatcherState.loadInProgress();
 
             await _activityCreatorFormStreamSubscription?.cancel();
-            _activityCreatorFormStreamSubscription = _aAuthFacade.watchActivityCreatorForm(activitySessionId: e.activityId).listen((event) {
+            _activityCreatorFormStreamSubscription = _aAuthFacade.watchActivityCreatorForm(activityId: e.activityId).listen((event) {
               return add(ActivityManagerWatcherEvent.activityCreatorFormReceived(event));
             });
-
           },
 
           activityCreatorFormReceived: (e) async* {
@@ -58,7 +57,7 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
             yield const ActivityManagerWatcherState.loadInProgress();
 
             _allActivityCreatorFormsStreamSubscription?.cancel();
-            _allActivityCreatorFormsStreamSubscription = _aAuthFacade.watchAllActivityCreatorForms(activitySessionId: e.activitySessionIds).listen((event) {
+            _allActivityCreatorFormsStreamSubscription = _aAuthFacade.watchAllActivityCreatorForms(isReservation: e.isReservation, reservationId: e.reservationId).listen((event) {
               return add(ActivityManagerWatcherEvent.allActivityCreatorFormsReceived(event));
             });
 

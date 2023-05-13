@@ -16,6 +16,8 @@ import 'package:phone_form_field/phone_form_field.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:location/location.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:check_in_domain/domain/auth/reservation_manager/post.dart';
+import 'package:geoflutterfire/geoflutterfire.dart';
 
 part 'injection.dart';
 
@@ -34,9 +36,9 @@ part 'auth/update_services/listing_update_create_services/facility_activity_upda
 part 'auth/update_services/listing_update_create_services/facility_activity_updater_creator/update_facility_activity_event.dart';
 part 'auth/update_services/listing_update_create_services/facility_activity_updater_creator/update_facility_activity_state.dart';
 
-part 'auth/update_services/listing_update_create_services/reservation_update_create_services/reservation_form_bloc.dart';
-part 'auth/update_services/listing_update_create_services/reservation_update_create_services/reservation_form_event.dart';
-part 'auth/update_services/listing_update_create_services/reservation_update_create_services/reservation_form_state.dart';
+part 'auth/update_services/listing_update_create_services/reservation_update_create_services/listing_reservation_form_bloc.dart';
+part 'auth/update_services/listing_update_create_services/reservation_update_create_services/listing_reservation_form_event.dart';
+part 'auth/update_services/listing_update_create_services/reservation_update_create_services/listing_reservation_form_state.dart';
 
 part 'auth/update_services/listing_update_create_services/settings_update_create_services/listing_settings_form_bloc.dart';
 part 'auth/update_services/listing_update_create_services/settings_update_create_services/listing_settings_form_event.dart';

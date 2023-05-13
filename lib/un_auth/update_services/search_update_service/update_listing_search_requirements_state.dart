@@ -8,6 +8,7 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
   factory ListingsSearchRequirementsState({
     UniqueId? locationItemId,
     String? locationCityFromMap,
+    Iterable<LocationSearchLatLngModel>? historyLocationSearch,
     DateTimeRange? dateRange,
     RangeValues? participantRange,
     UniqueId? flexibleTimeRangeId,
@@ -16,6 +17,11 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
     bool? isSomeWhereNear,
     UniqueId? activtityTypeId,
     UniqueId? selectedListingId,
+    Iterable<ReservationTimeFeeSlotItem>? selectedReservationsSlots,
+    int? durationType,
+    required SearchListingType searchType,
+    required Iterable<ListingManagerForm> listings,
+    required Iterable<ReservationItem> reservation,
     required Set<Marker> markers,
     required bool isMarkersLoading,
 }) = _SearchListingsState;
@@ -23,6 +29,7 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
   factory ListingsSearchRequirementsState.initial() => ListingsSearchRequirementsState(
     locationItemId: null,
     locationCityFromMap: null,
+    historyLocationSearch: [],
     dateRange: null,
     participantRange: null,
     participantId: null,
@@ -30,8 +37,13 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
     flexibleTimeRangeId: null,
     isSomeWhereNear: null,
     selectedListingId: null,
+    durationType: null,
+    searchType: SearchListingType.facilities,
+    selectedReservationsSlots: [],
     activtityTypeId: getActivityOptions(null)[0].activityId,
     markers: {},
+    listings: [],
+    reservation: [],
     isMarkersLoading: false
   );
 

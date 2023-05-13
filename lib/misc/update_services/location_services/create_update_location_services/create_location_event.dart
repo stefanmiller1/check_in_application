@@ -6,7 +6,7 @@ class CreateLocationEvent with _$CreateLocationEvent {
   const factory CreateLocationEvent.initialLocation(Option<LocationModel> initialLocation) = InitialCreateLocation;
 
   const factory CreateLocationEvent.placeIdChanged(String placeIdStr) = CreatePlaceIdChanged;
-  const factory CreateLocationEvent.longLatChanged(String longLatStr) = CreateLongLatChanged;
+  const factory CreateLocationEvent.longLatChanged(double lat, double lng) = CreateLongLatChanged;
   const factory CreateLocationEvent.countryChanged(String countryStr) = CreateCountryChanged;
   const factory CreateLocationEvent.cityChanged(String cityStr) = CreateCityChanged;
   const factory CreateLocationEvent.provinceStateChanged(String stateStr) = CreateProvinceStateChanged;

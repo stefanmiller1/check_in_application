@@ -9,7 +9,9 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
 
   StreamSubscription<Either<ReservationFormFailure, List<ReservationItem>>>? _reservationsListStreamSubscription;
   StreamSubscription<Either<ReservationFormFailure, List<ReservationItem>>>? _currentUserReservationsListStreamSubscription;
-  
+  StreamSubscription<Either<ReservationFormFailure, List<Post>>>? _reservationPostListStreamSubscription;
+  StreamSubscription<Either<ReservationFormFailure, ReservationItem>>? _reservationItemSubscription;
+
   @override
   Stream<ReservationManagerWatcherState> mapEventToState(
       ReservationManagerWatcherEvent event
@@ -17,11 +19,30 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
 
       yield* event.map(
 
+          watchReservationItem: (e) async* {
+            yield const ReservationManagerWatcherState.resLoadInProgress();
+            await _reservationItemSubscription?.cancel();
+
+            _reservationItemSubscription = _resAuthFacade.watchCurrentReservationItem(reservationId: e.reservationId).listen((event) {
+                return add(ReservationManagerWatcherEvent.reservationItemReceived(event));
+            });
+
+          },
+
+          reservationItemReceived: (e) async* {
+              yield e.failedItem.fold(
+                  (f) => ReservationManagerWatcherState.loadReservationItemFailure(f),
+                  (r) => ReservationManagerWatcherState.loadReservationItemSuccess(r)
+              );
+          },
+
+
           watchReservationsList: (e) async* {
               yield const ReservationManagerWatcherState.resLoadInProgress();
               await _reservationsListStreamSubscription?.cancel();
 
-              _reservationsListStreamSubscription = _resAuthFacade.watchReservationListingItem(listingId: e.listingId).listen((event) {
+              /// returns a list of reservations based on specified parameters.
+              _reservationsListStreamSubscription = _resAuthFacade.watchReservationFacilityItem(facilityId: e.facilityId, activityTypeId: e.activityTypeId, isPublic: e.isPublic, resState: e.resState).listen((event) {
                   return add(ReservationManagerWatcherEvent.reservationListItemsReceived(event));
               });
           },
@@ -38,7 +59,7 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
             yield const ReservationManagerWatcherState.resLoadInProgress();
             await _currentUserReservationsListStreamSubscription?.cancel();
 
-            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(currentUser: e.currentUser).listen((event) {
+            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(currentUser: e.currentUser, isResInvitation: e.isResInvitation).listen((event) {
                 return add(ReservationManagerWatcherEvent.currentUsersReservationsReceived(event));
             });
           },
@@ -53,6 +74,24 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
 
           reservationListStreamClosed: (e) async* {
             await _reservationsListStreamSubscription?.cancel();
+          },
+
+
+          watchCurrentReservationPosts: (e) async* {
+              yield const ReservationManagerWatcherState.resLoadInProgress();
+              await _reservationPostListStreamSubscription?.cancel();
+
+              _reservationPostListStreamSubscription =  _resAuthFacade.watchReservationPostItems(reservationId: e.reservationId).listen((event) {
+                return add(ReservationManagerWatcherEvent.currentReservationPostsReceived(event));
+              });
+
+          },
+
+          currentReservationPostsReceived: (e) async* {
+            yield e.failedItems.fold(
+                    (f) => ReservationManagerWatcherState.loadReservationPostListFailure(f),
+                    (r) => ReservationManagerWatcherState.loadReservationPostListSuccess(r)
+            );
           }
 
     );

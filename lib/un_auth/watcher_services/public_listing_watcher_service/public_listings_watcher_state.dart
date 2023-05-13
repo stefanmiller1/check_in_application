@@ -9,4 +9,6 @@ class PublicListingWatcherState with _$PublicListingWatcherState {
   const factory PublicListingWatcherState.loadAllPublicListingItemsSuccess(List<ListingManagerForm> items) = _LoadAllPublicListingItemsSuccess;
   const factory PublicListingWatcherState.loadAllPublicListingItemsFailure(ListingFormFailure failure) = _LoadAllPublicListingItemsFailure;
 
+  const factory PublicListingWatcherState.loadAllSearchedPublicListingItemsSuccess(List<ListingManagerForm> items) = _LoadAllSearchedPublicListingItemsSuccess;
+  const factory PublicListingWatcherState.loadAllSearchedPublicListingItemsFailure(ListingFormFailure failure) = _LoadAllSearchedPublicListingItemsFailure;
 }

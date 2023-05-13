@@ -8,6 +8,7 @@ class PublicListingWatcherBloc extends Bloc<PublicListingWatcherEvent, PublicLis
   PublicListingWatcherBloc(this._lFacade) : super(const PublicListingWatcherState.listingsInitial());
 
   StreamSubscription<Either<ListingFormFailure, List<ListingManagerForm>>>? _allListingItemsStreamSubscription;
+  StreamSubscription<Either<ListingFormFailure, List<ListingManagerForm>>>? _allSearchedListingItemsStreamSubscription;
 
   @override
   Stream<PublicListingWatcherState> mapEventToState(
@@ -20,7 +21,7 @@ class PublicListingWatcherBloc extends Bloc<PublicListingWatcherEvent, PublicLis
               yield const PublicListingWatcherState.listingsLoadInProgress();
               await _allListingItemsStreamSubscription?.cancel();
 
-              _allListingItemsStreamSubscription = _lFacade.watchAllListingMangerItems(locationIdFilter: e.locationIdFilter).listen(
+              _allListingItemsStreamSubscription = _lFacade.watchAllListingMangerItems(listingIdFilterBy: e.locationIdFilter).listen(
                       (event) {
                         return add(PublicListingWatcherEvent.allListingItemsReceived(event));
               });
@@ -33,7 +34,27 @@ class PublicListingWatcherBloc extends Bloc<PublicListingWatcherEvent, PublicLis
                 );
             },
 
+            watchAllPublicListingsSearchStarted: (e) async* {
+              yield const PublicListingWatcherState.listingsLoadInProgress();
+              await _allSearchedListingItemsStreamSubscription?.cancel();
+
+              _allSearchedListingItemsStreamSubscription = _lFacade.watchSearchedListingItems(e.countriesFilter, e.city, e.stateProvince, e.isVerified).listen(
+                      (event) {
+                    return add(PublicListingWatcherEvent.allSearchedListingItemsReceived(event));
+                  });
+            },
+
+
+            allSearchedListingItemsReceived: (e) async* {
+              yield e.failedItems.fold(
+                  (f) => PublicListingWatcherState.loadAllSearchedPublicListingItemsFailure(f),
+                  (r) => PublicListingWatcherState.loadAllSearchedPublicListingItemsSuccess(r)
+              );
+            }
+
     );
   }
+
+
 
 }
