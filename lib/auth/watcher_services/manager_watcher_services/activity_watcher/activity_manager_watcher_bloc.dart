@@ -8,8 +8,8 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
   ActivityManagerWatcherBloc(this._aAuthFacade) : super(ActivityManagerWatcherState.initial());
 
   // StreamSubscription<Either<ActivityFormFailure, ActivityManagerProfile>>? _activityManagerItemStreamSubscription;
-  StreamSubscription<Either<ActivityFormFailure, ActivityCreatorForm>>? _activityCreatorFormStreamSubscription;
-  StreamSubscription<Either<ActivityFormFailure, List<ActivityCreatorForm>>>? _allActivityCreatorFormsStreamSubscription;
+  StreamSubscription<Either<ActivityFormFailure, ActivityManagerForm>>? _activityCreatorFormStreamSubscription;
+  StreamSubscription<Either<ActivityFormFailure, List<ActivityManagerForm>>>? _allActivityCreatorFormsStreamSubscription;
 
 
   @override
@@ -37,36 +37,36 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
           // },
 
 
-          watchActivityCreatorFormStarted: (e) async* {
+          watchActivityManagerFormStarted: (e) async* {
             yield const ActivityManagerWatcherState.loadInProgress();
 
             await _activityCreatorFormStreamSubscription?.cancel();
             _activityCreatorFormStreamSubscription = _aAuthFacade.watchActivityCreatorForm(activityId: e.activityId).listen((event) {
-              return add(ActivityManagerWatcherEvent.activityCreatorFormReceived(event));
+              return add(ActivityManagerWatcherEvent.activityManagerFormReceived(event));
             });
           },
 
-          activityCreatorFormReceived: (e) async* {
+          activityManagerFormReceived: (e) async* {
             yield e.failedItems.fold(
-                    (f) => ActivityManagerWatcherState.loadActivityCreatorFormFailure(f),
-                    (r) => ActivityManagerWatcherState.loadActivityCreatorFormSuccess(r)
+                    (f) => ActivityManagerWatcherState.loadActivityManagerFormFailure(f),
+                    (r) => ActivityManagerWatcherState.loadActivityManagerFormSuccess(r)
             );
           },
 
-          watchAllActivityCreatorFormsStarted: (e) async* {
+          watchAllActivityManagerFormsStarted: (e) async* {
             yield const ActivityManagerWatcherState.loadInProgress();
 
             _allActivityCreatorFormsStreamSubscription?.cancel();
             _allActivityCreatorFormsStreamSubscription = _aAuthFacade.watchAllActivityCreatorForms(isReservation: e.isReservation, reservationId: e.reservationId).listen((event) {
-              return add(ActivityManagerWatcherEvent.allActivityCreatorFormsReceived(event));
+              return add(ActivityManagerWatcherEvent.allActivityManagerFormsReceived(event));
             });
 
           },
 
-          allActivityCreatorFormsReceived: (e) async* {
+          allActivityManagerFormsReceived: (e) async* {
             yield e.failedItems.fold(
-                    (f) => ActivityManagerWatcherState.loadAllActivityCreatorFormsFailure(f),
-                    (r) => ActivityManagerWatcherState.loadAllActivityCreatorFormsSuccess(r)
+                    (f) => ActivityManagerWatcherState.loadAllActivityManagerFormsFailure(f),
+                    (r) => ActivityManagerWatcherState.loadAllActivityManagerFormsSuccess(r)
             );
           },
       );

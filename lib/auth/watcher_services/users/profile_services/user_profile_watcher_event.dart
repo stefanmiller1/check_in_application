@@ -26,6 +26,9 @@ class UserProfileWatcherEvent with _$UserProfileWatcherEvent {
   const factory UserProfileWatcherEvent.watchProfileActiveSessionsListStarted(String userId) = _WatchProfileActiveSessionsListsStarted;
   const factory UserProfileWatcherEvent.profileActiveSessionsListReceived(Either<AuthFailure, List<ProfileSession>> failedSessions) = _ProfileActiveSessionsListReceived;
 
+  const factory UserProfileWatcherEvent.watchProfileEmailsStarted(String emailAddress) = _WatchProfileEmailsStarted;
+  const factory UserProfileWatcherEvent.profileFromEmailReceived(Either<AuthFailure, UserProfileModel> failedProfile) = _ProfileFromEmailReceived;
+
   const factory UserProfileWatcherEvent.watchSearchedProfileStarted(String query) = _WatchSearchedProfileStarted;
   const factory UserProfileWatcherEvent.searchedProfileReceived(Either<AuthFailure, List<UserProfileModel>> failedQuery) = _SearchedProfileReceived;
 

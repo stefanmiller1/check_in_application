@@ -1,4 +1,5 @@
 import 'package:check_in_domain/check_in_domain.dart';
+import 'package:check_in_domain/domain/misc/attendee_services/value_object.dart';
 import 'package:check_in_facade/check_in_facade.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
@@ -14,9 +15,10 @@ part 'listing_attendee_form_bloc.freezed.dart';
 @injectable
 class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
-  final SStripeFacade _stripeFacade;
+  // final SStripeFacade _stripeFacade;
+  final ATTAuthFacade _attFacade;
 
-  AttendeeFormBloc(this._stripeFacade) : super(AttendeeFormState.initial());
+  AttendeeFormBloc(this._attFacade) : super(AttendeeFormState.initial());
 
   @override
   Stream<AttendeeFormState> mapEventToState(
@@ -39,64 +41,44 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
         updateAttendeeContactDetails: (e) async* {
           yield state.copyWith(
-              attendeeItem: AttendeeItem(
-                  attendeeId: state.attendeeItem.attendeeId,
-                  attendeeOwnerId: state.attendeeItem.attendeeOwnerId,
-                  reservationId: state.attendeeItem.reservationId,
-                  cost: state.attendeeItem.cost,
-                  paymentStatus: state.attendeeItem.paymentStatus,
-                  attendeeType: state.attendeeItem.attendeeType,
-                  paymentIntentId: state.attendeeItem.paymentIntentId,
-                  attendeeDetails: e.contacts,
-                  checkInSetting: state.attendeeItem.checkInSetting,
-                  customFieldRuleSetting: state.attendeeItem.customFieldRuleSetting,
-                  refundId: state.attendeeItem.refundId,
-                  receipt_link: state.attendeeItem.receipt_link,
-                  dateCreated: state.attendeeItem.dateCreated
-              )
+              attendeeItem: state.attendeeItem.copyWith(
+               attendeeDetails: e.contacts,
+               attendeeOwnerId: e.contacts.contactId
+            )
           );
         },
 
         updateCustomRules: (e) async* {
           yield state.copyWith(
-            attendeeItem: AttendeeItem(
-                attendeeId: state.attendeeItem.attendeeId,
-                attendeeOwnerId: state.attendeeItem.attendeeOwnerId,
-                reservationId: state.attendeeItem.reservationId,
-                cost: state.attendeeItem.cost,
-                paymentStatus: state.attendeeItem.paymentStatus,
-                attendeeType: state.attendeeItem.attendeeType,
-                paymentIntentId: state.attendeeItem.paymentIntentId,
-                attendeeDetails: state.attendeeItem.attendeeDetails,
-                checkInSetting: state.attendeeItem.checkInSetting,
-                customFieldRuleSetting: e.rules,
-                refundId: state.attendeeItem.refundId,
-                receipt_link: state.attendeeItem.receipt_link,
-                dateCreated: state.attendeeItem.dateCreated
+            attendeeItem: state.attendeeItem.copyWith(
+              customFieldRuleSetting: e.rules
             )
           );
         },
 
         updateCheckInSettings: (e) async* {
           yield state.copyWith(
-              attendeeItem: AttendeeItem(
-                  attendeeId: state.attendeeItem.attendeeId,
-                  attendeeOwnerId: state.attendeeItem.attendeeOwnerId,
-                  reservationId: state.attendeeItem.reservationId,
-                  cost: state.attendeeItem.cost,
-                  paymentStatus: state.attendeeItem.paymentStatus,
-                  attendeeType: state.attendeeItem.attendeeType,
-                  paymentIntentId: state.attendeeItem.paymentIntentId,
-                  attendeeDetails: state.attendeeItem.attendeeDetails,
-                  checkInSetting: e.checkInSettings,
-                  customFieldRuleSetting: state.attendeeItem.customFieldRuleSetting,
-                  refundId: state.attendeeItem.refundId,
-                  receipt_link: state.attendeeItem.receipt_link,
-                  dateCreated: state.attendeeItem.dateCreated
+              attendeeItem: state.attendeeItem.copyWith(
+                checkInSetting: e.checkInSettings
               )
           );
         },
 
+        updateClassesInstructorForm: (e) async* {
+          yield state.copyWith(
+            attendeeItem: state.attendeeItem.copyWith(
+              classesInstructorProfile: e.instructorProfile
+            )
+          );
+        },
+
+        updateMerchantVendorForm: (e) async* {
+          yield state.copyWith(
+            attendeeItem: state.attendeeItem.copyWith(
+              eventMerchantVendorProfile: e.merchVendorProfile
+            )
+          );
+        },
 
         createPaymentIntentForAttendee: (e) async* {
 
@@ -115,7 +97,46 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
         isFinishedCreatingAttendee: (e) async* {
 
 
-        }
+        },
+
+        isFinishedInvitingAttendee: (e) async* {
+
+          Either<AttendeeFormFailure, Unit> failureOrSuccess;
+
+          var isValid = false;
+
+          isValid = (state.attendeeItem.attendeeDetails != null) && (state.attendeeItem.contactStatus != null);
+          if (state.attendeeItem.attendeeType == AttendeeType.vendor) {
+            print('is vendor');
+            print(state.attendeeItem.eventMerchantVendorProfile?.vendorLogo);
+            print(state.attendeeItem.eventMerchantVendorProfile?.brandName.isValid());
+            print(state.attendeeItem.eventMerchantVendorProfile?.backgroundInfo.isValid());
+            isValid = (state.attendeeItem.eventMerchantVendorProfile?.vendorLogo != null && (state.attendeeItem.eventMerchantVendorProfile?.brandName.isValid() ?? false) && (state.attendeeItem.eventMerchantVendorProfile?.backgroundInfo.isValid() ?? false));
+          }
+
+          print('${isValid} is valid????');
+            yield state.copyWith(
+              isSubmitting: true,
+              authFailureOrSuccessOption: none()
+            );
+
+          if (isValid) {
+            failureOrSuccess = state.isSubmitting ? left(const AttendeeFormFailure.attendeeServerError(failed: 'cannot invite new attendee')) : await _attFacade.createNewAttendee(attendeeItem: state.attendeeItem);
+
+            yield state.copyWith(
+              isSubmitting: false,
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+            );
+          } else {
+
+            yield state.copyWith(
+              isSubmitting: false,
+              authFailureOrSuccessOption: optionOf(left(const AttendeeFormFailure.attendeeServerError(failed: 'please finish filling out the invite form above')))
+            );
+          }
+
+
+        },
     );
   }
 

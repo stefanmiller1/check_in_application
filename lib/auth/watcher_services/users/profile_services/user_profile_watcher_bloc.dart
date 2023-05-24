@@ -9,6 +9,7 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
 
   StreamSubscription<Either<AuthFailure, UserProfileModel>>? _userProfileStreamSubscription;
   StreamSubscription<Either<AuthFailure, UserProfileModel>>? _selectedUserProfileStreamSubscription;
+  StreamSubscription<Either<AuthFailure, UserProfileModel>>? _userProfileFromEmailSubscription;
   StreamSubscription<Either<AuthFailure, List<UserProfileModel>>>? _allUserProfileStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<ProfileSession>>>? _userProfileSessionStreamSubscription;
 
@@ -16,6 +17,7 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
   StreamSubscription<Either<AuthFailure, SocialsItem>>? _userSocialsStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<LocationModel>>>? _userLocationsStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<UserProfileModel>>>? _searchUserProfilesStreamSubscription;
+
 
   @override
   Stream<UserProfileWatcherState> mapEventToState(
@@ -174,6 +176,20 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
           );
 
         },
+
+        watchProfileEmailsStarted: (e) async* {
+
+        },
+
+        profileFromEmailReceived: (e) async* {
+          yield e.failedProfile.fold(
+                  (f) => UserProfileWatcherState.loadProfileFromEmailFailure(f),
+                  (r) => UserProfileWatcherState.loadProfileFromEmailSuccess(r)
+          );
+        },
+
+
+
 
 
 

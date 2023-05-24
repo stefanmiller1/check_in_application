@@ -15,7 +15,7 @@ class AttendeeFormState with _$AttendeeFormState {
     required AutovalidateMode showErrorMessages,
 
     required Option<Either<PaymentMethodValueFailure, StringStringItems>> authPaymentFailureOrSuccessOption,
-
+    required Option<Either<AttendeeFormFailure, Unit>> authFailureOrSuccessOption,
   }) = _AttendeeFormState;
 
   factory AttendeeFormState.initial() => AttendeeFormState(
@@ -25,7 +25,8 @@ class AttendeeFormState with _$AttendeeFormState {
 
       isSubmitting: false,
       showErrorMessages: AutovalidateMode.disabled,
-      authPaymentFailureOrSuccessOption: none()
+      authPaymentFailureOrSuccessOption: none(),
+      authFailureOrSuccessOption: none()
   );
 
 }

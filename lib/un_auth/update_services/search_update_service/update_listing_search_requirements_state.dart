@@ -40,7 +40,7 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
     durationType: null,
     searchType: SearchListingType.facilities,
     selectedReservationsSlots: [],
-    activtityTypeId: getActivityOptions(null)[0].activityId,
+    activtityTypeId: getActivityOptions()[0].activityId,
     markers: {},
     listings: [],
     reservation: [],

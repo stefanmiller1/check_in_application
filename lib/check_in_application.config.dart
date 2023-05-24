@@ -10,14 +10,18 @@ import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
 import 'auth/update_services/booked_reservation_services/booked_reservation_form_bloc.dart'
-    as _i6;
+    as _i7;
 import 'auth/update_services/listing_update_create_services/attendee_update_create_services/listing_attendee_form_bloc.dart'
     as _i5;
+import 'auth/update_services/listing_update_create_services/settings_update_create_services/activity_settings/activity_settings_form_bloc.dart'
+    as _i10;
 import 'check_in_application.dart' as _i3;
 import 'misc/update_services/invitiation_services/invitation_service_bloc.dart'
-    as _i7;
+    as _i8;
 import 'misc/watcher_services/stripe_watcher_services/stripe_payment_watcher_bloc.dart'
-    as _i8; // ignore_for_file: unnecessary_lambdas
+    as _i9;
+import 'un_auth/watcher_services/attendee_watcher_service/attendee_manager_watcher_bloc.dart'
+    as _i6; // ignore_for_file: unnecessary_lambdas
 
 // ignore_for_file: lines_longer_than_80_chars
 /// initializes the registration of provided dependencies inside of [GetIt]
@@ -34,10 +38,12 @@ _i1.GetIt $initGetIt(
   gh.factory<_i3.ActivityManagerWatcherBloc>(
       () => _i3.ActivityManagerWatcherBloc(get<_i4.AAuthWatcherFacade>()));
   gh.factory<_i5.AttendeeFormBloc>(
-      () => _i5.AttendeeFormBloc(get<_i4.SStripeFacade>()));
+      () => _i5.AttendeeFormBloc(get<_i4.ATTAuthFacade>()));
+  gh.factory<_i6.AttendeeManagerWatcherBloc>(
+      () => _i6.AttendeeManagerWatcherBloc(get<_i4.ATTAuthWatcherFacade>()));
   gh.factory<_i3.AuthBloc>(() => _i3.AuthBloc(get<_i4.IAuthFacade>()));
-  gh.factory<_i6.BookedReservationFormBloc>(
-      () => _i6.BookedReservationFormBloc(get<_i4.RUpdaterFacade>()));
+  gh.factory<_i7.BookedReservationFormBloc>(
+      () => _i7.BookedReservationFormBloc(get<_i4.RUpdaterFacade>()));
   gh.factory<_i3.CreateAuthUserAccountBloc>(
       () => _i3.CreateAuthUserAccountBloc(get<_i4.IAuthFacade>()));
   gh.factory<_i3.CreateLocationBloc>(
@@ -48,8 +54,8 @@ _i1.GetIt $initGetIt(
       () => _i3.FacilityManagerWatcherBloc(get<_i4.FAuthWatcherFacade>()));
   gh.factory<_i3.GeoLocatorWatcherBloc>(
       () => _i3.GeoLocatorWatcherBloc(get<_i4.MMiscFacade>()));
-  gh.factory<_i7.InvitationFormBloc>(
-      () => _i7.InvitationFormBloc(get<_i4.RUpdaterFacade>()));
+  gh.factory<_i8.InvitationFormBloc>(
+      () => _i8.InvitationFormBloc(get<_i4.RUpdaterFacade>()));
   gh.factory<_i3.ListingManagerWatcherBloc>(
       () => _i3.ListingManagerWatcherBloc(get<_i4.LMWatcherFacade>()));
   gh.factory<_i3.ListingSettingFormBloc>(() => _i3.ListingSettingFormBloc(
@@ -76,10 +82,10 @@ _i1.GetIt $initGetIt(
       ));
   gh.factory<_i3.ReservationManagerWatcherBloc>(
       () => _i3.ReservationManagerWatcherBloc(get<_i4.RAuthWatcherFacade>()));
-  gh.factory<_i8.StripePaymentWatcherBloc>(
-      () => _i8.StripePaymentWatcherBloc(get<_i4.SStripeWatcherFacade>()));
-  gh.factory<_i3.UpdateActivityFormBloc>(
-      () => _i3.UpdateActivityFormBloc(get<_i4.AAuthFacade>()));
+  gh.factory<_i9.StripePaymentWatcherBloc>(
+      () => _i9.StripePaymentWatcherBloc(get<_i4.SStripeWatcherFacade>()));
+  gh.factory<_i10.UpdateActivityFormBloc>(
+      () => _i10.UpdateActivityFormBloc(get<_i4.AAuthFacade>()));
   gh.factory<_i3.UpdateFacilityActivityBloc>(
       () => _i3.UpdateFacilityActivityBloc(get<_i4.FAuthFacade>()));
   gh.factory<_i3.UpdateFacilityFormBloc>(

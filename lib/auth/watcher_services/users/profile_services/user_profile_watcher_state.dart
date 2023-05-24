@@ -12,6 +12,10 @@ class UserProfileWatcherState with _$UserProfileWatcherState {
   const factory UserProfileWatcherState.loadSelectedProfileSuccess(UserProfileModel profile) = _LoadSelectedProfileSuccess;
   const factory UserProfileWatcherState.loadSelectedProfileFailure(AuthFailure failure) = _LoadSelectedProfileFailure;
 
+  const factory UserProfileWatcherState.loadProfileFromEmailSuccess(UserProfileModel profile) = _LoadProfileFromEmailSuccess;
+  const factory UserProfileWatcherState.loadProfileFromEmailFailure(AuthFailure failure) = _LoadProfileFromEmailFailure;
+
+
   const factory UserProfileWatcherState.loadAllUserProfilesSuccess(List<UserProfileModel> profile) = _LoadAllUserProfilesSuccess;
   const factory UserProfileWatcherState.loadAllProfilesFailure(AuthFailure failure) = _LoadAllProfilesFailure;
 

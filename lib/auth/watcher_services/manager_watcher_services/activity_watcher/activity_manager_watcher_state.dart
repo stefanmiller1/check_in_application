@@ -9,10 +9,10 @@ class ActivityManagerWatcherState with _$ActivityManagerWatcherState {
   // const factory ActivityManagerWatcherState.loadActivityManagerItemSuccess(ActivityManagerProfile item) = _LoadActivityManagerItemSuccess;
   const factory ActivityManagerWatcherState.loadActivityManagerItemFailure(ActivityFormFailure failure) = _LoadActivityManagerItemFailure;
 
-  const factory ActivityManagerWatcherState.loadActivityCreatorFormSuccess(ActivityCreatorForm item) = _LoadActivityCreatorFormSuccess;
-  const factory ActivityManagerWatcherState.loadActivityCreatorFormFailure(ActivityFormFailure failure) = _LoadActivityCreatorFormFailure;
+  const factory ActivityManagerWatcherState.loadActivityManagerFormSuccess(ActivityManagerForm item) = _LoadActivityManagerFormSuccess;
+  const factory ActivityManagerWatcherState.loadActivityManagerFormFailure(ActivityFormFailure failure) = _LoadActivityManagerFormFailure;
 
-  const factory ActivityManagerWatcherState.loadAllActivityCreatorFormsSuccess(List<ActivityCreatorForm> items) =  _LoadAllActivityCreatorFormsSuccess;
-  const factory ActivityManagerWatcherState.loadAllActivityCreatorFormsFailure(ActivityFormFailure failure) = _LoadAllActivityCreatorFormsFailure;
+  const factory ActivityManagerWatcherState.loadAllActivityManagerFormsSuccess(List<ActivityManagerForm> items) =  _LoadAllActivityManagerFormsSuccess;
+  const factory ActivityManagerWatcherState.loadAllActivityManagerFormsFailure(ActivityFormFailure failure) = _LoadAllActivityManagerFormsFailure;
 
 }

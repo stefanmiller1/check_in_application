@@ -33,7 +33,7 @@ class ReservationFormState with _$ReservationFormState {
       isSavingCard: false,
 
       selectedDate: DateTime(DateTime.now().year, DateTime.now().month, DateTime.now().day, 0, 0),
-      selectedActivityType: getActivityOptions(null)[0].activityId,
+      selectedActivityType: getActivityOptions()[0].activityId,
       currentSelectedSpace: null,
       currentSelectedSpaceOption: null,
       currentListingActivityOption: FacilityActivityCreatorForm.empty(),
