@@ -15,6 +15,8 @@ class UpdateActivityFormState with _$UpdateActivityFormState {
     required AutovalidateMode showErrorMessages,
     required Option<Either<ActivityFormFailure, Unit>> authFailureOrSuccessOptionSaving,
     required Option<Either<ActivityFormFailure, Unit>> authFailureOrSuccessOptionSubmitting,
+    required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOptionStripe,
+
 
   }) = _UpdateActivityFormState;
 
@@ -26,7 +28,8 @@ class UpdateActivityFormState with _$UpdateActivityFormState {
       isSubmitting: false,
       showErrorMessages: AutovalidateMode.disabled,
       authFailureOrSuccessOptionSaving: none(),
-      authFailureOrSuccessOptionSubmitting: none()
+      authFailureOrSuccessOptionSubmitting: none(),
+      authFailureOrSuccessOptionStripe: none()
   );
 
 }

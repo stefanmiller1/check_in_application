@@ -10,6 +10,8 @@ class CustomCheckInFormEvent with _$CustomCheckInFormEvent {
   factory CustomCheckInFormEvent.isAfterStartChanged(bool isAfterBool) = _IsAfterStartChanged;
   factory CustomCheckInFormEvent.hoursUntilChanged(TimeOfDay hoursInt) = _HoursUntilChanged;
   factory CustomCheckInFormEvent.listOfSpaceIdsChanged(List<UniqueId> spaceList) = _ListOfSpaceIdsChanged;
+  factory CustomCheckInFormEvent.listOfReservationsChanged(List<ReservationSlotItem> resList) = _ListOfReservationsChanged;
+  factory CustomCheckInFormEvent.attendeeTypeChanged(AttendeeType attType) = _AttendeeTypeChanged;
   factory CustomCheckInFormEvent.listOfConfirmationItemsChanged(List<StringBoolItem> conList) = _ListOfConfirmationItemsChanged;
 
   factory CustomCheckInFormEvent.didSaveCustomRule() = _DidSaveCustomRule;

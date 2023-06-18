@@ -14,8 +14,9 @@ part 'activity_settings_form_bloc.freezed.dart';
 class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivityFormState> {
 
   final facade.AAuthFacade _activityAuthFacade;
+  final facade.SStripeFacade _stripeFacade;
 
-  UpdateActivityFormBloc(this._activityAuthFacade) : super(UpdateActivityFormState.initial());
+  UpdateActivityFormBloc(this._activityAuthFacade, this._stripeFacade) : super(UpdateActivityFormState.initial());
 
   @override
   Stream<UpdateActivityFormState> mapEventToState(
@@ -881,6 +882,21 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
           );
         },
 
+        currencyTypeChanged: (e) async* {
+          yield state.copyWith(
+            activitySettingsForm: ActivityManagerForm(
+              activityFormId: state.activitySettingsForm.activityFormId,
+              profileService: state.activitySettingsForm.profileService,
+              rulesService: state.activitySettingsForm.rulesService.copyWith(
+                currency: e.currency
+              ),
+              activityType: state.activitySettingsForm.activityType,
+              activityAttendance: state.activitySettingsForm.activityAttendance
+            ),
+            isEditingForm: true,
+          );
+        },
+
         isTicketBasedAttendanceChanged: (e) async* {
           yield state.copyWith(
               activitySettingsForm: ActivityManagerForm(
@@ -941,7 +957,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
           );
         },
 
-        ticketAttendanceIsAllowedGroups: (e) async* {
+        isTicketFixedChanged: (e) async* {
           yield state.copyWith(
               activitySettingsForm: ActivityManagerForm(
                   activityFormId: state.activitySettingsForm.activityFormId,
@@ -949,16 +965,29 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                    defaultActivityTickets: state.activitySettingsForm.activityAttendance.defaultActivityTickets?.copyWith(
-                        isAllowedGroupAttendance: e.groupBool
+                      isTicketFixed: e.ticketBool
                   )
+              ),
+              isEditingForm: true
+          );
+        },
+
+        isPassFixedChanged: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService,
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
+                      isPassesFixed: e.passBool
                 )
               ),
               isEditingForm: true
           );
         },
 
-        ticketMinimumGroupQuantityChanged: (e) async* {
+        defaultTicketChanged: (e) async* {
           yield state.copyWith(
               activitySettingsForm: ActivityManagerForm(
                   activityFormId: state.activitySettingsForm.activityFormId,
@@ -966,61 +995,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      defaultActivityTickets: state.activitySettingsForm.activityAttendance.defaultActivityTickets?.copyWith(
-                          minimumGroupQuantity: e.minInt
-                  )
-                )
-              ),
-              isEditingForm: true
-          );
-        },
-
-        ticketMaximumGroupQuantityChanged: (e) async* {
-          yield state.copyWith(
-              activitySettingsForm: ActivityManagerForm(
-                  activityFormId: state.activitySettingsForm.activityFormId,
-                  profileService: state.activitySettingsForm.profileService,
-                  rulesService: state.activitySettingsForm.rulesService,
-                  activityType: state.activitySettingsForm.activityType,
-                  activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      defaultActivityTickets: state.activitySettingsForm.activityAttendance.defaultActivityTickets?.copyWith(
-                          maximumGroupQuantity: e.maxInt
-                      )
-                  )
-              ),
-              isEditingForm: true
-          );
-        },
-
-        ticketFeeChanged: (e) async* {
-          yield state.copyWith(
-              activitySettingsForm: ActivityManagerForm(
-                  activityFormId: state.activitySettingsForm.activityFormId,
-                  profileService: state.activitySettingsForm.profileService,
-                  rulesService: state.activitySettingsForm.rulesService,
-                  activityType: state.activitySettingsForm.activityType,
-                  activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      defaultActivityTickets: state.activitySettingsForm.activityAttendance.defaultActivityTickets?.copyWith(
-                          ticketFee: e.ticketFee
-                      )
-                  )
-              ),
-              isEditingForm: true
-          );
-        },
-
-        ticketQuantityChanged: (e) async* {
-
-          yield state.copyWith(
-              activitySettingsForm: ActivityManagerForm(
-                  activityFormId: state.activitySettingsForm.activityFormId,
-                  profileService: state.activitySettingsForm.profileService,
-                  rulesService: state.activitySettingsForm.rulesService,
-                  activityType: state.activitySettingsForm.activityType,
-                  activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      defaultActivityTickets: state.activitySettingsForm.activityAttendance.defaultActivityTickets?.copyWith(
-                          ticketQuantity: e.ticketsInt
-                      )
+                      defaultActivityTickets: e.aTicket
                   )
               ),
               isEditingForm: true
@@ -1050,7 +1025,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                    activityPasses: state.activitySettingsForm.activityAttendance.activityPasses?.copyWith(
+                      defaultActivityPass: state.activitySettingsForm.activityAttendance.defaultActivityPass?.copyWith(
                         isAllowedGroupAttendance: e.groupBool
                     )
                   )
@@ -1067,7 +1042,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      activityPasses: state.activitySettingsForm.activityAttendance.activityPasses?.copyWith(
+                      defaultActivityPass: state.activitySettingsForm.activityAttendance.defaultActivityPass?.copyWith(
                           minimumGroupQuantity: e.minInt
                       )
                   )
@@ -1084,7 +1059,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      activityPasses: state.activitySettingsForm.activityAttendance.activityPasses?.copyWith(
+                      defaultActivityPass: state.activitySettingsForm.activityAttendance.defaultActivityPass?.copyWith(
                           maximumGroupQuantity: e.maxInt
                       )
                   )
@@ -1101,7 +1076,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      activityPasses: state.activitySettingsForm.activityAttendance.activityPasses?.copyWith(
+                      defaultActivityPass: state.activitySettingsForm.activityAttendance.defaultActivityPass?.copyWith(
                           passQuantity: e.passesInt
                       )
                   )
@@ -1118,12 +1093,29 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      activityPasses: state.activitySettingsForm.activityAttendance.activityPasses?.copyWith(
+                      defaultActivityPass: state.activitySettingsForm.activityAttendance.defaultActivityPass?.copyWith(
                           recurringPassAllSession: e.sessionBool
                       )
                   )
               ),
               isEditingForm: true
+          );
+        },
+
+        passesFeeChanged: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService,
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
+                      defaultActivityPass: state.activitySettingsForm.activityAttendance.defaultActivityPass?.copyWith(
+                          passesPrice: e.maxInt
+                  )
+                )
+              ),
+            isEditingForm: true
           );
         },
 
@@ -1135,12 +1127,56 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
-                      activityPasses: state.activitySettingsForm.activityAttendance.activityPasses?.copyWith(
+                      defaultActivityPass: state.activitySettingsForm.activityAttendance.defaultActivityPass?.copyWith(
                           recurringNumberOfSessions: e.limitInt
                       )
                   )
               ),
             isEditingForm: true
+          );
+        },
+
+        activityPassesChanged: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService,
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
+                      activityPasses: e.passesList
+                  )
+              ),
+              isEditingForm: true
+          );
+        },
+
+        createStripeOnBoardingAccountLink: (e) async* {
+          Either<AuthFailure, Unit> failureOrSuccess;
+
+          yield state.copyWith(
+              authFailureOrSuccessOptionStripe: none()
+          );
+
+          failureOrSuccess = await _stripeFacade.createOnBoardingStripeAccountLink(profile: e.profile);
+
+          yield state.copyWith(
+              authFailureOrSuccessOptionStripe: optionOf(failureOrSuccess)
+          );
+
+        },
+
+        presentStripeAccountDashboard: (e) async* {
+          Either<AuthFailure, Unit> failureOrSuccess;
+
+          yield state.copyWith(
+              authFailureOrSuccessOptionStripe: none()
+          );
+
+          failureOrSuccess = await _stripeFacade.presentStripeAccountWithLoginLink(profile: e.profile);
+
+          yield state.copyWith(
+              authFailureOrSuccessOptionStripe: optionOf(failureOrSuccess)
           );
         },
 
@@ -1153,8 +1189,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
               authFailureOrSuccessOptionSaving: none()
           );
 
-          failureOrSuccess = state.isSaving ?
-          left(const ActivityFormFailure.unexpected()) :
+          failureOrSuccess = state.isSaving ? left(const ActivityFormFailure.unexpected()) :
           await _activityAuthFacade.updateActivitySettingsForm(
               activityForm: state.activitySettingsForm,
               activityResId: state.reservationItem.reservationId
@@ -1183,7 +1218,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
           // );
         },
 
-        deleteActivityFinished: (e) async* {}
+        deleteActivityFinished: (e) async* {},
+
 
       );
 

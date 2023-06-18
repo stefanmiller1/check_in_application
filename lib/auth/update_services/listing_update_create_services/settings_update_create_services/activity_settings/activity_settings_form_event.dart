@@ -116,27 +116,30 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
   const factory UpdateActivityFormEvent.allowedDonationTypesChanged(List<DonationType> donationTypes) = _AllowedDonationTypesChanged;
   const factory UpdateActivityFormEvent.isAllowedExternalContributions(bool exBool) = _IsAllowedExternalContributions;
 
+  const factory UpdateActivityFormEvent.currencyTypeChanged(String currency) = _CurrencyTypeChanged;
 
   const factory UpdateActivityFormEvent.isTicketBasedAttendanceChanged(bool ticketBool) = _IsTicketBasedAttendanceChanged;
   const factory UpdateActivityFormEvent.isPassBasedAttendanceChanged(bool passBool) = _IsPassBasedAttendanceChanged;
   const factory UpdateActivityFormEvent.isLimitedAttendanceChanged(bool limitBool) = _IsLimitedAttendanceChanged;
   const factory UpdateActivityFormEvent.attendanceLimitChanged(int limitInt) = _AttendanceLimitChanged;
+  const factory UpdateActivityFormEvent.isTicketFixedChanged(bool ticketBool) = _isTicketFixedChanged;
+  const factory UpdateActivityFormEvent.isPassFixedChanged(bool passBool) = _IsPassFixedChanged;
 
-  const factory UpdateActivityFormEvent.ticketAttendanceIsAllowedGroups(bool groupBool) = _TicketAttendanceIsAllowedGroups;
-  const factory UpdateActivityFormEvent.ticketMinimumGroupQuantityChanged(int minInt) = _TicketMinimumGroupQuantityChanged;
-  const factory UpdateActivityFormEvent.ticketMaximumGroupQuantityChanged(int maxInt) = _TicketMaximumGroupQuantityChanged;
-  const factory UpdateActivityFormEvent.ticketFeeChanged(String? ticketFee) = _TicketFeeChanged;
-  const factory UpdateActivityFormEvent.ticketQuantityChanged(int ticketsInt) = _TicketQuantityChanged;
-
+  const factory UpdateActivityFormEvent.defaultTicketChanged(ActivityTicketOption aTicket) = _DefaultTicketChanged;
   const factory UpdateActivityFormEvent.activityTicketsChanged(List<ActivityTicketOption>? ticketList) = _ActivityTicketsChanged;
 
   const factory UpdateActivityFormEvent.passesAttendanceIsAllowedGroups(bool groupBool) = _PassesAttendanceIsAllowedGroups;
   const factory UpdateActivityFormEvent.passesMinimumGroupQuantityChanged(int minInt) = _PassesMinimumGroupQuantityChanged;
   const factory UpdateActivityFormEvent.passesMaximumGroupQuantityChanged(int maxInt) = _PassesMaximumGroupQuantityChanged;
+  const factory UpdateActivityFormEvent.passesFeeChanged(int maxInt) = _PassesFeeChanged;
   const factory UpdateActivityFormEvent.passesQuantityChanged(int passesInt) = _PassesQuantityChanged;
   const factory UpdateActivityFormEvent.passesCoverAllSessions(bool sessionBool) = _PassesCoverAllSessions;
   const factory UpdateActivityFormEvent.passesCoverLimitedSession(int limitInt) = _PassesCoverLimitedSession;
 
+  const factory UpdateActivityFormEvent.activityPassesChanged(List<ActivityPassesOption> passesList) = _ActivityPassesChanged;
+
+  const factory UpdateActivityFormEvent.createStripeOnBoardingAccountLink(UserProfileModel profile) = _CreateStripeOnBoardingAccountLink;
+  const factory UpdateActivityFormEvent.presentStripeAccountDashboard(UserProfileModel profile) = _PresentStripeAccountDashboard;
 
   const factory UpdateActivityFormEvent.createActivityFinished() = CreateActivityFinished;
   const factory UpdateActivityFormEvent.saveActivityFinished() = SaveActivityFinished;

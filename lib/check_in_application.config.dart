@@ -84,8 +84,10 @@ _i1.GetIt $initGetIt(
       () => _i3.ReservationManagerWatcherBloc(get<_i4.RAuthWatcherFacade>()));
   gh.factory<_i9.StripePaymentWatcherBloc>(
       () => _i9.StripePaymentWatcherBloc(get<_i4.SStripeWatcherFacade>()));
-  gh.factory<_i10.UpdateActivityFormBloc>(
-      () => _i10.UpdateActivityFormBloc(get<_i4.AAuthFacade>()));
+  gh.factory<_i10.UpdateActivityFormBloc>(() => _i10.UpdateActivityFormBloc(
+        get<_i4.AAuthFacade>(),
+        get<_i4.SStripeFacade>(),
+      ));
   gh.factory<_i3.UpdateFacilityActivityBloc>(
       () => _i3.UpdateFacilityActivityBloc(get<_i4.FAuthFacade>()));
   gh.factory<_i3.UpdateFacilityFormBloc>(

@@ -1,5 +1,4 @@
 import 'package:check_in_domain/check_in_domain.dart';
-import 'package:check_in_domain/domain/misc/attendee_services/value_object.dart';
 import 'package:check_in_facade/check_in_facade.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
@@ -108,7 +107,6 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           isValid = (state.attendeeItem.attendeeDetails != null) && (state.attendeeItem.contactStatus != null);
           if (state.attendeeItem.attendeeType == AttendeeType.vendor) {
             print('is vendor');
-            print(state.attendeeItem.eventMerchantVendorProfile?.vendorLogo);
             print(state.attendeeItem.eventMerchantVendorProfile?.brandName.isValid());
             print(state.attendeeItem.eventMerchantVendorProfile?.backgroundInfo.isValid());
             isValid = (state.attendeeItem.eventMerchantVendorProfile?.vendorLogo != null && (state.attendeeItem.eventMerchantVendorProfile?.brandName.isValid() ?? false) && (state.attendeeItem.eventMerchantVendorProfile?.backgroundInfo.isValid() ?? false));

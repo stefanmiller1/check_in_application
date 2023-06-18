@@ -25,11 +25,6 @@ class CustomCheckInFormBloc extends Bloc<CustomCheckInFormEvent, CustomCheckInFo
           yield state.copyWith(
             customCheckInSetting: state.customCheckInSetting.copyWith(
                 hoursBefore: e.hoursBeforeInt,
-                isBeforeResStart: state.customCheckInSetting.isBeforeResStart,
-                isAfterResStart: state.customCheckInSetting.isAfterResStart,
-                hoursUntil:  state.customCheckInSetting.hoursUntil,
-                listOfSpaceIds: state.customCheckInSetting.listOfSpaceIds,
-                listOfConfirmationItems: state.customCheckInSetting.listOfConfirmationItems
             )
           );
 
@@ -38,12 +33,7 @@ class CustomCheckInFormBloc extends Bloc<CustomCheckInFormEvent, CustomCheckInFo
         isBeforeStartChanged: (e) async* {
           yield state.copyWith(
               customCheckInSetting: state.customCheckInSetting.copyWith(
-              hoursBefore: state.customCheckInSetting.hoursBefore,
               isBeforeResStart: e.isBeforeBool,
-              isAfterResStart: state.customCheckInSetting.isAfterResStart,
-              hoursUntil:  state.customCheckInSetting.hoursUntil,
-              listOfSpaceIds: state.customCheckInSetting.listOfSpaceIds,
-              listOfConfirmationItems: state.customCheckInSetting.listOfConfirmationItems
             )
           );
         },
@@ -51,12 +41,7 @@ class CustomCheckInFormBloc extends Bloc<CustomCheckInFormEvent, CustomCheckInFo
         isAfterStartChanged: (e) async* {
           yield state.copyWith(
               customCheckInSetting: state.customCheckInSetting.copyWith(
-              hoursBefore: state.customCheckInSetting.hoursBefore,
-              isBeforeResStart: state.customCheckInSetting.isBeforeResStart,
               isAfterResStart: e.isAfterBool,
-              hoursUntil:  state.customCheckInSetting.hoursUntil,
-              listOfSpaceIds: state.customCheckInSetting.listOfSpaceIds,
-              listOfConfirmationItems: state.customCheckInSetting.listOfConfirmationItems
             )
           );
         },
@@ -64,12 +49,7 @@ class CustomCheckInFormBloc extends Bloc<CustomCheckInFormEvent, CustomCheckInFo
         hoursUntilChanged: (e) async* {
           yield state.copyWith(
               customCheckInSetting: state.customCheckInSetting.copyWith(
-              hoursBefore: state.customCheckInSetting.hoursBefore,
-              isBeforeResStart: state.customCheckInSetting.isBeforeResStart,
-              isAfterResStart: state.customCheckInSetting.isAfterResStart,
-              hoursUntil:  e.hoursInt,
-              listOfSpaceIds: state.customCheckInSetting.listOfSpaceIds,
-              listOfConfirmationItems: state.customCheckInSetting.listOfConfirmationItems
+                hoursUntil:  e.hoursInt,
             )
           );
         },
@@ -77,12 +57,7 @@ class CustomCheckInFormBloc extends Bloc<CustomCheckInFormEvent, CustomCheckInFo
         listOfSpaceIdsChanged: (e) async* {
           yield state.copyWith(
               customCheckInSetting: state.customCheckInSetting.copyWith(
-              hoursBefore: state.customCheckInSetting.hoursBefore,
-              isBeforeResStart: state.customCheckInSetting.isBeforeResStart,
-              isAfterResStart: state.customCheckInSetting.isAfterResStart,
-              hoursUntil:  state.customCheckInSetting.hoursUntil,
-              listOfSpaceIds: e.spaceList,
-              listOfConfirmationItems: state.customCheckInSetting.listOfConfirmationItems
+                listOfSpaceIds: e.spaceList,
              )
           );
         },
@@ -90,12 +65,23 @@ class CustomCheckInFormBloc extends Bloc<CustomCheckInFormEvent, CustomCheckInFo
         listOfConfirmationItemsChanged: (e) async* {
           yield state.copyWith(
               customCheckInSetting: state.customCheckInSetting.copyWith(
-              hoursBefore: state.customCheckInSetting.hoursBefore,
-              isBeforeResStart: state.customCheckInSetting.isBeforeResStart,
-              isAfterResStart: state.customCheckInSetting.isAfterResStart,
-              hoursUntil:  state.customCheckInSetting.hoursUntil,
-              listOfSpaceIds: state.customCheckInSetting.listOfSpaceIds,
-              listOfConfirmationItems: e.conList
+                listOfConfirmationItems: e.conList
+            )
+          );
+        },
+
+        listOfReservationsChanged: (e) async* {
+          yield state.copyWith(
+            customCheckInSetting: state.customCheckInSetting.copyWith(
+                listOfReservations: e.resList
+            )
+          );
+        },
+
+        attendeeTypeChanged: (e) async* {
+          yield state.copyWith(
+              customCheckInSetting: state.customCheckInSetting.copyWith(
+                attendeeType: e.attType
             )
           );
         },
