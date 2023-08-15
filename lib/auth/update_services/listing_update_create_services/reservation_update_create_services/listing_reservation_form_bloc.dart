@@ -23,6 +23,10 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
                           () => state.listing,
                           (listing) => listing,
                       ),
+                      listingOwner: e.initialListingOwner.fold(
+                          () => state.listingOwner,
+                          (listingOwner) => listingOwner,
+                      ),
                       authFailureOrSuccessOption: none()
             ),
           );
@@ -39,7 +43,7 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
               reservationOwnerId: state.newFacilityBooking.reservationOwnerId,
               instanceId: state.newFacilityBooking.instanceId,
               reservationAffiliates: state.newFacilityBooking.reservationAffiliates,
-              reservationCost: completeTotalPriceWithCurrency(getTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? []) + getTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOReservationPercentageFee + getTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOTaxesFee, e.currency),
+              reservationCost: completeTotalPriceWithCurrency(getListingTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? []) + getListingTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOReservationPercentageFee + getListingTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOTaxesFee, e.currency),
               reservationSlotItem: e.slotItem,
               cancelledSlotItem: state.newFacilityBooking.cancelledSlotItem,
               reservationState: state.newFacilityBooking.reservationState,
@@ -59,7 +63,7 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
             reservationOwnerId: state.newFacilityBooking.reservationOwnerId,
             instanceId: state.newFacilityBooking.instanceId,
             reservationAffiliates: state.newFacilityBooking.reservationAffiliates,
-            reservationCost: completeTotalPriceWithCurrency(getTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? []) + getTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOReservationPercentageFee + getTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOTaxesFee, e.currency),
+            reservationCost: completeTotalPriceWithCurrency(getListingTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? []) + getListingTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOReservationPercentageFee + getListingTotalPriceDouble(e.slotItem, state.newFacilityBooking.cancelledSlotItem ?? [])*CICOTaxesFee, e.currency),
             reservationSlotItem: state.newFacilityBooking.reservationSlotItem,
             cancelledSlotItem: e.slotItem,
             reservationState: state.newFacilityBooking.reservationState,
@@ -172,18 +176,19 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
           authPaymentFailureOrSuccessOption: none(),
         );
 
-        // failurePaymentClientFailureOrSuccess = state.isSubmitting ? left(PaymentMethodValueFailure.paymentServerError()) : await _stripeFacade.confirmExistingPaymentIntent(paymentIntentId: e.paymentIntentId);
+        failurePaymentClientFailureOrSuccess = state.isSubmitting ? left(PaymentMethodValueFailure.paymentServerError()) : await _stripeFacade.confirmExistingPaymentIntent(paymentIntentId: e.paymentIntentId);
+
         // failureOrSuccess = await failurePaymentClientFailureOrSuccess.fold(
         //         (l) => left(ReservationFormFailure.reservationServerError()),
         //         (paymentIntent) => _reservationFormFacade.createReservationForm(reservationForm: state.newFacilityBooking, paymentIntentId: paymentIntent.stringItemOne)
         // );
-        //
-        //
-        // yield state.copyWith(
-        //     authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
-        //     authFailureOrSuccessOption: optionOf(failureOrSuccess),
-        //     isSubmitting: false
-        // );
+
+
+        yield state.copyWith(
+            authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
+            // authFailureOrSuccessOption: optionOf(failureOrSuccess),
+            isSubmitting: false
+        );
       },
 
       createPaymentIntentForBooking: (e) async* {
@@ -209,20 +214,22 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
             return;
           }
 
-          // failurePaymentClientFailureOrSuccess = state.isSubmitting ?
-          // left(PaymentMethodValueFailure.couldNotRetrievePaymentMethod()) :
-          // await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
-          //     userProfile: e.profile,
-          //     reservationItem: state.newFacilityBooking,
-          //     amount: e.amount,
-          //     currency: e.currency,
-          //     paymentMethod: e.paymentMethod);
-          //
-          //
-          // yield state.copyWith(
-          //     isSubmitting: false,
-          //     authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
-          // );
+          failurePaymentClientFailureOrSuccess = state.isSubmitting ?
+          left(PaymentMethodValueFailure.couldNotRetrievePaymentMethod()) :
+          await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
+              userProfile: e.profile,
+              reservationId: state.newFacilityBooking.reservationId,
+              listingId: state.newFacilityBooking.instanceId,
+              listingOwnerStripeId: state.listingOwner.stripeAccountId,
+              amount: e.amount,
+              currency: e.currency,
+              paymentMethod: e.paymentMethod);
+
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
+          );
         }
       },
 
@@ -281,17 +288,21 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
 
             failurePaymentClientFailureOrSuccess = await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
                 userProfile: e.profile,
-                reservationItem: state.newFacilityBooking,
+                reservationId: state.newFacilityBooking.reservationId,
+                listingId: state.newFacilityBooking.instanceId,
+                listingOwnerStripeId: state.listingOwner.stripeAccountId,
                 amount: e.amount,
                 currency: e.currency,
                 paymentMethod: e.paymentMethod);
 
+
             failureOrSuccess = await failurePaymentClientFailureOrSuccess.fold(
                     (l) => left(const ReservationFormFailure.waitingForPaymentConfirmation()),
                     (r) => _reservationFormFacade.createReservationForm(
-                        reservationForm: state.newFacilityBooking,
-                        listing: state.listing,
-                        paymentIntentId: r.stringItemTwo)
+                      reservationForm: state.newFacilityBooking,
+                      listing: state.listing,
+                      paymentIntentId: r.stringItemTwo
+              )
             );
 
 
@@ -331,7 +342,9 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
 
           failurePaymentClientFailureOrSuccess = state.isSubmitting ? left(PaymentMethodValueFailure.couldNotRetrievePaymentMethod()) : await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
               userProfile: e.profile,
-              reservationItem: state.newFacilityBooking,
+              reservationId: state.newFacilityBooking.reservationId,
+              listingId: state.newFacilityBooking.instanceId,
+              listingOwnerStripeId: state.listingOwner.stripeAccountId,
               amount: e.amount,
               currency: e.currency,
               paymentMethod: e.paymentMethod);
@@ -361,25 +374,25 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
             authPaymentFailureOrSuccessOption: none(),
           );
 
-          // paymentClientFailureOrSuccess = state.isSubmitting ?
-          // left(PaymentMethodValueFailure.paymentServerError()) :
-          // await _stripeFacade.refundExistingStripePayment(paymentIntent: state.newFacilityBooking.paymentIntentId, refundAmount: e.amount);
-          //
-          // failureOrSuccess = await paymentClientFailureOrSuccess.fold(
-          //         (l) => left(ReservationFormFailure.reservationServerError()),
-          //         (r) => _reservationFormFacade.cancelReservationForm(cancelRequest: ReservationCancelRequest(
-          //             cancellationType: e.cancelType,
-          //             stripeRefundId: r.stringItemOne,
-          //             cancellationResponse: e.reasonResponse),
-          //           reservationForm: state.newFacilityBooking
-          //   )
-          // );
-          //
-          // yield state.copyWith(
-          //     authPaymentFailureOrSuccessOption: optionOf(paymentClientFailureOrSuccess),
-          //     authFailureOrSuccessOption: optionOf(failureOrSuccess),
-          //     isSubmitting: false
-          // );
+          paymentClientFailureOrSuccess = state.isSubmitting ?
+          left(PaymentMethodValueFailure.paymentServerError()) :
+          await _stripeFacade.refundExistingStripePayment(paymentIntent: state.newFacilityBooking.paymentIntentId, refundAmount: e.amount);
+
+          failureOrSuccess = await paymentClientFailureOrSuccess.fold(
+                  (l) => left(ReservationFormFailure.reservationServerError()),
+                  (r) => _reservationFormFacade.cancelReservationForm(cancelRequest: ReservationCancelRequest(
+                      cancellationType: e.cancelType,
+                      stripeRefundId: r.stringItemOne,
+                      cancellationResponse: e.reasonResponse),
+                    reservationForm: state.newFacilityBooking
+            )
+          );
+
+          yield state.copyWith(
+              authPaymentFailureOrSuccessOption: optionOf(paymentClientFailureOrSuccess),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess),
+              isSubmitting: false
+          );
         }
       },
 

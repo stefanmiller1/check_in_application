@@ -44,20 +44,19 @@ class InvitationFormBloc extends Bloc<InvitationFormEvent, InvitationFormState> 
 
                   final invitationListVerify = state.inviteList.isNotEmpty;
 
-
                   if (invitationListVerify) {
 
-                    yield state.copyWith(
-                      isSubmitting: true,
-                      authFailureOrSuccess: none()
-                    );
-
-                    failureOrSuccess = state.isSubmitting ? await _rFacade.sendInvitationToUsers(reservationId: e.reservationId, invitations: state.inviteList.toList()) : left(AuthFailure.serverError());
-
-                    yield state.copyWith(
-                        isSubmitting: false,
-                        authFailureOrSuccess: optionOf(failureOrSuccess)
-                    );
+                    // yield state.copyWith(
+                    //   isSubmitting: true,
+                    //   authFailureOrSuccess: none()
+                    // );
+                    //
+                    // failureOrSuccess = state.isSubmitting ? await _rFacade.sendInvitationToUsers(reservationId: e.reservationId, invitations: state.inviteList.toList()) : left(AuthFailure.serverError());
+                    //
+                    // yield state.copyWith(
+                    //     isSubmitting: false,
+                    //     authFailureOrSuccess: optionOf(failureOrSuccess)
+                    // );
                 }
              },
 

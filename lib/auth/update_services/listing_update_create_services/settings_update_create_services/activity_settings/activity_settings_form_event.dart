@@ -122,8 +122,10 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
   const factory UpdateActivityFormEvent.isPassBasedAttendanceChanged(bool passBool) = _IsPassBasedAttendanceChanged;
   const factory UpdateActivityFormEvent.isLimitedAttendanceChanged(bool limitBool) = _IsLimitedAttendanceChanged;
   const factory UpdateActivityFormEvent.attendanceLimitChanged(int limitInt) = _AttendanceLimitChanged;
-  const factory UpdateActivityFormEvent.isTicketFixedChanged(bool ticketBool) = _isTicketFixedChanged;
+  const factory UpdateActivityFormEvent.isTicketFixedChanged(bool ticketBool) = _IsTicketFixedChanged;
+  const factory UpdateActivityFormEvent.isTicketSlotBasedOnly(bool ticketBool) = _IsTicketSlotBasedOnly;
   const factory UpdateActivityFormEvent.isPassFixedChanged(bool passBool) = _IsPassFixedChanged;
+
 
   const factory UpdateActivityFormEvent.defaultTicketChanged(ActivityTicketOption aTicket) = _DefaultTicketChanged;
   const factory UpdateActivityFormEvent.activityTicketsChanged(List<ActivityTicketOption>? ticketList) = _ActivityTicketsChanged;

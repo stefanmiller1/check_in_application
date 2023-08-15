@@ -95,6 +95,10 @@ part 'misc/update_services/news_services/news_updates_watcher_state.dart';
 part 'misc/update_services/payment_services/payment_services_bloc.dart';
 part 'misc/update_services/payment_services/payment_services_event.dart';
 part 'misc/update_services/payment_services/payment_services_state.dart';
+part 'misc/update_services/web/check_out_services/check_out_services_bloc.dart';
+part 'misc/update_services/web/check_out_services/check_out_services_event.dart';
+part 'misc/update_services/web/check_out_services/check_out_services_state.dart';
+
 
 part 'un_auth/watcher_services/user_profile_preview/bookings_overview/users_current_bookings_watcher_bloc.dart';
 part 'un_auth/watcher_services/user_profile_preview/bookings_overview/users_current_bookings_watcher_event.dart';

@@ -37,13 +37,17 @@ _i1.GetIt $initGetIt(
   );
   gh.factory<_i3.ActivityManagerWatcherBloc>(
       () => _i3.ActivityManagerWatcherBloc(get<_i4.AAuthWatcherFacade>()));
-  gh.factory<_i5.AttendeeFormBloc>(
-      () => _i5.AttendeeFormBloc(get<_i4.ATTAuthFacade>()));
+  gh.factory<_i5.AttendeeFormBloc>(() => _i5.AttendeeFormBloc(
+        get<_i4.ATTAuthFacade>(),
+        get<_i4.SStripeFacade>(),
+      ));
   gh.factory<_i6.AttendeeManagerWatcherBloc>(
       () => _i6.AttendeeManagerWatcherBloc(get<_i4.ATTAuthWatcherFacade>()));
   gh.factory<_i3.AuthBloc>(() => _i3.AuthBloc(get<_i4.IAuthFacade>()));
   gh.factory<_i7.BookedReservationFormBloc>(
       () => _i7.BookedReservationFormBloc(get<_i4.RUpdaterFacade>()));
+  gh.factory<_i3.CheckOutServicesBloc>(
+      () => _i3.CheckOutServicesBloc(get<_i4.SStripeFacade>()));
   gh.factory<_i3.CreateAuthUserAccountBloc>(
       () => _i3.CreateAuthUserAccountBloc(get<_i4.IAuthFacade>()));
   gh.factory<_i3.CreateLocationBloc>(

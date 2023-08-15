@@ -166,53 +166,53 @@ class BookedReservationFormBloc extends Bloc<BookedReservationFormEvent, BookedR
 
         didLeaveBookedReservation: (e) async* {
 
-          Either<ReservationFormFailure, Unit> authFailureOrSuccess;
-
-          yield state.copyWith(
-              isSubmitting: true,
-              authFailureOrSuccess: none()
-          );
-
-          authFailureOrSuccess = state.isSubmitting ? await _resFacade.updateReservationAffiliatesList(reservationId: e.reservation.reservationId.getOrCrash(), updatedAffiliatesList: e.affiliates) : left(const ReservationFormFailure.reservationServerError());
-
-          yield state.copyWith(
-              isSubmitting: false,
-              authFailureOrSuccess: optionOf(authFailureOrSuccess)
-          );
+          // Either<ReservationFormFailure, Unit> authFailureOrSuccess;
+          //
+          // yield state.copyWith(
+          //     isSubmitting: true,
+          //     authFailureOrSuccess: none()
+          // );
+          //
+          // authFailureOrSuccess = state.isSubmitting ? await _resFacade.updateReservationAffiliatesList(reservationId: e.reservation.reservationId.getOrCrash(), updatedAffiliatesList: e.affiliates) : left(const ReservationFormFailure.reservationServerError());
+          //
+          // yield state.copyWith(
+          //     isSubmitting: false,
+          //     authFailureOrSuccess: optionOf(authFailureOrSuccess)
+          // );
 
         },
 
         didRemoveAffiliate: (e) async* {
-          Either<ReservationFormFailure, Unit> authFailureOrSuccess;
-
-          yield state.copyWith(
-              isSubmitting: true,
-              authFailureOrSuccess: none()
-          );
-
-          authFailureOrSuccess = state.isSubmitting ? await _resFacade.updateReservationAffiliatesList(reservationId: e.reservation.reservationId.getOrCrash(), updatedAffiliatesList: e.affiliates) : left(const ReservationFormFailure.reservationServerError());
-
-          yield state.copyWith(
-              isSubmitting: false,
-              authFailureOrSuccess: optionOf(authFailureOrSuccess)
-          );
+          // Either<ReservationFormFailure, Unit> authFailureOrSuccess;
+          //
+          // yield state.copyWith(
+          //     isSubmitting: true,
+          //     authFailureOrSuccess: none()
+          // );
+          //
+          // authFailureOrSuccess = state.isSubmitting ? await _resFacade.updateReservationAffiliatesList(reservationId: e.reservation.reservationId.getOrCrash(), updatedAffiliatesList: e.affiliates) : left(const ReservationFormFailure.reservationServerError());
+          //
+          // yield state.copyWith(
+          //     isSubmitting: false,
+          //     authFailureOrSuccess: optionOf(authFailureOrSuccess)
+          // );
 
         },
 
         didJoinBookedReservation: (e) async* {
-          Either<ReservationFormFailure, Unit> authFailureOrSuccess;
-
-          yield state.copyWith(
-            isSubmitting: true,
-            authFailureOrSuccess: none()
-          );
-
-          authFailureOrSuccess = state.isSubmitting ? await _resFacade.updateReservationAffiliatesList(reservationId: e.reservation.reservationId.getOrCrash(), updatedAffiliatesList: e.affiliates) : left(const ReservationFormFailure.reservationServerError());
-
-          yield state.copyWith(
-            isSubmitting: false,
-            authFailureOrSuccess: optionOf(authFailureOrSuccess)
-          );
+          // Either<ReservationFormFailure, Unit> authFailureOrSuccess;
+          //
+          // yield state.copyWith(
+          //   isSubmitting: true,
+          //   authFailureOrSuccess: none()
+          // );
+          //
+          // authFailureOrSuccess = state.isSubmitting ? await _resFacade.updateReservationAffiliatesList(reservationId: e.reservation.reservationId.getOrCrash(), updatedAffiliatesList: e.affiliates) : left(const ReservationFormFailure.reservationServerError());
+          //
+          // yield state.copyWith(
+          //   isSubmitting: false,
+          //   authFailureOrSuccess: optionOf(authFailureOrSuccess)
+          // );
         },
 
         didRequestRefundCancellation: (e) async* {

@@ -47,7 +47,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                     activityType: e.activityOption,
                     activityAttendance: state.activitySettingsForm.activityAttendance
             ),
-            isEditingForm: true
+            isEditingForm: true,
+            authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -65,7 +66,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -82,7 +84,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -99,7 +102,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -116,7 +120,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -133,7 +138,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -151,7 +157,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -168,7 +175,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -186,7 +194,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -203,7 +212,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -220,7 +230,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -237,7 +248,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -254,7 +266,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -271,7 +284,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -289,7 +303,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -306,7 +321,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -323,7 +339,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -340,7 +357,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -357,7 +375,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -374,7 +393,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -391,7 +411,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -410,7 +431,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -429,7 +451,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -449,7 +472,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -468,7 +492,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -487,7 +512,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -506,7 +532,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -525,7 +552,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -544,7 +572,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -563,7 +592,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -582,7 +612,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -599,7 +630,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+            isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -616,7 +648,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -633,7 +666,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -650,7 +684,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -667,7 +702,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -684,7 +720,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -701,7 +738,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -718,7 +756,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -735,7 +774,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -752,7 +792,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -769,7 +810,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -784,7 +826,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -799,7 +842,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -814,7 +858,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -829,7 +874,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -844,7 +890,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -861,7 +908,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -878,7 +926,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   activityType: state.activitySettingsForm.activityType,
                   activityAttendance: state.activitySettingsForm.activityAttendance
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -894,6 +943,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
               activityAttendance: state.activitySettingsForm.activityAttendance
             ),
             isEditingForm: true,
+            authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -908,7 +958,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                     isTicketBased: e.ticketBool
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -923,7 +974,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       isPassBased: e.passBool
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -938,7 +990,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       isLimitedAttendance: e.limitBool
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -953,7 +1006,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       attendanceLimit: e.limitInt
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -968,9 +1022,26 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       isTicketFixed: e.ticketBool
                   )
               ),
-              isEditingForm: true
+            isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
+
+      isTicketSlotBasedOnly: (e) async* {
+        yield state.copyWith(
+            activitySettingsForm: ActivityManagerForm(
+                activityFormId: state.activitySettingsForm.activityFormId,
+                profileService: state.activitySettingsForm.profileService,
+                rulesService: state.activitySettingsForm.rulesService,
+                activityType: state.activitySettingsForm.activityType,
+                activityAttendance: state.activitySettingsForm.activityAttendance.copyWith(
+                    isTicketPerSlotBased: e.ticketBool
+                )
+            ),
+            isEditingForm: true,
+            authFailureOrSuccessOptionSaving: none()
+        );
+      },
 
         isPassFixedChanged: (e) async* {
           yield state.copyWith(
@@ -983,7 +1054,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       isPassesFixed: e.passBool
                 )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -998,7 +1070,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       defaultActivityTickets: e.aTicket
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1013,7 +1086,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       activityTickets: e.ticketList
                 )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1030,7 +1104,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                     )
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1047,7 +1122,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       )
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1064,7 +1140,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       )
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1081,7 +1158,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       )
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1098,7 +1176,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       )
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1115,7 +1194,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                   )
                 )
               ),
-            isEditingForm: true
+            isEditingForm: true,
+            authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1132,7 +1212,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       )
                   )
               ),
-            isEditingForm: true
+            isEditingForm: true,
+            authFailureOrSuccessOptionSaving: none()
           );
         },
 
@@ -1147,7 +1228,8 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                       activityPasses: e.passesList
                   )
               ),
-              isEditingForm: true
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
           );
         },
 

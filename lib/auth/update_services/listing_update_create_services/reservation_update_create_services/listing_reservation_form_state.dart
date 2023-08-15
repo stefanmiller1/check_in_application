@@ -8,6 +8,7 @@ class ReservationFormState with _$ReservationFormState {
   factory ReservationFormState({
     required ReservationItem newFacilityBooking,
     required ListingManagerForm listing,
+    required UserProfileModel listingOwner,
     required bool isTermsConditionsAccepted,
     required bool isSavingCard,
 
@@ -29,6 +30,7 @@ class ReservationFormState with _$ReservationFormState {
   factory ReservationFormState.initial() => ReservationFormState(
       newFacilityBooking: ReservationItem.empty(),
       listing: ListingManagerForm.empty(),
+      listingOwner: UserProfileModel.empty(),
       isTermsConditionsAccepted: false,
       isSavingCard: false,
 

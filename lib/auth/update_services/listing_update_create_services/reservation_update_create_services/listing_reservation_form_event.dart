@@ -3,7 +3,7 @@ part of check_in_application;
 @freezed
 class ReservationFormEvent with _$ReservationFormEvent {
 
-  const factory ReservationFormEvent.initializedReservation(Option<ReservationItem> initialBooking, Option<ListingManagerForm> initListing) = _InitializedReservation;
+  const factory ReservationFormEvent.initializedReservation(Option<ReservationItem> initialBooking, Option<ListingManagerForm> initListing, Option<UserProfileModel> initialListingOwner) = _InitializedReservation;
   const factory ReservationFormEvent.isTermsConditionsChanged(bool terms) = _IsTermsConditionsChanged;
   const factory ReservationFormEvent.isSavingCardDetails(bool save) = _IsSavingCardDetails;
 
