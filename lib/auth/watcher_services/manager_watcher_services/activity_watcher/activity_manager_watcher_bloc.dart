@@ -10,7 +10,7 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
   // StreamSubscription<Either<ActivityFormFailure, ActivityManagerProfile>>? _activityManagerItemStreamSubscription;
   StreamSubscription<Either<ActivityFormFailure, ActivityManagerForm>>? _activityCreatorFormStreamSubscription;
   StreamSubscription<Either<ActivityFormFailure, List<ActivityManagerForm>>>? _allActivityCreatorFormsStreamSubscription;
-
+  StreamSubscription<Either<ActivityFormFailure, List<ActivityManagerForm>>>? _allActivityCreatorFormFromResStreamSubscription;
 
   @override
   Stream<ActivityManagerWatcherState> mapEventToState(
@@ -69,6 +69,23 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
                     (r) => ActivityManagerWatcherState.loadAllActivityManagerFormsSuccess(r)
             );
           },
+
+          watchActivityManagerFromReservations: (e) async* {
+            yield const ActivityManagerWatcherState.loadInProgress();
+            _allActivityCreatorFormFromResStreamSubscription?.cancel();
+
+            _allActivityCreatorFormFromResStreamSubscription = _aAuthFacade.watchAllActivityFormsFromRes(reservationIds: e.reservationIds).listen((event) {
+                return add(ActivityManagerWatcherEvent.activityManagerForsmFromReservationsReceived(event));
+            });
+          },
+
+          activityManagerForsmFromReservationsReceived: (e) async* {
+            yield e.failedItems.fold(
+                    (f) => ActivityManagerWatcherState.loadActivityManagerFromResFailure(f),
+                    (r) => ActivityManagerWatcherState.loadActivityManagerFromResSuccess(r),
+            );
+
+          }
       );
 
   }

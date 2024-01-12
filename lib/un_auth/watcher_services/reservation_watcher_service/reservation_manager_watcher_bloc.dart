@@ -11,6 +11,7 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
   StreamSubscription<Either<ReservationFormFailure, List<ReservationItem>>>? _currentUserReservationsListStreamSubscription;
   StreamSubscription<Either<ReservationFormFailure, List<Post>>>? _reservationPostListStreamSubscription;
   StreamSubscription<Either<ReservationFormFailure, ReservationItem>>? _reservationItemSubscription;
+  StreamSubscription<Either<ReservationFormFailure, List<ReservationItem>>>? _reservationDiscoveryListStreamSubscription;
 
   @override
   Stream<ReservationManagerWatcherState> mapEventToState(
@@ -59,7 +60,7 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
             yield const ReservationManagerWatcherState.resLoadInProgress();
             await _currentUserReservationsListStreamSubscription?.cancel();
 
-            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(currentUser: e.currentUser, isResInvitation: e.isResInvitation).listen((event) {
+            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(resState: e.resState, currentUser: e.currentUser, isResInvitation: e.isResInvitation).listen((event) {
                 return add(ReservationManagerWatcherEvent.currentUsersReservationsReceived(event));
             });
           },
@@ -92,6 +93,22 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
                     (f) => ReservationManagerWatcherState.loadReservationPostListFailure(f),
                     (r) => ReservationManagerWatcherState.loadReservationPostListSuccess(r)
             );
+          },
+
+          watchDiscoveryReservationsList: (e) async* {
+                yield const ReservationManagerWatcherState.resLoadInProgress();
+                await _reservationDiscoveryListStreamSubscription?.cancel();
+
+                _reservationDiscoveryListStreamSubscription = _resAuthFacade.watchDiscoveryReservationItems(resState: e.resState, hoursTimeAhead: e.hoursAhead, hoursTimeBefore: e.hoursPast).listen((event) {
+                  return add(ReservationManagerWatcherEvent.discoveryReservationListReceived(event));
+                });
+          },
+
+          discoveryReservationListReceived: (e) async* {
+              yield e.resItems.fold(
+                  (f) => ReservationManagerWatcherState.loadDiscoveryReservationItemFailure(f),
+                  (r) => ReservationManagerWatcherState.loadDiscoveryReservationItemSuccess(r)
+              );
           }
 
     );

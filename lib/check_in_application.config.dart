@@ -37,6 +37,8 @@ _i1.GetIt $initGetIt(
   );
   gh.factory<_i3.ActivityManagerWatcherBloc>(
       () => _i3.ActivityManagerWatcherBloc(get<_i4.AAuthWatcherFacade>()));
+  gh.factory<_i3.ActivityTicketWatcherBloc>(
+      () => _i3.ActivityTicketWatcherBloc(get<_i4.TWatcherFacade>()));
   gh.factory<_i5.AttendeeFormBloc>(() => _i5.AttendeeFormBloc(
         get<_i4.ATTAuthFacade>(),
         get<_i4.SStripeFacade>(),
@@ -98,8 +100,10 @@ _i1.GetIt $initGetIt(
       () => _i3.UpdateFacilityFormBloc(get<_i4.FAuthFacade>()));
   gh.factory<_i3.UpdateUserProfileAccountBloc>(
       () => _i3.UpdateUserProfileAccountBloc(get<_i4.IAuthFacade>()));
-  gh.factory<_i3.UserProfileWatcherBloc>(
-      () => _i3.UserProfileWatcherBloc(get<_i4.IAuthFacade>()));
+  gh.factory<_i3.UserProfileWatcherBloc>(() => _i3.UserProfileWatcherBloc(
+        get<_i4.IAuthFacade>(),
+        get<_i4.ATTAuthWatcherFacade>(),
+      ));
   gh.factory<_i3.UsersCurrentBookingsCountWatcherBloc>(
       () => _i3.UsersCurrentBookingsCountWatcherBloc(get<_i4.UnAuthFacade>()));
   return get;

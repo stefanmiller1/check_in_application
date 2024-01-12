@@ -44,6 +44,12 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           );
         },
 
+        attendeeIsSaving: (e) async* {
+            yield state.copyWith(
+              isSubmitting: e.save
+            );
+        },
+
 
         updateAttendeeContactDetails: (e) async* {
           yield state.copyWith(
@@ -105,40 +111,105 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
 
         isFinishedCreatingAttendee: (e) async* {
+          Either<AttendeeFormFailure, Unit> failureOrSuccess;
 
+          yield state.copyWith(
+            isSubmitting: true,
+            authFailureOrSuccessOption: none(),
+          );
+
+          failureOrSuccess = await _attFacade.createNewAttendee(
+              attendeeItem: state.attendeeItem,
+              activityForm: state.activityForm,
+              paymentIntentId: null);
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+
+        },
+
+
+        checkVendorLimits: (e) async* {
+          Either<AttendeeFormFailure, UserProfileModel> failureOrSuccessVendor;
+
+          yield state.copyWith(
+            isSubmitting: true,
+            authFailureOrSuccessOption: none(),
+            authFailureOrSuccessPaymentOption: none(),
+          );
+
+
+          failureOrSuccessVendor = (state.isSubmitting) ?
+          await _attFacade.checkVendorLimit(
+              attendeeItem: state.attendeeItem,
+              activityForm: state.activityForm,
+              currentUser: e.currentUserProfile) :
+          left(const AttendeeFormFailure.attendeeServerError());
+
+
+          /// vendor limit is reached
+          yield state.copyWith(
+              isSubmitting: false,
+              authFailureOrSuccessPaymentOption: optionOf(failureOrSuccessVendor)
+          );
         },
 
       /// put ticket on hold for web
       /// save ticket and attendee for web
 
         checkTicketLimits: (e) async* {
-          Either<AttendeeFormFailure, Unit> failureOrSuccessTicket;
+          Either<AttendeeFormFailure, UserProfileModel> failureOrSuccessTicket;
 
           yield state.copyWith(
             isSubmitting: true,
-            authFailureOrSuccessTicketOption: none(),
+            authFailureOrSuccessOption: none(),
+            authFailureOrSuccessPaymentOption: none(),
           );
 
 
-          failureOrSuccessTicket = (state.isSubmitting == false) ?
+          failureOrSuccessTicket = (state.isSubmitting) ?
               await _attFacade.checkTicketLimit(
                   attendeeItem: state.attendeeItem,
-                  activityForm: state.activityForm) :
+                  activityForm: state.activityForm,
+                  currentUser: e.currentUserProfile) :
               left(const AttendeeFormFailure.attendeeServerError());
 
 
               /// tickets on hold added but limit was reached
               yield state.copyWith(
                   isSubmitting: false,
-                  authFailureOrSuccessTicketOption: optionOf(failureOrSuccessTicket)
+                  authFailureOrSuccessPaymentOption: optionOf(failureOrSuccessTicket)
             );
         },
+
+        createTicketsOnHold: (e) async* {
+          Either<AttendeeFormFailure, Unit> failureOrSuccess;
+
+          yield state.copyWith(
+            authFailureOrSuccessOnHoldTicketOption: none(),
+          );
+
+          failureOrSuccess = await _attFacade.createNewTicket(
+              attendeeItem: state.attendeeItem,
+              activityForm: state.activityForm,
+              isOnHold: true
+          );
+
+          yield state.copyWith(
+              authFailureOrSuccessOnHoldTicketOption: optionOf(failureOrSuccess)
+          );
+        },
+
+
 
         isFinishedCreatingTicketAttendeeWeb: (e) async* {
           Either<AttendeeFormFailure, Unit> failureOrSuccess;
 
           yield state.copyWith(
               isSubmitting: true,
+              authFailureOrSuccessPaymentOption: none(),
               authFailureOrSuccessOption: none(),
           );
 
@@ -164,31 +235,19 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
 
 
-
     isFinishedCreatingTicketAttendee: (e) async* {
           Either<AttendeeFormFailure, Unit> failureOrSuccess;
           Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
 
           yield state.copyWith(
-              isSubmitting: true,
+              isSubmitting:  true,
+              authFailureOrSuccessPaymentOption: none(),
               authFailureOrSuccessOption: none(),
               authPaymentFailureOrSuccessOption: none()
           );
 
-          /// is ticket date valid? - create value object to check all ticket items by date...
-          // if (state.activityForm.activityAttendance.isTicketPerSlotBased == true && state.attendeeItem.ticketItems.reservationTimeSlot?.slotRange.start.isAfter(DateTime.now()) == true) {
-          //   yield state.copyWith(
-          //       isSubmitting: false,
-          //       authFailureOrSuccessOption: optionOf(left(const AttendeeFormFailure.ticketsNoLongerAvailable()))
-          //   );
-          //   return;
-          // }
-
           /// put selected tickets on hold temporarily if ticket count is below ticket limit after holding total tickets
-          failureOrSuccess = (state.isSubmitting == false) ?
-          await _attFacade.createNewTicket(attendeeItem: state.attendeeItem, activityForm: state.activityForm, isOnHold: true) :
-          left(const AttendeeFormFailure.attendeeServerError());
-
+          failureOrSuccess = await _attFacade.createNewTicket(attendeeItem: state.attendeeItem, activityForm: state.activityForm, isOnHold: true);
 
           /// tickets on hold added but limit was reached
           if (failureOrSuccess.isLeft()) {
@@ -210,7 +269,8 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
                                   listingOwnerStripeId: state.reservationOwner.stripeAccountId,
                                   amount: e.amount,
                                   currency: e.currency,
-                                  paymentMethod: e.paymentMethod
+                                  paymentMethod: e.paymentMethod,
+                                  description: 'Ticket to be sold and to be made redeemable for a specific Reservation'
           ));
 
           /// after payment is complete successfully - save confirmed tickets and new attendee.
@@ -230,6 +290,8 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
                             isOnHold: false
                           )
                         );
+
+
 
           yield state.copyWith(
             authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
@@ -252,6 +314,7 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
           yield state.copyWith(
             isSubmitting: true,
+            authFailureOrSuccessPaymentOption: none(),
             authFailureOrSuccessOption: none()
           );
 
@@ -265,20 +328,36 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           }
 
           failureOrSuccess = state.isSubmitting ?
-          left(const AttendeeFormFailure.attendeeServerError(failed: 'cannot invite new attendee')) :
           await _attFacade.createNewAttendee(
               attendeeItem: state.attendeeItem,
               activityForm: state.activityForm,
               paymentIntentId: null
-          );
+          ) : left(const AttendeeFormFailure.attendeeServerError(failed: 'cannot invite new attendee'));
 
           yield state.copyWith(
             isSubmitting: false,
             authFailureOrSuccessOption: optionOf(failureOrSuccess)
-          );
+        );
+      },
 
+      didDeleteAttendee: (e) async* {
+        Either<AttendeeFormFailure, Unit> failureOrSuccess;
 
-        },
+        yield state.copyWith(
+          isSubmitting: true,
+          authFailureOrSuccessOption: none(),
+        );
+
+        failureOrSuccess = await _attFacade.deleteAttendee(
+            attendeeItem: state.attendeeItem,
+            activityForm: state.activityForm);
+
+        yield state.copyWith(
+            isSubmitting: false,
+            authFailureOrSuccessOption: optionOf(failureOrSuccess)
+        );
+
+      },
     );
   }
 

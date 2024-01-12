@@ -19,14 +19,15 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
     UniqueId? selectedListingId,
     Iterable<ReservationTimeFeeSlotItem>? selectedReservationsSlots,
     int? durationType,
-    required SearchListingType searchType,
     required Iterable<ListingManagerForm> listings,
     required Iterable<ReservationItem> reservation,
     required Set<Marker> markers,
     required bool isMarkersLoading,
+    required DashboardMarker currentDashboardMarker,
 }) = _SearchListingsState;
 
   factory ListingsSearchRequirementsState.initial() => ListingsSearchRequirementsState(
+    currentDashboardMarker: DashboardMarker.home,
     locationItemId: null,
     locationCityFromMap: null,
     historyLocationSearch: [],
@@ -38,7 +39,6 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
     isSomeWhereNear: null,
     selectedListingId: null,
     durationType: null,
-    searchType: SearchListingType.facilities,
     selectedReservationsSlots: [],
     activtityTypeId: getActivityOptions()[0].activityId,
     markers: {},

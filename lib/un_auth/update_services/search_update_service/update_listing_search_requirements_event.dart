@@ -3,6 +3,8 @@ part of check_in_application;
 @freezed
 class ListingsSearchRequirementsEvent with _$ListingsSearchRequirementsEvent {
 
+  const factory ListingsSearchRequirementsEvent.currentDashboardMarker(DashboardMarker marker) = _CurrentDashboardMarker;
+
   const factory ListingsSearchRequirementsEvent.locationItemIdRequiredChanged(UniqueId? locationId) = _LocationItemIdRequiredChanged;
   const factory ListingsSearchRequirementsEvent.locationCotyFromMapChanged(String? locationStr) = _LocationCotyFromMapChanged;
   const factory ListingsSearchRequirementsEvent.locationIsSomewhereNearChanged(bool? locationBool) = _LocationIsSomewhereNearChanged;
@@ -25,7 +27,5 @@ class ListingsSearchRequirementsEvent with _$ListingsSearchRequirementsEvent {
   const factory ListingsSearchRequirementsEvent.isMarkersLoading(bool markerBool) = _IsMarkersLoading;
 
   const factory ListingsSearchRequirementsEvent.selectedListingIdChanged(UniqueId? selectedId) = _SelectedListingIdChanged;
-
-  const factory ListingsSearchRequirementsEvent.selectedSearchTypeChanged(SearchListingType searchType) = _SelectedSearchTypeChanged;
 
 }

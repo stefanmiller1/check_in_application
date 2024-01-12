@@ -166,91 +166,113 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
           );
       },
 
-      isFinishedConfirmPaymentIntent: (e) async* {
+      // isFinishedConfirmPaymentIntent: (e) async* {
+      //   Either<ReservationFormFailure, Unit> failureOrSuccess;
+      //   Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
+      //
+      //   yield state.copyWith(
+      //     isSubmitting: true,
+      //     authFailureOrSuccessOption: none(),
+      //     authPaymentFailureOrSuccessOption: none(),
+      //   );
+      //
+      //   failurePaymentClientFailureOrSuccess = state.isSubmitting ? left(PaymentMethodValueFailure.paymentServerError()) : await _stripeFacade.confirmExistingPaymentIntent(paymentIntentId: e.paymentIntentId);
+      //
+      //   // failureOrSuccess = await failurePaymentClientFailureOrSuccess.fold(
+      //   //         (l) => left(ReservationFormFailure.reservationServerError()),
+      //   //         (paymentIntent) => _reservationFormFacade.createReservationForm(reservationForm: state.newFacilityBooking, paymentIntentId: paymentIntent.stringItemOne)
+      //   // );
+      //
+      //
+      //   yield state.copyWith(
+      //       authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
+      //       // authFailureOrSuccessOption: optionOf(failureOrSuccess),
+      //       isSubmitting: false
+      //   );
+      // },
+
+      // createPaymentIntentForBooking: (e) async* {
+      //   Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
+      //   Either<ReservationFormFailure, Unit> failureOrSuccess;
+      //
+      //   final isInstanceValid = state.newFacilityBooking.instanceId.isValid();
+      //   final isValid = state.newFacilityBooking.reservationId.isValid();
+      //
+      //   if (isInstanceValid && isValid) {
+      //     yield state.copyWith(
+      //       isSubmitting: true,
+      //       authFailureOrSuccessOption: none(),
+      //       authPaymentFailureOrSuccessOption: none(),
+      //     );
+      //
+      //     if (isAllDatesValid(state.newFacilityBooking.reservationSlotItem)) {
+      //       failureOrSuccess = left(ReservationFormFailure.datesNoLongerAvailable(currentRes: invalidReservationItems(state.newFacilityBooking.reservationSlotItem)));
+      //       yield state.copyWith(
+      //         isSubmitting: false,
+      //         authFailureOrSuccessOption: optionOf(failureOrSuccess)
+      //       );
+      //       return;
+      //     }
+      //
+      //     failurePaymentClientFailureOrSuccess = state.isSubmitting ?
+      //     left(PaymentMethodValueFailure.couldNotRetrievePaymentMethod()) :
+      //     await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
+      //         userProfile: e.profile,
+      //         reservationId: state.newFacilityBooking.reservationId,
+      //         listingId: state.newFacilityBooking.instanceId,
+      //         listingOwnerStripeId: state.listingOwner.stripeAccountId,
+      //         amount: e.amount,
+      //         currency: e.currency,
+      //         paymentMethod: e.paymentMethod,
+      //         description: 'Reservation to be made for a specific Listing posted on CICO.'
+      //     );
+      //
+      //
+      //     yield state.copyWith(
+      //         isSubmitting: false,
+      //         authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
+      //     );
+      //   }
+      // },
+
+      // createReservationFormForBooking: (e) async* {
+      //
+      //   Either<ReservationFormFailure, Unit> failureOrSuccess;
+      //
+      //   yield state.copyWith(
+      //     isSubmitting: true,
+      //     authFailureOrSuccessOption: none(),
+      //   );
+      //
+      //   failureOrSuccess = await state.authPaymentFailureOrSuccessOption.fold(
+      //           () => left(const ReservationFormFailure.reservationServerError()),
+      //           (r) => r.fold(
+      //                   (l) =>  left(const ReservationFormFailure.reservationServerError()),
+      //                   (r) => _reservationFormFacade.createReservationForm(
+      //                       reservationForm: state.newFacilityBooking,
+      //                       listing: state.listing,
+      //                       paymentIntentId: r.stringItemTwo)
+      //           )
+      //   );
+      //
+      //   yield state.copyWith(
+      //     isSubmitting: false,
+      //     authFailureOrSuccessOption: optionOf(failureOrSuccess)
+      //   );
+      // },
+
+      isFinishedCreatingReservationWeb: (e) async* {
         Either<ReservationFormFailure, Unit> failureOrSuccess;
-        Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
 
         yield state.copyWith(
           isSubmitting: true,
-          authFailureOrSuccessOption: none(),
-          authPaymentFailureOrSuccessOption: none(),
+          authFailureOrSuccessOption: none()
         );
 
-        failurePaymentClientFailureOrSuccess = state.isSubmitting ? left(PaymentMethodValueFailure.paymentServerError()) : await _stripeFacade.confirmExistingPaymentIntent(paymentIntentId: e.paymentIntentId);
-
-        // failureOrSuccess = await failurePaymentClientFailureOrSuccess.fold(
-        //         (l) => left(ReservationFormFailure.reservationServerError()),
-        //         (paymentIntent) => _reservationFormFacade.createReservationForm(reservationForm: state.newFacilityBooking, paymentIntentId: paymentIntent.stringItemOne)
-        // );
-
-
-        yield state.copyWith(
-            authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
-            // authFailureOrSuccessOption: optionOf(failureOrSuccess),
-            isSubmitting: false
-        );
-      },
-
-      createPaymentIntentForBooking: (e) async* {
-        Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
-        Either<ReservationFormFailure, Unit> failureOrSuccess;
-
-        final isInstanceValid = state.newFacilityBooking.instanceId.isValid();
-        final isValid = state.newFacilityBooking.reservationId.isValid();
-
-        if (isInstanceValid && isValid) {
-          yield state.copyWith(
-            isSubmitting: true,
-            authFailureOrSuccessOption: none(),
-            authPaymentFailureOrSuccessOption: none(),
-          );
-
-          if (isAllDatesValid(state.newFacilityBooking.reservationSlotItem)) {
-            failureOrSuccess = left(ReservationFormFailure.datesNoLongerAvailable(currentRes: invalidReservationItems(state.newFacilityBooking.reservationSlotItem)));
-            yield state.copyWith(
-              isSubmitting: false,
-              authFailureOrSuccessOption: optionOf(failureOrSuccess)
-            );
-            return;
-          }
-
-          failurePaymentClientFailureOrSuccess = state.isSubmitting ?
-          left(PaymentMethodValueFailure.couldNotRetrievePaymentMethod()) :
-          await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
-              userProfile: e.profile,
-              reservationId: state.newFacilityBooking.reservationId,
-              listingId: state.newFacilityBooking.instanceId,
-              listingOwnerStripeId: state.listingOwner.stripeAccountId,
-              amount: e.amount,
-              currency: e.currency,
-              paymentMethod: e.paymentMethod);
-
-
-          yield state.copyWith(
-              isSubmitting: false,
-              authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
-          );
-        }
-      },
-
-      createReservationFormForBooking: (e) async* {
-
-        Either<ReservationFormFailure, Unit> failureOrSuccess;
-
-        yield state.copyWith(
-          isSubmitting: true,
-          authFailureOrSuccessOption: none(),
-        );
-
-        failureOrSuccess = await state.authPaymentFailureOrSuccessOption.fold(
-                () => left(const ReservationFormFailure.reservationServerError()),
-                (r) => r.fold(
-                        (l) =>  left(const ReservationFormFailure.reservationServerError()),
-                        (r) => _reservationFormFacade.createReservationForm(
-                            reservationForm: state.newFacilityBooking,
-                            listing: state.listing,
-                            paymentIntentId: r.stringItemTwo)
-                )
+        failureOrSuccess = await _reservationFormFacade.createReservationForm(
+            reservationForm: state.newFacilityBooking,
+            listing: state.listing,
+            paymentIntentId: e.paymentIntentId
         );
 
         yield state.copyWith(
@@ -260,13 +282,14 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
 
       },
 
-
-      isFinishedCreatingBooking: (e) async* {
+      isFinishedCreatingReservation: (e) async* {
           Either<ReservationFormFailure, Unit> failureOrSuccess;
           Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
 
           final isInstanceValid = state.newFacilityBooking.instanceId.isValid();
           final isValid = state.newFacilityBooking.reservationId.isValid();
+
+          print('STARTING');
 
 
           if (isInstanceValid && isValid) {
@@ -293,7 +316,9 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
                 listingOwnerStripeId: state.listingOwner.stripeAccountId,
                 amount: e.amount,
                 currency: e.currency,
-                paymentMethod: e.paymentMethod);
+                paymentMethod: e.paymentMethod,
+                description: 'Reservation to be made for a specific Listing posted on CICO.'
+            );
 
 
             failureOrSuccess = await failurePaymentClientFailureOrSuccess.fold(
@@ -315,49 +340,51 @@ class ReservationFormBloc extends Bloc<ReservationFormEvent, ReservationFormStat
       },
 
 
-      isFinishedCreatingBookingMobile: (e) async* {
-        Either<ReservationFormFailure, Unit> failureOrSuccess;
-        Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
-
-
-        final isInstanceValid = state.newFacilityBooking.instanceId.isValid();
-        final isValid = state.newFacilityBooking.reservationId.isValid();
-
-        if (isInstanceValid && isValid) {
-          yield state.copyWith(
-            isSubmitting: true,
-            authFailureOrSuccessOption: none(),
-            authPaymentFailureOrSuccessOption: none(),
-          );
-
-          if (isAllDatesValid(state.newFacilityBooking.reservationSlotItem)) {
-            failureOrSuccess = left(ReservationFormFailure.datesNoLongerAvailable(currentRes: invalidReservationItems(state.newFacilityBooking.reservationSlotItem)));
-            yield state.copyWith(
-                isSubmitting: false,
-                authPaymentFailureOrSuccessOption: none(),
-                authFailureOrSuccessOption: optionOf(failureOrSuccess)
-            );
-            return;
-          }
-
-          failurePaymentClientFailureOrSuccess = state.isSubmitting ? left(PaymentMethodValueFailure.couldNotRetrievePaymentMethod()) : await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
-              userProfile: e.profile,
-              reservationId: state.newFacilityBooking.reservationId,
-              listingId: state.newFacilityBooking.instanceId,
-              listingOwnerStripeId: state.listingOwner.stripeAccountId,
-              amount: e.amount,
-              currency: e.currency,
-              paymentMethod: e.paymentMethod);
-
-
-          yield state.copyWith(
-              authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
-              authFailureOrSuccessOption: none(),
-              isSubmitting: false
-          );
-
-        }
-      },
+      // isFinishedCreatingBookingMobile: (e) async* {
+      //   Either<ReservationFormFailure, Unit> failureOrSuccess;
+      //   Either<PaymentMethodValueFailure, StringStringItems> failurePaymentClientFailureOrSuccess;
+      //
+      //
+      //   final isInstanceValid = state.newFacilityBooking.instanceId.isValid();
+      //   final isValid = state.newFacilityBooking.reservationId.isValid();
+      //
+      //   if (isInstanceValid && isValid) {
+      //     yield state.copyWith(
+      //       isSubmitting: true,
+      //       authFailureOrSuccessOption: none(),
+      //       authPaymentFailureOrSuccessOption: none(),
+      //     );
+      //
+      //     if (isAllDatesValid(state.newFacilityBooking.reservationSlotItem)) {
+      //       failureOrSuccess = left(ReservationFormFailure.datesNoLongerAvailable(currentRes: invalidReservationItems(state.newFacilityBooking.reservationSlotItem)));
+      //       yield state.copyWith(
+      //           isSubmitting: false,
+      //           authPaymentFailureOrSuccessOption: none(),
+      //           authFailureOrSuccessOption: optionOf(failureOrSuccess)
+      //       );
+      //       return;
+      //     }
+      //
+      //     failurePaymentClientFailureOrSuccess = state.isSubmitting ? left(PaymentMethodValueFailure.couldNotRetrievePaymentMethod()) : await _stripeFacade.processAndConfirmPaymentAsDirectCharge(
+      //         userProfile: e.profile,
+      //         reservationId: state.newFacilityBooking.reservationId,
+      //         listingId: state.newFacilityBooking.instanceId,
+      //         listingOwnerStripeId: state.listingOwner.stripeAccountId,
+      //         amount: e.amount,
+      //         currency: e.currency,
+      //         paymentMethod: e.paymentMethod,
+      //         description: 'Reservation to be made for a specific Listing posted on CICO.'
+      //     );
+      //
+      //
+      //     yield state.copyWith(
+      //         authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
+      //         authFailureOrSuccessOption: none(),
+      //         isSubmitting: false
+      //     );
+      //
+      //   }
+      // },
 
 
 

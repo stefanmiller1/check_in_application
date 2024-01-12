@@ -38,7 +38,7 @@ class PublicListingWatcherBloc extends Bloc<PublicListingWatcherEvent, PublicLis
               yield const PublicListingWatcherState.listingsLoadInProgress();
               await _allSearchedListingItemsStreamSubscription?.cancel();
 
-              _allSearchedListingItemsStreamSubscription = _lFacade.watchSearchedListingItems(e.countriesFilter, e.city, e.stateProvince, e.isVerified).listen(
+              _allSearchedListingItemsStreamSubscription = _lFacade.watchSearchedListingItems(e.status, e.stateProvince, e.city, e.isVerified).listen(
                       (event) {
                     return add(PublicListingWatcherEvent.allSearchedListingItemsReceived(event));
                   });

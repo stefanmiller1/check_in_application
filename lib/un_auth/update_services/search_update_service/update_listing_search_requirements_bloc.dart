@@ -11,6 +11,11 @@ class ListingsSearchRequirementsBloc extends Bloc<ListingsSearchRequirementsEven
 
     yield* event.map(
 
+        currentDashboardMarker: (e) async* {
+          yield state.copyWith(
+              currentDashboardMarker: e.marker
+          );
+        },
 
         locationItemIdRequiredChanged: (e) async* {
           yield state.copyWith(
@@ -51,12 +56,6 @@ class ListingsSearchRequirementsBloc extends Bloc<ListingsSearchRequirementsEven
         searchDurationTypeChanged: (e) async* {
           yield state.copyWith(
               durationType: e.durationInt
-          );
-        },
-
-        selectedSearchTypeChanged: (e) async* {
-          yield state.copyWith(
-              searchType: e.searchType
           );
         },
 

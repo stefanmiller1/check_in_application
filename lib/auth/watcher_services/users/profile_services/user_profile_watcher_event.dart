@@ -32,4 +32,7 @@ class UserProfileWatcherEvent with _$UserProfileWatcherEvent {
   const factory UserProfileWatcherEvent.watchSearchedProfileStarted(String query) = _WatchSearchedProfileStarted;
   const factory UserProfileWatcherEvent.searchedProfileReceived(Either<AuthFailure, List<UserProfileModel>> failedQuery) = _SearchedProfileReceived;
 
+  const factory UserProfileWatcherEvent.watchProfileAllAttendingResStarted() = _WatchProfileAllAttendingResStarted;
+  const factory UserProfileWatcherEvent.profileAllAttendingResReceived(Either<AttendeeFormFailure, List<AttendeeItem>> failedList) = _ProfileAllAttendingResReceived;
+
 }

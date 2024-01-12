@@ -8,13 +8,15 @@ class InvitationFormState with _$InvitationFormState {
   factory InvitationFormState({
     required Iterable<ContactDetails> inviteList,
     required bool isSubmitting,
-    required Option<Either<AuthFailure, Unit>> authFailureOrSuccess
+    required Option<Either<AttendeeFormFailure, Unit>> authFailureOrSuccess,
+    required Option<Either<AttendeeFormFailure, Unit>> authFailureRemoveAttendeeOrSuccess,
 }) = _InvitationFormState;
 
   factory InvitationFormState.initial() => InvitationFormState(
     inviteList: [],
     isSubmitting: false,
-    authFailureOrSuccess: none()
+    authFailureOrSuccess: none(),
+    authFailureRemoveAttendeeOrSuccess: none()
   );
 
 }

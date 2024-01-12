@@ -2,6 +2,7 @@ library check_in_application;
 
 import 'dart:async';
 
+import 'package:check_in_domain/domain/misc/attendee_services/attendee_item/attendee_item.dart';
 import 'package:dartz/dartz.dart';
 import 'package:check_in_credentials/check_in_credentials.dart';
 import 'package:check_in_domain/check_in_domain.dart';
@@ -60,6 +61,9 @@ part 'auth/update_services/user_update_account_services/account_services/create_
 part 'auth/watcher_services/manager_watcher_services/activity_watcher/activity_manager_watcher_bloc.dart';
 part 'auth/watcher_services/manager_watcher_services/activity_watcher/activity_manager_watcher_event.dart';
 part 'auth/watcher_services/manager_watcher_services/activity_watcher/activity_manager_watcher_state.dart';
+part 'auth/watcher_services/manager_watcher_services/activity_watcher/ticket_watcher/activity_ticket_watcher_bloc.dart';
+part 'auth/watcher_services/manager_watcher_services/activity_watcher/ticket_watcher/activity_ticket_watcher_event.dart';
+part 'auth/watcher_services/manager_watcher_services/activity_watcher/ticket_watcher/activity_ticket_watcher_state.dart';
 part 'auth/watcher_services/manager_watcher_services/facility_watcher/facility_manager_watcher_bloc.dart';
 part 'auth/watcher_services/manager_watcher_services/facility_watcher/facility_manager_watcher_event.dart';
 part 'auth/watcher_services/manager_watcher_services/facility_watcher/facility_manager_watcher_state.dart';

@@ -20,6 +20,10 @@ class AttendeeManagerWatcherBloc extends Bloc<AttendeeManagerWatcherEvent, Atten
   AttendeeManagerWatcherBloc(this._attWatcherFacade) : super(const AttendeeManagerWatcherState.attInitial());
 
   StreamSubscription<Either<AttendeeFormFailure, List<AttendeeItem>>>? _attendanceListStreamSubscription;
+  StreamSubscription<Either<AttendeeFormFailure, int>>? _attendanceCountStreamSubscription;
+  StreamSubscription<Either<AttendeeFormFailure, List<AttendeeItem>>>? _allAttendanceListStreamSubscription;
+  StreamSubscription<Either<AttendeeFormFailure, AttendeeItem>>? _attendanceItemStreamSubscription;
+
 
   @override
   Stream<AttendeeManagerWatcherState> mapEventToState(
@@ -31,7 +35,7 @@ class AttendeeManagerWatcherBloc extends Bloc<AttendeeManagerWatcherEvent, Atten
           yield const AttendeeManagerWatcherState.attLoadInProgress();
           await _attendanceListStreamSubscription?.cancel();
 
-          _attendanceListStreamSubscription = _attWatcherFacade.watchAllAttendeesList(attendeeType: e.attendanceType, activityId: e.activityId).listen((event) {
+          _attendanceListStreamSubscription = _attWatcherFacade.watchAllAttendeesByTypeList(attendeeType: e.attendanceType, activityId: e.activityId).listen((event) {
               return add(AttendeeManagerWatcherEvent.allAttendanceReceivedByType(event));
           });
         },
@@ -40,6 +44,55 @@ class AttendeeManagerWatcherBloc extends Bloc<AttendeeManagerWatcherEvent, Atten
           yield e.failedItems.fold(
                   (f) => AttendeeManagerWatcherState.loadAllAttendanceFailure(f),
                   (r) => AttendeeManagerWatcherState.loadAllAttendanceSuccess(r)
+          );
+        },
+
+        watchAttendanceCountByType: (e) async* {
+          yield const AttendeeManagerWatcherState.attLoadInProgress();
+          await _attendanceCountStreamSubscription?.cancel();
+
+          _attendanceCountStreamSubscription = _attWatcherFacade.watchAllAttendeesByCount(attendeeType: e.attendanceType, activityId: e.activityId).listen((event) {
+            return add(AttendeeManagerWatcherEvent.attendanceCountByTypeReceived(event));
+          });
+
+        },
+
+        attendanceCountByTypeReceived: (e) async* {
+          yield e.failedItem.fold(
+                  (f) => AttendeeManagerWatcherState.loadAttendanceCountByTypeFailure(f),
+                  (r) => AttendeeManagerWatcherState.loadAttendanceCountByTypeSuccess(r)
+          );
+        },
+
+        watchAllAttendance: (e) async* {
+          yield const AttendeeManagerWatcherState.attLoadInProgress();
+          await _allAttendanceListStreamSubscription?.cancel();
+
+          _allAttendanceListStreamSubscription = _attWatcherFacade.watchAllAttendees(activityId: e.activityId).listen((event) {
+            return add(AttendeeManagerWatcherEvent.allAttendanceReceived(event));
+          });
+        },
+
+        allAttendanceReceived: (e) async* {
+          yield e.failedItems.fold(
+                  (f) => AttendeeManagerWatcherState.loadAllAttendanceActivityFailure(f),
+                  (r) => AttendeeManagerWatcherState.loadAllAttendanceActivitySuccess(r)
+          );
+        },
+
+
+        watchAttendeeItem: (e) async* {
+          yield const AttendeeManagerWatcherState.attLoadInProgress();
+
+          _attendanceItemStreamSubscription = _attWatcherFacade.watchAttendeeItem(activityId: e.activityId, attendeeId: e.attendeeId).listen((event) {
+            return add(AttendeeManagerWatcherEvent.attendeeItemReceived(event));
+          });
+        },
+
+        attendeeItemReceived: (e) async* {
+          yield e.failedItem.fold(
+                  (f) => AttendeeManagerWatcherState.loadAttendeeItemFailure(f),
+                  (r) => AttendeeManagerWatcherState.loadAttendeeItemSuccess(r)
           );
         }
     );

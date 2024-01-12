@@ -17,4 +17,7 @@ class ReservationManagerWatcherState with _$ReservationManagerWatcherState {
 
   const factory ReservationManagerWatcherState.loadReservationItemSuccess(ReservationItem item) = _LoadReservationItemSuccess;
   const factory ReservationManagerWatcherState.loadReservationItemFailure(ReservationFormFailure failure) = _LoadReservationItemFailure;
+
+  const factory ReservationManagerWatcherState.loadDiscoveryReservationItemSuccess(List<ReservationItem> item) = _LoadDiscoveryReservationItemSuccess;
+  const factory ReservationManagerWatcherState.loadDiscoveryReservationItemFailure(ReservationFormFailure failure) = _LoadDiscoveryReservationItemFailure;
 }

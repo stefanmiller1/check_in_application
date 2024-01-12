@@ -9,4 +9,15 @@ class AttendeeManagerWatcherState with _$AttendeeManagerWatcherState {
   const factory AttendeeManagerWatcherState.loadAllAttendanceSuccess(List<AttendeeItem> item) = _LoadAllAttendanceSuccess;
   const factory AttendeeManagerWatcherState.loadAllAttendanceFailure(AttendeeFormFailure failure) = _LoadAllAttendanceFailure;
 
+  const factory AttendeeManagerWatcherState.loadAttendanceCountByTypeSuccess(int item) = _LoadAttendanceCountByTypeSuccess;
+  const factory AttendeeManagerWatcherState.loadAttendanceCountByTypeFailure(AttendeeFormFailure failure) = _LoadAttendanceCountByTypeFailure;
+
+  const factory AttendeeManagerWatcherState.loadAllAttendanceActivitySuccess(List<AttendeeItem> item) = _LoadAllAttendanceActivitySuccess;
+  const factory AttendeeManagerWatcherState.loadAllAttendanceActivityFailure(AttendeeFormFailure failure) = _LoadAllAttendanceActivityFailure;
+
+  const factory AttendeeManagerWatcherState.loadAttendeeItemSuccess(AttendeeItem item) = _LoadAttendeeItemSuccess;
+  const factory AttendeeManagerWatcherState.loadAttendeeItemFailure(AttendeeFormFailure failure) = _LoadAttendeeItemFailure;
+
+
+
 }

@@ -5,6 +5,7 @@ class BookedReservationFormEvent with _$BookedReservationFormEvent {
 
   const factory BookedReservationFormEvent.initializedPostForm(Option<Post> initialPost) = _InitializedPostForm;
 
+  const factory BookedReservationFormEvent.postIsSaving(bool save) = _PostIsSaving;
   const factory BookedReservationFormEvent.textPostChanged(TextPost textPost) = _TextPostChanged;
   const factory BookedReservationFormEvent.audioPostChanged(AudioPost audioPost) = _AudioPostChanged;
   const factory BookedReservationFormEvent.imagesChanged(List<ImagePost> videoPosts) = _ImagesChanged;

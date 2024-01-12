@@ -92,25 +92,9 @@ class CreateLocationBloc extends Bloc<CreateLocationEvent, CreateLocationState> 
 
         countryChanged: (e) async* {
           yield state.copyWith(
-            location: LocationModel(
-              ownerId: state.location.ownerId,
-              placeId: state.location.placeId,
-              longLat: state.location.longLat,
-              locationPosition: state.location.locationPosition,
-              countryRegion: e.countryStr,
-              city: state.location.city,
-              provinceState: state.location.provinceState,
-              street: state.location.street,
-              postalCode: state.location.postalCode,
-              isLocationConfirmed: state.location.isLocationConfirmed,
-              isUnverified: state.location.isUnverified,
-              isVerified: state.location.isVerified,
-              isVerifiedAlready: state.location.isVerifiedAlready,
-              isCompleted: state.location.isCompleted,
-              aptUnitNumber: state.location.aptUnitNumber,
-              locationType: state.location.locationType,
+            location: state.location.copyWith(
+                countryRegion: e.countryStr
             ),
-
             authFailureOrSuccessOption: none(),
           );
         },

@@ -38,6 +38,12 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
           );
         },
 
+        isSavingChanged: (e) async* {
+          yield state.copyWith(
+            isSaving: e.boolSave
+          );
+        },
+
         activityOptionChanged: (e) async* {
             yield state.copyWith(
                 activitySettingsForm: ActivityManagerForm(
@@ -143,8 +149,26 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
           );
         },
 
+      isInstructorInviteOnly: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService.copyWith(
+                      activityBackground: state.activitySettingsForm.profileService.activityBackground.copyWith(
+                          isInstructorInviteOnly: e.inviteBool
+                      )
+                  ),
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance
+              ),
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
+          );
+      },
 
-        activityGoalsChanged: (e) async* {
+
+      activityGoalsChanged: (e) async* {
           yield state.copyWith(
               activitySettingsForm: ActivityManagerForm(
                   activityFormId: state.activitySettingsForm.activityFormId,
@@ -446,6 +470,69 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
                               isMerchantInviteOnly: e.inviteBool
                           )
                       )
+                  ),
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance
+              ),
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
+          );
+        },
+
+
+        merchantLimitChanged: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService.copyWith(
+                      activityRequirements: state.activitySettingsForm.profileService.activityRequirements.copyWith(
+                          eventActivityRulesRequirement: EventActivityRulesRequirement(
+                              isMerchantSupported: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isMerchantSupported ?? EventActivityRulesRequirement.empty().isMerchantSupported,
+                              isMerchantInviteOnly: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isMerchantInviteOnly ?? EventActivityRulesRequirement.empty().isMerchantInviteOnly,
+                              merchantFee: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.merchantFee,
+                              merchantLimit: e.merchLimit,
+                              isAlcoholForSale: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isAlcoholForSale ?? EventActivityRulesRequirement.empty().isAlcoholForSale,
+                              isFoodForSale: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFoodForSale ?? EventActivityRulesRequirement.empty().isFoodForSale,
+                              isAlcoholProvided: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isAlcoholProvided ?? EventActivityRulesRequirement.empty().isAlcoholProvided,
+                              isFacilityProvidedAlcohol: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFacilityProvidedAlcohol ?? EventActivityRulesRequirement.empty().isFacilityProvidedAlcohol,
+                              isFoodProvided: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFoodProvided ?? EventActivityRulesRequirement.empty().isFoodProvided,
+                              isFacilityProvidedFood: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFacilityProvidedFood ?? EventActivityRulesRequirement.empty().isFacilityProvidedFood,
+                              isSecurityProvided: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isSecurityProvided ?? EventActivityRulesRequirement.empty().isSecurityProvided,
+                              isFacilityProvidedSecurity: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFacilityProvidedSecurity ?? EventActivityRulesRequirement.empty().isFacilityProvidedSecurity
+                          )
+                      )
+                  ),
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance
+              ),
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
+          );
+        },
+
+        merchantFeeChanged: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService.copyWith(
+                      activityRequirements: state.activitySettingsForm.profileService.activityRequirements.copyWith(
+                          eventActivityRulesRequirement: EventActivityRulesRequirement(
+                            isMerchantSupported: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isMerchantSupported ?? EventActivityRulesRequirement.empty().isMerchantSupported,
+                            isMerchantInviteOnly: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isMerchantInviteOnly ?? EventActivityRulesRequirement.empty().isMerchantInviteOnly,
+                            merchantFee: e.merchFee,
+                            merchantLimit: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.merchantLimit,
+                            isAlcoholForSale: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isAlcoholForSale ?? EventActivityRulesRequirement.empty().isAlcoholForSale,
+                            isFoodForSale: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFoodForSale ?? EventActivityRulesRequirement.empty().isFoodForSale,
+                            isAlcoholProvided: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isAlcoholProvided ?? EventActivityRulesRequirement.empty().isAlcoholProvided,
+                            isFacilityProvidedAlcohol: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFacilityProvidedAlcohol ?? EventActivityRulesRequirement.empty().isFacilityProvidedAlcohol,
+                            isFoodProvided: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFoodProvided ?? EventActivityRulesRequirement.empty().isFoodProvided,
+                            isFacilityProvidedFood: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFacilityProvidedFood ?? EventActivityRulesRequirement.empty().isFacilityProvidedFood,
+                            isSecurityProvided: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isSecurityProvided ?? EventActivityRulesRequirement.empty().isSecurityProvided,
+                            isFacilityProvidedSecurity: state.activitySettingsForm.profileService.activityRequirements.eventActivityRulesRequirement?.isFacilityProvidedSecurity ?? EventActivityRulesRequirement.empty().isFacilityProvidedSecurity
+                      )
+                    )
                   ),
                   rulesService: state.activitySettingsForm.rulesService,
                   activityType: state.activitySettingsForm.activityType,
@@ -1271,11 +1358,11 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
               authFailureOrSuccessOptionSaving: none()
           );
 
-          failureOrSuccess = state.isSaving ? left(const ActivityFormFailure.unexpected()) :
+          failureOrSuccess = state.isSaving ?
           await _activityAuthFacade.updateActivitySettingsForm(
               activityForm: state.activitySettingsForm,
               activityResId: state.reservationItem.reservationId
-          );
+          ) : left(const ActivityFormFailure.unexpected());
 
           yield state.copyWith(
               isSaving: false,
@@ -1301,7 +1388,6 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
         },
 
         deleteActivityFinished: (e) async* {},
-
 
       );
 

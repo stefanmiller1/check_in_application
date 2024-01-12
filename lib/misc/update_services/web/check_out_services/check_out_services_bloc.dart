@@ -40,7 +40,9 @@ class CheckOutServicesBloc extends Bloc<CheckOutServicesEvent, CheckOutServicesS
                 listingOwnerStripeId: state.listingOwner.stripeAccountId,
                 amount: e.amount,
                 currency: e.currency,
-                paymentMethod: null);
+                paymentMethod: null,
+                description: e.description
+            );
 
             yield state.copyWith(
               isSubmitting: false,
@@ -65,7 +67,9 @@ class CheckOutServicesBloc extends Bloc<CheckOutServicesEvent, CheckOutServicesS
               listingOwnerStripeId: state.listingOwner.stripeAccountId,
               amount: e.amount,
               currency: e.currency,
-              paymentMethod: e.paymentMethod);
+              paymentMethod: e.paymentMethod,
+              description: e.description
+          );
 
           yield state.copyWith(
             isSubmitting: false,

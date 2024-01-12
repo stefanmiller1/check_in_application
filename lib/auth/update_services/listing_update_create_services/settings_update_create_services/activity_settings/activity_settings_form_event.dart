@@ -12,6 +12,7 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
 
   // const factory UpdateActivityFormEvent.durationTypeChanged(DurationType durationType) = _DurationTypeChanged;
   // const factory UpdateActivityFormEvent.activitySessionTypeChanged(ActivitySessionType durationType) = _ActivitySessionTypeChanged;
+  // const factory UpdateActivityFormEvent.activitySessionTypeChanged(ActivitySessionType durationType) = _ActivitySessionTypeChanged;
 
   // const factory UpdateActivityFormEvent.isDynamicHoursChanged(bool hoursBool) = _IsDynamicHoursChanged;
   // const factory UpdateActivityFormEvent.isFixedHoursChanged(bool hoursBool) = _IsFixedHoursChanged;
@@ -48,12 +49,14 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
   //
   // const factory UpdateActivityFormEvent.gameNumberOfTeamsChanged(int teamInt) = _GameNumberOfTeamsChanged;
 
+  const factory UpdateActivityFormEvent.isSavingChanged(bool boolSave) = _IsSavingChanged;
 
   const factory UpdateActivityFormEvent.activityTitleChanged(BackgroundInfoTitle titleChanged) = _ActivityTitleChanged;
   const factory UpdateActivityFormEvent.activityDescriptionChanged(BackgroundInfoDescription descriptionChanged) = _ActivityDescriptionChanged;
   const factory UpdateActivityFormEvent.activityDescriptionChangedTwo(BackgroundInfoDescription descriptionChanged) = _ActivityDescriptionChangedTwo;
   const factory UpdateActivityFormEvent.activityProfileImagesChanged(List<ImageUpload> imagesList) = _activityProfileImagesChanged;
   const factory UpdateActivityFormEvent.isPartnersInviteOnly(bool inviteBool) = _IsPartnersInviteOnly;
+  const factory UpdateActivityFormEvent.isInstructorInviteOnly(bool inviteBool) = _IsInstructorInviteOnly;
 
   const factory UpdateActivityFormEvent.activityGoalsChanged(List<BackgroundInfoDescription> activityGoals) = _ActivityGoalsChanged;
   const factory UpdateActivityFormEvent.activityInterestsChanged(List<BackgroundInfoDescription> activityInterests) = _ActivityInterestsChanged;
@@ -79,6 +82,8 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
 
   const factory UpdateActivityFormEvent.isMerchantSupportedChanged(bool merchBool) = _IsMerchantSupportedChanged;
   const factory UpdateActivityFormEvent.isMerchantInviteOnlyChanged(bool inviteBool) = _IsMerchantInviteOnlyChanged;
+  const factory UpdateActivityFormEvent.merchantLimitChanged(int merchLimit) = _MerchantLimitChanged;
+  const factory UpdateActivityFormEvent.merchantFeeChanged(int merchFee) = _MerchantFeeChanged;
 
   const factory UpdateActivityFormEvent.isAlcoholForSaleChanged(bool alcBool) = _IsAlcoholForSaleChanged;
   const factory UpdateActivityFormEvent.isFoodForSaleChanged(bool foodBool) = _IsFoodForSaleChanged;

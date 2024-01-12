@@ -20,13 +20,9 @@ class ReservationFormEvent with _$ReservationFormEvent {
   const factory ReservationFormEvent.selectedIntervalChanged(int intervalInt) = _SelectedIntervalChanged;
   const factory ReservationFormEvent.cardItemChanged(CardItem cardItem) = _CardItemChanged;
 
-  const factory ReservationFormEvent.createPaymentIntentForBooking(UserProfileModel profile, String amount, String currency, String? paymentMethod) = _CreatePaymentIntentForbooking;
-  const factory ReservationFormEvent.createReservationFormForBooking(String paymentIntent) = _CreateReservationFormForBooking;
 
   const factory ReservationFormEvent.isFinishedReservationCancelRefund(ReservationCancellationRequestType cancelType, String reasonResponse, String amount, String currency) = _IsFinishedReservationCancelRefund;
   const factory ReservationFormEvent.isFinishedChangeEditsRequest() = _IsFinishedChangeEditsRequest;
-  const factory ReservationFormEvent.isFinishedConfirmPaymentIntent(String paymentIntentId) = _IsFinishedConfirmPaymentIntent;
-  const factory ReservationFormEvent.isFinishedCreatingBooking(UserProfileModel profile, String amount, String currency, String? paymentMethod, bool resRequiresReview) = _IsFinishedCreatingBooking;
-  const factory ReservationFormEvent.isFinishedCreatingBookingMobile(UserProfileModel profile, String amount, String currency, String? paymentMethod, bool resRequiresReview) = _IsFinishedCreatingBookingMobile;
-
+  const factory ReservationFormEvent.isFinishedCreatingReservation(UserProfileModel profile, String amount, String currency, String? paymentMethod, bool resRequiresReview) = _IsFinishedCreatingReservation;
+  const factory ReservationFormEvent.isFinishedCreatingReservationWeb(String paymentIntentId) = _IsFinishedCreatingReservationWeb;
 }

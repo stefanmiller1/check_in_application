@@ -4,8 +4,9 @@ part of check_in_application;
 class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWatcherState> {
 
   final facade.IAuthFacade _authFacade;
+  final facade.ATTAuthWatcherFacade _attendeeFacade;
 
-  UserProfileWatcherBloc(this._authFacade) : super(const UserProfileWatcherState.initial());
+  UserProfileWatcherBloc(this._authFacade, this._attendeeFacade) : super(const UserProfileWatcherState.initial());
 
   StreamSubscription<Either<AuthFailure, UserProfileModel>>? _userProfileStreamSubscription;
   StreamSubscription<Either<AuthFailure, UserProfileModel>>? _selectedUserProfileStreamSubscription;
@@ -17,7 +18,7 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
   StreamSubscription<Either<AuthFailure, SocialsItem>>? _userSocialsStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<LocationModel>>>? _userLocationsStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<UserProfileModel>>>? _searchUserProfilesStreamSubscription;
-
+  StreamSubscription<Either<AttendeeFormFailure, List<AttendeeItem>>>? _userAttendingResStreamSubscription;
 
   @override
   Stream<UserProfileWatcherState> mapEventToState(
@@ -25,7 +26,6 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
       ) async* {
 
     yield* event.map(
-
 
         watchUserProfileStarted: (e) async* {
             yield const UserProfileWatcherState.loadInProgress();
@@ -189,7 +189,21 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
         },
 
 
+        watchProfileAllAttendingResStarted: (e) async* {
+          yield const UserProfileWatcherState.loadInProgress();
+          await _userAttendingResStreamSubscription?.cancel();
 
+          _userAttendingResStreamSubscription = _attendeeFacade.watchUserProfileAttending().listen((event) {
+            return add(UserProfileWatcherEvent.profileAllAttendingResReceived(event));
+          });
+        },
+
+        profileAllAttendingResReceived: (e) async* {
+          yield e.failedList.fold(
+                  (l) => UserProfileWatcherState.loadProfileAttendingResFailure(l),
+                  (r) => UserProfileWatcherState.loadProfileAttendingResSuccess(r)
+          );
+        },
 
 
 

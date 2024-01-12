@@ -36,6 +36,12 @@ class BookedReservationFormBloc extends Bloc<BookedReservationFormEvent, BookedR
           );
         },
 
+        postIsSaving: (e) async* {
+          yield state.copyWith(
+              isSubmitting: e.save
+          );
+        },
+
         textPostChanged: (e) async* {
           yield state.copyWith(
             reservationPost: state.reservationPost.copyWith(
