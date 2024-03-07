@@ -52,14 +52,12 @@ class InvitationFormBloc extends Bloc<InvitationFormEvent, InvitationFormState> 
               Either<AttendeeFormFailure, Unit> failureOrSuccess;
 
               if (e.attendees.isNotEmpty) {
-
                 yield state.copyWith(
                     isSubmitting: true,
                     authFailureOrSuccess: none()
                 );
 
                 failureOrSuccess = state.isSubmitting ? await _rFacade.sendInvitationToUsers(reservationId: e.reservationId, activityForm: e.activityForm, invitations: e.attendees) : left(const AttendeeFormFailure.attendeeServerError());
-
 
                 yield state.copyWith(
                     isSubmitting: false,

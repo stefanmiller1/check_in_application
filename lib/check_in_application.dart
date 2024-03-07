@@ -37,6 +37,7 @@ part 'auth/update_services/listing_update_create_services/facility_activity_upda
 part 'auth/update_services/listing_update_create_services/facility_activity_updater_creator/update_facility_activity_event.dart';
 part 'auth/update_services/listing_update_create_services/facility_activity_updater_creator/update_facility_activity_state.dart';
 
+
 part 'auth/update_services/listing_update_create_services/reservation_update_create_services/listing_reservation_form_bloc.dart';
 part 'auth/update_services/listing_update_create_services/reservation_update_create_services/listing_reservation_form_event.dart';
 part 'auth/update_services/listing_update_create_services/reservation_update_create_services/listing_reservation_form_state.dart';
@@ -45,6 +46,9 @@ part 'auth/update_services/listing_update_create_services/settings_update_create
 part 'auth/update_services/listing_update_create_services/settings_update_create_services/facility_settings/listing_settings_form_event.dart';
 part 'auth/update_services/listing_update_create_services/settings_update_create_services/facility_settings/listing_settings_form_state.dart';
 
+part 'auth/watcher_services/manager_watcher_services/community_watcher/community_manager_watcher_bloc.dart';
+part 'auth/watcher_services/manager_watcher_services/community_watcher/community_manager_watcher_event.dart';
+part 'auth/watcher_services/manager_watcher_services/community_watcher/community_manager_watcher_state.dart';
 
 part 'auth/update_services/manager_update_create_services/facility_updater_creator/update_facility_form/update_facility_form_bloc.dart';
 part 'auth/update_services/manager_update_create_services/facility_updater_creator/update_facility_form/update_facility_form_event.dart';
@@ -93,6 +97,9 @@ part 'misc/watcher_services/current_location_watcher/geolocator_location_watcher
 part 'misc/watcher_services/location_verification_watcher/location_verification_watcher_bloc.dart';
 part 'misc/watcher_services/location_verification_watcher/location_verification_watcher_event.dart';
 part 'misc/watcher_services/location_verification_watcher/location_verification_watcher_state.dart';
+part 'misc/watcher_services/notification_watcher_services/notification_watcher_bloc.dart';
+part 'misc/watcher_services/notification_watcher_services/notification_watcher_event.dart';
+part 'misc/watcher_services/notification_watcher_services/notification_watcher_state.dart';
 part 'misc/update_services/news_services/news_updates_watcher_bloc.dart';
 part 'misc/update_services/news_services/news_updates_watcher_event.dart';
 part 'misc/update_services/news_services/news_updates_watcher_state.dart';
@@ -103,7 +110,6 @@ part 'misc/update_services/web/check_out_services/check_out_services_bloc.dart';
 part 'misc/update_services/web/check_out_services/check_out_services_event.dart';
 part 'misc/update_services/web/check_out_services/check_out_services_state.dart';
 
-
 part 'un_auth/watcher_services/user_profile_preview/bookings_overview/users_current_bookings_watcher_bloc.dart';
 part 'un_auth/watcher_services/user_profile_preview/bookings_overview/users_current_bookings_watcher_event.dart';
 part 'un_auth/watcher_services/user_profile_preview/bookings_overview/users_current_bookings_watcher_state.dart';
@@ -113,3 +119,4 @@ part 'un_auth/watcher_services/locations_profile_services/locations_directory_wa
 part 'un_auth/watcher_services/locations_profile_services/locations_directory_watcher/locations_directory_watcher_state.dart';
 
 part 'check_in_application.freezed.dart';
+

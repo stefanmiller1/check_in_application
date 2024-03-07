@@ -58,9 +58,13 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
   const factory UpdateActivityFormEvent.isPartnersInviteOnly(bool inviteBool) = _IsPartnersInviteOnly;
   const factory UpdateActivityFormEvent.isInstructorInviteOnly(bool inviteBool) = _IsInstructorInviteOnly;
 
+  const factory UpdateActivityFormEvent.activityPostedOnBehalf(bool isPostBool) = _ActivityPostedOnBehalf;
+  const factory UpdateActivityFormEvent.activityPostContactWebsite(String websiteStr) = _ActivityPostContactWebsite;
+  const factory UpdateActivityFormEvent.activityPostContactEmail(String emailStr) = _ActivityPostContactEmail;
+  const factory UpdateActivityFormEvent.activityPostContactInstagram(String instaStr) = _ActivityPostContactInstagram;
+
   const factory UpdateActivityFormEvent.activityGoalsChanged(List<BackgroundInfoDescription> activityGoals) = _ActivityGoalsChanged;
   const factory UpdateActivityFormEvent.activityInterestsChanged(List<BackgroundInfoDescription> activityInterests) = _ActivityInterestsChanged;
-
 
   const factory UpdateActivityFormEvent.isSeventeenAndUnderChanged(bool ageBool) = _IsSeventeenAndUnderChanged;
   const factory UpdateActivityFormEvent.minimumAgeChanged(int ageInt) = _MinimumAgeChanged;

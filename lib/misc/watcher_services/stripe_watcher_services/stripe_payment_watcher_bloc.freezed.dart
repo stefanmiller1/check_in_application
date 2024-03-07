@@ -128,21 +128,23 @@ class _$StripePaymentWatcherEventCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_WatchAllPaymentMethodsCopyWith<$Res> {
-  factory _$$_WatchAllPaymentMethodsCopyWith(_$_WatchAllPaymentMethods value,
-          $Res Function(_$_WatchAllPaymentMethods) then) =
-      __$$_WatchAllPaymentMethodsCopyWithImpl<$Res>;
+abstract class _$$WatchAllPaymentMethodsImplCopyWith<$Res> {
+  factory _$$WatchAllPaymentMethodsImplCopyWith(
+          _$WatchAllPaymentMethodsImpl value,
+          $Res Function(_$WatchAllPaymentMethodsImpl) then) =
+      __$$WatchAllPaymentMethodsImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String customerId});
 }
 
 /// @nodoc
-class __$$_WatchAllPaymentMethodsCopyWithImpl<$Res>
+class __$$WatchAllPaymentMethodsImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherEventCopyWithImpl<$Res,
-        _$_WatchAllPaymentMethods>
-    implements _$$_WatchAllPaymentMethodsCopyWith<$Res> {
-  __$$_WatchAllPaymentMethodsCopyWithImpl(_$_WatchAllPaymentMethods _value,
-      $Res Function(_$_WatchAllPaymentMethods) _then)
+        _$WatchAllPaymentMethodsImpl>
+    implements _$$WatchAllPaymentMethodsImplCopyWith<$Res> {
+  __$$WatchAllPaymentMethodsImplCopyWithImpl(
+      _$WatchAllPaymentMethodsImpl _value,
+      $Res Function(_$WatchAllPaymentMethodsImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -150,7 +152,7 @@ class __$$_WatchAllPaymentMethodsCopyWithImpl<$Res>
   $Res call({
     Object? customerId = null,
   }) {
-    return _then(_$_WatchAllPaymentMethods(
+    return _then(_$WatchAllPaymentMethodsImpl(
       null == customerId
           ? _value.customerId
           : customerId // ignore: cast_nullable_to_non_nullable
@@ -161,8 +163,8 @@ class __$$_WatchAllPaymentMethodsCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WatchAllPaymentMethods implements _WatchAllPaymentMethods {
-  const _$_WatchAllPaymentMethods(this.customerId);
+class _$WatchAllPaymentMethodsImpl implements _WatchAllPaymentMethods {
+  const _$WatchAllPaymentMethodsImpl(this.customerId);
 
   @override
   final String customerId;
@@ -173,10 +175,10 @@ class _$_WatchAllPaymentMethods implements _WatchAllPaymentMethods {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WatchAllPaymentMethods &&
+            other is _$WatchAllPaymentMethodsImpl &&
             (identical(other.customerId, customerId) ||
                 other.customerId == customerId));
   }
@@ -187,9 +189,9 @@ class _$_WatchAllPaymentMethods implements _WatchAllPaymentMethods {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WatchAllPaymentMethodsCopyWith<_$_WatchAllPaymentMethods> get copyWith =>
-      __$$_WatchAllPaymentMethodsCopyWithImpl<_$_WatchAllPaymentMethods>(
-          this, _$identity);
+  _$$WatchAllPaymentMethodsImplCopyWith<_$WatchAllPaymentMethodsImpl>
+      get copyWith => __$$WatchAllPaymentMethodsImplCopyWithImpl<
+          _$WatchAllPaymentMethodsImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -308,30 +310,32 @@ class _$_WatchAllPaymentMethods implements _WatchAllPaymentMethods {
 
 abstract class _WatchAllPaymentMethods implements StripePaymentWatcherEvent {
   const factory _WatchAllPaymentMethods(final String customerId) =
-      _$_WatchAllPaymentMethods;
+      _$WatchAllPaymentMethodsImpl;
 
   String get customerId;
   @JsonKey(ignore: true)
-  _$$_WatchAllPaymentMethodsCopyWith<_$_WatchAllPaymentMethods> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$WatchAllPaymentMethodsImplCopyWith<_$WatchAllPaymentMethodsImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_PaymentMethodsReceivedCopyWith<$Res> {
-  factory _$$_PaymentMethodsReceivedCopyWith(_$_PaymentMethodsReceived value,
-          $Res Function(_$_PaymentMethodsReceived) then) =
-      __$$_PaymentMethodsReceivedCopyWithImpl<$Res>;
+abstract class _$$PaymentMethodsReceivedImplCopyWith<$Res> {
+  factory _$$PaymentMethodsReceivedImplCopyWith(
+          _$PaymentMethodsReceivedImpl value,
+          $Res Function(_$PaymentMethodsReceivedImpl) then) =
+      __$$PaymentMethodsReceivedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Either<PaymentMethodValueFailure, List<CardItem>> failedItems});
 }
 
 /// @nodoc
-class __$$_PaymentMethodsReceivedCopyWithImpl<$Res>
+class __$$PaymentMethodsReceivedImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherEventCopyWithImpl<$Res,
-        _$_PaymentMethodsReceived>
-    implements _$$_PaymentMethodsReceivedCopyWith<$Res> {
-  __$$_PaymentMethodsReceivedCopyWithImpl(_$_PaymentMethodsReceived _value,
-      $Res Function(_$_PaymentMethodsReceived) _then)
+        _$PaymentMethodsReceivedImpl>
+    implements _$$PaymentMethodsReceivedImplCopyWith<$Res> {
+  __$$PaymentMethodsReceivedImplCopyWithImpl(
+      _$PaymentMethodsReceivedImpl _value,
+      $Res Function(_$PaymentMethodsReceivedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -339,7 +343,7 @@ class __$$_PaymentMethodsReceivedCopyWithImpl<$Res>
   $Res call({
     Object? failedItems = null,
   }) {
-    return _then(_$_PaymentMethodsReceived(
+    return _then(_$PaymentMethodsReceivedImpl(
       null == failedItems
           ? _value.failedItems
           : failedItems // ignore: cast_nullable_to_non_nullable
@@ -350,8 +354,8 @@ class __$$_PaymentMethodsReceivedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PaymentMethodsReceived implements _PaymentMethodsReceived {
-  const _$_PaymentMethodsReceived(this.failedItems);
+class _$PaymentMethodsReceivedImpl implements _PaymentMethodsReceived {
+  const _$PaymentMethodsReceivedImpl(this.failedItems);
 
   @override
   final Either<PaymentMethodValueFailure, List<CardItem>> failedItems;
@@ -362,10 +366,10 @@ class _$_PaymentMethodsReceived implements _PaymentMethodsReceived {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PaymentMethodsReceived &&
+            other is _$PaymentMethodsReceivedImpl &&
             (identical(other.failedItems, failedItems) ||
                 other.failedItems == failedItems));
   }
@@ -376,9 +380,9 @@ class _$_PaymentMethodsReceived implements _PaymentMethodsReceived {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PaymentMethodsReceivedCopyWith<_$_PaymentMethodsReceived> get copyWith =>
-      __$$_PaymentMethodsReceivedCopyWithImpl<_$_PaymentMethodsReceived>(
-          this, _$identity);
+  _$$PaymentMethodsReceivedImplCopyWith<_$PaymentMethodsReceivedImpl>
+      get copyWith => __$$PaymentMethodsReceivedImplCopyWithImpl<
+          _$PaymentMethodsReceivedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -498,32 +502,32 @@ class _$_PaymentMethodsReceived implements _PaymentMethodsReceived {
 abstract class _PaymentMethodsReceived implements StripePaymentWatcherEvent {
   const factory _PaymentMethodsReceived(
           final Either<PaymentMethodValueFailure, List<CardItem>> failedItems) =
-      _$_PaymentMethodsReceived;
+      _$PaymentMethodsReceivedImpl;
 
   Either<PaymentMethodValueFailure, List<CardItem>> get failedItems;
   @JsonKey(ignore: true)
-  _$$_PaymentMethodsReceivedCopyWith<_$_PaymentMethodsReceived> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PaymentMethodsReceivedImplCopyWith<_$PaymentMethodsReceivedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_WatchAllPaymentIntentHistoryCopyWith<$Res> {
-  factory _$$_WatchAllPaymentIntentHistoryCopyWith(
-          _$_WatchAllPaymentIntentHistory value,
-          $Res Function(_$_WatchAllPaymentIntentHistory) then) =
-      __$$_WatchAllPaymentIntentHistoryCopyWithImpl<$Res>;
+abstract class _$$WatchAllPaymentIntentHistoryImplCopyWith<$Res> {
+  factory _$$WatchAllPaymentIntentHistoryImplCopyWith(
+          _$WatchAllPaymentIntentHistoryImpl value,
+          $Res Function(_$WatchAllPaymentIntentHistoryImpl) then) =
+      __$$WatchAllPaymentIntentHistoryImplCopyWithImpl<$Res>;
   @useResult
   $Res call({String customerId});
 }
 
 /// @nodoc
-class __$$_WatchAllPaymentIntentHistoryCopyWithImpl<$Res>
+class __$$WatchAllPaymentIntentHistoryImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherEventCopyWithImpl<$Res,
-        _$_WatchAllPaymentIntentHistory>
-    implements _$$_WatchAllPaymentIntentHistoryCopyWith<$Res> {
-  __$$_WatchAllPaymentIntentHistoryCopyWithImpl(
-      _$_WatchAllPaymentIntentHistory _value,
-      $Res Function(_$_WatchAllPaymentIntentHistory) _then)
+        _$WatchAllPaymentIntentHistoryImpl>
+    implements _$$WatchAllPaymentIntentHistoryImplCopyWith<$Res> {
+  __$$WatchAllPaymentIntentHistoryImplCopyWithImpl(
+      _$WatchAllPaymentIntentHistoryImpl _value,
+      $Res Function(_$WatchAllPaymentIntentHistoryImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -531,7 +535,7 @@ class __$$_WatchAllPaymentIntentHistoryCopyWithImpl<$Res>
   $Res call({
     Object? customerId = null,
   }) {
-    return _then(_$_WatchAllPaymentIntentHistory(
+    return _then(_$WatchAllPaymentIntentHistoryImpl(
       null == customerId
           ? _value.customerId
           : customerId // ignore: cast_nullable_to_non_nullable
@@ -542,8 +546,9 @@ class __$$_WatchAllPaymentIntentHistoryCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_WatchAllPaymentIntentHistory implements _WatchAllPaymentIntentHistory {
-  const _$_WatchAllPaymentIntentHistory(this.customerId);
+class _$WatchAllPaymentIntentHistoryImpl
+    implements _WatchAllPaymentIntentHistory {
+  const _$WatchAllPaymentIntentHistoryImpl(this.customerId);
 
   @override
   final String customerId;
@@ -554,10 +559,10 @@ class _$_WatchAllPaymentIntentHistory implements _WatchAllPaymentIntentHistory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_WatchAllPaymentIntentHistory &&
+            other is _$WatchAllPaymentIntentHistoryImpl &&
             (identical(other.customerId, customerId) ||
                 other.customerId == customerId));
   }
@@ -568,9 +573,10 @@ class _$_WatchAllPaymentIntentHistory implements _WatchAllPaymentIntentHistory {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_WatchAllPaymentIntentHistoryCopyWith<_$_WatchAllPaymentIntentHistory>
-      get copyWith => __$$_WatchAllPaymentIntentHistoryCopyWithImpl<
-          _$_WatchAllPaymentIntentHistory>(this, _$identity);
+  _$$WatchAllPaymentIntentHistoryImplCopyWith<
+          _$WatchAllPaymentIntentHistoryImpl>
+      get copyWith => __$$WatchAllPaymentIntentHistoryImplCopyWithImpl<
+          _$WatchAllPaymentIntentHistoryImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -690,33 +696,34 @@ class _$_WatchAllPaymentIntentHistory implements _WatchAllPaymentIntentHistory {
 abstract class _WatchAllPaymentIntentHistory
     implements StripePaymentWatcherEvent {
   const factory _WatchAllPaymentIntentHistory(final String customerId) =
-      _$_WatchAllPaymentIntentHistory;
+      _$WatchAllPaymentIntentHistoryImpl;
 
   String get customerId;
   @JsonKey(ignore: true)
-  _$$_WatchAllPaymentIntentHistoryCopyWith<_$_WatchAllPaymentIntentHistory>
+  _$$WatchAllPaymentIntentHistoryImplCopyWith<
+          _$WatchAllPaymentIntentHistoryImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_paymentIntentHistoryReceivedCopyWith<$Res> {
-  factory _$$_paymentIntentHistoryReceivedCopyWith(
-          _$_paymentIntentHistoryReceived value,
-          $Res Function(_$_paymentIntentHistoryReceived) then) =
-      __$$_paymentIntentHistoryReceivedCopyWithImpl<$Res>;
+abstract class _$$paymentIntentHistoryReceivedImplCopyWith<$Res> {
+  factory _$$paymentIntentHistoryReceivedImplCopyWith(
+          _$paymentIntentHistoryReceivedImpl value,
+          $Res Function(_$paymentIntentHistoryReceivedImpl) then) =
+      __$$paymentIntentHistoryReceivedImplCopyWithImpl<$Res>;
   @useResult
   $Res call(
       {Either<PaymentMethodValueFailure, List<PaymentIntent>> failedItems});
 }
 
 /// @nodoc
-class __$$_paymentIntentHistoryReceivedCopyWithImpl<$Res>
+class __$$paymentIntentHistoryReceivedImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherEventCopyWithImpl<$Res,
-        _$_paymentIntentHistoryReceived>
-    implements _$$_paymentIntentHistoryReceivedCopyWith<$Res> {
-  __$$_paymentIntentHistoryReceivedCopyWithImpl(
-      _$_paymentIntentHistoryReceived _value,
-      $Res Function(_$_paymentIntentHistoryReceived) _then)
+        _$paymentIntentHistoryReceivedImpl>
+    implements _$$paymentIntentHistoryReceivedImplCopyWith<$Res> {
+  __$$paymentIntentHistoryReceivedImplCopyWithImpl(
+      _$paymentIntentHistoryReceivedImpl _value,
+      $Res Function(_$paymentIntentHistoryReceivedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -724,7 +731,7 @@ class __$$_paymentIntentHistoryReceivedCopyWithImpl<$Res>
   $Res call({
     Object? failedItems = null,
   }) {
-    return _then(_$_paymentIntentHistoryReceived(
+    return _then(_$paymentIntentHistoryReceivedImpl(
       null == failedItems
           ? _value.failedItems
           : failedItems // ignore: cast_nullable_to_non_nullable
@@ -735,8 +742,9 @@ class __$$_paymentIntentHistoryReceivedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_paymentIntentHistoryReceived implements _paymentIntentHistoryReceived {
-  const _$_paymentIntentHistoryReceived(this.failedItems);
+class _$paymentIntentHistoryReceivedImpl
+    implements _paymentIntentHistoryReceived {
+  const _$paymentIntentHistoryReceivedImpl(this.failedItems);
 
   @override
   final Either<PaymentMethodValueFailure, List<PaymentIntent>> failedItems;
@@ -747,10 +755,10 @@ class _$_paymentIntentHistoryReceived implements _paymentIntentHistoryReceived {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_paymentIntentHistoryReceived &&
+            other is _$paymentIntentHistoryReceivedImpl &&
             (identical(other.failedItems, failedItems) ||
                 other.failedItems == failedItems));
   }
@@ -761,9 +769,10 @@ class _$_paymentIntentHistoryReceived implements _paymentIntentHistoryReceived {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_paymentIntentHistoryReceivedCopyWith<_$_paymentIntentHistoryReceived>
-      get copyWith => __$$_paymentIntentHistoryReceivedCopyWithImpl<
-          _$_paymentIntentHistoryReceived>(this, _$identity);
+  _$$paymentIntentHistoryReceivedImplCopyWith<
+          _$paymentIntentHistoryReceivedImpl>
+      get copyWith => __$$paymentIntentHistoryReceivedImplCopyWithImpl<
+          _$paymentIntentHistoryReceivedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -884,35 +893,37 @@ abstract class _paymentIntentHistoryReceived
     implements StripePaymentWatcherEvent {
   const factory _paymentIntentHistoryReceived(
       final Either<PaymentMethodValueFailure, List<PaymentIntent>>
-          failedItems) = _$_paymentIntentHistoryReceived;
+          failedItems) = _$paymentIntentHistoryReceivedImpl;
 
   Either<PaymentMethodValueFailure, List<PaymentIntent>> get failedItems;
   @JsonKey(ignore: true)
-  _$$_paymentIntentHistoryReceivedCopyWith<_$_paymentIntentHistoryReceived>
+  _$$paymentIntentHistoryReceivedImplCopyWith<
+          _$paymentIntentHistoryReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_WatchAllPayoutHistoryCopyWith<$Res> {
-  factory _$$_WatchAllPayoutHistoryCopyWith(_$_WatchAllPayoutHistory value,
-          $Res Function(_$_WatchAllPayoutHistory) then) =
-      __$$_WatchAllPayoutHistoryCopyWithImpl<$Res>;
+abstract class _$$WatchAllPayoutHistoryImplCopyWith<$Res> {
+  factory _$$WatchAllPayoutHistoryImplCopyWith(
+          _$WatchAllPayoutHistoryImpl value,
+          $Res Function(_$WatchAllPayoutHistoryImpl) then) =
+      __$$WatchAllPayoutHistoryImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_WatchAllPayoutHistoryCopyWithImpl<$Res>
+class __$$WatchAllPayoutHistoryImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherEventCopyWithImpl<$Res,
-        _$_WatchAllPayoutHistory>
-    implements _$$_WatchAllPayoutHistoryCopyWith<$Res> {
-  __$$_WatchAllPayoutHistoryCopyWithImpl(_$_WatchAllPayoutHistory _value,
-      $Res Function(_$_WatchAllPayoutHistory) _then)
+        _$WatchAllPayoutHistoryImpl>
+    implements _$$WatchAllPayoutHistoryImplCopyWith<$Res> {
+  __$$WatchAllPayoutHistoryImplCopyWithImpl(_$WatchAllPayoutHistoryImpl _value,
+      $Res Function(_$WatchAllPayoutHistoryImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_WatchAllPayoutHistory implements _WatchAllPayoutHistory {
-  const _$_WatchAllPayoutHistory();
+class _$WatchAllPayoutHistoryImpl implements _WatchAllPayoutHistory {
+  const _$WatchAllPayoutHistoryImpl();
 
   @override
   String toString() {
@@ -920,9 +931,10 @@ class _$_WatchAllPayoutHistory implements _WatchAllPayoutHistory {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_WatchAllPayoutHistory);
+        (other.runtimeType == runtimeType &&
+            other is _$WatchAllPayoutHistoryImpl);
   }
 
   @override
@@ -1044,25 +1056,26 @@ class _$_WatchAllPayoutHistory implements _WatchAllPayoutHistory {
 }
 
 abstract class _WatchAllPayoutHistory implements StripePaymentWatcherEvent {
-  const factory _WatchAllPayoutHistory() = _$_WatchAllPayoutHistory;
+  const factory _WatchAllPayoutHistory() = _$WatchAllPayoutHistoryImpl;
 }
 
 /// @nodoc
-abstract class _$$_PayoutHistoryReceivedCopyWith<$Res> {
-  factory _$$_PayoutHistoryReceivedCopyWith(_$_PayoutHistoryReceived value,
-          $Res Function(_$_PayoutHistoryReceived) then) =
-      __$$_PayoutHistoryReceivedCopyWithImpl<$Res>;
+abstract class _$$PayoutHistoryReceivedImplCopyWith<$Res> {
+  factory _$$PayoutHistoryReceivedImplCopyWith(
+          _$PayoutHistoryReceivedImpl value,
+          $Res Function(_$PayoutHistoryReceivedImpl) then) =
+      __$$PayoutHistoryReceivedImplCopyWithImpl<$Res>;
   @useResult
   $Res call({Either<PaymentMethodValueFailure, List<PayoutModel>> failedItems});
 }
 
 /// @nodoc
-class __$$_PayoutHistoryReceivedCopyWithImpl<$Res>
+class __$$PayoutHistoryReceivedImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherEventCopyWithImpl<$Res,
-        _$_PayoutHistoryReceived>
-    implements _$$_PayoutHistoryReceivedCopyWith<$Res> {
-  __$$_PayoutHistoryReceivedCopyWithImpl(_$_PayoutHistoryReceived _value,
-      $Res Function(_$_PayoutHistoryReceived) _then)
+        _$PayoutHistoryReceivedImpl>
+    implements _$$PayoutHistoryReceivedImplCopyWith<$Res> {
+  __$$PayoutHistoryReceivedImplCopyWithImpl(_$PayoutHistoryReceivedImpl _value,
+      $Res Function(_$PayoutHistoryReceivedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1070,7 +1083,7 @@ class __$$_PayoutHistoryReceivedCopyWithImpl<$Res>
   $Res call({
     Object? failedItems = null,
   }) {
-    return _then(_$_PayoutHistoryReceived(
+    return _then(_$PayoutHistoryReceivedImpl(
       null == failedItems
           ? _value.failedItems
           : failedItems // ignore: cast_nullable_to_non_nullable
@@ -1081,8 +1094,8 @@ class __$$_PayoutHistoryReceivedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_PayoutHistoryReceived implements _PayoutHistoryReceived {
-  const _$_PayoutHistoryReceived(this.failedItems);
+class _$PayoutHistoryReceivedImpl implements _PayoutHistoryReceived {
+  const _$PayoutHistoryReceivedImpl(this.failedItems);
 
   @override
   final Either<PaymentMethodValueFailure, List<PayoutModel>> failedItems;
@@ -1093,10 +1106,10 @@ class _$_PayoutHistoryReceived implements _PayoutHistoryReceived {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_PayoutHistoryReceived &&
+            other is _$PayoutHistoryReceivedImpl &&
             (identical(other.failedItems, failedItems) ||
                 other.failedItems == failedItems));
   }
@@ -1107,9 +1120,9 @@ class _$_PayoutHistoryReceived implements _PayoutHistoryReceived {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_PayoutHistoryReceivedCopyWith<_$_PayoutHistoryReceived> get copyWith =>
-      __$$_PayoutHistoryReceivedCopyWithImpl<_$_PayoutHistoryReceived>(
-          this, _$identity);
+  _$$PayoutHistoryReceivedImplCopyWith<_$PayoutHistoryReceivedImpl>
+      get copyWith => __$$PayoutHistoryReceivedImplCopyWithImpl<
+          _$PayoutHistoryReceivedImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1229,12 +1242,12 @@ class _$_PayoutHistoryReceived implements _PayoutHistoryReceived {
 abstract class _PayoutHistoryReceived implements StripePaymentWatcherEvent {
   const factory _PayoutHistoryReceived(
       final Either<PaymentMethodValueFailure, List<PayoutModel>>
-          failedItems) = _$_PayoutHistoryReceived;
+          failedItems) = _$PayoutHistoryReceivedImpl;
 
   Either<PaymentMethodValueFailure, List<PayoutModel>> get failedItems;
   @JsonKey(ignore: true)
-  _$$_PayoutHistoryReceivedCopyWith<_$_PayoutHistoryReceived> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$PayoutHistoryReceivedImplCopyWith<_$PayoutHistoryReceivedImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -1363,24 +1376,25 @@ class _$StripePaymentWatcherStateCopyWithImpl<$Res,
 }
 
 /// @nodoc
-abstract class _$$_InitialCopyWith<$Res> {
-  factory _$$_InitialCopyWith(
-          _$_Initial value, $Res Function(_$_Initial) then) =
-      __$$_InitialCopyWithImpl<$Res>;
+abstract class _$$InitialImplCopyWith<$Res> {
+  factory _$$InitialImplCopyWith(
+          _$InitialImpl value, $Res Function(_$InitialImpl) then) =
+      __$$InitialImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_InitialCopyWithImpl<$Res>
-    extends _$StripePaymentWatcherStateCopyWithImpl<$Res, _$_Initial>
-    implements _$$_InitialCopyWith<$Res> {
-  __$$_InitialCopyWithImpl(_$_Initial _value, $Res Function(_$_Initial) _then)
+class __$$InitialImplCopyWithImpl<$Res>
+    extends _$StripePaymentWatcherStateCopyWithImpl<$Res, _$InitialImpl>
+    implements _$$InitialImplCopyWith<$Res> {
+  __$$InitialImplCopyWithImpl(
+      _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_Initial implements _Initial {
-  const _$_Initial();
+class _$InitialImpl implements _Initial {
+  const _$InitialImpl();
 
   @override
   String toString() {
@@ -1388,9 +1402,9 @@ class _$_Initial implements _Initial {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_Initial);
+        (other.runtimeType == runtimeType && other is _$InitialImpl);
   }
 
   @override
@@ -1524,29 +1538,29 @@ class _$_Initial implements _Initial {
 }
 
 abstract class _Initial implements StripePaymentWatcherState {
-  const factory _Initial() = _$_Initial;
+  const factory _Initial() = _$InitialImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadInProgressCopyWith<$Res> {
-  factory _$$_LoadInProgressCopyWith(
-          _$_LoadInProgress value, $Res Function(_$_LoadInProgress) then) =
-      __$$_LoadInProgressCopyWithImpl<$Res>;
+abstract class _$$LoadInProgressImplCopyWith<$Res> {
+  factory _$$LoadInProgressImplCopyWith(_$LoadInProgressImpl value,
+          $Res Function(_$LoadInProgressImpl) then) =
+      __$$LoadInProgressImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_LoadInProgressCopyWithImpl<$Res>
-    extends _$StripePaymentWatcherStateCopyWithImpl<$Res, _$_LoadInProgress>
-    implements _$$_LoadInProgressCopyWith<$Res> {
-  __$$_LoadInProgressCopyWithImpl(
-      _$_LoadInProgress _value, $Res Function(_$_LoadInProgress) _then)
+class __$$LoadInProgressImplCopyWithImpl<$Res>
+    extends _$StripePaymentWatcherStateCopyWithImpl<$Res, _$LoadInProgressImpl>
+    implements _$$LoadInProgressImplCopyWith<$Res> {
+  __$$LoadInProgressImplCopyWithImpl(
+      _$LoadInProgressImpl _value, $Res Function(_$LoadInProgressImpl) _then)
       : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_LoadInProgress implements _LoadInProgress {
-  const _$_LoadInProgress();
+class _$LoadInProgressImpl implements _LoadInProgress {
+  const _$LoadInProgressImpl();
 
   @override
   String toString() {
@@ -1554,9 +1568,9 @@ class _$_LoadInProgress implements _LoadInProgress {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_LoadInProgress);
+        (other.runtimeType == runtimeType && other is _$LoadInProgressImpl);
   }
 
   @override
@@ -1690,27 +1704,27 @@ class _$_LoadInProgress implements _LoadInProgress {
 }
 
 abstract class _LoadInProgress implements StripePaymentWatcherState {
-  const factory _LoadInProgress() = _$_LoadInProgress;
+  const factory _LoadInProgress() = _$LoadInProgressImpl;
 }
 
 /// @nodoc
-abstract class _$$_LoadAllPaymentMethodsSuccessCopyWith<$Res> {
-  factory _$$_LoadAllPaymentMethodsSuccessCopyWith(
-          _$_LoadAllPaymentMethodsSuccess value,
-          $Res Function(_$_LoadAllPaymentMethodsSuccess) then) =
-      __$$_LoadAllPaymentMethodsSuccessCopyWithImpl<$Res>;
+abstract class _$$LoadAllPaymentMethodsSuccessImplCopyWith<$Res> {
+  factory _$$LoadAllPaymentMethodsSuccessImplCopyWith(
+          _$LoadAllPaymentMethodsSuccessImpl value,
+          $Res Function(_$LoadAllPaymentMethodsSuccessImpl) then) =
+      __$$LoadAllPaymentMethodsSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<CardItem> cards});
 }
 
 /// @nodoc
-class __$$_LoadAllPaymentMethodsSuccessCopyWithImpl<$Res>
+class __$$LoadAllPaymentMethodsSuccessImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherStateCopyWithImpl<$Res,
-        _$_LoadAllPaymentMethodsSuccess>
-    implements _$$_LoadAllPaymentMethodsSuccessCopyWith<$Res> {
-  __$$_LoadAllPaymentMethodsSuccessCopyWithImpl(
-      _$_LoadAllPaymentMethodsSuccess _value,
-      $Res Function(_$_LoadAllPaymentMethodsSuccess) _then)
+        _$LoadAllPaymentMethodsSuccessImpl>
+    implements _$$LoadAllPaymentMethodsSuccessImplCopyWith<$Res> {
+  __$$LoadAllPaymentMethodsSuccessImplCopyWithImpl(
+      _$LoadAllPaymentMethodsSuccessImpl _value,
+      $Res Function(_$LoadAllPaymentMethodsSuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1718,7 +1732,7 @@ class __$$_LoadAllPaymentMethodsSuccessCopyWithImpl<$Res>
   $Res call({
     Object? cards = null,
   }) {
-    return _then(_$_LoadAllPaymentMethodsSuccess(
+    return _then(_$LoadAllPaymentMethodsSuccessImpl(
       null == cards
           ? _value._cards
           : cards // ignore: cast_nullable_to_non_nullable
@@ -1729,8 +1743,9 @@ class __$$_LoadAllPaymentMethodsSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadAllPaymentMethodsSuccess implements _LoadAllPaymentMethodsSuccess {
-  const _$_LoadAllPaymentMethodsSuccess(final List<CardItem> cards)
+class _$LoadAllPaymentMethodsSuccessImpl
+    implements _LoadAllPaymentMethodsSuccess {
+  const _$LoadAllPaymentMethodsSuccessImpl(final List<CardItem> cards)
       : _cards = cards;
 
   final List<CardItem> _cards;
@@ -1747,10 +1762,10 @@ class _$_LoadAllPaymentMethodsSuccess implements _LoadAllPaymentMethodsSuccess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadAllPaymentMethodsSuccess &&
+            other is _$LoadAllPaymentMethodsSuccessImpl &&
             const DeepCollectionEquality().equals(other._cards, _cards));
   }
 
@@ -1761,9 +1776,10 @@ class _$_LoadAllPaymentMethodsSuccess implements _LoadAllPaymentMethodsSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadAllPaymentMethodsSuccessCopyWith<_$_LoadAllPaymentMethodsSuccess>
-      get copyWith => __$$_LoadAllPaymentMethodsSuccessCopyWithImpl<
-          _$_LoadAllPaymentMethodsSuccess>(this, _$identity);
+  _$$LoadAllPaymentMethodsSuccessImplCopyWith<
+          _$LoadAllPaymentMethodsSuccessImpl>
+      get copyWith => __$$LoadAllPaymentMethodsSuccessImplCopyWithImpl<
+          _$LoadAllPaymentMethodsSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1895,20 +1911,21 @@ class _$_LoadAllPaymentMethodsSuccess implements _LoadAllPaymentMethodsSuccess {
 abstract class _LoadAllPaymentMethodsSuccess
     implements StripePaymentWatcherState {
   const factory _LoadAllPaymentMethodsSuccess(final List<CardItem> cards) =
-      _$_LoadAllPaymentMethodsSuccess;
+      _$LoadAllPaymentMethodsSuccessImpl;
 
   List<CardItem> get cards;
   @JsonKey(ignore: true)
-  _$$_LoadAllPaymentMethodsSuccessCopyWith<_$_LoadAllPaymentMethodsSuccess>
+  _$$LoadAllPaymentMethodsSuccessImplCopyWith<
+          _$LoadAllPaymentMethodsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadAllPaymentMethodsFailureCopyWith<$Res> {
-  factory _$$_LoadAllPaymentMethodsFailureCopyWith(
-          _$_LoadAllPaymentMethodsFailure value,
-          $Res Function(_$_LoadAllPaymentMethodsFailure) then) =
-      __$$_LoadAllPaymentMethodsFailureCopyWithImpl<$Res>;
+abstract class _$$LoadAllPaymentMethodsFailureImplCopyWith<$Res> {
+  factory _$$LoadAllPaymentMethodsFailureImplCopyWith(
+          _$LoadAllPaymentMethodsFailureImpl value,
+          $Res Function(_$LoadAllPaymentMethodsFailureImpl) then) =
+      __$$LoadAllPaymentMethodsFailureImplCopyWithImpl<$Res>;
   @useResult
   $Res call({PaymentMethodValueFailure<dynamic> failure});
 
@@ -1916,13 +1933,13 @@ abstract class _$$_LoadAllPaymentMethodsFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LoadAllPaymentMethodsFailureCopyWithImpl<$Res>
+class __$$LoadAllPaymentMethodsFailureImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherStateCopyWithImpl<$Res,
-        _$_LoadAllPaymentMethodsFailure>
-    implements _$$_LoadAllPaymentMethodsFailureCopyWith<$Res> {
-  __$$_LoadAllPaymentMethodsFailureCopyWithImpl(
-      _$_LoadAllPaymentMethodsFailure _value,
-      $Res Function(_$_LoadAllPaymentMethodsFailure) _then)
+        _$LoadAllPaymentMethodsFailureImpl>
+    implements _$$LoadAllPaymentMethodsFailureImplCopyWith<$Res> {
+  __$$LoadAllPaymentMethodsFailureImplCopyWithImpl(
+      _$LoadAllPaymentMethodsFailureImpl _value,
+      $Res Function(_$LoadAllPaymentMethodsFailureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -1930,7 +1947,7 @@ class __$$_LoadAllPaymentMethodsFailureCopyWithImpl<$Res>
   $Res call({
     Object? failure = null,
   }) {
-    return _then(_$_LoadAllPaymentMethodsFailure(
+    return _then(_$LoadAllPaymentMethodsFailureImpl(
       null == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -1950,8 +1967,9 @@ class __$$_LoadAllPaymentMethodsFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadAllPaymentMethodsFailure implements _LoadAllPaymentMethodsFailure {
-  const _$_LoadAllPaymentMethodsFailure(this.failure);
+class _$LoadAllPaymentMethodsFailureImpl
+    implements _LoadAllPaymentMethodsFailure {
+  const _$LoadAllPaymentMethodsFailureImpl(this.failure);
 
   @override
   final PaymentMethodValueFailure<dynamic> failure;
@@ -1962,10 +1980,10 @@ class _$_LoadAllPaymentMethodsFailure implements _LoadAllPaymentMethodsFailure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadAllPaymentMethodsFailure &&
+            other is _$LoadAllPaymentMethodsFailureImpl &&
             (identical(other.failure, failure) || other.failure == failure));
   }
 
@@ -1975,9 +1993,10 @@ class _$_LoadAllPaymentMethodsFailure implements _LoadAllPaymentMethodsFailure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadAllPaymentMethodsFailureCopyWith<_$_LoadAllPaymentMethodsFailure>
-      get copyWith => __$$_LoadAllPaymentMethodsFailureCopyWithImpl<
-          _$_LoadAllPaymentMethodsFailure>(this, _$identity);
+  _$$LoadAllPaymentMethodsFailureImplCopyWith<
+          _$LoadAllPaymentMethodsFailureImpl>
+      get copyWith => __$$LoadAllPaymentMethodsFailureImplCopyWithImpl<
+          _$LoadAllPaymentMethodsFailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2110,32 +2129,33 @@ abstract class _LoadAllPaymentMethodsFailure
     implements StripePaymentWatcherState {
   const factory _LoadAllPaymentMethodsFailure(
           final PaymentMethodValueFailure<dynamic> failure) =
-      _$_LoadAllPaymentMethodsFailure;
+      _$LoadAllPaymentMethodsFailureImpl;
 
   PaymentMethodValueFailure<dynamic> get failure;
   @JsonKey(ignore: true)
-  _$$_LoadAllPaymentMethodsFailureCopyWith<_$_LoadAllPaymentMethodsFailure>
+  _$$LoadAllPaymentMethodsFailureImplCopyWith<
+          _$LoadAllPaymentMethodsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadAllPaymentIntentsSuccessCopyWith<$Res> {
-  factory _$$_LoadAllPaymentIntentsSuccessCopyWith(
-          _$_LoadAllPaymentIntentsSuccess value,
-          $Res Function(_$_LoadAllPaymentIntentsSuccess) then) =
-      __$$_LoadAllPaymentIntentsSuccessCopyWithImpl<$Res>;
+abstract class _$$LoadAllPaymentIntentsSuccessImplCopyWith<$Res> {
+  factory _$$LoadAllPaymentIntentsSuccessImplCopyWith(
+          _$LoadAllPaymentIntentsSuccessImpl value,
+          $Res Function(_$LoadAllPaymentIntentsSuccessImpl) then) =
+      __$$LoadAllPaymentIntentsSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<PaymentIntent> paymentIntent});
 }
 
 /// @nodoc
-class __$$_LoadAllPaymentIntentsSuccessCopyWithImpl<$Res>
+class __$$LoadAllPaymentIntentsSuccessImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherStateCopyWithImpl<$Res,
-        _$_LoadAllPaymentIntentsSuccess>
-    implements _$$_LoadAllPaymentIntentsSuccessCopyWith<$Res> {
-  __$$_LoadAllPaymentIntentsSuccessCopyWithImpl(
-      _$_LoadAllPaymentIntentsSuccess _value,
-      $Res Function(_$_LoadAllPaymentIntentsSuccess) _then)
+        _$LoadAllPaymentIntentsSuccessImpl>
+    implements _$$LoadAllPaymentIntentsSuccessImplCopyWith<$Res> {
+  __$$LoadAllPaymentIntentsSuccessImplCopyWithImpl(
+      _$LoadAllPaymentIntentsSuccessImpl _value,
+      $Res Function(_$LoadAllPaymentIntentsSuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2143,7 +2163,7 @@ class __$$_LoadAllPaymentIntentsSuccessCopyWithImpl<$Res>
   $Res call({
     Object? paymentIntent = null,
   }) {
-    return _then(_$_LoadAllPaymentIntentsSuccess(
+    return _then(_$LoadAllPaymentIntentsSuccessImpl(
       null == paymentIntent
           ? _value._paymentIntent
           : paymentIntent // ignore: cast_nullable_to_non_nullable
@@ -2154,8 +2174,10 @@ class __$$_LoadAllPaymentIntentsSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadAllPaymentIntentsSuccess implements _LoadAllPaymentIntentsSuccess {
-  const _$_LoadAllPaymentIntentsSuccess(final List<PaymentIntent> paymentIntent)
+class _$LoadAllPaymentIntentsSuccessImpl
+    implements _LoadAllPaymentIntentsSuccess {
+  const _$LoadAllPaymentIntentsSuccessImpl(
+      final List<PaymentIntent> paymentIntent)
       : _paymentIntent = paymentIntent;
 
   final List<PaymentIntent> _paymentIntent;
@@ -2172,10 +2194,10 @@ class _$_LoadAllPaymentIntentsSuccess implements _LoadAllPaymentIntentsSuccess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadAllPaymentIntentsSuccess &&
+            other is _$LoadAllPaymentIntentsSuccessImpl &&
             const DeepCollectionEquality()
                 .equals(other._paymentIntent, _paymentIntent));
   }
@@ -2187,9 +2209,10 @@ class _$_LoadAllPaymentIntentsSuccess implements _LoadAllPaymentIntentsSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadAllPaymentIntentsSuccessCopyWith<_$_LoadAllPaymentIntentsSuccess>
-      get copyWith => __$$_LoadAllPaymentIntentsSuccessCopyWithImpl<
-          _$_LoadAllPaymentIntentsSuccess>(this, _$identity);
+  _$$LoadAllPaymentIntentsSuccessImplCopyWith<
+          _$LoadAllPaymentIntentsSuccessImpl>
+      get copyWith => __$$LoadAllPaymentIntentsSuccessImplCopyWithImpl<
+          _$LoadAllPaymentIntentsSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2322,20 +2345,21 @@ abstract class _LoadAllPaymentIntentsSuccess
     implements StripePaymentWatcherState {
   const factory _LoadAllPaymentIntentsSuccess(
           final List<PaymentIntent> paymentIntent) =
-      _$_LoadAllPaymentIntentsSuccess;
+      _$LoadAllPaymentIntentsSuccessImpl;
 
   List<PaymentIntent> get paymentIntent;
   @JsonKey(ignore: true)
-  _$$_LoadAllPaymentIntentsSuccessCopyWith<_$_LoadAllPaymentIntentsSuccess>
+  _$$LoadAllPaymentIntentsSuccessImplCopyWith<
+          _$LoadAllPaymentIntentsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadAllPaymentIntentsFailureCopyWith<$Res> {
-  factory _$$_LoadAllPaymentIntentsFailureCopyWith(
-          _$_LoadAllPaymentIntentsFailure value,
-          $Res Function(_$_LoadAllPaymentIntentsFailure) then) =
-      __$$_LoadAllPaymentIntentsFailureCopyWithImpl<$Res>;
+abstract class _$$LoadAllPaymentIntentsFailureImplCopyWith<$Res> {
+  factory _$$LoadAllPaymentIntentsFailureImplCopyWith(
+          _$LoadAllPaymentIntentsFailureImpl value,
+          $Res Function(_$LoadAllPaymentIntentsFailureImpl) then) =
+      __$$LoadAllPaymentIntentsFailureImplCopyWithImpl<$Res>;
   @useResult
   $Res call({PaymentMethodValueFailure<dynamic> failure});
 
@@ -2343,13 +2367,13 @@ abstract class _$$_LoadAllPaymentIntentsFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LoadAllPaymentIntentsFailureCopyWithImpl<$Res>
+class __$$LoadAllPaymentIntentsFailureImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherStateCopyWithImpl<$Res,
-        _$_LoadAllPaymentIntentsFailure>
-    implements _$$_LoadAllPaymentIntentsFailureCopyWith<$Res> {
-  __$$_LoadAllPaymentIntentsFailureCopyWithImpl(
-      _$_LoadAllPaymentIntentsFailure _value,
-      $Res Function(_$_LoadAllPaymentIntentsFailure) _then)
+        _$LoadAllPaymentIntentsFailureImpl>
+    implements _$$LoadAllPaymentIntentsFailureImplCopyWith<$Res> {
+  __$$LoadAllPaymentIntentsFailureImplCopyWithImpl(
+      _$LoadAllPaymentIntentsFailureImpl _value,
+      $Res Function(_$LoadAllPaymentIntentsFailureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2357,7 +2381,7 @@ class __$$_LoadAllPaymentIntentsFailureCopyWithImpl<$Res>
   $Res call({
     Object? failure = null,
   }) {
-    return _then(_$_LoadAllPaymentIntentsFailure(
+    return _then(_$LoadAllPaymentIntentsFailureImpl(
       null == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -2377,8 +2401,9 @@ class __$$_LoadAllPaymentIntentsFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadAllPaymentIntentsFailure implements _LoadAllPaymentIntentsFailure {
-  const _$_LoadAllPaymentIntentsFailure(this.failure);
+class _$LoadAllPaymentIntentsFailureImpl
+    implements _LoadAllPaymentIntentsFailure {
+  const _$LoadAllPaymentIntentsFailureImpl(this.failure);
 
   @override
   final PaymentMethodValueFailure<dynamic> failure;
@@ -2389,10 +2414,10 @@ class _$_LoadAllPaymentIntentsFailure implements _LoadAllPaymentIntentsFailure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadAllPaymentIntentsFailure &&
+            other is _$LoadAllPaymentIntentsFailureImpl &&
             (identical(other.failure, failure) || other.failure == failure));
   }
 
@@ -2402,9 +2427,10 @@ class _$_LoadAllPaymentIntentsFailure implements _LoadAllPaymentIntentsFailure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadAllPaymentIntentsFailureCopyWith<_$_LoadAllPaymentIntentsFailure>
-      get copyWith => __$$_LoadAllPaymentIntentsFailureCopyWithImpl<
-          _$_LoadAllPaymentIntentsFailure>(this, _$identity);
+  _$$LoadAllPaymentIntentsFailureImplCopyWith<
+          _$LoadAllPaymentIntentsFailureImpl>
+      get copyWith => __$$LoadAllPaymentIntentsFailureImplCopyWithImpl<
+          _$LoadAllPaymentIntentsFailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2537,30 +2563,32 @@ abstract class _LoadAllPaymentIntentsFailure
     implements StripePaymentWatcherState {
   const factory _LoadAllPaymentIntentsFailure(
           final PaymentMethodValueFailure<dynamic> failure) =
-      _$_LoadAllPaymentIntentsFailure;
+      _$LoadAllPaymentIntentsFailureImpl;
 
   PaymentMethodValueFailure<dynamic> get failure;
   @JsonKey(ignore: true)
-  _$$_LoadAllPaymentIntentsFailureCopyWith<_$_LoadAllPaymentIntentsFailure>
+  _$$LoadAllPaymentIntentsFailureImplCopyWith<
+          _$LoadAllPaymentIntentsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadAllPayoutsSuccessCopyWith<$Res> {
-  factory _$$_LoadAllPayoutsSuccessCopyWith(_$_LoadAllPayoutsSuccess value,
-          $Res Function(_$_LoadAllPayoutsSuccess) then) =
-      __$$_LoadAllPayoutsSuccessCopyWithImpl<$Res>;
+abstract class _$$LoadAllPayoutsSuccessImplCopyWith<$Res> {
+  factory _$$LoadAllPayoutsSuccessImplCopyWith(
+          _$LoadAllPayoutsSuccessImpl value,
+          $Res Function(_$LoadAllPayoutsSuccessImpl) then) =
+      __$$LoadAllPayoutsSuccessImplCopyWithImpl<$Res>;
   @useResult
   $Res call({List<PayoutModel> payoutModel});
 }
 
 /// @nodoc
-class __$$_LoadAllPayoutsSuccessCopyWithImpl<$Res>
+class __$$LoadAllPayoutsSuccessImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherStateCopyWithImpl<$Res,
-        _$_LoadAllPayoutsSuccess>
-    implements _$$_LoadAllPayoutsSuccessCopyWith<$Res> {
-  __$$_LoadAllPayoutsSuccessCopyWithImpl(_$_LoadAllPayoutsSuccess _value,
-      $Res Function(_$_LoadAllPayoutsSuccess) _then)
+        _$LoadAllPayoutsSuccessImpl>
+    implements _$$LoadAllPayoutsSuccessImplCopyWith<$Res> {
+  __$$LoadAllPayoutsSuccessImplCopyWithImpl(_$LoadAllPayoutsSuccessImpl _value,
+      $Res Function(_$LoadAllPayoutsSuccessImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2568,7 +2596,7 @@ class __$$_LoadAllPayoutsSuccessCopyWithImpl<$Res>
   $Res call({
     Object? payoutModel = null,
   }) {
-    return _then(_$_LoadAllPayoutsSuccess(
+    return _then(_$LoadAllPayoutsSuccessImpl(
       null == payoutModel
           ? _value._payoutModel
           : payoutModel // ignore: cast_nullable_to_non_nullable
@@ -2579,8 +2607,8 @@ class __$$_LoadAllPayoutsSuccessCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadAllPayoutsSuccess implements _LoadAllPayoutsSuccess {
-  const _$_LoadAllPayoutsSuccess(final List<PayoutModel> payoutModel)
+class _$LoadAllPayoutsSuccessImpl implements _LoadAllPayoutsSuccess {
+  const _$LoadAllPayoutsSuccessImpl(final List<PayoutModel> payoutModel)
       : _payoutModel = payoutModel;
 
   final List<PayoutModel> _payoutModel;
@@ -2597,10 +2625,10 @@ class _$_LoadAllPayoutsSuccess implements _LoadAllPayoutsSuccess {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadAllPayoutsSuccess &&
+            other is _$LoadAllPayoutsSuccessImpl &&
             const DeepCollectionEquality()
                 .equals(other._payoutModel, _payoutModel));
   }
@@ -2612,9 +2640,9 @@ class _$_LoadAllPayoutsSuccess implements _LoadAllPayoutsSuccess {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadAllPayoutsSuccessCopyWith<_$_LoadAllPayoutsSuccess> get copyWith =>
-      __$$_LoadAllPayoutsSuccessCopyWithImpl<_$_LoadAllPayoutsSuccess>(
-          this, _$identity);
+  _$$LoadAllPayoutsSuccessImplCopyWith<_$LoadAllPayoutsSuccessImpl>
+      get copyWith => __$$LoadAllPayoutsSuccessImplCopyWithImpl<
+          _$LoadAllPayoutsSuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2745,19 +2773,20 @@ class _$_LoadAllPayoutsSuccess implements _LoadAllPayoutsSuccess {
 
 abstract class _LoadAllPayoutsSuccess implements StripePaymentWatcherState {
   const factory _LoadAllPayoutsSuccess(final List<PayoutModel> payoutModel) =
-      _$_LoadAllPayoutsSuccess;
+      _$LoadAllPayoutsSuccessImpl;
 
   List<PayoutModel> get payoutModel;
   @JsonKey(ignore: true)
-  _$$_LoadAllPayoutsSuccessCopyWith<_$_LoadAllPayoutsSuccess> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadAllPayoutsSuccessImplCopyWith<_$LoadAllPayoutsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_LoadAllPayoutsFailureCopyWith<$Res> {
-  factory _$$_LoadAllPayoutsFailureCopyWith(_$_LoadAllPayoutsFailure value,
-          $Res Function(_$_LoadAllPayoutsFailure) then) =
-      __$$_LoadAllPayoutsFailureCopyWithImpl<$Res>;
+abstract class _$$LoadAllPayoutsFailureImplCopyWith<$Res> {
+  factory _$$LoadAllPayoutsFailureImplCopyWith(
+          _$LoadAllPayoutsFailureImpl value,
+          $Res Function(_$LoadAllPayoutsFailureImpl) then) =
+      __$$LoadAllPayoutsFailureImplCopyWithImpl<$Res>;
   @useResult
   $Res call({PaymentMethodValueFailure<dynamic> failure});
 
@@ -2765,12 +2794,12 @@ abstract class _$$_LoadAllPayoutsFailureCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_LoadAllPayoutsFailureCopyWithImpl<$Res>
+class __$$LoadAllPayoutsFailureImplCopyWithImpl<$Res>
     extends _$StripePaymentWatcherStateCopyWithImpl<$Res,
-        _$_LoadAllPayoutsFailure>
-    implements _$$_LoadAllPayoutsFailureCopyWith<$Res> {
-  __$$_LoadAllPayoutsFailureCopyWithImpl(_$_LoadAllPayoutsFailure _value,
-      $Res Function(_$_LoadAllPayoutsFailure) _then)
+        _$LoadAllPayoutsFailureImpl>
+    implements _$$LoadAllPayoutsFailureImplCopyWith<$Res> {
+  __$$LoadAllPayoutsFailureImplCopyWithImpl(_$LoadAllPayoutsFailureImpl _value,
+      $Res Function(_$LoadAllPayoutsFailureImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -2778,7 +2807,7 @@ class __$$_LoadAllPayoutsFailureCopyWithImpl<$Res>
   $Res call({
     Object? failure = null,
   }) {
-    return _then(_$_LoadAllPayoutsFailure(
+    return _then(_$LoadAllPayoutsFailureImpl(
       null == failure
           ? _value.failure
           : failure // ignore: cast_nullable_to_non_nullable
@@ -2798,8 +2827,8 @@ class __$$_LoadAllPayoutsFailureCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoadAllPayoutsFailure implements _LoadAllPayoutsFailure {
-  const _$_LoadAllPayoutsFailure(this.failure);
+class _$LoadAllPayoutsFailureImpl implements _LoadAllPayoutsFailure {
+  const _$LoadAllPayoutsFailureImpl(this.failure);
 
   @override
   final PaymentMethodValueFailure<dynamic> failure;
@@ -2810,10 +2839,10 @@ class _$_LoadAllPayoutsFailure implements _LoadAllPayoutsFailure {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_LoadAllPayoutsFailure &&
+            other is _$LoadAllPayoutsFailureImpl &&
             (identical(other.failure, failure) || other.failure == failure));
   }
 
@@ -2823,9 +2852,9 @@ class _$_LoadAllPayoutsFailure implements _LoadAllPayoutsFailure {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_LoadAllPayoutsFailureCopyWith<_$_LoadAllPayoutsFailure> get copyWith =>
-      __$$_LoadAllPayoutsFailureCopyWithImpl<_$_LoadAllPayoutsFailure>(
-          this, _$identity);
+  _$$LoadAllPayoutsFailureImplCopyWith<_$LoadAllPayoutsFailureImpl>
+      get copyWith => __$$LoadAllPayoutsFailureImplCopyWithImpl<
+          _$LoadAllPayoutsFailureImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -2957,10 +2986,10 @@ class _$_LoadAllPayoutsFailure implements _LoadAllPayoutsFailure {
 abstract class _LoadAllPayoutsFailure implements StripePaymentWatcherState {
   const factory _LoadAllPayoutsFailure(
           final PaymentMethodValueFailure<dynamic> failure) =
-      _$_LoadAllPayoutsFailure;
+      _$LoadAllPayoutsFailureImpl;
 
   PaymentMethodValueFailure<dynamic> get failure;
   @JsonKey(ignore: true)
-  _$$_LoadAllPayoutsFailureCopyWith<_$_LoadAllPayoutsFailure> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$LoadAllPayoutsFailureImplCopyWith<_$LoadAllPayoutsFailureImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

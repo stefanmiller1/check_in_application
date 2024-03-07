@@ -50,6 +50,8 @@ _i1.GetIt $initGetIt(
       () => _i7.BookedReservationFormBloc(get<_i4.RUpdaterFacade>()));
   gh.factory<_i3.CheckOutServicesBloc>(
       () => _i3.CheckOutServicesBloc(get<_i4.SStripeFacade>()));
+  gh.factory<_i3.CommunityManagerWatcherBloc>(
+      () => _i3.CommunityManagerWatcherBloc(get<_i4.CAuthWatcherFacade>()));
   gh.factory<_i3.CreateAuthUserAccountBloc>(
       () => _i3.CreateAuthUserAccountBloc(get<_i4.IAuthFacade>()));
   gh.factory<_i3.CreateLocationBloc>(
@@ -76,6 +78,8 @@ _i1.GetIt $initGetIt(
       () => _i3.LocationVerificationWatcherBloc(get<_i4.MMiscFacade>()));
   gh.factory<_i3.NewsUpdatesWatcherBloc>(
       () => _i3.NewsUpdatesWatcherBloc(get<_i4.MMiscFacade>()));
+  gh.factory<_i3.NotificationWatcherBloc>(
+      () => _i3.NotificationWatcherBloc(get<_i4.NWatcherFacade>()));
   gh.factory<_i3.PaymentServicesBloc>(() => _i3.PaymentServicesBloc(
         get<_i4.SStripeFacade>(),
         get<_i4.IAuthFacade>(),

@@ -131,6 +131,70 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
           );
         },
 
+        activityPostedOnBehalf: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService.copyWith(
+                      isActivityPost: e.isPostBool
+                  ),
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance
+              ),
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
+          );
+        },
+
+        activityPostContactWebsite: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService.copyWith(
+                      postContactWebsite: e.websiteStr
+                  ),
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance
+              ),
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
+          );
+        },
+
+        activityPostContactEmail: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService.copyWith(
+                      postContactEmail: e.emailStr
+                  ),
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance
+              ),
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
+          );
+        },
+
+        activityPostContactInstagram: (e) async* {
+          yield state.copyWith(
+              activitySettingsForm: ActivityManagerForm(
+                  activityFormId: state.activitySettingsForm.activityFormId,
+                  profileService: state.activitySettingsForm.profileService.copyWith(
+                      postContactSocialInstagram: e.instaStr
+                  ),
+                  rulesService: state.activitySettingsForm.rulesService,
+                  activityType: state.activitySettingsForm.activityType,
+                  activityAttendance: state.activitySettingsForm.activityAttendance
+              ),
+              isEditingForm: true,
+              authFailureOrSuccessOptionSaving: none()
+          );
+        },
+
         isPartnersInviteOnly: (e) async* {
           yield state.copyWith(
               activitySettingsForm: ActivityManagerForm(
@@ -1358,8 +1422,7 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
               authFailureOrSuccessOptionSaving: none()
           );
 
-          failureOrSuccess = state.isSaving ?
-          await _activityAuthFacade.updateActivitySettingsForm(
+          failureOrSuccess = state.isSaving ? await _activityAuthFacade.updateActivitySettingsForm(
               activityForm: state.activitySettingsForm,
               activityResId: state.reservationItem.reservationId
           ) : left(const ActivityFormFailure.unexpected());

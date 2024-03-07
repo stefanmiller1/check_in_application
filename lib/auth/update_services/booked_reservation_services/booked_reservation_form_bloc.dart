@@ -4,6 +4,7 @@ import 'package:check_in_domain/domain/auth/reservation_manager/reservation_post
 import 'package:check_in_domain/domain/auth/reservation_manager/reservation_post/image_post.dart';
 import 'package:check_in_domain/domain/auth/reservation_manager/reservation_post/text_post.dart';
 import 'package:check_in_domain/domain/auth/reservation_manager/reservation_post/video_post.dart';
+import 'package:check_in_domain/domain/misc/attendee_services/attendee_item/attendee_item.dart';
 import 'package:check_in_facade/check_in_facade.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -111,7 +112,7 @@ class BookedReservationFormBloc extends Bloc<BookedReservationFormEvent, BookedR
                 authFailureOrSuccess: none()
             );
 
-            failureOrSuccess = state.isSubmitting ? await _resFacade.createReservationPost(reservationPost: state.reservationPost) : left(const ReservationFormFailure.reservationServerError());
+            failureOrSuccess = state.isSubmitting ? await _resFacade.createReservationPost(reservationPost: state.reservationPost, attendees: e.attendees) : left(const ReservationFormFailure.reservationServerError());
 
             yield state.copyWith(
                 authFailureOrSuccess: optionOf(failureOrSuccess)
@@ -139,7 +140,7 @@ class BookedReservationFormBloc extends Bloc<BookedReservationFormEvent, BookedR
               authFailureOrSuccess: none()
             );
 
-            failureOrSuccess = state.isSubmitting ? await _resFacade.createReservationPost(reservationPost: state.reservationPost) : left(const ReservationFormFailure.reservationServerError());
+            failureOrSuccess = state.isSubmitting ? await _resFacade.createReservationPost(reservationPost: state.reservationPost, attendees: e.attendees) : left(const ReservationFormFailure.reservationServerError());
 
             yield state.copyWith(
               authFailureOrSuccess: optionOf(failureOrSuccess)

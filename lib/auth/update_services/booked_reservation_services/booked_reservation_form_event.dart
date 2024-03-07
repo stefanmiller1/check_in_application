@@ -21,8 +21,8 @@ class BookedReservationFormEvent with _$BookedReservationFormEvent {
   const factory BookedReservationFormEvent.didRequestRefundCancellation() = _DidRequestRefundCancellation;
   const factory BookedReservationFormEvent.didRequestReservationChange() = _DidRequestReservationChange;
 
-  const factory BookedReservationFormEvent.didFinishSubmittingReply(Post replyingPost) = _DidFinishSubmittingReply;
-  const factory BookedReservationFormEvent.didFinishSubmittingPost() = _DidFinishSubmittingPost;
+  const factory BookedReservationFormEvent.didFinishSubmittingReply(Post replyingPost, List<AttendeeItem> attendees) = _DidFinishSubmittingReply;
+  const factory BookedReservationFormEvent.didFinishSubmittingPost(List<AttendeeItem> attendees) = _DidFinishSubmittingPost;
   const factory BookedReservationFormEvent.didFinishCreateNewInviteLink(ReservationItem reservation) = _DidFinishCreateNewInviteLink;
 
 

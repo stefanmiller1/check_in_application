@@ -80,7 +80,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
                 )
             );
           },
-          phoneNumberChanged: (e) async* {
+          listingPhoneNumberChanged: (e) async* {
             yield state.copyWith(
                 isEditingSettings: true,
                 listingManagerForm: state.listingManagerForm.copyWith(
@@ -184,7 +184,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
           },
 
 
-          instagramContactChanged: (e) async* {
+          listingInstagramContactChanged: (e) async* {
             yield state.copyWith(
                 isEditingSettings: true,
                 listingManagerForm: state.listingManagerForm.copyWith(
@@ -203,7 +203,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
                 )
             );
           },
-          twitterContactChanged: (e) async* {
+          listingTwitterContactChanged: (e) async* {
             yield state.copyWith(
                 isEditingSettings: true,
                 listingManagerForm: state.listingManagerForm.copyWith(
@@ -222,7 +222,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
                 )
             );
           },
-          fBookContactChanged: (e) async* {
+          listingFBookContactChanged: (e) async* {
             yield state.copyWith(
                 isEditingSettings: true,
                 listingManagerForm: state.listingManagerForm.copyWith(

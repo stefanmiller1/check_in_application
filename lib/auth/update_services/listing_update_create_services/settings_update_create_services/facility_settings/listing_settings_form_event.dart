@@ -14,15 +14,15 @@ class ListingSettingFormEvent with _$ListingSettingFormEvent {
   const factory ListingSettingFormEvent.startDateChanged(DateTime startDate) = _StartDateChanged;
   const factory ListingSettingFormEvent.nameChanged(String nameStr) = _NameChanged;
   const factory ListingSettingFormEvent.emailAddressChanged(EmailAddress emailStr) = _EmailAddressChanged;
-  const factory ListingSettingFormEvent.phoneNumberChanged(PhoneNumber phoneNumberStr) = _PhoneNumberChanged;
+  const factory ListingSettingFormEvent.listingPhoneNumberChanged(PhoneNumber phoneNumberStr) = _ListingPhoneNumberChanged;
   const factory ListingSettingFormEvent.statusTypeChanged(ManagerListingStatusType statusType) = _StatusTypeChanged;
   const factory ListingSettingFormEvent.webSiteChanged(String webSiteStr) = _WebSiteChanged;
   const factory ListingSettingFormEvent.countryRegionLanguageChanged(Language countryStr) = _CountryRegionLanguageChanged;
   const factory ListingSettingFormEvent.timeZoneChanged(String timeZoneStr) = _TimeZoneChanged;
   const factory ListingSettingFormEvent.currencyTypeChanged(String currencyStr) = _CurrencyTypeChanged;
-  const factory ListingSettingFormEvent.instagramContactChanged(String instStr) = _InstagramContactChanged;
-  const factory ListingSettingFormEvent.twitterContactChanged(String twitterStr) = _TwitterContactChanged;
-  const factory ListingSettingFormEvent.fBookContactChanged(String bookStr) = _FBookContactChanged;
+  const factory ListingSettingFormEvent.listingInstagramContactChanged(String instStr) = _ListingInstagramContactChanged;
+  const factory ListingSettingFormEvent.listingTwitterContactChanged(String twitterStr) = _ListingTwitterContactChanged;
+  const factory ListingSettingFormEvent.listingFBookContactChanged(String bookStr) = _ListingFBookContactChanged;
 
 
   /// listing profile location info events:
