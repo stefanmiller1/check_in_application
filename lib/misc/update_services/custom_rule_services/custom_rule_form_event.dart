@@ -9,9 +9,9 @@ class CustomRuleFormEvent with _$CustomRuleFormEvent {
 
   factory CustomRuleFormEvent.customRuleTypeChanged(CustomRuleObjectType typ) = _CustomRuleTypeChanged;
   factory CustomRuleFormEvent.customRuleLabelTextRuleChanged(LabelTextRuleOption labelRule) = _CustomRuleLabelTextRuleChanged;
-  factory CustomRuleFormEvent.customRuleSelectionRuleChanged(SelectionLabelOption labelRule) = _CustomRuleSelectionRuleChanged;
+  factory CustomRuleFormEvent.customRuleSelectionRuleChanged(List<SelectionLabelOption> labelRule) = _CustomRuleSelectionRuleChanged;
   factory CustomRuleFormEvent.customRuleNumberLimitRuleChanged(NumberLimitRuleOption labelRule) = _CustomRuleNumberLimitRuleChanged;
-  factory CustomRuleFormEvent.customRuleCheckBoxRuleChanged(CheckBoxRuleOption labelRule) = _CustomRuleCheckBoxRuleChanged;
+  factory CustomRuleFormEvent.customRuleCheckBoxRuleChanged(List<CheckBoxRuleOption> labelRule) = _CustomRuleCheckBoxRuleChanged;
 
   factory CustomRuleFormEvent.customRuleDetailsChanged(CustomRuleOptionDetail labelRule) = _CustomRuleDetailsChanged;
 

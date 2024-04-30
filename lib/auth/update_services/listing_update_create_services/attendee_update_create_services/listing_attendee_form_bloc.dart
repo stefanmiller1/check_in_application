@@ -84,7 +84,15 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           );
         },
 
-        updateMerchantVendorForm: (e) async* {
+        updateVendorForm: (e) async* {
+            yield state.copyWith(
+              attendeeItem: state.attendeeItem.copyWith(
+                  vendorForm: e.form
+              )
+            );
+        },
+
+        updateMerchantVendorProfileId: (e) async* {
           yield state.copyWith(
             attendeeItem: state.attendeeItem.copyWith(
               eventMerchantVendorProfile: e.merchVendorProfile
@@ -113,8 +121,18 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
         isFinishedCreatingAttendee: (e) async* {
           Either<AttendeeFormFailure, Unit> failureOrSuccess;
 
+
+
           yield state.copyWith(
             isSubmitting: true,
+            attendeeItem: state.attendeeItem.copyWith(
+              attendeeOwnerId: e.profile.userId,
+              attendeeDetails: ContactDetails(
+                  contactId: e.profile.userId,
+                  name: FirstLastName('${e.profile.legalName.value.fold((l) => '', (r) => r)} ${e.profile.legalSurname.value.fold((l) => '', (r) => r)}'),
+                  emailAddress: e.profile.emailAddress
+              )
+            ),
             authFailureOrSuccessOption: none(),
           );
 
@@ -301,7 +319,7 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
         },
 
 
-
+        /// TODO: REMOVE THIS
         isFinishedInvitingAttendee: (e) async* {
           Either<AttendeeFormFailure, Unit> failureOrSuccess;
 
@@ -309,7 +327,7 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
           isValid = (state.attendeeItem.attendeeDetails != null) && (state.attendeeItem.contactStatus != null);
           if (state.attendeeItem.attendeeType == AttendeeType.vendor) {
-            isValid = (state.attendeeItem.eventMerchantVendorProfile?.vendorLogo != null && (state.attendeeItem.eventMerchantVendorProfile?.brandName.isValid() ?? false) && (state.attendeeItem.eventMerchantVendorProfile?.backgroundInfo.isValid() ?? false));
+            isValid = state.attendeeItem.eventMerchantVendorProfile != null;
           }
 
           yield state.copyWith(

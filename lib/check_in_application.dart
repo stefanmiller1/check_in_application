@@ -58,6 +58,14 @@ part 'auth/update_services/user_update_account_services/profile_services/update_
 part 'auth/update_services/user_update_account_services/profile_services/update_user_profile_account_event.dart';
 part 'auth/update_services/user_update_account_services/profile_services/update_user_profile_account_state.dart';
 
+part 'auth/update_services/user_update_account_services/vendor_merchant_profile_services/update_vendor_merch_profile_bloc.dart';
+part 'auth/update_services/user_update_account_services/vendor_merchant_profile_services/update_vendor_merch_profile_event.dart';
+part 'auth/update_services/user_update_account_services/vendor_merchant_profile_services/update_vendor_merch_profile_state.dart';
+
+part 'auth/update_services/user_update_account_services/circle_services/circle_profile_bloc.dart';
+part 'auth/update_services/user_update_account_services/circle_services/circle_profile_event.dart';
+part 'auth/update_services/user_update_account_services/circle_services/circle_profile_state.dart';
+
 part 'auth/update_services/user_update_account_services/account_services/create_auth_user_account_bloc.dart';
 part 'auth/update_services/user_update_account_services/account_services/create_auth_user_account_event.dart';
 part 'auth/update_services/user_update_account_services/account_services/create_auth_user_account_state.dart';
@@ -77,6 +85,9 @@ part 'auth/watcher_services/manager_watcher_services/listing_watcher/listing_man
 part 'auth/watcher_services/users/profile_services/user_profile_watcher_bloc.dart';
 part 'auth/watcher_services/users/profile_services/user_profile_watcher_event.dart';
 part 'auth/watcher_services/users/profile_services/user_profile_watcher_state.dart';
+part 'auth/watcher_services/users/profile_vendor_merch/vendor_merch_profile_watcher_bloc.dart';
+part 'auth/watcher_services/users/profile_vendor_merch/vendor_merch_profile_watcher_event.dart';
+part 'auth/watcher_services/users/profile_vendor_merch/vendor_merch_profile_watcher_state.dart';
 
 part 'auth/auth_bloc.dart';
 part 'auth/auth_event.dart';

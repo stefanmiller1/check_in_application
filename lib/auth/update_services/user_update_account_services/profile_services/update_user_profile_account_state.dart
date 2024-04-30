@@ -5,14 +5,24 @@ class UpdateUserProfileAccountState with _$UpdateUserProfileAccountState {
 
   const factory UpdateUserProfileAccountState({
     required ProfileItem profile,
-    required bool isEmailVerified,
+    required bool showProfilePreview,
+
+    required bool isEditingProfile,
+    required bool isSubmitting,
+    required AutovalidateMode showErrorMessages,
+    required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+    required Option<Either<AuthFailure, Unit>> deleteAuthFailureOrSuccessOption,
+
+
 
     required bool isChangingPassword,
     required Password password,
     required String passwordCheck,
     required PasswordConfirmation passwordConfirmation,
 
-    String? profileImagePath,
+    required bool isEmailVerified,
+
+    ImageUpload? profileImagePath,
     String? profileImageUrl,
     String? photoIdImagePath,
     String? photoIdImageUrl,
@@ -24,10 +34,6 @@ class UpdateUserProfileAccountState with _$UpdateUserProfileAccountState {
     required bool isPublic,
     required bool isSubmittingAddress,
 
-    required bool isEditingProfile,
-    required bool isSubmitting,
-    required AutovalidateMode showErrorMessages,
-    required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
 }) = _UpdateUserProfileAccountState;
 
   factory UpdateUserProfileAccountState.initial() => UpdateUserProfileAccountState(
@@ -44,8 +50,10 @@ class UpdateUserProfileAccountState with _$UpdateUserProfileAccountState {
       isPublic: false,
       isEditingProfile: false,
       isSubmitting: false,
+      showProfilePreview: false,
       showErrorMessages: AutovalidateMode.disabled,
-      authFailureOrSuccessOption: none()
+      authFailureOrSuccessOption: none(),
+      deleteAuthFailureOrSuccessOption: none(),
   );
 
 }

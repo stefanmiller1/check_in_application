@@ -193,7 +193,7 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
           yield const UserProfileWatcherState.loadInProgress();
           await _userAttendingResStreamSubscription?.cancel();
 
-          _userAttendingResStreamSubscription = _attendeeFacade.watchUserProfileAttending().listen((event) {
+          _userAttendingResStreamSubscription = _attendeeFacade.watchUserProfileAttending(status: e.status, attendingType: e.attendingType, limit: e.limit).listen((event) {
             return add(UserProfileWatcherEvent.profileAllAttendingResReceived(event));
           });
         },
@@ -202,13 +202,8 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
           yield e.failedList.fold(
                   (l) => UserProfileWatcherState.loadProfileAttendingResFailure(l),
                   (r) => UserProfileWatcherState.loadProfileAttendingResSuccess(r)
-          );
-        },
-
-
-
-
+        );
+      },
     );
   }
-
 }

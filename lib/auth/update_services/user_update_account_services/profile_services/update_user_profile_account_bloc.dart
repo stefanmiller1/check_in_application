@@ -214,40 +214,6 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
               );
           },
 
-          addressChanged: (e) async* {
-              yield state.copyWith(
-                  profile: state.profile.copyWith(
-                      profileUser: UserProfileModel(
-                          userId: state.profile.profileUser.userId,
-                          legalName: state.profile.profileUser.legalName,
-                          legalSurname: state.profile.profileUser.legalSurname,
-                          age: state.profile.profileUser.age,
-                          gender: state.profile.profileUser.gender,
-                          dateOfBirth: state.profile.profileUser.dateOfBirth,
-                          emailAddress: state.profile.profileUser.emailAddress,
-                          userAddress: ProfileAddress(e.addressStr),
-                          photoUri: state.profile.profileUser.photoUri,
-                          photoIdUri: state.profile.profileUser.photoIdUri,
-                          photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                          profileImage: state.profile.profileUser.profileImage,
-                          contactPhones: state.profile.profileUser.contactPhones,
-                          emergencyContact: state.profile.profileUser.emergencyContact,
-                          isEmailAuth: state.profile.profileUser.isEmailAuth,
-                          isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                          isVerified: state.profile.profileUser.isVerified,
-                          identificationState: state.profile.profileUser.identificationState,
-                          joinedDate: state.profile.profileUser.joinedDate,
-                          stripeAccountId: state.profile.profileUser.stripeAccountId,
-                          stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                          defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                          stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
-                      ),
-                  ),
-                  isEditingProfile: true,
-                  authFailureOrSuccessOption: none()
-              );
-          },
-
           phoneNumberChanged: (e) async* {
               yield state.copyWith(
                   profile: state.profile.copyWith(
@@ -493,6 +459,15 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
               isEditingProfile: true,
               authFailureOrSuccessOption: none(),
             );
+          },
+
+
+          communityProfileDidRemove: (e) async* {
+
+          },
+
+          merchantProfileDIdRemove: (e) async* {
+
           },
 
 
@@ -997,7 +972,6 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
 
               failureOrSuccess = state.isSubmitting ? await _authFacade.updateUserProfileSocials(socials: state.profile.profileSocials) : left(AuthFailure.serverError());
 
-
               yield state.copyWith(
                 authFailureOrSuccessOption: optionOf(failureOrSuccess),
                 showErrorMessages: AutovalidateMode.always,
@@ -1026,7 +1000,6 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
 
               yield state.copyWith(
                   authFailureOrSuccessOption: optionOf(failureOrSuccess));
-
             }
 
             yield state.copyWith(
@@ -1039,12 +1012,7 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
           finishedUpdatingUserProfile: (e) async* {
             Either<AuthFailure, Unit> failureOrSuccess;
 
-            final isNameValid = state.profile.profileUser.legalName.isValid();
-            final isLastNameValid = state.profile.profileUser.legalSurname.isValid();
-            final isPhoneValid = (state.profile.profileUser.contactPhones != null) ? state.profile.profileUser.contactPhones!.isValid() : true;
-            final isEmergePhoneValid = (state.profile.profileUser.emergencyContact != null) ? state.profile.profileUser.emergencyContact!.isValid() : true;
-
-            if (isNameValid && isLastNameValid && isPhoneValid && isEmergePhoneValid && state.isEditingProfile) {
+            if (isProfileItemValid(state.profile) && state.isEditingProfile) {
               yield state.copyWith(
                 isEditingProfile: false,
                 isSubmitting: true,
@@ -1053,7 +1021,7 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
 
               failureOrSuccess = state.isSubmitting ? await _authFacade.updateUserProfile(
                   profile: state.profile.profileUser,
-                  profileImageUrl: state.profileImageUrl,
+                  profileImageData: state.profileImagePath,
                   photoIDUrl: state.photoIdImageUrl,
                   photoSelfieUrl: state.photoSelfieImageUrl,
               ) : left(AuthFailure.serverError());
@@ -1089,12 +1057,30 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
               failureOrSuccess = state.isSubmitting ? left(AuthFailure.serverError()) : await _authFacade.createNewUserProfileLocation(location: state.profile.profileLocations);
 
               yield state.copyWith(
-              authFailureOrSuccessOption: optionOf(failureOrSuccess));
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+              );
             }
 
             yield state.copyWith(
               isSubmitting: false,
           );
+        },
+
+        deleteCurrentUserAccount: (e) async* {
+          Either<AuthFailure, Unit> failureOrSuccess;
+
+          yield state.copyWith(
+            isSubmitting: true,
+            deleteAuthFailureOrSuccessOption: none(),
+          );
+
+          failureOrSuccess = await _authFacade.deleteCurrentUserAccount();
+
+          yield state.copyWith(
+              isSubmitting: false,
+              deleteAuthFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+
         },
       );
     }

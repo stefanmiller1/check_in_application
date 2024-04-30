@@ -7,5 +7,5 @@ class CommunityManagerWatcherState with _$CommunityManagerWatcherState {
   const factory CommunityManagerWatcherState.communityLoadInProgress() = _CommunityWLoadInProgress;
 
   const factory CommunityManagerWatcherState.loadReservationLinkedCommunitiesSuccess(List<UniqueId> communityIds) = _LoadReservationLinkedCommunitiesSuccess;
-  const factory CommunityManagerWatcherState.loadReservationLinkedCommunitiesFailure(CommunityProfileFailure failure) = _LoadReservationLinkedCommunitiesFailure;
+  const factory CommunityManagerWatcherState.loadReservationLinkedCommunitiesFailure(ProfileValueFailure failure) = _LoadReservationLinkedCommunitiesFailure;
 }

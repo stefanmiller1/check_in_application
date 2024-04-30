@@ -122,6 +122,8 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
 
   const factory UpdateActivityFormEvent.skillLevelToReachChanged(List<SkillLevel> skills) = _SkillLevelToReachChanged;
 
+  const factory UpdateActivityFormEvent.vendorFormsChanged(List<VendorMerchantForm> forms) = _VendorFormsChanged;
+
   const factory UpdateActivityFormEvent.allowedDonationTypesChanged(List<DonationType> donationTypes) = _AllowedDonationTypesChanged;
   const factory UpdateActivityFormEvent.isAllowedExternalContributions(bool exBool) = _IsAllowedExternalContributions;
 

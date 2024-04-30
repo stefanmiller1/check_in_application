@@ -7,7 +7,7 @@ class CommunityManagerWatcherBloc extends Bloc<CommunityManagerWatcherEvent, Com
 
   CommunityManagerWatcherBloc(this._cAuthFacade) : super(CommunityManagerWatcherState.communityInitial());
 
-  StreamSubscription<Either<CommunityProfileFailure, List<UniqueId>>>? _communityLinkedResStreamSubscription;
+  StreamSubscription<Either<ProfileValueFailure, List<UniqueId>>>? _communityLinkedResStreamSubscription;
   // StreamSubscription<Either<CommunityProfileFailure, CommunityProfileItem>>? _currentCommunityStreamSubscription;
   // StreamSubscription<Either<CommunityProfileFailure, List<CommunityProfileItem>>>? _createdCommunitiesStreamSubscription;
 
@@ -23,7 +23,7 @@ class CommunityManagerWatcherBloc extends Bloc<CommunityManagerWatcherEvent, Com
           yield const CommunityManagerWatcherState.communityLoadInProgress();
 
           await _communityLinkedResStreamSubscription?.cancel();
-          _communityLinkedResStreamSubscription = _cAuthFacade.watchLinkedReservationCommunities(reservationId: e.reservationId).listen((event) {
+          _communityLinkedResStreamSubscription = _cAuthFacade.watchLinkedReservationCirclesCommunities(reservationId: e.reservationId).listen((event) {
             return add(CommunityManagerWatcherEvent.reservationLinkedCommunitiesReceived(event));
           });
         },

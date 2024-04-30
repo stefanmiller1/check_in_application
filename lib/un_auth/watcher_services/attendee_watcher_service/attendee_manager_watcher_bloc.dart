@@ -23,6 +23,7 @@ class AttendeeManagerWatcherBloc extends Bloc<AttendeeManagerWatcherEvent, Atten
   StreamSubscription<Either<AttendeeFormFailure, int>>? _attendanceCountStreamSubscription;
   StreamSubscription<Either<AttendeeFormFailure, List<AttendeeItem>>>? _allAttendanceListStreamSubscription;
   StreamSubscription<Either<AttendeeFormFailure, AttendeeItem>>? _attendanceItemStreamSubscription;
+  StreamSubscription<Either<AttendeeFormFailure, List<AttendeeItem>>>? _allAttendingItemStreamSubscription;
 
 
   @override
@@ -94,6 +95,22 @@ class AttendeeManagerWatcherBloc extends Bloc<AttendeeManagerWatcherEvent, Atten
                   (f) => AttendeeManagerWatcherState.loadAttendeeItemFailure(f),
                   (r) => AttendeeManagerWatcherState.loadAttendeeItemSuccess(r)
           );
+        },
+
+        watchCurrentUsersResAttendance: (e) async* {
+          yield const AttendeeManagerWatcherState.attLoadInProgress();
+
+          _allAttendingItemStreamSubscription = _attWatcherFacade.watchCurrentUsersAttendance(userId: e.userId.getOrCrash(), status: e.status, type: e.type, limit: e.limit).listen((event) {
+            return add(AttendeeManagerWatcherEvent.currentUserAttendanceReceived(event));
+          });
+        },
+
+        currentUserAttendanceReceived: (e) async* {
+          yield e.failedItems.fold(
+                  (l) => AttendeeManagerWatcherState.loadCurrentUserAttendancesFailure(l),
+                  (r) => AttendeeManagerWatcherState.loadCurrentUserAttendancesSuccess(r)
+          );
+
         }
     );
 

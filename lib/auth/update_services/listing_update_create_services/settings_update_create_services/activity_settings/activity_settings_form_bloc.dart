@@ -1046,6 +1046,18 @@ class UpdateActivityFormBloc extends Bloc<UpdateActivityFormEvent, UpdateActivit
           );
         },
 
+        vendorFormsChanged: (e) async* {
+          yield state.copyWith(
+            activitySettingsForm: state.activitySettingsForm.copyWith(
+              rulesService: state.activitySettingsForm.rulesService.copyWith(
+                vendorMerchantForms: e.forms
+              )
+            ),
+            isEditingForm: true,
+            authFailureOrSuccessOptionSaving: none()
+          );
+        },
+
         allowedDonationTypesChanged: (e) async* {
           yield state.copyWith(
               activitySettingsForm: ActivityManagerForm(

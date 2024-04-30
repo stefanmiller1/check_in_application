@@ -15,4 +15,7 @@ class AttendeeManagerWatcherEvent with _$AttendeeManagerWatcherEvent {
   const factory AttendeeManagerWatcherEvent.watchAttendeeItem(String activityId, String attendeeId) = _WatchAttendeeItem;
   const factory AttendeeManagerWatcherEvent.attendeeItemReceived(Either<AttendeeFormFailure, AttendeeItem> failedItem) = _AttendeeItemReceived;
 
+  const factory AttendeeManagerWatcherEvent.watchCurrentUsersResAttendance(UniqueId userId, ContactStatus status, AttendeeType type, int limit) = _WatchCurrentUsersResAttendance;
+  const factory AttendeeManagerWatcherEvent.currentUserAttendanceReceived(Either<AttendeeFormFailure, List<AttendeeItem>> failedItems) = _CurrentUserAttendanceReceived;
+
 }

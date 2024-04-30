@@ -13,9 +13,12 @@ class AttendeeFormEvent with _$AttendeeFormEvent {
   const factory AttendeeFormEvent.updateSelectedTicketOption(List<TicketItem> ticketItems) = _UpdateSelectedTicketOption;
 
   /// TODO: implement all attendee type forms.
-  const factory AttendeeFormEvent.updateClassesInstructorForm(ClassesInstructorProfile? instructorProfile) = _UpdateClassesInstructorForm;
-  const factory AttendeeFormEvent.updateMerchantVendorForm(EventMerchantVendorProfile? merchVendorProfile) = _UpdateMerchantVendorForm;
+  const factory AttendeeFormEvent.updateClassesInstructorForm(UniqueId? instructorProfile) = _UpdateClassesInstructorForm;
+  const factory AttendeeFormEvent.updateMerchantVendorProfileId(UniqueId? merchVendorProfile) = _UpdateMerchantVendorForm;
+
   /// fill out form for vendor
+  const factory AttendeeFormEvent.updateVendorForm(VendorMerchantForm? form) = _UpdateVendorForm;
+
   /// fill out form for organization/partner
   /// fill out form for ticket
   /// fill out form for passes

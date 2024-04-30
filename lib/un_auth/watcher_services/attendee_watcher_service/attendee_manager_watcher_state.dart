@@ -18,6 +18,8 @@ class AttendeeManagerWatcherState with _$AttendeeManagerWatcherState {
   const factory AttendeeManagerWatcherState.loadAttendeeItemSuccess(AttendeeItem item) = _LoadAttendeeItemSuccess;
   const factory AttendeeManagerWatcherState.loadAttendeeItemFailure(AttendeeFormFailure failure) = _LoadAttendeeItemFailure;
 
+  const factory AttendeeManagerWatcherState.loadCurrentUserAttendancesSuccess(List<AttendeeItem> item) = _LoadCurrentUserAttendancesSuccess;
+  const factory AttendeeManagerWatcherState.loadCurrentUserAttendancesFailure(AttendeeFormFailure failure) = _LoadCurrentUserAttendancesFailure;
 
 
 }
