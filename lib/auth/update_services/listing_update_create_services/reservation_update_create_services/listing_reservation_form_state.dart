@@ -21,6 +21,7 @@ class ReservationFormState with _$ReservationFormState {
 
     required bool isSubmitting,
     required AutovalidateMode showErrorMessages,
+    required Option<Either<PaymentMethodValueFailure, List<StripeRefundModel>>> authRefundFailureOrSuccessOption,
     required Option<Either<ReservationFormFailure, Unit>> authFailureOrSuccessOption,
     required Option<Either<PaymentMethodValueFailure, StringStringItems>> authPaymentFailureOrSuccessOption,
 
@@ -42,6 +43,7 @@ class ReservationFormState with _$ReservationFormState {
 
       isSubmitting: false,
       showErrorMessages: AutovalidateMode.disabled,
+      authRefundFailureOrSuccessOption: none(),
       authFailureOrSuccessOption: none(),
       authPaymentFailureOrSuccessOption: none(),
   );

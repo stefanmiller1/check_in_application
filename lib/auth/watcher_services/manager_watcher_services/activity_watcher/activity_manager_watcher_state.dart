@@ -3,7 +3,7 @@ part of check_in_application;
 @freezed
 class ActivityManagerWatcherState with _$ActivityManagerWatcherState {
 
-  const factory ActivityManagerWatcherState.initial() = _ActivityMInitial;
+  const factory ActivityManagerWatcherState.activityMInitial() = _ActivityMInitial;
   const factory ActivityManagerWatcherState.loadInProgress() = _ActivityMLoadInProgress;
 
   // const factory ActivityManagerWatcherState.loadActivityManagerItemSuccess(ActivityManagerProfile item) = _LoadActivityManagerItemSuccess;

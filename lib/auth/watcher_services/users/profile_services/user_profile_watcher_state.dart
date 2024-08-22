@@ -41,5 +41,7 @@ class UserProfileWatcherState with _$UserProfileWatcherState {
 
   const factory UserProfileWatcherState.loadProfileAttendingResSuccess(List<AttendeeItem> attending) = _LoadProfileAttendingResSuccess;
   const factory UserProfileWatcherState.loadProfileAttendingResFailure(AttendeeFormFailure failure) = _LoadProfileAttendingResFailure;
-  
+
+  const factory UserProfileWatcherState.loadAllProfileFromIdsSuccess(List<UserProfileModel> profiles) = _LoadAllProfileFromIdsSuccess;
+  const factory UserProfileWatcherState.loadAllProfileFromIdsFailure(AuthFailure failure) = _LoadAllProfileFromIdsFailure;
 }

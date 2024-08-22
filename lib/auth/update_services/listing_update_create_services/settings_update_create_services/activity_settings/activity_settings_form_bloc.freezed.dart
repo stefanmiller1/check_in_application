@@ -58,9 +58,6 @@ mixin _$UpdateActivityFormEvent {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -167,9 +164,6 @@ mixin _$UpdateActivityFormEvent {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -269,9 +263,6 @@ mixin _$UpdateActivityFormEvent {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -386,10 +377,6 @@ mixin _$UpdateActivityFormEvent {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -527,10 +514,6 @@ mixin _$UpdateActivityFormEvent {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -650,10 +633,6 @@ mixin _$UpdateActivityFormEvent {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -869,9 +848,6 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -982,9 +958,6 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -1088,9 +1061,6 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -1212,10 +1182,6 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -1356,10 +1322,6 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -1482,10 +1444,6 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -1695,9 +1653,6 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -1807,9 +1762,6 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -1912,9 +1864,6 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -2035,10 +1984,6 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -2179,10 +2124,6 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -2305,10 +2246,6 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -2503,9 +2440,6 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -2615,9 +2549,6 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -2720,9 +2651,6 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -2843,10 +2771,6 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -2987,10 +2911,6 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -3113,10 +3033,6 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -3312,9 +3228,6 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -3424,9 +3337,6 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -3529,9 +3439,6 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -3652,10 +3559,6 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -3796,10 +3699,6 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -3922,10 +3821,6 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -4123,9 +4018,6 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -4235,9 +4127,6 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -4340,9 +4229,6 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -4463,10 +4349,6 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -4607,10 +4489,6 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -4733,10 +4611,6 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -4937,9 +4811,6 @@ class _$ActivityDescriptionChangedTwoImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -5049,9 +4920,6 @@ class _$ActivityDescriptionChangedTwoImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -5154,9 +5022,6 @@ class _$ActivityDescriptionChangedTwoImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -5277,10 +5142,6 @@ class _$ActivityDescriptionChangedTwoImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -5421,10 +5282,6 @@ class _$ActivityDescriptionChangedTwoImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -5547,10 +5404,6 @@ class _$ActivityDescriptionChangedTwoImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -5760,9 +5613,6 @@ class _$activityProfileImagesChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -5872,9 +5722,6 @@ class _$activityProfileImagesChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -5977,9 +5824,6 @@ class _$activityProfileImagesChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -6100,10 +5944,6 @@ class _$activityProfileImagesChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -6244,10 +6084,6 @@ class _$activityProfileImagesChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -6370,10 +6206,6 @@ class _$activityProfileImagesChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -6572,9 +6404,6 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -6684,9 +6513,6 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -6789,9 +6615,6 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -6912,10 +6735,6 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -7056,10 +6875,6 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -7182,10 +6997,6 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -7383,9 +7194,6 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -7495,9 +7303,6 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -7600,9 +7405,6 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -7723,10 +7525,6 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -7867,10 +7665,6 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -7993,10 +7787,6 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -8194,9 +7984,6 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -8306,9 +8093,6 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -8411,9 +8195,6 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -8534,10 +8315,6 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -8678,10 +8455,6 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -8804,10 +8577,6 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -9005,9 +8774,6 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -9117,9 +8883,6 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -9222,9 +8985,6 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -9345,10 +9105,6 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -9489,10 +9245,6 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -9615,10 +9367,6 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -9816,9 +9564,6 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -9928,9 +9673,6 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -10033,9 +9775,6 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -10156,10 +9895,6 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -10300,10 +10035,6 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -10426,10 +10157,6 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -10629,9 +10356,6 @@ class _$ActivityPostContactInstagramImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -10741,9 +10465,6 @@ class _$ActivityPostContactInstagramImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -10846,9 +10567,6 @@ class _$ActivityPostContactInstagramImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -10969,10 +10687,6 @@ class _$ActivityPostContactInstagramImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -11113,10 +10827,6 @@ class _$ActivityPostContactInstagramImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -11239,10 +10949,6 @@ class _$ActivityPostContactInstagramImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -11449,9 +11155,6 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -11561,9 +11264,6 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -11666,9 +11366,6 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -11789,10 +11486,6 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -11933,10 +11626,6 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -12059,10 +11748,6 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -12270,9 +11955,6 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -12382,9 +12064,6 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -12487,9 +12166,6 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -12610,10 +12286,6 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -12754,10 +12426,6 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -12880,10 +12548,6 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -13081,9 +12745,6 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -13193,9 +12854,6 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -13298,9 +12956,6 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -13421,10 +13076,6 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -13565,10 +13216,6 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -13691,10 +13338,6 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -13888,9 +13531,6 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -14000,9 +13640,6 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -14105,9 +13742,6 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -14228,10 +13862,6 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -14372,10 +14002,6 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -14498,10 +14124,6 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -14694,9 +14316,6 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -14806,9 +14425,6 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -14911,9 +14527,6 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -15034,10 +14647,6 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -15178,10 +14787,6 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -15304,10 +14909,6 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -15502,9 +15103,6 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -15614,9 +15212,6 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -15719,9 +15314,6 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -15842,10 +15434,6 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -15986,10 +15574,6 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -16112,10 +15696,6 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -16310,9 +15890,6 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -16422,9 +15999,6 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -16527,9 +16101,6 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -16650,10 +16221,6 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -16794,10 +16361,6 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -16920,10 +16483,6 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -17130,9 +16689,6 @@ class _$SkillLevelExpectationChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -17242,9 +16798,6 @@ class _$SkillLevelExpectationChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -17347,9 +16900,6 @@ class _$SkillLevelExpectationChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -17470,10 +17020,6 @@ class _$SkillLevelExpectationChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -17614,10 +17160,6 @@ class _$SkillLevelExpectationChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -17740,10 +17282,6 @@ class _$SkillLevelExpectationChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -17942,9 +17480,6 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -18054,9 +17589,6 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -18159,9 +17691,6 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -18282,10 +17811,6 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -18426,10 +17951,6 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -18552,10 +18073,6 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -18753,9 +18270,6 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -18865,9 +18379,6 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -18970,9 +18481,6 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -19093,10 +18601,6 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -19237,10 +18741,6 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -19363,10 +18863,6 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -19564,9 +19060,6 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -19676,9 +19169,6 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -19781,9 +19271,6 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -19904,10 +19391,6 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -20048,10 +19531,6 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -20174,10 +19653,6 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -20374,9 +19849,6 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -20486,9 +19958,6 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -20591,9 +20060,6 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -20714,10 +20180,6 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -20858,10 +20320,6 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -20984,10 +20442,6 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -21184,9 +20638,6 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -21296,9 +20747,6 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -21401,9 +20849,6 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -21524,10 +20969,6 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -21668,10 +21109,6 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -21794,10 +21231,6 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -21994,9 +21427,6 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -22106,9 +21536,6 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -22211,9 +21638,6 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -22334,10 +21758,6 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -22478,10 +21898,6 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -22604,10 +22020,6 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -22805,9 +22217,6 @@ class _$IsOfficiatorProvidedChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -22917,9 +22326,6 @@ class _$IsOfficiatorProvidedChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -23022,9 +22428,6 @@ class _$IsOfficiatorProvidedChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -23145,10 +22548,6 @@ class _$IsOfficiatorProvidedChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -23289,10 +22688,6 @@ class _$IsOfficiatorProvidedChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -23415,10 +22810,6 @@ class _$IsOfficiatorProvidedChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -23616,9 +23007,6 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -23728,9 +23116,6 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -23833,9 +23218,6 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -23956,10 +23338,6 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -24100,10 +23478,6 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -24226,10 +23600,6 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -24316,2437 +23686,6 @@ abstract class _IsMerchantSupportedChanged implements UpdateActivityFormEvent {
   @JsonKey(ignore: true)
   _$$IsMerchantSupportedChangedImplCopyWith<_$IsMerchantSupportedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$IsMerchantInviteOnlyChangedImplCopyWith<$Res> {
-  factory _$$IsMerchantInviteOnlyChangedImplCopyWith(
-          _$IsMerchantInviteOnlyChangedImpl value,
-          $Res Function(_$IsMerchantInviteOnlyChangedImpl) then) =
-      __$$IsMerchantInviteOnlyChangedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({bool inviteBool});
-}
-
-/// @nodoc
-class __$$IsMerchantInviteOnlyChangedImplCopyWithImpl<$Res>
-    extends _$UpdateActivityFormEventCopyWithImpl<$Res,
-        _$IsMerchantInviteOnlyChangedImpl>
-    implements _$$IsMerchantInviteOnlyChangedImplCopyWith<$Res> {
-  __$$IsMerchantInviteOnlyChangedImplCopyWithImpl(
-      _$IsMerchantInviteOnlyChangedImpl _value,
-      $Res Function(_$IsMerchantInviteOnlyChangedImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? inviteBool = null,
-  }) {
-    return _then(_$IsMerchantInviteOnlyChangedImpl(
-      null == inviteBool
-          ? _value.inviteBool
-          : inviteBool // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$IsMerchantInviteOnlyChangedImpl
-    implements _IsMerchantInviteOnlyChanged {
-  const _$IsMerchantInviteOnlyChangedImpl(this.inviteBool);
-
-  @override
-  final bool inviteBool;
-
-  @override
-  String toString() {
-    return 'UpdateActivityFormEvent.isMerchantInviteOnlyChanged(inviteBool: $inviteBool)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$IsMerchantInviteOnlyChangedImpl &&
-            (identical(other.inviteBool, inviteBool) ||
-                other.inviteBool == inviteBool));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, inviteBool);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$IsMerchantInviteOnlyChangedImplCopyWith<_$IsMerchantInviteOnlyChangedImpl>
-      get copyWith => __$$IsMerchantInviteOnlyChangedImplCopyWithImpl<
-          _$IsMerchantInviteOnlyChangedImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)
-        initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
-        activityOptionChanged,
-    required TResult Function(bool boolSave) isSavingChanged,
-    required TResult Function(BackgroundInfoTitle titleChanged)
-        activityTitleChanged,
-    required TResult Function(BackgroundInfoDescription descriptionChanged)
-        activityDescriptionChanged,
-    required TResult Function(BackgroundInfoDescription descriptionChanged)
-        activityDescriptionChangedTwo,
-    required TResult Function(List<ImageUpload> imagesList)
-        activityProfileImagesChanged,
-    required TResult Function(bool inviteBool) isPartnersInviteOnly,
-    required TResult Function(bool inviteBool) isInstructorInviteOnly,
-    required TResult Function(bool isPostBool) activityPostedOnBehalf,
-    required TResult Function(String websiteStr) activityPostContactWebsite,
-    required TResult Function(String emailStr) activityPostContactEmail,
-    required TResult Function(String instaStr) activityPostContactInstagram,
-    required TResult Function(List<BackgroundInfoDescription> activityGoals)
-        activityGoalsChanged,
-    required TResult Function(List<BackgroundInfoDescription> activityInterests)
-        activityInterestsChanged,
-    required TResult Function(bool ageBool) isSeventeenAndUnderChanged,
-    required TResult Function(int ageInt) minimumAgeChanged,
-    required TResult Function(bool menBool) isMenOnlyChanged,
-    required TResult Function(bool womenBool) isWomenOnlyChanged,
-    required TResult Function(bool coedBool) isCoEdOnlyChanged,
-    required TResult Function(List<SkillLevel> skillLevel)
-        skillLevelExpectationChanged,
-    required TResult Function(int yearsInt) suggestedYearsChanged,
-    required TResult Function(bool equipBool) isEquipmentProvidedChanged,
-    required TResult Function(bool equipBool) isFacilityEquipmentChanged,
-    required TResult Function(bool gearBool) isGearProvidedChanged,
-    required TResult Function(bool gearBool) isFacilityGearChanged,
-    required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
-    required TResult Function(bool offBool) isOfficiatorProvidedChanged,
-    required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
-    required TResult Function(bool alcBool) isAlcoholForSaleChanged,
-    required TResult Function(bool foodBool) isFoodForSaleChanged,
-    required TResult Function(bool alcBool) isAlcoholProvidedChanged,
-    required TResult Function(bool alcBool) isFacilityAlcoholChanged,
-    required TResult Function(bool foodBool) isFoodProvidedChanged,
-    required TResult Function(bool foodBool) isFacilityFoodChanged,
-    required TResult Function(bool secBool) isSecurityProvidedChanged,
-    required TResult Function(bool secBool) isFacilitySecurityChanged,
-    required TResult Function(bool isReviewBool) isReviewRequiredChanged,
-    required TResult Function(bool isPrivateBool) isPrivateOnlyChanged,
-    required TResult Function(bool isPublicBool) isInviteOnlyChanged,
-    required TResult Function(List<ContactDetails> contactList)
-        privateInviteListChanged,
-    required TResult Function(bool earlyEndBool) isAllowedEarlyEndChange,
-    required TResult Function(bool changeOnlyBool)
-        isAllowedChangeWithoutEarlyEnd,
-    required TResult Function(bool noCancelBool) isNotAllowedCancellation,
-    required TResult Function(bool timeBasedBool)
-        isAllowedTimeBasedCancellation,
-    required TResult Function(bool feeBasedBool) isAllowedFeeBasedCancellation,
-    required TResult Function(List<TimeBasedCancellation> timeBasedCancellation)
-        timeBasedCancellationChanged,
-    required TResult Function(List<FeeBasedCancellation> feeBasedCancellation)
-        feeBasedCancellationChanged,
-    required TResult Function(ListK<DetailOption> rules) ruleOptionChanged,
-    required TResult Function(List<CheckInSetting> checkInList)
-        checkInSettingsChanged,
-    required TResult Function(List<CustomRuleOption> customRulesList)
-        customFieldRuleSettingsChanged,
-    required TResult Function(ListK<DetailCustomOption> customRules)
-        customRuleOptionChanged,
-    required TResult Function(List<SkillLevel> skills) skillLevelToReachChanged,
-    required TResult Function(List<VendorMerchantForm> forms)
-        vendorFormsChanged,
-    required TResult Function(List<DonationType> donationTypes)
-        allowedDonationTypesChanged,
-    required TResult Function(bool exBool) isAllowedExternalContributions,
-    required TResult Function(String currency) currencyTypeChanged,
-    required TResult Function(bool ticketBool) isTicketBasedAttendanceChanged,
-    required TResult Function(bool passBool) isPassBasedAttendanceChanged,
-    required TResult Function(bool limitBool) isLimitedAttendanceChanged,
-    required TResult Function(int limitInt) attendanceLimitChanged,
-    required TResult Function(bool ticketBool) isTicketFixedChanged,
-    required TResult Function(bool ticketBool) isTicketSlotBasedOnly,
-    required TResult Function(bool passBool) isPassFixedChanged,
-    required TResult Function(ActivityTicketOption aTicket)
-        defaultTicketChanged,
-    required TResult Function(List<ActivityTicketOption>? ticketList)
-        activityTicketsChanged,
-    required TResult Function(bool groupBool) passesAttendanceIsAllowedGroups,
-    required TResult Function(int minInt) passesMinimumGroupQuantityChanged,
-    required TResult Function(int maxInt) passesMaximumGroupQuantityChanged,
-    required TResult Function(int maxInt) passesFeeChanged,
-    required TResult Function(int passesInt) passesQuantityChanged,
-    required TResult Function(bool sessionBool) passesCoverAllSessions,
-    required TResult Function(int limitInt) passesCoverLimitedSession,
-    required TResult Function(List<ActivityPassesOption> passesList)
-        activityPassesChanged,
-    required TResult Function(UserProfileModel profile)
-        createStripeOnBoardingAccountLink,
-    required TResult Function(UserProfileModel profile)
-        presentStripeAccountDashboard,
-    required TResult Function() createActivityFinished,
-    required TResult Function() saveActivityFinished,
-    required TResult Function() deleteActivityFinished,
-  }) {
-    return isMerchantInviteOnlyChanged(inviteBool);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)?
-        initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
-    TResult? Function(bool boolSave)? isSavingChanged,
-    TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
-    TResult? Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChanged,
-    TResult? Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChangedTwo,
-    TResult? Function(List<ImageUpload> imagesList)?
-        activityProfileImagesChanged,
-    TResult? Function(bool inviteBool)? isPartnersInviteOnly,
-    TResult? Function(bool inviteBool)? isInstructorInviteOnly,
-    TResult? Function(bool isPostBool)? activityPostedOnBehalf,
-    TResult? Function(String websiteStr)? activityPostContactWebsite,
-    TResult? Function(String emailStr)? activityPostContactEmail,
-    TResult? Function(String instaStr)? activityPostContactInstagram,
-    TResult? Function(List<BackgroundInfoDescription> activityGoals)?
-        activityGoalsChanged,
-    TResult? Function(List<BackgroundInfoDescription> activityInterests)?
-        activityInterestsChanged,
-    TResult? Function(bool ageBool)? isSeventeenAndUnderChanged,
-    TResult? Function(int ageInt)? minimumAgeChanged,
-    TResult? Function(bool menBool)? isMenOnlyChanged,
-    TResult? Function(bool womenBool)? isWomenOnlyChanged,
-    TResult? Function(bool coedBool)? isCoEdOnlyChanged,
-    TResult? Function(List<SkillLevel> skillLevel)?
-        skillLevelExpectationChanged,
-    TResult? Function(int yearsInt)? suggestedYearsChanged,
-    TResult? Function(bool equipBool)? isEquipmentProvidedChanged,
-    TResult? Function(bool equipBool)? isFacilityEquipmentChanged,
-    TResult? Function(bool gearBool)? isGearProvidedChanged,
-    TResult? Function(bool gearBool)? isFacilityGearChanged,
-    TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
-    TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
-    TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
-    TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
-    TResult? Function(bool foodBool)? isFoodForSaleChanged,
-    TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
-    TResult? Function(bool alcBool)? isFacilityAlcoholChanged,
-    TResult? Function(bool foodBool)? isFoodProvidedChanged,
-    TResult? Function(bool foodBool)? isFacilityFoodChanged,
-    TResult? Function(bool secBool)? isSecurityProvidedChanged,
-    TResult? Function(bool secBool)? isFacilitySecurityChanged,
-    TResult? Function(bool isReviewBool)? isReviewRequiredChanged,
-    TResult? Function(bool isPrivateBool)? isPrivateOnlyChanged,
-    TResult? Function(bool isPublicBool)? isInviteOnlyChanged,
-    TResult? Function(List<ContactDetails> contactList)?
-        privateInviteListChanged,
-    TResult? Function(bool earlyEndBool)? isAllowedEarlyEndChange,
-    TResult? Function(bool changeOnlyBool)? isAllowedChangeWithoutEarlyEnd,
-    TResult? Function(bool noCancelBool)? isNotAllowedCancellation,
-    TResult? Function(bool timeBasedBool)? isAllowedTimeBasedCancellation,
-    TResult? Function(bool feeBasedBool)? isAllowedFeeBasedCancellation,
-    TResult? Function(List<TimeBasedCancellation> timeBasedCancellation)?
-        timeBasedCancellationChanged,
-    TResult? Function(List<FeeBasedCancellation> feeBasedCancellation)?
-        feeBasedCancellationChanged,
-    TResult? Function(ListK<DetailOption> rules)? ruleOptionChanged,
-    TResult? Function(List<CheckInSetting> checkInList)? checkInSettingsChanged,
-    TResult? Function(List<CustomRuleOption> customRulesList)?
-        customFieldRuleSettingsChanged,
-    TResult? Function(ListK<DetailCustomOption> customRules)?
-        customRuleOptionChanged,
-    TResult? Function(List<SkillLevel> skills)? skillLevelToReachChanged,
-    TResult? Function(List<VendorMerchantForm> forms)? vendorFormsChanged,
-    TResult? Function(List<DonationType> donationTypes)?
-        allowedDonationTypesChanged,
-    TResult? Function(bool exBool)? isAllowedExternalContributions,
-    TResult? Function(String currency)? currencyTypeChanged,
-    TResult? Function(bool ticketBool)? isTicketBasedAttendanceChanged,
-    TResult? Function(bool passBool)? isPassBasedAttendanceChanged,
-    TResult? Function(bool limitBool)? isLimitedAttendanceChanged,
-    TResult? Function(int limitInt)? attendanceLimitChanged,
-    TResult? Function(bool ticketBool)? isTicketFixedChanged,
-    TResult? Function(bool ticketBool)? isTicketSlotBasedOnly,
-    TResult? Function(bool passBool)? isPassFixedChanged,
-    TResult? Function(ActivityTicketOption aTicket)? defaultTicketChanged,
-    TResult? Function(List<ActivityTicketOption>? ticketList)?
-        activityTicketsChanged,
-    TResult? Function(bool groupBool)? passesAttendanceIsAllowedGroups,
-    TResult? Function(int minInt)? passesMinimumGroupQuantityChanged,
-    TResult? Function(int maxInt)? passesMaximumGroupQuantityChanged,
-    TResult? Function(int maxInt)? passesFeeChanged,
-    TResult? Function(int passesInt)? passesQuantityChanged,
-    TResult? Function(bool sessionBool)? passesCoverAllSessions,
-    TResult? Function(int limitInt)? passesCoverLimitedSession,
-    TResult? Function(List<ActivityPassesOption> passesList)?
-        activityPassesChanged,
-    TResult? Function(UserProfileModel profile)?
-        createStripeOnBoardingAccountLink,
-    TResult? Function(UserProfileModel profile)? presentStripeAccountDashboard,
-    TResult? Function()? createActivityFinished,
-    TResult? Function()? saveActivityFinished,
-    TResult? Function()? deleteActivityFinished,
-  }) {
-    return isMerchantInviteOnlyChanged?.call(inviteBool);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)?
-        initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
-    TResult Function(bool boolSave)? isSavingChanged,
-    TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
-    TResult Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChanged,
-    TResult Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChangedTwo,
-    TResult Function(List<ImageUpload> imagesList)?
-        activityProfileImagesChanged,
-    TResult Function(bool inviteBool)? isPartnersInviteOnly,
-    TResult Function(bool inviteBool)? isInstructorInviteOnly,
-    TResult Function(bool isPostBool)? activityPostedOnBehalf,
-    TResult Function(String websiteStr)? activityPostContactWebsite,
-    TResult Function(String emailStr)? activityPostContactEmail,
-    TResult Function(String instaStr)? activityPostContactInstagram,
-    TResult Function(List<BackgroundInfoDescription> activityGoals)?
-        activityGoalsChanged,
-    TResult Function(List<BackgroundInfoDescription> activityInterests)?
-        activityInterestsChanged,
-    TResult Function(bool ageBool)? isSeventeenAndUnderChanged,
-    TResult Function(int ageInt)? minimumAgeChanged,
-    TResult Function(bool menBool)? isMenOnlyChanged,
-    TResult Function(bool womenBool)? isWomenOnlyChanged,
-    TResult Function(bool coedBool)? isCoEdOnlyChanged,
-    TResult Function(List<SkillLevel> skillLevel)? skillLevelExpectationChanged,
-    TResult Function(int yearsInt)? suggestedYearsChanged,
-    TResult Function(bool equipBool)? isEquipmentProvidedChanged,
-    TResult Function(bool equipBool)? isFacilityEquipmentChanged,
-    TResult Function(bool gearBool)? isGearProvidedChanged,
-    TResult Function(bool gearBool)? isFacilityGearChanged,
-    TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
-    TResult Function(bool offBool)? isOfficiatorProvidedChanged,
-    TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
-    TResult Function(bool alcBool)? isAlcoholForSaleChanged,
-    TResult Function(bool foodBool)? isFoodForSaleChanged,
-    TResult Function(bool alcBool)? isAlcoholProvidedChanged,
-    TResult Function(bool alcBool)? isFacilityAlcoholChanged,
-    TResult Function(bool foodBool)? isFoodProvidedChanged,
-    TResult Function(bool foodBool)? isFacilityFoodChanged,
-    TResult Function(bool secBool)? isSecurityProvidedChanged,
-    TResult Function(bool secBool)? isFacilitySecurityChanged,
-    TResult Function(bool isReviewBool)? isReviewRequiredChanged,
-    TResult Function(bool isPrivateBool)? isPrivateOnlyChanged,
-    TResult Function(bool isPublicBool)? isInviteOnlyChanged,
-    TResult Function(List<ContactDetails> contactList)?
-        privateInviteListChanged,
-    TResult Function(bool earlyEndBool)? isAllowedEarlyEndChange,
-    TResult Function(bool changeOnlyBool)? isAllowedChangeWithoutEarlyEnd,
-    TResult Function(bool noCancelBool)? isNotAllowedCancellation,
-    TResult Function(bool timeBasedBool)? isAllowedTimeBasedCancellation,
-    TResult Function(bool feeBasedBool)? isAllowedFeeBasedCancellation,
-    TResult Function(List<TimeBasedCancellation> timeBasedCancellation)?
-        timeBasedCancellationChanged,
-    TResult Function(List<FeeBasedCancellation> feeBasedCancellation)?
-        feeBasedCancellationChanged,
-    TResult Function(ListK<DetailOption> rules)? ruleOptionChanged,
-    TResult Function(List<CheckInSetting> checkInList)? checkInSettingsChanged,
-    TResult Function(List<CustomRuleOption> customRulesList)?
-        customFieldRuleSettingsChanged,
-    TResult Function(ListK<DetailCustomOption> customRules)?
-        customRuleOptionChanged,
-    TResult Function(List<SkillLevel> skills)? skillLevelToReachChanged,
-    TResult Function(List<VendorMerchantForm> forms)? vendorFormsChanged,
-    TResult Function(List<DonationType> donationTypes)?
-        allowedDonationTypesChanged,
-    TResult Function(bool exBool)? isAllowedExternalContributions,
-    TResult Function(String currency)? currencyTypeChanged,
-    TResult Function(bool ticketBool)? isTicketBasedAttendanceChanged,
-    TResult Function(bool passBool)? isPassBasedAttendanceChanged,
-    TResult Function(bool limitBool)? isLimitedAttendanceChanged,
-    TResult Function(int limitInt)? attendanceLimitChanged,
-    TResult Function(bool ticketBool)? isTicketFixedChanged,
-    TResult Function(bool ticketBool)? isTicketSlotBasedOnly,
-    TResult Function(bool passBool)? isPassFixedChanged,
-    TResult Function(ActivityTicketOption aTicket)? defaultTicketChanged,
-    TResult Function(List<ActivityTicketOption>? ticketList)?
-        activityTicketsChanged,
-    TResult Function(bool groupBool)? passesAttendanceIsAllowedGroups,
-    TResult Function(int minInt)? passesMinimumGroupQuantityChanged,
-    TResult Function(int maxInt)? passesMaximumGroupQuantityChanged,
-    TResult Function(int maxInt)? passesFeeChanged,
-    TResult Function(int passesInt)? passesQuantityChanged,
-    TResult Function(bool sessionBool)? passesCoverAllSessions,
-    TResult Function(int limitInt)? passesCoverLimitedSession,
-    TResult Function(List<ActivityPassesOption> passesList)?
-        activityPassesChanged,
-    TResult Function(UserProfileModel profile)?
-        createStripeOnBoardingAccountLink,
-    TResult Function(UserProfileModel profile)? presentStripeAccountDashboard,
-    TResult Function()? createActivityFinished,
-    TResult Function()? saveActivityFinished,
-    TResult Function()? deleteActivityFinished,
-    required TResult orElse(),
-  }) {
-    if (isMerchantInviteOnlyChanged != null) {
-      return isMerchantInviteOnlyChanged(inviteBool);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitializeActivityForm value)
-        initializeActivityForm,
-    required TResult Function(ActivityOptionChanged value)
-        activityOptionChanged,
-    required TResult Function(_IsSavingChanged value) isSavingChanged,
-    required TResult Function(_ActivityTitleChanged value) activityTitleChanged,
-    required TResult Function(_ActivityDescriptionChanged value)
-        activityDescriptionChanged,
-    required TResult Function(_ActivityDescriptionChangedTwo value)
-        activityDescriptionChangedTwo,
-    required TResult Function(_activityProfileImagesChanged value)
-        activityProfileImagesChanged,
-    required TResult Function(_IsPartnersInviteOnly value) isPartnersInviteOnly,
-    required TResult Function(_IsInstructorInviteOnly value)
-        isInstructorInviteOnly,
-    required TResult Function(_ActivityPostedOnBehalf value)
-        activityPostedOnBehalf,
-    required TResult Function(_ActivityPostContactWebsite value)
-        activityPostContactWebsite,
-    required TResult Function(_ActivityPostContactEmail value)
-        activityPostContactEmail,
-    required TResult Function(_ActivityPostContactInstagram value)
-        activityPostContactInstagram,
-    required TResult Function(_ActivityGoalsChanged value) activityGoalsChanged,
-    required TResult Function(_ActivityInterestsChanged value)
-        activityInterestsChanged,
-    required TResult Function(_IsSeventeenAndUnderChanged value)
-        isSeventeenAndUnderChanged,
-    required TResult Function(_MinimumAgeChanged value) minimumAgeChanged,
-    required TResult Function(_IsMenOnlyChanged value) isMenOnlyChanged,
-    required TResult Function(_IsWomenOnlyChanged value) isWomenOnlyChanged,
-    required TResult Function(_IsCoEdOnlyChanged value) isCoEdOnlyChanged,
-    required TResult Function(_SkillLevelExpectationChanged value)
-        skillLevelExpectationChanged,
-    required TResult Function(_SuggestedYearsChanged value)
-        suggestedYearsChanged,
-    required TResult Function(_IsEquipmentProvidedChanged value)
-        isEquipmentProvidedChanged,
-    required TResult Function(_IsFacilityEquipmentChanged value)
-        isFacilityEquipmentChanged,
-    required TResult Function(_IsGearProvidedChanged value)
-        isGearProvidedChanged,
-    required TResult Function(_IsFacilityGearChanged value)
-        isFacilityGearChanged,
-    required TResult Function(_IsAnalyticsProvidedChanged value)
-        isAnalyticsProvidedChanged,
-    required TResult Function(_IsOfficiatorProvidedChanged value)
-        isOfficiatorProvidedChanged,
-    required TResult Function(_IsMerchantSupportedChanged value)
-        isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
-    required TResult Function(_IsAlcoholForSaleChanged value)
-        isAlcoholForSaleChanged,
-    required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
-    required TResult Function(_IsAlcoholProvidedChanged value)
-        isAlcoholProvidedChanged,
-    required TResult Function(_IsFacilityAlcoholChanged value)
-        isFacilityAlcoholChanged,
-    required TResult Function(_IsFoodProvidedChanged value)
-        isFoodProvidedChanged,
-    required TResult Function(_IsFacilityFoodChanged value)
-        isFacilityFoodChanged,
-    required TResult Function(_IsSecurityProvidedChanged value)
-        isSecurityProvidedChanged,
-    required TResult Function(_IsFacilitySecurityChanged value)
-        isFacilitySecurityChanged,
-    required TResult Function(_IsReviewRequiredChanged value)
-        isReviewRequiredChanged,
-    required TResult Function(_IsPrivateOnlyChanged value) isPrivateOnlyChanged,
-    required TResult Function(_ListingIsInviteOnlyChanged value)
-        isInviteOnlyChanged,
-    required TResult Function(_PrivateInviteListChanged value)
-        privateInviteListChanged,
-    required TResult Function(_IsAllowedEarlyEndChanged value)
-        isAllowedEarlyEndChange,
-    required TResult Function(_IsAllowedChangeWithoutEarlyEnd value)
-        isAllowedChangeWithoutEarlyEnd,
-    required TResult Function(_IsNotAllowedCancellation value)
-        isNotAllowedCancellation,
-    required TResult Function(_IsAllowedTimeBasedCancellation value)
-        isAllowedTimeBasedCancellation,
-    required TResult Function(_IsAllowedFeeBasedCancellation value)
-        isAllowedFeeBasedCancellation,
-    required TResult Function(_TimeBasedCancellationChanged value)
-        timeBasedCancellationChanged,
-    required TResult Function(_FeeBasedCancellationChanged value)
-        feeBasedCancellationChanged,
-    required TResult Function(_RuleOptionChanged value) ruleOptionChanged,
-    required TResult Function(_CheckInSettingsChanged value)
-        checkInSettingsChanged,
-    required TResult Function(_CustomFieldRuleSettingsChanged value)
-        customFieldRuleSettingsChanged,
-    required TResult Function(_CustomRuleOptionChanged value)
-        customRuleOptionChanged,
-    required TResult Function(_SkillLevelToReachChanged value)
-        skillLevelToReachChanged,
-    required TResult Function(_VendorFormsChanged value) vendorFormsChanged,
-    required TResult Function(_AllowedDonationTypesChanged value)
-        allowedDonationTypesChanged,
-    required TResult Function(_IsAllowedExternalContributions value)
-        isAllowedExternalContributions,
-    required TResult Function(_CurrencyTypeChanged value) currencyTypeChanged,
-    required TResult Function(_IsTicketBasedAttendanceChanged value)
-        isTicketBasedAttendanceChanged,
-    required TResult Function(_IsPassBasedAttendanceChanged value)
-        isPassBasedAttendanceChanged,
-    required TResult Function(_IsLimitedAttendanceChanged value)
-        isLimitedAttendanceChanged,
-    required TResult Function(_AttendanceLimitChanged value)
-        attendanceLimitChanged,
-    required TResult Function(_IsTicketFixedChanged value) isTicketFixedChanged,
-    required TResult Function(_IsTicketSlotBasedOnly value)
-        isTicketSlotBasedOnly,
-    required TResult Function(_IsPassFixedChanged value) isPassFixedChanged,
-    required TResult Function(_DefaultTicketChanged value) defaultTicketChanged,
-    required TResult Function(_ActivityTicketsChanged value)
-        activityTicketsChanged,
-    required TResult Function(_PassesAttendanceIsAllowedGroups value)
-        passesAttendanceIsAllowedGroups,
-    required TResult Function(_PassesMinimumGroupQuantityChanged value)
-        passesMinimumGroupQuantityChanged,
-    required TResult Function(_PassesMaximumGroupQuantityChanged value)
-        passesMaximumGroupQuantityChanged,
-    required TResult Function(_PassesFeeChanged value) passesFeeChanged,
-    required TResult Function(_PassesQuantityChanged value)
-        passesQuantityChanged,
-    required TResult Function(_PassesCoverAllSessions value)
-        passesCoverAllSessions,
-    required TResult Function(_PassesCoverLimitedSession value)
-        passesCoverLimitedSession,
-    required TResult Function(_ActivityPassesChanged value)
-        activityPassesChanged,
-    required TResult Function(_CreateStripeOnBoardingAccountLink value)
-        createStripeOnBoardingAccountLink,
-    required TResult Function(_PresentStripeAccountDashboard value)
-        presentStripeAccountDashboard,
-    required TResult Function(CreateActivityFinished value)
-        createActivityFinished,
-    required TResult Function(SaveActivityFinished value) saveActivityFinished,
-    required TResult Function(DeleteActivityFinished value)
-        deleteActivityFinished,
-  }) {
-    return isMerchantInviteOnlyChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitializeActivityForm value)? initializeActivityForm,
-    TResult? Function(ActivityOptionChanged value)? activityOptionChanged,
-    TResult? Function(_IsSavingChanged value)? isSavingChanged,
-    TResult? Function(_ActivityTitleChanged value)? activityTitleChanged,
-    TResult? Function(_ActivityDescriptionChanged value)?
-        activityDescriptionChanged,
-    TResult? Function(_ActivityDescriptionChangedTwo value)?
-        activityDescriptionChangedTwo,
-    TResult? Function(_activityProfileImagesChanged value)?
-        activityProfileImagesChanged,
-    TResult? Function(_IsPartnersInviteOnly value)? isPartnersInviteOnly,
-    TResult? Function(_IsInstructorInviteOnly value)? isInstructorInviteOnly,
-    TResult? Function(_ActivityPostedOnBehalf value)? activityPostedOnBehalf,
-    TResult? Function(_ActivityPostContactWebsite value)?
-        activityPostContactWebsite,
-    TResult? Function(_ActivityPostContactEmail value)?
-        activityPostContactEmail,
-    TResult? Function(_ActivityPostContactInstagram value)?
-        activityPostContactInstagram,
-    TResult? Function(_ActivityGoalsChanged value)? activityGoalsChanged,
-    TResult? Function(_ActivityInterestsChanged value)?
-        activityInterestsChanged,
-    TResult? Function(_IsSeventeenAndUnderChanged value)?
-        isSeventeenAndUnderChanged,
-    TResult? Function(_MinimumAgeChanged value)? minimumAgeChanged,
-    TResult? Function(_IsMenOnlyChanged value)? isMenOnlyChanged,
-    TResult? Function(_IsWomenOnlyChanged value)? isWomenOnlyChanged,
-    TResult? Function(_IsCoEdOnlyChanged value)? isCoEdOnlyChanged,
-    TResult? Function(_SkillLevelExpectationChanged value)?
-        skillLevelExpectationChanged,
-    TResult? Function(_SuggestedYearsChanged value)? suggestedYearsChanged,
-    TResult? Function(_IsEquipmentProvidedChanged value)?
-        isEquipmentProvidedChanged,
-    TResult? Function(_IsFacilityEquipmentChanged value)?
-        isFacilityEquipmentChanged,
-    TResult? Function(_IsGearProvidedChanged value)? isGearProvidedChanged,
-    TResult? Function(_IsFacilityGearChanged value)? isFacilityGearChanged,
-    TResult? Function(_IsAnalyticsProvidedChanged value)?
-        isAnalyticsProvidedChanged,
-    TResult? Function(_IsOfficiatorProvidedChanged value)?
-        isOfficiatorProvidedChanged,
-    TResult? Function(_IsMerchantSupportedChanged value)?
-        isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
-    TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
-    TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
-    TResult? Function(_IsAlcoholProvidedChanged value)?
-        isAlcoholProvidedChanged,
-    TResult? Function(_IsFacilityAlcoholChanged value)?
-        isFacilityAlcoholChanged,
-    TResult? Function(_IsFoodProvidedChanged value)? isFoodProvidedChanged,
-    TResult? Function(_IsFacilityFoodChanged value)? isFacilityFoodChanged,
-    TResult? Function(_IsSecurityProvidedChanged value)?
-        isSecurityProvidedChanged,
-    TResult? Function(_IsFacilitySecurityChanged value)?
-        isFacilitySecurityChanged,
-    TResult? Function(_IsReviewRequiredChanged value)? isReviewRequiredChanged,
-    TResult? Function(_IsPrivateOnlyChanged value)? isPrivateOnlyChanged,
-    TResult? Function(_ListingIsInviteOnlyChanged value)? isInviteOnlyChanged,
-    TResult? Function(_PrivateInviteListChanged value)?
-        privateInviteListChanged,
-    TResult? Function(_IsAllowedEarlyEndChanged value)? isAllowedEarlyEndChange,
-    TResult? Function(_IsAllowedChangeWithoutEarlyEnd value)?
-        isAllowedChangeWithoutEarlyEnd,
-    TResult? Function(_IsNotAllowedCancellation value)?
-        isNotAllowedCancellation,
-    TResult? Function(_IsAllowedTimeBasedCancellation value)?
-        isAllowedTimeBasedCancellation,
-    TResult? Function(_IsAllowedFeeBasedCancellation value)?
-        isAllowedFeeBasedCancellation,
-    TResult? Function(_TimeBasedCancellationChanged value)?
-        timeBasedCancellationChanged,
-    TResult? Function(_FeeBasedCancellationChanged value)?
-        feeBasedCancellationChanged,
-    TResult? Function(_RuleOptionChanged value)? ruleOptionChanged,
-    TResult? Function(_CheckInSettingsChanged value)? checkInSettingsChanged,
-    TResult? Function(_CustomFieldRuleSettingsChanged value)?
-        customFieldRuleSettingsChanged,
-    TResult? Function(_CustomRuleOptionChanged value)? customRuleOptionChanged,
-    TResult? Function(_SkillLevelToReachChanged value)?
-        skillLevelToReachChanged,
-    TResult? Function(_VendorFormsChanged value)? vendorFormsChanged,
-    TResult? Function(_AllowedDonationTypesChanged value)?
-        allowedDonationTypesChanged,
-    TResult? Function(_IsAllowedExternalContributions value)?
-        isAllowedExternalContributions,
-    TResult? Function(_CurrencyTypeChanged value)? currencyTypeChanged,
-    TResult? Function(_IsTicketBasedAttendanceChanged value)?
-        isTicketBasedAttendanceChanged,
-    TResult? Function(_IsPassBasedAttendanceChanged value)?
-        isPassBasedAttendanceChanged,
-    TResult? Function(_IsLimitedAttendanceChanged value)?
-        isLimitedAttendanceChanged,
-    TResult? Function(_AttendanceLimitChanged value)? attendanceLimitChanged,
-    TResult? Function(_IsTicketFixedChanged value)? isTicketFixedChanged,
-    TResult? Function(_IsTicketSlotBasedOnly value)? isTicketSlotBasedOnly,
-    TResult? Function(_IsPassFixedChanged value)? isPassFixedChanged,
-    TResult? Function(_DefaultTicketChanged value)? defaultTicketChanged,
-    TResult? Function(_ActivityTicketsChanged value)? activityTicketsChanged,
-    TResult? Function(_PassesAttendanceIsAllowedGroups value)?
-        passesAttendanceIsAllowedGroups,
-    TResult? Function(_PassesMinimumGroupQuantityChanged value)?
-        passesMinimumGroupQuantityChanged,
-    TResult? Function(_PassesMaximumGroupQuantityChanged value)?
-        passesMaximumGroupQuantityChanged,
-    TResult? Function(_PassesFeeChanged value)? passesFeeChanged,
-    TResult? Function(_PassesQuantityChanged value)? passesQuantityChanged,
-    TResult? Function(_PassesCoverAllSessions value)? passesCoverAllSessions,
-    TResult? Function(_PassesCoverLimitedSession value)?
-        passesCoverLimitedSession,
-    TResult? Function(_ActivityPassesChanged value)? activityPassesChanged,
-    TResult? Function(_CreateStripeOnBoardingAccountLink value)?
-        createStripeOnBoardingAccountLink,
-    TResult? Function(_PresentStripeAccountDashboard value)?
-        presentStripeAccountDashboard,
-    TResult? Function(CreateActivityFinished value)? createActivityFinished,
-    TResult? Function(SaveActivityFinished value)? saveActivityFinished,
-    TResult? Function(DeleteActivityFinished value)? deleteActivityFinished,
-  }) {
-    return isMerchantInviteOnlyChanged?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitializeActivityForm value)? initializeActivityForm,
-    TResult Function(ActivityOptionChanged value)? activityOptionChanged,
-    TResult Function(_IsSavingChanged value)? isSavingChanged,
-    TResult Function(_ActivityTitleChanged value)? activityTitleChanged,
-    TResult Function(_ActivityDescriptionChanged value)?
-        activityDescriptionChanged,
-    TResult Function(_ActivityDescriptionChangedTwo value)?
-        activityDescriptionChangedTwo,
-    TResult Function(_activityProfileImagesChanged value)?
-        activityProfileImagesChanged,
-    TResult Function(_IsPartnersInviteOnly value)? isPartnersInviteOnly,
-    TResult Function(_IsInstructorInviteOnly value)? isInstructorInviteOnly,
-    TResult Function(_ActivityPostedOnBehalf value)? activityPostedOnBehalf,
-    TResult Function(_ActivityPostContactWebsite value)?
-        activityPostContactWebsite,
-    TResult Function(_ActivityPostContactEmail value)? activityPostContactEmail,
-    TResult Function(_ActivityPostContactInstagram value)?
-        activityPostContactInstagram,
-    TResult Function(_ActivityGoalsChanged value)? activityGoalsChanged,
-    TResult Function(_ActivityInterestsChanged value)? activityInterestsChanged,
-    TResult Function(_IsSeventeenAndUnderChanged value)?
-        isSeventeenAndUnderChanged,
-    TResult Function(_MinimumAgeChanged value)? minimumAgeChanged,
-    TResult Function(_IsMenOnlyChanged value)? isMenOnlyChanged,
-    TResult Function(_IsWomenOnlyChanged value)? isWomenOnlyChanged,
-    TResult Function(_IsCoEdOnlyChanged value)? isCoEdOnlyChanged,
-    TResult Function(_SkillLevelExpectationChanged value)?
-        skillLevelExpectationChanged,
-    TResult Function(_SuggestedYearsChanged value)? suggestedYearsChanged,
-    TResult Function(_IsEquipmentProvidedChanged value)?
-        isEquipmentProvidedChanged,
-    TResult Function(_IsFacilityEquipmentChanged value)?
-        isFacilityEquipmentChanged,
-    TResult Function(_IsGearProvidedChanged value)? isGearProvidedChanged,
-    TResult Function(_IsFacilityGearChanged value)? isFacilityGearChanged,
-    TResult Function(_IsAnalyticsProvidedChanged value)?
-        isAnalyticsProvidedChanged,
-    TResult Function(_IsOfficiatorProvidedChanged value)?
-        isOfficiatorProvidedChanged,
-    TResult Function(_IsMerchantSupportedChanged value)?
-        isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
-    TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
-    TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
-    TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
-    TResult Function(_IsFacilityAlcoholChanged value)? isFacilityAlcoholChanged,
-    TResult Function(_IsFoodProvidedChanged value)? isFoodProvidedChanged,
-    TResult Function(_IsFacilityFoodChanged value)? isFacilityFoodChanged,
-    TResult Function(_IsSecurityProvidedChanged value)?
-        isSecurityProvidedChanged,
-    TResult Function(_IsFacilitySecurityChanged value)?
-        isFacilitySecurityChanged,
-    TResult Function(_IsReviewRequiredChanged value)? isReviewRequiredChanged,
-    TResult Function(_IsPrivateOnlyChanged value)? isPrivateOnlyChanged,
-    TResult Function(_ListingIsInviteOnlyChanged value)? isInviteOnlyChanged,
-    TResult Function(_PrivateInviteListChanged value)? privateInviteListChanged,
-    TResult Function(_IsAllowedEarlyEndChanged value)? isAllowedEarlyEndChange,
-    TResult Function(_IsAllowedChangeWithoutEarlyEnd value)?
-        isAllowedChangeWithoutEarlyEnd,
-    TResult Function(_IsNotAllowedCancellation value)? isNotAllowedCancellation,
-    TResult Function(_IsAllowedTimeBasedCancellation value)?
-        isAllowedTimeBasedCancellation,
-    TResult Function(_IsAllowedFeeBasedCancellation value)?
-        isAllowedFeeBasedCancellation,
-    TResult Function(_TimeBasedCancellationChanged value)?
-        timeBasedCancellationChanged,
-    TResult Function(_FeeBasedCancellationChanged value)?
-        feeBasedCancellationChanged,
-    TResult Function(_RuleOptionChanged value)? ruleOptionChanged,
-    TResult Function(_CheckInSettingsChanged value)? checkInSettingsChanged,
-    TResult Function(_CustomFieldRuleSettingsChanged value)?
-        customFieldRuleSettingsChanged,
-    TResult Function(_CustomRuleOptionChanged value)? customRuleOptionChanged,
-    TResult Function(_SkillLevelToReachChanged value)? skillLevelToReachChanged,
-    TResult Function(_VendorFormsChanged value)? vendorFormsChanged,
-    TResult Function(_AllowedDonationTypesChanged value)?
-        allowedDonationTypesChanged,
-    TResult Function(_IsAllowedExternalContributions value)?
-        isAllowedExternalContributions,
-    TResult Function(_CurrencyTypeChanged value)? currencyTypeChanged,
-    TResult Function(_IsTicketBasedAttendanceChanged value)?
-        isTicketBasedAttendanceChanged,
-    TResult Function(_IsPassBasedAttendanceChanged value)?
-        isPassBasedAttendanceChanged,
-    TResult Function(_IsLimitedAttendanceChanged value)?
-        isLimitedAttendanceChanged,
-    TResult Function(_AttendanceLimitChanged value)? attendanceLimitChanged,
-    TResult Function(_IsTicketFixedChanged value)? isTicketFixedChanged,
-    TResult Function(_IsTicketSlotBasedOnly value)? isTicketSlotBasedOnly,
-    TResult Function(_IsPassFixedChanged value)? isPassFixedChanged,
-    TResult Function(_DefaultTicketChanged value)? defaultTicketChanged,
-    TResult Function(_ActivityTicketsChanged value)? activityTicketsChanged,
-    TResult Function(_PassesAttendanceIsAllowedGroups value)?
-        passesAttendanceIsAllowedGroups,
-    TResult Function(_PassesMinimumGroupQuantityChanged value)?
-        passesMinimumGroupQuantityChanged,
-    TResult Function(_PassesMaximumGroupQuantityChanged value)?
-        passesMaximumGroupQuantityChanged,
-    TResult Function(_PassesFeeChanged value)? passesFeeChanged,
-    TResult Function(_PassesQuantityChanged value)? passesQuantityChanged,
-    TResult Function(_PassesCoverAllSessions value)? passesCoverAllSessions,
-    TResult Function(_PassesCoverLimitedSession value)?
-        passesCoverLimitedSession,
-    TResult Function(_ActivityPassesChanged value)? activityPassesChanged,
-    TResult Function(_CreateStripeOnBoardingAccountLink value)?
-        createStripeOnBoardingAccountLink,
-    TResult Function(_PresentStripeAccountDashboard value)?
-        presentStripeAccountDashboard,
-    TResult Function(CreateActivityFinished value)? createActivityFinished,
-    TResult Function(SaveActivityFinished value)? saveActivityFinished,
-    TResult Function(DeleteActivityFinished value)? deleteActivityFinished,
-    required TResult orElse(),
-  }) {
-    if (isMerchantInviteOnlyChanged != null) {
-      return isMerchantInviteOnlyChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _IsMerchantInviteOnlyChanged implements UpdateActivityFormEvent {
-  const factory _IsMerchantInviteOnlyChanged(final bool inviteBool) =
-      _$IsMerchantInviteOnlyChangedImpl;
-
-  bool get inviteBool;
-  @JsonKey(ignore: true)
-  _$$IsMerchantInviteOnlyChangedImplCopyWith<_$IsMerchantInviteOnlyChangedImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$MerchantLimitChangedImplCopyWith<$Res> {
-  factory _$$MerchantLimitChangedImplCopyWith(_$MerchantLimitChangedImpl value,
-          $Res Function(_$MerchantLimitChangedImpl) then) =
-      __$$MerchantLimitChangedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int merchLimit});
-}
-
-/// @nodoc
-class __$$MerchantLimitChangedImplCopyWithImpl<$Res>
-    extends _$UpdateActivityFormEventCopyWithImpl<$Res,
-        _$MerchantLimitChangedImpl>
-    implements _$$MerchantLimitChangedImplCopyWith<$Res> {
-  __$$MerchantLimitChangedImplCopyWithImpl(_$MerchantLimitChangedImpl _value,
-      $Res Function(_$MerchantLimitChangedImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? merchLimit = null,
-  }) {
-    return _then(_$MerchantLimitChangedImpl(
-      null == merchLimit
-          ? _value.merchLimit
-          : merchLimit // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$MerchantLimitChangedImpl implements _MerchantLimitChanged {
-  const _$MerchantLimitChangedImpl(this.merchLimit);
-
-  @override
-  final int merchLimit;
-
-  @override
-  String toString() {
-    return 'UpdateActivityFormEvent.merchantLimitChanged(merchLimit: $merchLimit)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MerchantLimitChangedImpl &&
-            (identical(other.merchLimit, merchLimit) ||
-                other.merchLimit == merchLimit));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, merchLimit);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$MerchantLimitChangedImplCopyWith<_$MerchantLimitChangedImpl>
-      get copyWith =>
-          __$$MerchantLimitChangedImplCopyWithImpl<_$MerchantLimitChangedImpl>(
-              this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)
-        initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
-        activityOptionChanged,
-    required TResult Function(bool boolSave) isSavingChanged,
-    required TResult Function(BackgroundInfoTitle titleChanged)
-        activityTitleChanged,
-    required TResult Function(BackgroundInfoDescription descriptionChanged)
-        activityDescriptionChanged,
-    required TResult Function(BackgroundInfoDescription descriptionChanged)
-        activityDescriptionChangedTwo,
-    required TResult Function(List<ImageUpload> imagesList)
-        activityProfileImagesChanged,
-    required TResult Function(bool inviteBool) isPartnersInviteOnly,
-    required TResult Function(bool inviteBool) isInstructorInviteOnly,
-    required TResult Function(bool isPostBool) activityPostedOnBehalf,
-    required TResult Function(String websiteStr) activityPostContactWebsite,
-    required TResult Function(String emailStr) activityPostContactEmail,
-    required TResult Function(String instaStr) activityPostContactInstagram,
-    required TResult Function(List<BackgroundInfoDescription> activityGoals)
-        activityGoalsChanged,
-    required TResult Function(List<BackgroundInfoDescription> activityInterests)
-        activityInterestsChanged,
-    required TResult Function(bool ageBool) isSeventeenAndUnderChanged,
-    required TResult Function(int ageInt) minimumAgeChanged,
-    required TResult Function(bool menBool) isMenOnlyChanged,
-    required TResult Function(bool womenBool) isWomenOnlyChanged,
-    required TResult Function(bool coedBool) isCoEdOnlyChanged,
-    required TResult Function(List<SkillLevel> skillLevel)
-        skillLevelExpectationChanged,
-    required TResult Function(int yearsInt) suggestedYearsChanged,
-    required TResult Function(bool equipBool) isEquipmentProvidedChanged,
-    required TResult Function(bool equipBool) isFacilityEquipmentChanged,
-    required TResult Function(bool gearBool) isGearProvidedChanged,
-    required TResult Function(bool gearBool) isFacilityGearChanged,
-    required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
-    required TResult Function(bool offBool) isOfficiatorProvidedChanged,
-    required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
-    required TResult Function(bool alcBool) isAlcoholForSaleChanged,
-    required TResult Function(bool foodBool) isFoodForSaleChanged,
-    required TResult Function(bool alcBool) isAlcoholProvidedChanged,
-    required TResult Function(bool alcBool) isFacilityAlcoholChanged,
-    required TResult Function(bool foodBool) isFoodProvidedChanged,
-    required TResult Function(bool foodBool) isFacilityFoodChanged,
-    required TResult Function(bool secBool) isSecurityProvidedChanged,
-    required TResult Function(bool secBool) isFacilitySecurityChanged,
-    required TResult Function(bool isReviewBool) isReviewRequiredChanged,
-    required TResult Function(bool isPrivateBool) isPrivateOnlyChanged,
-    required TResult Function(bool isPublicBool) isInviteOnlyChanged,
-    required TResult Function(List<ContactDetails> contactList)
-        privateInviteListChanged,
-    required TResult Function(bool earlyEndBool) isAllowedEarlyEndChange,
-    required TResult Function(bool changeOnlyBool)
-        isAllowedChangeWithoutEarlyEnd,
-    required TResult Function(bool noCancelBool) isNotAllowedCancellation,
-    required TResult Function(bool timeBasedBool)
-        isAllowedTimeBasedCancellation,
-    required TResult Function(bool feeBasedBool) isAllowedFeeBasedCancellation,
-    required TResult Function(List<TimeBasedCancellation> timeBasedCancellation)
-        timeBasedCancellationChanged,
-    required TResult Function(List<FeeBasedCancellation> feeBasedCancellation)
-        feeBasedCancellationChanged,
-    required TResult Function(ListK<DetailOption> rules) ruleOptionChanged,
-    required TResult Function(List<CheckInSetting> checkInList)
-        checkInSettingsChanged,
-    required TResult Function(List<CustomRuleOption> customRulesList)
-        customFieldRuleSettingsChanged,
-    required TResult Function(ListK<DetailCustomOption> customRules)
-        customRuleOptionChanged,
-    required TResult Function(List<SkillLevel> skills) skillLevelToReachChanged,
-    required TResult Function(List<VendorMerchantForm> forms)
-        vendorFormsChanged,
-    required TResult Function(List<DonationType> donationTypes)
-        allowedDonationTypesChanged,
-    required TResult Function(bool exBool) isAllowedExternalContributions,
-    required TResult Function(String currency) currencyTypeChanged,
-    required TResult Function(bool ticketBool) isTicketBasedAttendanceChanged,
-    required TResult Function(bool passBool) isPassBasedAttendanceChanged,
-    required TResult Function(bool limitBool) isLimitedAttendanceChanged,
-    required TResult Function(int limitInt) attendanceLimitChanged,
-    required TResult Function(bool ticketBool) isTicketFixedChanged,
-    required TResult Function(bool ticketBool) isTicketSlotBasedOnly,
-    required TResult Function(bool passBool) isPassFixedChanged,
-    required TResult Function(ActivityTicketOption aTicket)
-        defaultTicketChanged,
-    required TResult Function(List<ActivityTicketOption>? ticketList)
-        activityTicketsChanged,
-    required TResult Function(bool groupBool) passesAttendanceIsAllowedGroups,
-    required TResult Function(int minInt) passesMinimumGroupQuantityChanged,
-    required TResult Function(int maxInt) passesMaximumGroupQuantityChanged,
-    required TResult Function(int maxInt) passesFeeChanged,
-    required TResult Function(int passesInt) passesQuantityChanged,
-    required TResult Function(bool sessionBool) passesCoverAllSessions,
-    required TResult Function(int limitInt) passesCoverLimitedSession,
-    required TResult Function(List<ActivityPassesOption> passesList)
-        activityPassesChanged,
-    required TResult Function(UserProfileModel profile)
-        createStripeOnBoardingAccountLink,
-    required TResult Function(UserProfileModel profile)
-        presentStripeAccountDashboard,
-    required TResult Function() createActivityFinished,
-    required TResult Function() saveActivityFinished,
-    required TResult Function() deleteActivityFinished,
-  }) {
-    return merchantLimitChanged(merchLimit);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)?
-        initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
-    TResult? Function(bool boolSave)? isSavingChanged,
-    TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
-    TResult? Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChanged,
-    TResult? Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChangedTwo,
-    TResult? Function(List<ImageUpload> imagesList)?
-        activityProfileImagesChanged,
-    TResult? Function(bool inviteBool)? isPartnersInviteOnly,
-    TResult? Function(bool inviteBool)? isInstructorInviteOnly,
-    TResult? Function(bool isPostBool)? activityPostedOnBehalf,
-    TResult? Function(String websiteStr)? activityPostContactWebsite,
-    TResult? Function(String emailStr)? activityPostContactEmail,
-    TResult? Function(String instaStr)? activityPostContactInstagram,
-    TResult? Function(List<BackgroundInfoDescription> activityGoals)?
-        activityGoalsChanged,
-    TResult? Function(List<BackgroundInfoDescription> activityInterests)?
-        activityInterestsChanged,
-    TResult? Function(bool ageBool)? isSeventeenAndUnderChanged,
-    TResult? Function(int ageInt)? minimumAgeChanged,
-    TResult? Function(bool menBool)? isMenOnlyChanged,
-    TResult? Function(bool womenBool)? isWomenOnlyChanged,
-    TResult? Function(bool coedBool)? isCoEdOnlyChanged,
-    TResult? Function(List<SkillLevel> skillLevel)?
-        skillLevelExpectationChanged,
-    TResult? Function(int yearsInt)? suggestedYearsChanged,
-    TResult? Function(bool equipBool)? isEquipmentProvidedChanged,
-    TResult? Function(bool equipBool)? isFacilityEquipmentChanged,
-    TResult? Function(bool gearBool)? isGearProvidedChanged,
-    TResult? Function(bool gearBool)? isFacilityGearChanged,
-    TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
-    TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
-    TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
-    TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
-    TResult? Function(bool foodBool)? isFoodForSaleChanged,
-    TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
-    TResult? Function(bool alcBool)? isFacilityAlcoholChanged,
-    TResult? Function(bool foodBool)? isFoodProvidedChanged,
-    TResult? Function(bool foodBool)? isFacilityFoodChanged,
-    TResult? Function(bool secBool)? isSecurityProvidedChanged,
-    TResult? Function(bool secBool)? isFacilitySecurityChanged,
-    TResult? Function(bool isReviewBool)? isReviewRequiredChanged,
-    TResult? Function(bool isPrivateBool)? isPrivateOnlyChanged,
-    TResult? Function(bool isPublicBool)? isInviteOnlyChanged,
-    TResult? Function(List<ContactDetails> contactList)?
-        privateInviteListChanged,
-    TResult? Function(bool earlyEndBool)? isAllowedEarlyEndChange,
-    TResult? Function(bool changeOnlyBool)? isAllowedChangeWithoutEarlyEnd,
-    TResult? Function(bool noCancelBool)? isNotAllowedCancellation,
-    TResult? Function(bool timeBasedBool)? isAllowedTimeBasedCancellation,
-    TResult? Function(bool feeBasedBool)? isAllowedFeeBasedCancellation,
-    TResult? Function(List<TimeBasedCancellation> timeBasedCancellation)?
-        timeBasedCancellationChanged,
-    TResult? Function(List<FeeBasedCancellation> feeBasedCancellation)?
-        feeBasedCancellationChanged,
-    TResult? Function(ListK<DetailOption> rules)? ruleOptionChanged,
-    TResult? Function(List<CheckInSetting> checkInList)? checkInSettingsChanged,
-    TResult? Function(List<CustomRuleOption> customRulesList)?
-        customFieldRuleSettingsChanged,
-    TResult? Function(ListK<DetailCustomOption> customRules)?
-        customRuleOptionChanged,
-    TResult? Function(List<SkillLevel> skills)? skillLevelToReachChanged,
-    TResult? Function(List<VendorMerchantForm> forms)? vendorFormsChanged,
-    TResult? Function(List<DonationType> donationTypes)?
-        allowedDonationTypesChanged,
-    TResult? Function(bool exBool)? isAllowedExternalContributions,
-    TResult? Function(String currency)? currencyTypeChanged,
-    TResult? Function(bool ticketBool)? isTicketBasedAttendanceChanged,
-    TResult? Function(bool passBool)? isPassBasedAttendanceChanged,
-    TResult? Function(bool limitBool)? isLimitedAttendanceChanged,
-    TResult? Function(int limitInt)? attendanceLimitChanged,
-    TResult? Function(bool ticketBool)? isTicketFixedChanged,
-    TResult? Function(bool ticketBool)? isTicketSlotBasedOnly,
-    TResult? Function(bool passBool)? isPassFixedChanged,
-    TResult? Function(ActivityTicketOption aTicket)? defaultTicketChanged,
-    TResult? Function(List<ActivityTicketOption>? ticketList)?
-        activityTicketsChanged,
-    TResult? Function(bool groupBool)? passesAttendanceIsAllowedGroups,
-    TResult? Function(int minInt)? passesMinimumGroupQuantityChanged,
-    TResult? Function(int maxInt)? passesMaximumGroupQuantityChanged,
-    TResult? Function(int maxInt)? passesFeeChanged,
-    TResult? Function(int passesInt)? passesQuantityChanged,
-    TResult? Function(bool sessionBool)? passesCoverAllSessions,
-    TResult? Function(int limitInt)? passesCoverLimitedSession,
-    TResult? Function(List<ActivityPassesOption> passesList)?
-        activityPassesChanged,
-    TResult? Function(UserProfileModel profile)?
-        createStripeOnBoardingAccountLink,
-    TResult? Function(UserProfileModel profile)? presentStripeAccountDashboard,
-    TResult? Function()? createActivityFinished,
-    TResult? Function()? saveActivityFinished,
-    TResult? Function()? deleteActivityFinished,
-  }) {
-    return merchantLimitChanged?.call(merchLimit);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)?
-        initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
-    TResult Function(bool boolSave)? isSavingChanged,
-    TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
-    TResult Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChanged,
-    TResult Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChangedTwo,
-    TResult Function(List<ImageUpload> imagesList)?
-        activityProfileImagesChanged,
-    TResult Function(bool inviteBool)? isPartnersInviteOnly,
-    TResult Function(bool inviteBool)? isInstructorInviteOnly,
-    TResult Function(bool isPostBool)? activityPostedOnBehalf,
-    TResult Function(String websiteStr)? activityPostContactWebsite,
-    TResult Function(String emailStr)? activityPostContactEmail,
-    TResult Function(String instaStr)? activityPostContactInstagram,
-    TResult Function(List<BackgroundInfoDescription> activityGoals)?
-        activityGoalsChanged,
-    TResult Function(List<BackgroundInfoDescription> activityInterests)?
-        activityInterestsChanged,
-    TResult Function(bool ageBool)? isSeventeenAndUnderChanged,
-    TResult Function(int ageInt)? minimumAgeChanged,
-    TResult Function(bool menBool)? isMenOnlyChanged,
-    TResult Function(bool womenBool)? isWomenOnlyChanged,
-    TResult Function(bool coedBool)? isCoEdOnlyChanged,
-    TResult Function(List<SkillLevel> skillLevel)? skillLevelExpectationChanged,
-    TResult Function(int yearsInt)? suggestedYearsChanged,
-    TResult Function(bool equipBool)? isEquipmentProvidedChanged,
-    TResult Function(bool equipBool)? isFacilityEquipmentChanged,
-    TResult Function(bool gearBool)? isGearProvidedChanged,
-    TResult Function(bool gearBool)? isFacilityGearChanged,
-    TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
-    TResult Function(bool offBool)? isOfficiatorProvidedChanged,
-    TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
-    TResult Function(bool alcBool)? isAlcoholForSaleChanged,
-    TResult Function(bool foodBool)? isFoodForSaleChanged,
-    TResult Function(bool alcBool)? isAlcoholProvidedChanged,
-    TResult Function(bool alcBool)? isFacilityAlcoholChanged,
-    TResult Function(bool foodBool)? isFoodProvidedChanged,
-    TResult Function(bool foodBool)? isFacilityFoodChanged,
-    TResult Function(bool secBool)? isSecurityProvidedChanged,
-    TResult Function(bool secBool)? isFacilitySecurityChanged,
-    TResult Function(bool isReviewBool)? isReviewRequiredChanged,
-    TResult Function(bool isPrivateBool)? isPrivateOnlyChanged,
-    TResult Function(bool isPublicBool)? isInviteOnlyChanged,
-    TResult Function(List<ContactDetails> contactList)?
-        privateInviteListChanged,
-    TResult Function(bool earlyEndBool)? isAllowedEarlyEndChange,
-    TResult Function(bool changeOnlyBool)? isAllowedChangeWithoutEarlyEnd,
-    TResult Function(bool noCancelBool)? isNotAllowedCancellation,
-    TResult Function(bool timeBasedBool)? isAllowedTimeBasedCancellation,
-    TResult Function(bool feeBasedBool)? isAllowedFeeBasedCancellation,
-    TResult Function(List<TimeBasedCancellation> timeBasedCancellation)?
-        timeBasedCancellationChanged,
-    TResult Function(List<FeeBasedCancellation> feeBasedCancellation)?
-        feeBasedCancellationChanged,
-    TResult Function(ListK<DetailOption> rules)? ruleOptionChanged,
-    TResult Function(List<CheckInSetting> checkInList)? checkInSettingsChanged,
-    TResult Function(List<CustomRuleOption> customRulesList)?
-        customFieldRuleSettingsChanged,
-    TResult Function(ListK<DetailCustomOption> customRules)?
-        customRuleOptionChanged,
-    TResult Function(List<SkillLevel> skills)? skillLevelToReachChanged,
-    TResult Function(List<VendorMerchantForm> forms)? vendorFormsChanged,
-    TResult Function(List<DonationType> donationTypes)?
-        allowedDonationTypesChanged,
-    TResult Function(bool exBool)? isAllowedExternalContributions,
-    TResult Function(String currency)? currencyTypeChanged,
-    TResult Function(bool ticketBool)? isTicketBasedAttendanceChanged,
-    TResult Function(bool passBool)? isPassBasedAttendanceChanged,
-    TResult Function(bool limitBool)? isLimitedAttendanceChanged,
-    TResult Function(int limitInt)? attendanceLimitChanged,
-    TResult Function(bool ticketBool)? isTicketFixedChanged,
-    TResult Function(bool ticketBool)? isTicketSlotBasedOnly,
-    TResult Function(bool passBool)? isPassFixedChanged,
-    TResult Function(ActivityTicketOption aTicket)? defaultTicketChanged,
-    TResult Function(List<ActivityTicketOption>? ticketList)?
-        activityTicketsChanged,
-    TResult Function(bool groupBool)? passesAttendanceIsAllowedGroups,
-    TResult Function(int minInt)? passesMinimumGroupQuantityChanged,
-    TResult Function(int maxInt)? passesMaximumGroupQuantityChanged,
-    TResult Function(int maxInt)? passesFeeChanged,
-    TResult Function(int passesInt)? passesQuantityChanged,
-    TResult Function(bool sessionBool)? passesCoverAllSessions,
-    TResult Function(int limitInt)? passesCoverLimitedSession,
-    TResult Function(List<ActivityPassesOption> passesList)?
-        activityPassesChanged,
-    TResult Function(UserProfileModel profile)?
-        createStripeOnBoardingAccountLink,
-    TResult Function(UserProfileModel profile)? presentStripeAccountDashboard,
-    TResult Function()? createActivityFinished,
-    TResult Function()? saveActivityFinished,
-    TResult Function()? deleteActivityFinished,
-    required TResult orElse(),
-  }) {
-    if (merchantLimitChanged != null) {
-      return merchantLimitChanged(merchLimit);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitializeActivityForm value)
-        initializeActivityForm,
-    required TResult Function(ActivityOptionChanged value)
-        activityOptionChanged,
-    required TResult Function(_IsSavingChanged value) isSavingChanged,
-    required TResult Function(_ActivityTitleChanged value) activityTitleChanged,
-    required TResult Function(_ActivityDescriptionChanged value)
-        activityDescriptionChanged,
-    required TResult Function(_ActivityDescriptionChangedTwo value)
-        activityDescriptionChangedTwo,
-    required TResult Function(_activityProfileImagesChanged value)
-        activityProfileImagesChanged,
-    required TResult Function(_IsPartnersInviteOnly value) isPartnersInviteOnly,
-    required TResult Function(_IsInstructorInviteOnly value)
-        isInstructorInviteOnly,
-    required TResult Function(_ActivityPostedOnBehalf value)
-        activityPostedOnBehalf,
-    required TResult Function(_ActivityPostContactWebsite value)
-        activityPostContactWebsite,
-    required TResult Function(_ActivityPostContactEmail value)
-        activityPostContactEmail,
-    required TResult Function(_ActivityPostContactInstagram value)
-        activityPostContactInstagram,
-    required TResult Function(_ActivityGoalsChanged value) activityGoalsChanged,
-    required TResult Function(_ActivityInterestsChanged value)
-        activityInterestsChanged,
-    required TResult Function(_IsSeventeenAndUnderChanged value)
-        isSeventeenAndUnderChanged,
-    required TResult Function(_MinimumAgeChanged value) minimumAgeChanged,
-    required TResult Function(_IsMenOnlyChanged value) isMenOnlyChanged,
-    required TResult Function(_IsWomenOnlyChanged value) isWomenOnlyChanged,
-    required TResult Function(_IsCoEdOnlyChanged value) isCoEdOnlyChanged,
-    required TResult Function(_SkillLevelExpectationChanged value)
-        skillLevelExpectationChanged,
-    required TResult Function(_SuggestedYearsChanged value)
-        suggestedYearsChanged,
-    required TResult Function(_IsEquipmentProvidedChanged value)
-        isEquipmentProvidedChanged,
-    required TResult Function(_IsFacilityEquipmentChanged value)
-        isFacilityEquipmentChanged,
-    required TResult Function(_IsGearProvidedChanged value)
-        isGearProvidedChanged,
-    required TResult Function(_IsFacilityGearChanged value)
-        isFacilityGearChanged,
-    required TResult Function(_IsAnalyticsProvidedChanged value)
-        isAnalyticsProvidedChanged,
-    required TResult Function(_IsOfficiatorProvidedChanged value)
-        isOfficiatorProvidedChanged,
-    required TResult Function(_IsMerchantSupportedChanged value)
-        isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
-    required TResult Function(_IsAlcoholForSaleChanged value)
-        isAlcoholForSaleChanged,
-    required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
-    required TResult Function(_IsAlcoholProvidedChanged value)
-        isAlcoholProvidedChanged,
-    required TResult Function(_IsFacilityAlcoholChanged value)
-        isFacilityAlcoholChanged,
-    required TResult Function(_IsFoodProvidedChanged value)
-        isFoodProvidedChanged,
-    required TResult Function(_IsFacilityFoodChanged value)
-        isFacilityFoodChanged,
-    required TResult Function(_IsSecurityProvidedChanged value)
-        isSecurityProvidedChanged,
-    required TResult Function(_IsFacilitySecurityChanged value)
-        isFacilitySecurityChanged,
-    required TResult Function(_IsReviewRequiredChanged value)
-        isReviewRequiredChanged,
-    required TResult Function(_IsPrivateOnlyChanged value) isPrivateOnlyChanged,
-    required TResult Function(_ListingIsInviteOnlyChanged value)
-        isInviteOnlyChanged,
-    required TResult Function(_PrivateInviteListChanged value)
-        privateInviteListChanged,
-    required TResult Function(_IsAllowedEarlyEndChanged value)
-        isAllowedEarlyEndChange,
-    required TResult Function(_IsAllowedChangeWithoutEarlyEnd value)
-        isAllowedChangeWithoutEarlyEnd,
-    required TResult Function(_IsNotAllowedCancellation value)
-        isNotAllowedCancellation,
-    required TResult Function(_IsAllowedTimeBasedCancellation value)
-        isAllowedTimeBasedCancellation,
-    required TResult Function(_IsAllowedFeeBasedCancellation value)
-        isAllowedFeeBasedCancellation,
-    required TResult Function(_TimeBasedCancellationChanged value)
-        timeBasedCancellationChanged,
-    required TResult Function(_FeeBasedCancellationChanged value)
-        feeBasedCancellationChanged,
-    required TResult Function(_RuleOptionChanged value) ruleOptionChanged,
-    required TResult Function(_CheckInSettingsChanged value)
-        checkInSettingsChanged,
-    required TResult Function(_CustomFieldRuleSettingsChanged value)
-        customFieldRuleSettingsChanged,
-    required TResult Function(_CustomRuleOptionChanged value)
-        customRuleOptionChanged,
-    required TResult Function(_SkillLevelToReachChanged value)
-        skillLevelToReachChanged,
-    required TResult Function(_VendorFormsChanged value) vendorFormsChanged,
-    required TResult Function(_AllowedDonationTypesChanged value)
-        allowedDonationTypesChanged,
-    required TResult Function(_IsAllowedExternalContributions value)
-        isAllowedExternalContributions,
-    required TResult Function(_CurrencyTypeChanged value) currencyTypeChanged,
-    required TResult Function(_IsTicketBasedAttendanceChanged value)
-        isTicketBasedAttendanceChanged,
-    required TResult Function(_IsPassBasedAttendanceChanged value)
-        isPassBasedAttendanceChanged,
-    required TResult Function(_IsLimitedAttendanceChanged value)
-        isLimitedAttendanceChanged,
-    required TResult Function(_AttendanceLimitChanged value)
-        attendanceLimitChanged,
-    required TResult Function(_IsTicketFixedChanged value) isTicketFixedChanged,
-    required TResult Function(_IsTicketSlotBasedOnly value)
-        isTicketSlotBasedOnly,
-    required TResult Function(_IsPassFixedChanged value) isPassFixedChanged,
-    required TResult Function(_DefaultTicketChanged value) defaultTicketChanged,
-    required TResult Function(_ActivityTicketsChanged value)
-        activityTicketsChanged,
-    required TResult Function(_PassesAttendanceIsAllowedGroups value)
-        passesAttendanceIsAllowedGroups,
-    required TResult Function(_PassesMinimumGroupQuantityChanged value)
-        passesMinimumGroupQuantityChanged,
-    required TResult Function(_PassesMaximumGroupQuantityChanged value)
-        passesMaximumGroupQuantityChanged,
-    required TResult Function(_PassesFeeChanged value) passesFeeChanged,
-    required TResult Function(_PassesQuantityChanged value)
-        passesQuantityChanged,
-    required TResult Function(_PassesCoverAllSessions value)
-        passesCoverAllSessions,
-    required TResult Function(_PassesCoverLimitedSession value)
-        passesCoverLimitedSession,
-    required TResult Function(_ActivityPassesChanged value)
-        activityPassesChanged,
-    required TResult Function(_CreateStripeOnBoardingAccountLink value)
-        createStripeOnBoardingAccountLink,
-    required TResult Function(_PresentStripeAccountDashboard value)
-        presentStripeAccountDashboard,
-    required TResult Function(CreateActivityFinished value)
-        createActivityFinished,
-    required TResult Function(SaveActivityFinished value) saveActivityFinished,
-    required TResult Function(DeleteActivityFinished value)
-        deleteActivityFinished,
-  }) {
-    return merchantLimitChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitializeActivityForm value)? initializeActivityForm,
-    TResult? Function(ActivityOptionChanged value)? activityOptionChanged,
-    TResult? Function(_IsSavingChanged value)? isSavingChanged,
-    TResult? Function(_ActivityTitleChanged value)? activityTitleChanged,
-    TResult? Function(_ActivityDescriptionChanged value)?
-        activityDescriptionChanged,
-    TResult? Function(_ActivityDescriptionChangedTwo value)?
-        activityDescriptionChangedTwo,
-    TResult? Function(_activityProfileImagesChanged value)?
-        activityProfileImagesChanged,
-    TResult? Function(_IsPartnersInviteOnly value)? isPartnersInviteOnly,
-    TResult? Function(_IsInstructorInviteOnly value)? isInstructorInviteOnly,
-    TResult? Function(_ActivityPostedOnBehalf value)? activityPostedOnBehalf,
-    TResult? Function(_ActivityPostContactWebsite value)?
-        activityPostContactWebsite,
-    TResult? Function(_ActivityPostContactEmail value)?
-        activityPostContactEmail,
-    TResult? Function(_ActivityPostContactInstagram value)?
-        activityPostContactInstagram,
-    TResult? Function(_ActivityGoalsChanged value)? activityGoalsChanged,
-    TResult? Function(_ActivityInterestsChanged value)?
-        activityInterestsChanged,
-    TResult? Function(_IsSeventeenAndUnderChanged value)?
-        isSeventeenAndUnderChanged,
-    TResult? Function(_MinimumAgeChanged value)? minimumAgeChanged,
-    TResult? Function(_IsMenOnlyChanged value)? isMenOnlyChanged,
-    TResult? Function(_IsWomenOnlyChanged value)? isWomenOnlyChanged,
-    TResult? Function(_IsCoEdOnlyChanged value)? isCoEdOnlyChanged,
-    TResult? Function(_SkillLevelExpectationChanged value)?
-        skillLevelExpectationChanged,
-    TResult? Function(_SuggestedYearsChanged value)? suggestedYearsChanged,
-    TResult? Function(_IsEquipmentProvidedChanged value)?
-        isEquipmentProvidedChanged,
-    TResult? Function(_IsFacilityEquipmentChanged value)?
-        isFacilityEquipmentChanged,
-    TResult? Function(_IsGearProvidedChanged value)? isGearProvidedChanged,
-    TResult? Function(_IsFacilityGearChanged value)? isFacilityGearChanged,
-    TResult? Function(_IsAnalyticsProvidedChanged value)?
-        isAnalyticsProvidedChanged,
-    TResult? Function(_IsOfficiatorProvidedChanged value)?
-        isOfficiatorProvidedChanged,
-    TResult? Function(_IsMerchantSupportedChanged value)?
-        isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
-    TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
-    TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
-    TResult? Function(_IsAlcoholProvidedChanged value)?
-        isAlcoholProvidedChanged,
-    TResult? Function(_IsFacilityAlcoholChanged value)?
-        isFacilityAlcoholChanged,
-    TResult? Function(_IsFoodProvidedChanged value)? isFoodProvidedChanged,
-    TResult? Function(_IsFacilityFoodChanged value)? isFacilityFoodChanged,
-    TResult? Function(_IsSecurityProvidedChanged value)?
-        isSecurityProvidedChanged,
-    TResult? Function(_IsFacilitySecurityChanged value)?
-        isFacilitySecurityChanged,
-    TResult? Function(_IsReviewRequiredChanged value)? isReviewRequiredChanged,
-    TResult? Function(_IsPrivateOnlyChanged value)? isPrivateOnlyChanged,
-    TResult? Function(_ListingIsInviteOnlyChanged value)? isInviteOnlyChanged,
-    TResult? Function(_PrivateInviteListChanged value)?
-        privateInviteListChanged,
-    TResult? Function(_IsAllowedEarlyEndChanged value)? isAllowedEarlyEndChange,
-    TResult? Function(_IsAllowedChangeWithoutEarlyEnd value)?
-        isAllowedChangeWithoutEarlyEnd,
-    TResult? Function(_IsNotAllowedCancellation value)?
-        isNotAllowedCancellation,
-    TResult? Function(_IsAllowedTimeBasedCancellation value)?
-        isAllowedTimeBasedCancellation,
-    TResult? Function(_IsAllowedFeeBasedCancellation value)?
-        isAllowedFeeBasedCancellation,
-    TResult? Function(_TimeBasedCancellationChanged value)?
-        timeBasedCancellationChanged,
-    TResult? Function(_FeeBasedCancellationChanged value)?
-        feeBasedCancellationChanged,
-    TResult? Function(_RuleOptionChanged value)? ruleOptionChanged,
-    TResult? Function(_CheckInSettingsChanged value)? checkInSettingsChanged,
-    TResult? Function(_CustomFieldRuleSettingsChanged value)?
-        customFieldRuleSettingsChanged,
-    TResult? Function(_CustomRuleOptionChanged value)? customRuleOptionChanged,
-    TResult? Function(_SkillLevelToReachChanged value)?
-        skillLevelToReachChanged,
-    TResult? Function(_VendorFormsChanged value)? vendorFormsChanged,
-    TResult? Function(_AllowedDonationTypesChanged value)?
-        allowedDonationTypesChanged,
-    TResult? Function(_IsAllowedExternalContributions value)?
-        isAllowedExternalContributions,
-    TResult? Function(_CurrencyTypeChanged value)? currencyTypeChanged,
-    TResult? Function(_IsTicketBasedAttendanceChanged value)?
-        isTicketBasedAttendanceChanged,
-    TResult? Function(_IsPassBasedAttendanceChanged value)?
-        isPassBasedAttendanceChanged,
-    TResult? Function(_IsLimitedAttendanceChanged value)?
-        isLimitedAttendanceChanged,
-    TResult? Function(_AttendanceLimitChanged value)? attendanceLimitChanged,
-    TResult? Function(_IsTicketFixedChanged value)? isTicketFixedChanged,
-    TResult? Function(_IsTicketSlotBasedOnly value)? isTicketSlotBasedOnly,
-    TResult? Function(_IsPassFixedChanged value)? isPassFixedChanged,
-    TResult? Function(_DefaultTicketChanged value)? defaultTicketChanged,
-    TResult? Function(_ActivityTicketsChanged value)? activityTicketsChanged,
-    TResult? Function(_PassesAttendanceIsAllowedGroups value)?
-        passesAttendanceIsAllowedGroups,
-    TResult? Function(_PassesMinimumGroupQuantityChanged value)?
-        passesMinimumGroupQuantityChanged,
-    TResult? Function(_PassesMaximumGroupQuantityChanged value)?
-        passesMaximumGroupQuantityChanged,
-    TResult? Function(_PassesFeeChanged value)? passesFeeChanged,
-    TResult? Function(_PassesQuantityChanged value)? passesQuantityChanged,
-    TResult? Function(_PassesCoverAllSessions value)? passesCoverAllSessions,
-    TResult? Function(_PassesCoverLimitedSession value)?
-        passesCoverLimitedSession,
-    TResult? Function(_ActivityPassesChanged value)? activityPassesChanged,
-    TResult? Function(_CreateStripeOnBoardingAccountLink value)?
-        createStripeOnBoardingAccountLink,
-    TResult? Function(_PresentStripeAccountDashboard value)?
-        presentStripeAccountDashboard,
-    TResult? Function(CreateActivityFinished value)? createActivityFinished,
-    TResult? Function(SaveActivityFinished value)? saveActivityFinished,
-    TResult? Function(DeleteActivityFinished value)? deleteActivityFinished,
-  }) {
-    return merchantLimitChanged?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitializeActivityForm value)? initializeActivityForm,
-    TResult Function(ActivityOptionChanged value)? activityOptionChanged,
-    TResult Function(_IsSavingChanged value)? isSavingChanged,
-    TResult Function(_ActivityTitleChanged value)? activityTitleChanged,
-    TResult Function(_ActivityDescriptionChanged value)?
-        activityDescriptionChanged,
-    TResult Function(_ActivityDescriptionChangedTwo value)?
-        activityDescriptionChangedTwo,
-    TResult Function(_activityProfileImagesChanged value)?
-        activityProfileImagesChanged,
-    TResult Function(_IsPartnersInviteOnly value)? isPartnersInviteOnly,
-    TResult Function(_IsInstructorInviteOnly value)? isInstructorInviteOnly,
-    TResult Function(_ActivityPostedOnBehalf value)? activityPostedOnBehalf,
-    TResult Function(_ActivityPostContactWebsite value)?
-        activityPostContactWebsite,
-    TResult Function(_ActivityPostContactEmail value)? activityPostContactEmail,
-    TResult Function(_ActivityPostContactInstagram value)?
-        activityPostContactInstagram,
-    TResult Function(_ActivityGoalsChanged value)? activityGoalsChanged,
-    TResult Function(_ActivityInterestsChanged value)? activityInterestsChanged,
-    TResult Function(_IsSeventeenAndUnderChanged value)?
-        isSeventeenAndUnderChanged,
-    TResult Function(_MinimumAgeChanged value)? minimumAgeChanged,
-    TResult Function(_IsMenOnlyChanged value)? isMenOnlyChanged,
-    TResult Function(_IsWomenOnlyChanged value)? isWomenOnlyChanged,
-    TResult Function(_IsCoEdOnlyChanged value)? isCoEdOnlyChanged,
-    TResult Function(_SkillLevelExpectationChanged value)?
-        skillLevelExpectationChanged,
-    TResult Function(_SuggestedYearsChanged value)? suggestedYearsChanged,
-    TResult Function(_IsEquipmentProvidedChanged value)?
-        isEquipmentProvidedChanged,
-    TResult Function(_IsFacilityEquipmentChanged value)?
-        isFacilityEquipmentChanged,
-    TResult Function(_IsGearProvidedChanged value)? isGearProvidedChanged,
-    TResult Function(_IsFacilityGearChanged value)? isFacilityGearChanged,
-    TResult Function(_IsAnalyticsProvidedChanged value)?
-        isAnalyticsProvidedChanged,
-    TResult Function(_IsOfficiatorProvidedChanged value)?
-        isOfficiatorProvidedChanged,
-    TResult Function(_IsMerchantSupportedChanged value)?
-        isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
-    TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
-    TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
-    TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
-    TResult Function(_IsFacilityAlcoholChanged value)? isFacilityAlcoholChanged,
-    TResult Function(_IsFoodProvidedChanged value)? isFoodProvidedChanged,
-    TResult Function(_IsFacilityFoodChanged value)? isFacilityFoodChanged,
-    TResult Function(_IsSecurityProvidedChanged value)?
-        isSecurityProvidedChanged,
-    TResult Function(_IsFacilitySecurityChanged value)?
-        isFacilitySecurityChanged,
-    TResult Function(_IsReviewRequiredChanged value)? isReviewRequiredChanged,
-    TResult Function(_IsPrivateOnlyChanged value)? isPrivateOnlyChanged,
-    TResult Function(_ListingIsInviteOnlyChanged value)? isInviteOnlyChanged,
-    TResult Function(_PrivateInviteListChanged value)? privateInviteListChanged,
-    TResult Function(_IsAllowedEarlyEndChanged value)? isAllowedEarlyEndChange,
-    TResult Function(_IsAllowedChangeWithoutEarlyEnd value)?
-        isAllowedChangeWithoutEarlyEnd,
-    TResult Function(_IsNotAllowedCancellation value)? isNotAllowedCancellation,
-    TResult Function(_IsAllowedTimeBasedCancellation value)?
-        isAllowedTimeBasedCancellation,
-    TResult Function(_IsAllowedFeeBasedCancellation value)?
-        isAllowedFeeBasedCancellation,
-    TResult Function(_TimeBasedCancellationChanged value)?
-        timeBasedCancellationChanged,
-    TResult Function(_FeeBasedCancellationChanged value)?
-        feeBasedCancellationChanged,
-    TResult Function(_RuleOptionChanged value)? ruleOptionChanged,
-    TResult Function(_CheckInSettingsChanged value)? checkInSettingsChanged,
-    TResult Function(_CustomFieldRuleSettingsChanged value)?
-        customFieldRuleSettingsChanged,
-    TResult Function(_CustomRuleOptionChanged value)? customRuleOptionChanged,
-    TResult Function(_SkillLevelToReachChanged value)? skillLevelToReachChanged,
-    TResult Function(_VendorFormsChanged value)? vendorFormsChanged,
-    TResult Function(_AllowedDonationTypesChanged value)?
-        allowedDonationTypesChanged,
-    TResult Function(_IsAllowedExternalContributions value)?
-        isAllowedExternalContributions,
-    TResult Function(_CurrencyTypeChanged value)? currencyTypeChanged,
-    TResult Function(_IsTicketBasedAttendanceChanged value)?
-        isTicketBasedAttendanceChanged,
-    TResult Function(_IsPassBasedAttendanceChanged value)?
-        isPassBasedAttendanceChanged,
-    TResult Function(_IsLimitedAttendanceChanged value)?
-        isLimitedAttendanceChanged,
-    TResult Function(_AttendanceLimitChanged value)? attendanceLimitChanged,
-    TResult Function(_IsTicketFixedChanged value)? isTicketFixedChanged,
-    TResult Function(_IsTicketSlotBasedOnly value)? isTicketSlotBasedOnly,
-    TResult Function(_IsPassFixedChanged value)? isPassFixedChanged,
-    TResult Function(_DefaultTicketChanged value)? defaultTicketChanged,
-    TResult Function(_ActivityTicketsChanged value)? activityTicketsChanged,
-    TResult Function(_PassesAttendanceIsAllowedGroups value)?
-        passesAttendanceIsAllowedGroups,
-    TResult Function(_PassesMinimumGroupQuantityChanged value)?
-        passesMinimumGroupQuantityChanged,
-    TResult Function(_PassesMaximumGroupQuantityChanged value)?
-        passesMaximumGroupQuantityChanged,
-    TResult Function(_PassesFeeChanged value)? passesFeeChanged,
-    TResult Function(_PassesQuantityChanged value)? passesQuantityChanged,
-    TResult Function(_PassesCoverAllSessions value)? passesCoverAllSessions,
-    TResult Function(_PassesCoverLimitedSession value)?
-        passesCoverLimitedSession,
-    TResult Function(_ActivityPassesChanged value)? activityPassesChanged,
-    TResult Function(_CreateStripeOnBoardingAccountLink value)?
-        createStripeOnBoardingAccountLink,
-    TResult Function(_PresentStripeAccountDashboard value)?
-        presentStripeAccountDashboard,
-    TResult Function(CreateActivityFinished value)? createActivityFinished,
-    TResult Function(SaveActivityFinished value)? saveActivityFinished,
-    TResult Function(DeleteActivityFinished value)? deleteActivityFinished,
-    required TResult orElse(),
-  }) {
-    if (merchantLimitChanged != null) {
-      return merchantLimitChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _MerchantLimitChanged implements UpdateActivityFormEvent {
-  const factory _MerchantLimitChanged(final int merchLimit) =
-      _$MerchantLimitChangedImpl;
-
-  int get merchLimit;
-  @JsonKey(ignore: true)
-  _$$MerchantLimitChangedImplCopyWith<_$MerchantLimitChangedImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$MerchantFeeChangedImplCopyWith<$Res> {
-  factory _$$MerchantFeeChangedImplCopyWith(_$MerchantFeeChangedImpl value,
-          $Res Function(_$MerchantFeeChangedImpl) then) =
-      __$$MerchantFeeChangedImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({int merchFee});
-}
-
-/// @nodoc
-class __$$MerchantFeeChangedImplCopyWithImpl<$Res>
-    extends _$UpdateActivityFormEventCopyWithImpl<$Res,
-        _$MerchantFeeChangedImpl>
-    implements _$$MerchantFeeChangedImplCopyWith<$Res> {
-  __$$MerchantFeeChangedImplCopyWithImpl(_$MerchantFeeChangedImpl _value,
-      $Res Function(_$MerchantFeeChangedImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? merchFee = null,
-  }) {
-    return _then(_$MerchantFeeChangedImpl(
-      null == merchFee
-          ? _value.merchFee
-          : merchFee // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$MerchantFeeChangedImpl implements _MerchantFeeChanged {
-  const _$MerchantFeeChangedImpl(this.merchFee);
-
-  @override
-  final int merchFee;
-
-  @override
-  String toString() {
-    return 'UpdateActivityFormEvent.merchantFeeChanged(merchFee: $merchFee)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MerchantFeeChangedImpl &&
-            (identical(other.merchFee, merchFee) ||
-                other.merchFee == merchFee));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, merchFee);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$MerchantFeeChangedImplCopyWith<_$MerchantFeeChangedImpl> get copyWith =>
-      __$$MerchantFeeChangedImplCopyWithImpl<_$MerchantFeeChangedImpl>(
-          this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)
-        initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
-        activityOptionChanged,
-    required TResult Function(bool boolSave) isSavingChanged,
-    required TResult Function(BackgroundInfoTitle titleChanged)
-        activityTitleChanged,
-    required TResult Function(BackgroundInfoDescription descriptionChanged)
-        activityDescriptionChanged,
-    required TResult Function(BackgroundInfoDescription descriptionChanged)
-        activityDescriptionChangedTwo,
-    required TResult Function(List<ImageUpload> imagesList)
-        activityProfileImagesChanged,
-    required TResult Function(bool inviteBool) isPartnersInviteOnly,
-    required TResult Function(bool inviteBool) isInstructorInviteOnly,
-    required TResult Function(bool isPostBool) activityPostedOnBehalf,
-    required TResult Function(String websiteStr) activityPostContactWebsite,
-    required TResult Function(String emailStr) activityPostContactEmail,
-    required TResult Function(String instaStr) activityPostContactInstagram,
-    required TResult Function(List<BackgroundInfoDescription> activityGoals)
-        activityGoalsChanged,
-    required TResult Function(List<BackgroundInfoDescription> activityInterests)
-        activityInterestsChanged,
-    required TResult Function(bool ageBool) isSeventeenAndUnderChanged,
-    required TResult Function(int ageInt) minimumAgeChanged,
-    required TResult Function(bool menBool) isMenOnlyChanged,
-    required TResult Function(bool womenBool) isWomenOnlyChanged,
-    required TResult Function(bool coedBool) isCoEdOnlyChanged,
-    required TResult Function(List<SkillLevel> skillLevel)
-        skillLevelExpectationChanged,
-    required TResult Function(int yearsInt) suggestedYearsChanged,
-    required TResult Function(bool equipBool) isEquipmentProvidedChanged,
-    required TResult Function(bool equipBool) isFacilityEquipmentChanged,
-    required TResult Function(bool gearBool) isGearProvidedChanged,
-    required TResult Function(bool gearBool) isFacilityGearChanged,
-    required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
-    required TResult Function(bool offBool) isOfficiatorProvidedChanged,
-    required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
-    required TResult Function(bool alcBool) isAlcoholForSaleChanged,
-    required TResult Function(bool foodBool) isFoodForSaleChanged,
-    required TResult Function(bool alcBool) isAlcoholProvidedChanged,
-    required TResult Function(bool alcBool) isFacilityAlcoholChanged,
-    required TResult Function(bool foodBool) isFoodProvidedChanged,
-    required TResult Function(bool foodBool) isFacilityFoodChanged,
-    required TResult Function(bool secBool) isSecurityProvidedChanged,
-    required TResult Function(bool secBool) isFacilitySecurityChanged,
-    required TResult Function(bool isReviewBool) isReviewRequiredChanged,
-    required TResult Function(bool isPrivateBool) isPrivateOnlyChanged,
-    required TResult Function(bool isPublicBool) isInviteOnlyChanged,
-    required TResult Function(List<ContactDetails> contactList)
-        privateInviteListChanged,
-    required TResult Function(bool earlyEndBool) isAllowedEarlyEndChange,
-    required TResult Function(bool changeOnlyBool)
-        isAllowedChangeWithoutEarlyEnd,
-    required TResult Function(bool noCancelBool) isNotAllowedCancellation,
-    required TResult Function(bool timeBasedBool)
-        isAllowedTimeBasedCancellation,
-    required TResult Function(bool feeBasedBool) isAllowedFeeBasedCancellation,
-    required TResult Function(List<TimeBasedCancellation> timeBasedCancellation)
-        timeBasedCancellationChanged,
-    required TResult Function(List<FeeBasedCancellation> feeBasedCancellation)
-        feeBasedCancellationChanged,
-    required TResult Function(ListK<DetailOption> rules) ruleOptionChanged,
-    required TResult Function(List<CheckInSetting> checkInList)
-        checkInSettingsChanged,
-    required TResult Function(List<CustomRuleOption> customRulesList)
-        customFieldRuleSettingsChanged,
-    required TResult Function(ListK<DetailCustomOption> customRules)
-        customRuleOptionChanged,
-    required TResult Function(List<SkillLevel> skills) skillLevelToReachChanged,
-    required TResult Function(List<VendorMerchantForm> forms)
-        vendorFormsChanged,
-    required TResult Function(List<DonationType> donationTypes)
-        allowedDonationTypesChanged,
-    required TResult Function(bool exBool) isAllowedExternalContributions,
-    required TResult Function(String currency) currencyTypeChanged,
-    required TResult Function(bool ticketBool) isTicketBasedAttendanceChanged,
-    required TResult Function(bool passBool) isPassBasedAttendanceChanged,
-    required TResult Function(bool limitBool) isLimitedAttendanceChanged,
-    required TResult Function(int limitInt) attendanceLimitChanged,
-    required TResult Function(bool ticketBool) isTicketFixedChanged,
-    required TResult Function(bool ticketBool) isTicketSlotBasedOnly,
-    required TResult Function(bool passBool) isPassFixedChanged,
-    required TResult Function(ActivityTicketOption aTicket)
-        defaultTicketChanged,
-    required TResult Function(List<ActivityTicketOption>? ticketList)
-        activityTicketsChanged,
-    required TResult Function(bool groupBool) passesAttendanceIsAllowedGroups,
-    required TResult Function(int minInt) passesMinimumGroupQuantityChanged,
-    required TResult Function(int maxInt) passesMaximumGroupQuantityChanged,
-    required TResult Function(int maxInt) passesFeeChanged,
-    required TResult Function(int passesInt) passesQuantityChanged,
-    required TResult Function(bool sessionBool) passesCoverAllSessions,
-    required TResult Function(int limitInt) passesCoverLimitedSession,
-    required TResult Function(List<ActivityPassesOption> passesList)
-        activityPassesChanged,
-    required TResult Function(UserProfileModel profile)
-        createStripeOnBoardingAccountLink,
-    required TResult Function(UserProfileModel profile)
-        presentStripeAccountDashboard,
-    required TResult Function() createActivityFinished,
-    required TResult Function() saveActivityFinished,
-    required TResult Function() deleteActivityFinished,
-  }) {
-    return merchantFeeChanged(merchFee);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)?
-        initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
-    TResult? Function(bool boolSave)? isSavingChanged,
-    TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
-    TResult? Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChanged,
-    TResult? Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChangedTwo,
-    TResult? Function(List<ImageUpload> imagesList)?
-        activityProfileImagesChanged,
-    TResult? Function(bool inviteBool)? isPartnersInviteOnly,
-    TResult? Function(bool inviteBool)? isInstructorInviteOnly,
-    TResult? Function(bool isPostBool)? activityPostedOnBehalf,
-    TResult? Function(String websiteStr)? activityPostContactWebsite,
-    TResult? Function(String emailStr)? activityPostContactEmail,
-    TResult? Function(String instaStr)? activityPostContactInstagram,
-    TResult? Function(List<BackgroundInfoDescription> activityGoals)?
-        activityGoalsChanged,
-    TResult? Function(List<BackgroundInfoDescription> activityInterests)?
-        activityInterestsChanged,
-    TResult? Function(bool ageBool)? isSeventeenAndUnderChanged,
-    TResult? Function(int ageInt)? minimumAgeChanged,
-    TResult? Function(bool menBool)? isMenOnlyChanged,
-    TResult? Function(bool womenBool)? isWomenOnlyChanged,
-    TResult? Function(bool coedBool)? isCoEdOnlyChanged,
-    TResult? Function(List<SkillLevel> skillLevel)?
-        skillLevelExpectationChanged,
-    TResult? Function(int yearsInt)? suggestedYearsChanged,
-    TResult? Function(bool equipBool)? isEquipmentProvidedChanged,
-    TResult? Function(bool equipBool)? isFacilityEquipmentChanged,
-    TResult? Function(bool gearBool)? isGearProvidedChanged,
-    TResult? Function(bool gearBool)? isFacilityGearChanged,
-    TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
-    TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
-    TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
-    TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
-    TResult? Function(bool foodBool)? isFoodForSaleChanged,
-    TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
-    TResult? Function(bool alcBool)? isFacilityAlcoholChanged,
-    TResult? Function(bool foodBool)? isFoodProvidedChanged,
-    TResult? Function(bool foodBool)? isFacilityFoodChanged,
-    TResult? Function(bool secBool)? isSecurityProvidedChanged,
-    TResult? Function(bool secBool)? isFacilitySecurityChanged,
-    TResult? Function(bool isReviewBool)? isReviewRequiredChanged,
-    TResult? Function(bool isPrivateBool)? isPrivateOnlyChanged,
-    TResult? Function(bool isPublicBool)? isInviteOnlyChanged,
-    TResult? Function(List<ContactDetails> contactList)?
-        privateInviteListChanged,
-    TResult? Function(bool earlyEndBool)? isAllowedEarlyEndChange,
-    TResult? Function(bool changeOnlyBool)? isAllowedChangeWithoutEarlyEnd,
-    TResult? Function(bool noCancelBool)? isNotAllowedCancellation,
-    TResult? Function(bool timeBasedBool)? isAllowedTimeBasedCancellation,
-    TResult? Function(bool feeBasedBool)? isAllowedFeeBasedCancellation,
-    TResult? Function(List<TimeBasedCancellation> timeBasedCancellation)?
-        timeBasedCancellationChanged,
-    TResult? Function(List<FeeBasedCancellation> feeBasedCancellation)?
-        feeBasedCancellationChanged,
-    TResult? Function(ListK<DetailOption> rules)? ruleOptionChanged,
-    TResult? Function(List<CheckInSetting> checkInList)? checkInSettingsChanged,
-    TResult? Function(List<CustomRuleOption> customRulesList)?
-        customFieldRuleSettingsChanged,
-    TResult? Function(ListK<DetailCustomOption> customRules)?
-        customRuleOptionChanged,
-    TResult? Function(List<SkillLevel> skills)? skillLevelToReachChanged,
-    TResult? Function(List<VendorMerchantForm> forms)? vendorFormsChanged,
-    TResult? Function(List<DonationType> donationTypes)?
-        allowedDonationTypesChanged,
-    TResult? Function(bool exBool)? isAllowedExternalContributions,
-    TResult? Function(String currency)? currencyTypeChanged,
-    TResult? Function(bool ticketBool)? isTicketBasedAttendanceChanged,
-    TResult? Function(bool passBool)? isPassBasedAttendanceChanged,
-    TResult? Function(bool limitBool)? isLimitedAttendanceChanged,
-    TResult? Function(int limitInt)? attendanceLimitChanged,
-    TResult? Function(bool ticketBool)? isTicketFixedChanged,
-    TResult? Function(bool ticketBool)? isTicketSlotBasedOnly,
-    TResult? Function(bool passBool)? isPassFixedChanged,
-    TResult? Function(ActivityTicketOption aTicket)? defaultTicketChanged,
-    TResult? Function(List<ActivityTicketOption>? ticketList)?
-        activityTicketsChanged,
-    TResult? Function(bool groupBool)? passesAttendanceIsAllowedGroups,
-    TResult? Function(int minInt)? passesMinimumGroupQuantityChanged,
-    TResult? Function(int maxInt)? passesMaximumGroupQuantityChanged,
-    TResult? Function(int maxInt)? passesFeeChanged,
-    TResult? Function(int passesInt)? passesQuantityChanged,
-    TResult? Function(bool sessionBool)? passesCoverAllSessions,
-    TResult? Function(int limitInt)? passesCoverLimitedSession,
-    TResult? Function(List<ActivityPassesOption> passesList)?
-        activityPassesChanged,
-    TResult? Function(UserProfileModel profile)?
-        createStripeOnBoardingAccountLink,
-    TResult? Function(UserProfileModel profile)? presentStripeAccountDashboard,
-    TResult? Function()? createActivityFinished,
-    TResult? Function()? saveActivityFinished,
-    TResult? Function()? deleteActivityFinished,
-  }) {
-    return merchantFeeChanged?.call(merchFee);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(Option<ActivityManagerForm> initializeActivityForm,
-            Option<ReservationItem> initializeResForm)?
-        initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
-    TResult Function(bool boolSave)? isSavingChanged,
-    TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
-    TResult Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChanged,
-    TResult Function(BackgroundInfoDescription descriptionChanged)?
-        activityDescriptionChangedTwo,
-    TResult Function(List<ImageUpload> imagesList)?
-        activityProfileImagesChanged,
-    TResult Function(bool inviteBool)? isPartnersInviteOnly,
-    TResult Function(bool inviteBool)? isInstructorInviteOnly,
-    TResult Function(bool isPostBool)? activityPostedOnBehalf,
-    TResult Function(String websiteStr)? activityPostContactWebsite,
-    TResult Function(String emailStr)? activityPostContactEmail,
-    TResult Function(String instaStr)? activityPostContactInstagram,
-    TResult Function(List<BackgroundInfoDescription> activityGoals)?
-        activityGoalsChanged,
-    TResult Function(List<BackgroundInfoDescription> activityInterests)?
-        activityInterestsChanged,
-    TResult Function(bool ageBool)? isSeventeenAndUnderChanged,
-    TResult Function(int ageInt)? minimumAgeChanged,
-    TResult Function(bool menBool)? isMenOnlyChanged,
-    TResult Function(bool womenBool)? isWomenOnlyChanged,
-    TResult Function(bool coedBool)? isCoEdOnlyChanged,
-    TResult Function(List<SkillLevel> skillLevel)? skillLevelExpectationChanged,
-    TResult Function(int yearsInt)? suggestedYearsChanged,
-    TResult Function(bool equipBool)? isEquipmentProvidedChanged,
-    TResult Function(bool equipBool)? isFacilityEquipmentChanged,
-    TResult Function(bool gearBool)? isGearProvidedChanged,
-    TResult Function(bool gearBool)? isFacilityGearChanged,
-    TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
-    TResult Function(bool offBool)? isOfficiatorProvidedChanged,
-    TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
-    TResult Function(bool alcBool)? isAlcoholForSaleChanged,
-    TResult Function(bool foodBool)? isFoodForSaleChanged,
-    TResult Function(bool alcBool)? isAlcoholProvidedChanged,
-    TResult Function(bool alcBool)? isFacilityAlcoholChanged,
-    TResult Function(bool foodBool)? isFoodProvidedChanged,
-    TResult Function(bool foodBool)? isFacilityFoodChanged,
-    TResult Function(bool secBool)? isSecurityProvidedChanged,
-    TResult Function(bool secBool)? isFacilitySecurityChanged,
-    TResult Function(bool isReviewBool)? isReviewRequiredChanged,
-    TResult Function(bool isPrivateBool)? isPrivateOnlyChanged,
-    TResult Function(bool isPublicBool)? isInviteOnlyChanged,
-    TResult Function(List<ContactDetails> contactList)?
-        privateInviteListChanged,
-    TResult Function(bool earlyEndBool)? isAllowedEarlyEndChange,
-    TResult Function(bool changeOnlyBool)? isAllowedChangeWithoutEarlyEnd,
-    TResult Function(bool noCancelBool)? isNotAllowedCancellation,
-    TResult Function(bool timeBasedBool)? isAllowedTimeBasedCancellation,
-    TResult Function(bool feeBasedBool)? isAllowedFeeBasedCancellation,
-    TResult Function(List<TimeBasedCancellation> timeBasedCancellation)?
-        timeBasedCancellationChanged,
-    TResult Function(List<FeeBasedCancellation> feeBasedCancellation)?
-        feeBasedCancellationChanged,
-    TResult Function(ListK<DetailOption> rules)? ruleOptionChanged,
-    TResult Function(List<CheckInSetting> checkInList)? checkInSettingsChanged,
-    TResult Function(List<CustomRuleOption> customRulesList)?
-        customFieldRuleSettingsChanged,
-    TResult Function(ListK<DetailCustomOption> customRules)?
-        customRuleOptionChanged,
-    TResult Function(List<SkillLevel> skills)? skillLevelToReachChanged,
-    TResult Function(List<VendorMerchantForm> forms)? vendorFormsChanged,
-    TResult Function(List<DonationType> donationTypes)?
-        allowedDonationTypesChanged,
-    TResult Function(bool exBool)? isAllowedExternalContributions,
-    TResult Function(String currency)? currencyTypeChanged,
-    TResult Function(bool ticketBool)? isTicketBasedAttendanceChanged,
-    TResult Function(bool passBool)? isPassBasedAttendanceChanged,
-    TResult Function(bool limitBool)? isLimitedAttendanceChanged,
-    TResult Function(int limitInt)? attendanceLimitChanged,
-    TResult Function(bool ticketBool)? isTicketFixedChanged,
-    TResult Function(bool ticketBool)? isTicketSlotBasedOnly,
-    TResult Function(bool passBool)? isPassFixedChanged,
-    TResult Function(ActivityTicketOption aTicket)? defaultTicketChanged,
-    TResult Function(List<ActivityTicketOption>? ticketList)?
-        activityTicketsChanged,
-    TResult Function(bool groupBool)? passesAttendanceIsAllowedGroups,
-    TResult Function(int minInt)? passesMinimumGroupQuantityChanged,
-    TResult Function(int maxInt)? passesMaximumGroupQuantityChanged,
-    TResult Function(int maxInt)? passesFeeChanged,
-    TResult Function(int passesInt)? passesQuantityChanged,
-    TResult Function(bool sessionBool)? passesCoverAllSessions,
-    TResult Function(int limitInt)? passesCoverLimitedSession,
-    TResult Function(List<ActivityPassesOption> passesList)?
-        activityPassesChanged,
-    TResult Function(UserProfileModel profile)?
-        createStripeOnBoardingAccountLink,
-    TResult Function(UserProfileModel profile)? presentStripeAccountDashboard,
-    TResult Function()? createActivityFinished,
-    TResult Function()? saveActivityFinished,
-    TResult Function()? deleteActivityFinished,
-    required TResult orElse(),
-  }) {
-    if (merchantFeeChanged != null) {
-      return merchantFeeChanged(merchFee);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitializeActivityForm value)
-        initializeActivityForm,
-    required TResult Function(ActivityOptionChanged value)
-        activityOptionChanged,
-    required TResult Function(_IsSavingChanged value) isSavingChanged,
-    required TResult Function(_ActivityTitleChanged value) activityTitleChanged,
-    required TResult Function(_ActivityDescriptionChanged value)
-        activityDescriptionChanged,
-    required TResult Function(_ActivityDescriptionChangedTwo value)
-        activityDescriptionChangedTwo,
-    required TResult Function(_activityProfileImagesChanged value)
-        activityProfileImagesChanged,
-    required TResult Function(_IsPartnersInviteOnly value) isPartnersInviteOnly,
-    required TResult Function(_IsInstructorInviteOnly value)
-        isInstructorInviteOnly,
-    required TResult Function(_ActivityPostedOnBehalf value)
-        activityPostedOnBehalf,
-    required TResult Function(_ActivityPostContactWebsite value)
-        activityPostContactWebsite,
-    required TResult Function(_ActivityPostContactEmail value)
-        activityPostContactEmail,
-    required TResult Function(_ActivityPostContactInstagram value)
-        activityPostContactInstagram,
-    required TResult Function(_ActivityGoalsChanged value) activityGoalsChanged,
-    required TResult Function(_ActivityInterestsChanged value)
-        activityInterestsChanged,
-    required TResult Function(_IsSeventeenAndUnderChanged value)
-        isSeventeenAndUnderChanged,
-    required TResult Function(_MinimumAgeChanged value) minimumAgeChanged,
-    required TResult Function(_IsMenOnlyChanged value) isMenOnlyChanged,
-    required TResult Function(_IsWomenOnlyChanged value) isWomenOnlyChanged,
-    required TResult Function(_IsCoEdOnlyChanged value) isCoEdOnlyChanged,
-    required TResult Function(_SkillLevelExpectationChanged value)
-        skillLevelExpectationChanged,
-    required TResult Function(_SuggestedYearsChanged value)
-        suggestedYearsChanged,
-    required TResult Function(_IsEquipmentProvidedChanged value)
-        isEquipmentProvidedChanged,
-    required TResult Function(_IsFacilityEquipmentChanged value)
-        isFacilityEquipmentChanged,
-    required TResult Function(_IsGearProvidedChanged value)
-        isGearProvidedChanged,
-    required TResult Function(_IsFacilityGearChanged value)
-        isFacilityGearChanged,
-    required TResult Function(_IsAnalyticsProvidedChanged value)
-        isAnalyticsProvidedChanged,
-    required TResult Function(_IsOfficiatorProvidedChanged value)
-        isOfficiatorProvidedChanged,
-    required TResult Function(_IsMerchantSupportedChanged value)
-        isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
-    required TResult Function(_IsAlcoholForSaleChanged value)
-        isAlcoholForSaleChanged,
-    required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
-    required TResult Function(_IsAlcoholProvidedChanged value)
-        isAlcoholProvidedChanged,
-    required TResult Function(_IsFacilityAlcoholChanged value)
-        isFacilityAlcoholChanged,
-    required TResult Function(_IsFoodProvidedChanged value)
-        isFoodProvidedChanged,
-    required TResult Function(_IsFacilityFoodChanged value)
-        isFacilityFoodChanged,
-    required TResult Function(_IsSecurityProvidedChanged value)
-        isSecurityProvidedChanged,
-    required TResult Function(_IsFacilitySecurityChanged value)
-        isFacilitySecurityChanged,
-    required TResult Function(_IsReviewRequiredChanged value)
-        isReviewRequiredChanged,
-    required TResult Function(_IsPrivateOnlyChanged value) isPrivateOnlyChanged,
-    required TResult Function(_ListingIsInviteOnlyChanged value)
-        isInviteOnlyChanged,
-    required TResult Function(_PrivateInviteListChanged value)
-        privateInviteListChanged,
-    required TResult Function(_IsAllowedEarlyEndChanged value)
-        isAllowedEarlyEndChange,
-    required TResult Function(_IsAllowedChangeWithoutEarlyEnd value)
-        isAllowedChangeWithoutEarlyEnd,
-    required TResult Function(_IsNotAllowedCancellation value)
-        isNotAllowedCancellation,
-    required TResult Function(_IsAllowedTimeBasedCancellation value)
-        isAllowedTimeBasedCancellation,
-    required TResult Function(_IsAllowedFeeBasedCancellation value)
-        isAllowedFeeBasedCancellation,
-    required TResult Function(_TimeBasedCancellationChanged value)
-        timeBasedCancellationChanged,
-    required TResult Function(_FeeBasedCancellationChanged value)
-        feeBasedCancellationChanged,
-    required TResult Function(_RuleOptionChanged value) ruleOptionChanged,
-    required TResult Function(_CheckInSettingsChanged value)
-        checkInSettingsChanged,
-    required TResult Function(_CustomFieldRuleSettingsChanged value)
-        customFieldRuleSettingsChanged,
-    required TResult Function(_CustomRuleOptionChanged value)
-        customRuleOptionChanged,
-    required TResult Function(_SkillLevelToReachChanged value)
-        skillLevelToReachChanged,
-    required TResult Function(_VendorFormsChanged value) vendorFormsChanged,
-    required TResult Function(_AllowedDonationTypesChanged value)
-        allowedDonationTypesChanged,
-    required TResult Function(_IsAllowedExternalContributions value)
-        isAllowedExternalContributions,
-    required TResult Function(_CurrencyTypeChanged value) currencyTypeChanged,
-    required TResult Function(_IsTicketBasedAttendanceChanged value)
-        isTicketBasedAttendanceChanged,
-    required TResult Function(_IsPassBasedAttendanceChanged value)
-        isPassBasedAttendanceChanged,
-    required TResult Function(_IsLimitedAttendanceChanged value)
-        isLimitedAttendanceChanged,
-    required TResult Function(_AttendanceLimitChanged value)
-        attendanceLimitChanged,
-    required TResult Function(_IsTicketFixedChanged value) isTicketFixedChanged,
-    required TResult Function(_IsTicketSlotBasedOnly value)
-        isTicketSlotBasedOnly,
-    required TResult Function(_IsPassFixedChanged value) isPassFixedChanged,
-    required TResult Function(_DefaultTicketChanged value) defaultTicketChanged,
-    required TResult Function(_ActivityTicketsChanged value)
-        activityTicketsChanged,
-    required TResult Function(_PassesAttendanceIsAllowedGroups value)
-        passesAttendanceIsAllowedGroups,
-    required TResult Function(_PassesMinimumGroupQuantityChanged value)
-        passesMinimumGroupQuantityChanged,
-    required TResult Function(_PassesMaximumGroupQuantityChanged value)
-        passesMaximumGroupQuantityChanged,
-    required TResult Function(_PassesFeeChanged value) passesFeeChanged,
-    required TResult Function(_PassesQuantityChanged value)
-        passesQuantityChanged,
-    required TResult Function(_PassesCoverAllSessions value)
-        passesCoverAllSessions,
-    required TResult Function(_PassesCoverLimitedSession value)
-        passesCoverLimitedSession,
-    required TResult Function(_ActivityPassesChanged value)
-        activityPassesChanged,
-    required TResult Function(_CreateStripeOnBoardingAccountLink value)
-        createStripeOnBoardingAccountLink,
-    required TResult Function(_PresentStripeAccountDashboard value)
-        presentStripeAccountDashboard,
-    required TResult Function(CreateActivityFinished value)
-        createActivityFinished,
-    required TResult Function(SaveActivityFinished value) saveActivityFinished,
-    required TResult Function(DeleteActivityFinished value)
-        deleteActivityFinished,
-  }) {
-    return merchantFeeChanged(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitializeActivityForm value)? initializeActivityForm,
-    TResult? Function(ActivityOptionChanged value)? activityOptionChanged,
-    TResult? Function(_IsSavingChanged value)? isSavingChanged,
-    TResult? Function(_ActivityTitleChanged value)? activityTitleChanged,
-    TResult? Function(_ActivityDescriptionChanged value)?
-        activityDescriptionChanged,
-    TResult? Function(_ActivityDescriptionChangedTwo value)?
-        activityDescriptionChangedTwo,
-    TResult? Function(_activityProfileImagesChanged value)?
-        activityProfileImagesChanged,
-    TResult? Function(_IsPartnersInviteOnly value)? isPartnersInviteOnly,
-    TResult? Function(_IsInstructorInviteOnly value)? isInstructorInviteOnly,
-    TResult? Function(_ActivityPostedOnBehalf value)? activityPostedOnBehalf,
-    TResult? Function(_ActivityPostContactWebsite value)?
-        activityPostContactWebsite,
-    TResult? Function(_ActivityPostContactEmail value)?
-        activityPostContactEmail,
-    TResult? Function(_ActivityPostContactInstagram value)?
-        activityPostContactInstagram,
-    TResult? Function(_ActivityGoalsChanged value)? activityGoalsChanged,
-    TResult? Function(_ActivityInterestsChanged value)?
-        activityInterestsChanged,
-    TResult? Function(_IsSeventeenAndUnderChanged value)?
-        isSeventeenAndUnderChanged,
-    TResult? Function(_MinimumAgeChanged value)? minimumAgeChanged,
-    TResult? Function(_IsMenOnlyChanged value)? isMenOnlyChanged,
-    TResult? Function(_IsWomenOnlyChanged value)? isWomenOnlyChanged,
-    TResult? Function(_IsCoEdOnlyChanged value)? isCoEdOnlyChanged,
-    TResult? Function(_SkillLevelExpectationChanged value)?
-        skillLevelExpectationChanged,
-    TResult? Function(_SuggestedYearsChanged value)? suggestedYearsChanged,
-    TResult? Function(_IsEquipmentProvidedChanged value)?
-        isEquipmentProvidedChanged,
-    TResult? Function(_IsFacilityEquipmentChanged value)?
-        isFacilityEquipmentChanged,
-    TResult? Function(_IsGearProvidedChanged value)? isGearProvidedChanged,
-    TResult? Function(_IsFacilityGearChanged value)? isFacilityGearChanged,
-    TResult? Function(_IsAnalyticsProvidedChanged value)?
-        isAnalyticsProvidedChanged,
-    TResult? Function(_IsOfficiatorProvidedChanged value)?
-        isOfficiatorProvidedChanged,
-    TResult? Function(_IsMerchantSupportedChanged value)?
-        isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
-    TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
-    TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
-    TResult? Function(_IsAlcoholProvidedChanged value)?
-        isAlcoholProvidedChanged,
-    TResult? Function(_IsFacilityAlcoholChanged value)?
-        isFacilityAlcoholChanged,
-    TResult? Function(_IsFoodProvidedChanged value)? isFoodProvidedChanged,
-    TResult? Function(_IsFacilityFoodChanged value)? isFacilityFoodChanged,
-    TResult? Function(_IsSecurityProvidedChanged value)?
-        isSecurityProvidedChanged,
-    TResult? Function(_IsFacilitySecurityChanged value)?
-        isFacilitySecurityChanged,
-    TResult? Function(_IsReviewRequiredChanged value)? isReviewRequiredChanged,
-    TResult? Function(_IsPrivateOnlyChanged value)? isPrivateOnlyChanged,
-    TResult? Function(_ListingIsInviteOnlyChanged value)? isInviteOnlyChanged,
-    TResult? Function(_PrivateInviteListChanged value)?
-        privateInviteListChanged,
-    TResult? Function(_IsAllowedEarlyEndChanged value)? isAllowedEarlyEndChange,
-    TResult? Function(_IsAllowedChangeWithoutEarlyEnd value)?
-        isAllowedChangeWithoutEarlyEnd,
-    TResult? Function(_IsNotAllowedCancellation value)?
-        isNotAllowedCancellation,
-    TResult? Function(_IsAllowedTimeBasedCancellation value)?
-        isAllowedTimeBasedCancellation,
-    TResult? Function(_IsAllowedFeeBasedCancellation value)?
-        isAllowedFeeBasedCancellation,
-    TResult? Function(_TimeBasedCancellationChanged value)?
-        timeBasedCancellationChanged,
-    TResult? Function(_FeeBasedCancellationChanged value)?
-        feeBasedCancellationChanged,
-    TResult? Function(_RuleOptionChanged value)? ruleOptionChanged,
-    TResult? Function(_CheckInSettingsChanged value)? checkInSettingsChanged,
-    TResult? Function(_CustomFieldRuleSettingsChanged value)?
-        customFieldRuleSettingsChanged,
-    TResult? Function(_CustomRuleOptionChanged value)? customRuleOptionChanged,
-    TResult? Function(_SkillLevelToReachChanged value)?
-        skillLevelToReachChanged,
-    TResult? Function(_VendorFormsChanged value)? vendorFormsChanged,
-    TResult? Function(_AllowedDonationTypesChanged value)?
-        allowedDonationTypesChanged,
-    TResult? Function(_IsAllowedExternalContributions value)?
-        isAllowedExternalContributions,
-    TResult? Function(_CurrencyTypeChanged value)? currencyTypeChanged,
-    TResult? Function(_IsTicketBasedAttendanceChanged value)?
-        isTicketBasedAttendanceChanged,
-    TResult? Function(_IsPassBasedAttendanceChanged value)?
-        isPassBasedAttendanceChanged,
-    TResult? Function(_IsLimitedAttendanceChanged value)?
-        isLimitedAttendanceChanged,
-    TResult? Function(_AttendanceLimitChanged value)? attendanceLimitChanged,
-    TResult? Function(_IsTicketFixedChanged value)? isTicketFixedChanged,
-    TResult? Function(_IsTicketSlotBasedOnly value)? isTicketSlotBasedOnly,
-    TResult? Function(_IsPassFixedChanged value)? isPassFixedChanged,
-    TResult? Function(_DefaultTicketChanged value)? defaultTicketChanged,
-    TResult? Function(_ActivityTicketsChanged value)? activityTicketsChanged,
-    TResult? Function(_PassesAttendanceIsAllowedGroups value)?
-        passesAttendanceIsAllowedGroups,
-    TResult? Function(_PassesMinimumGroupQuantityChanged value)?
-        passesMinimumGroupQuantityChanged,
-    TResult? Function(_PassesMaximumGroupQuantityChanged value)?
-        passesMaximumGroupQuantityChanged,
-    TResult? Function(_PassesFeeChanged value)? passesFeeChanged,
-    TResult? Function(_PassesQuantityChanged value)? passesQuantityChanged,
-    TResult? Function(_PassesCoverAllSessions value)? passesCoverAllSessions,
-    TResult? Function(_PassesCoverLimitedSession value)?
-        passesCoverLimitedSession,
-    TResult? Function(_ActivityPassesChanged value)? activityPassesChanged,
-    TResult? Function(_CreateStripeOnBoardingAccountLink value)?
-        createStripeOnBoardingAccountLink,
-    TResult? Function(_PresentStripeAccountDashboard value)?
-        presentStripeAccountDashboard,
-    TResult? Function(CreateActivityFinished value)? createActivityFinished,
-    TResult? Function(SaveActivityFinished value)? saveActivityFinished,
-    TResult? Function(DeleteActivityFinished value)? deleteActivityFinished,
-  }) {
-    return merchantFeeChanged?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitializeActivityForm value)? initializeActivityForm,
-    TResult Function(ActivityOptionChanged value)? activityOptionChanged,
-    TResult Function(_IsSavingChanged value)? isSavingChanged,
-    TResult Function(_ActivityTitleChanged value)? activityTitleChanged,
-    TResult Function(_ActivityDescriptionChanged value)?
-        activityDescriptionChanged,
-    TResult Function(_ActivityDescriptionChangedTwo value)?
-        activityDescriptionChangedTwo,
-    TResult Function(_activityProfileImagesChanged value)?
-        activityProfileImagesChanged,
-    TResult Function(_IsPartnersInviteOnly value)? isPartnersInviteOnly,
-    TResult Function(_IsInstructorInviteOnly value)? isInstructorInviteOnly,
-    TResult Function(_ActivityPostedOnBehalf value)? activityPostedOnBehalf,
-    TResult Function(_ActivityPostContactWebsite value)?
-        activityPostContactWebsite,
-    TResult Function(_ActivityPostContactEmail value)? activityPostContactEmail,
-    TResult Function(_ActivityPostContactInstagram value)?
-        activityPostContactInstagram,
-    TResult Function(_ActivityGoalsChanged value)? activityGoalsChanged,
-    TResult Function(_ActivityInterestsChanged value)? activityInterestsChanged,
-    TResult Function(_IsSeventeenAndUnderChanged value)?
-        isSeventeenAndUnderChanged,
-    TResult Function(_MinimumAgeChanged value)? minimumAgeChanged,
-    TResult Function(_IsMenOnlyChanged value)? isMenOnlyChanged,
-    TResult Function(_IsWomenOnlyChanged value)? isWomenOnlyChanged,
-    TResult Function(_IsCoEdOnlyChanged value)? isCoEdOnlyChanged,
-    TResult Function(_SkillLevelExpectationChanged value)?
-        skillLevelExpectationChanged,
-    TResult Function(_SuggestedYearsChanged value)? suggestedYearsChanged,
-    TResult Function(_IsEquipmentProvidedChanged value)?
-        isEquipmentProvidedChanged,
-    TResult Function(_IsFacilityEquipmentChanged value)?
-        isFacilityEquipmentChanged,
-    TResult Function(_IsGearProvidedChanged value)? isGearProvidedChanged,
-    TResult Function(_IsFacilityGearChanged value)? isFacilityGearChanged,
-    TResult Function(_IsAnalyticsProvidedChanged value)?
-        isAnalyticsProvidedChanged,
-    TResult Function(_IsOfficiatorProvidedChanged value)?
-        isOfficiatorProvidedChanged,
-    TResult Function(_IsMerchantSupportedChanged value)?
-        isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
-    TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
-    TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
-    TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
-    TResult Function(_IsFacilityAlcoholChanged value)? isFacilityAlcoholChanged,
-    TResult Function(_IsFoodProvidedChanged value)? isFoodProvidedChanged,
-    TResult Function(_IsFacilityFoodChanged value)? isFacilityFoodChanged,
-    TResult Function(_IsSecurityProvidedChanged value)?
-        isSecurityProvidedChanged,
-    TResult Function(_IsFacilitySecurityChanged value)?
-        isFacilitySecurityChanged,
-    TResult Function(_IsReviewRequiredChanged value)? isReviewRequiredChanged,
-    TResult Function(_IsPrivateOnlyChanged value)? isPrivateOnlyChanged,
-    TResult Function(_ListingIsInviteOnlyChanged value)? isInviteOnlyChanged,
-    TResult Function(_PrivateInviteListChanged value)? privateInviteListChanged,
-    TResult Function(_IsAllowedEarlyEndChanged value)? isAllowedEarlyEndChange,
-    TResult Function(_IsAllowedChangeWithoutEarlyEnd value)?
-        isAllowedChangeWithoutEarlyEnd,
-    TResult Function(_IsNotAllowedCancellation value)? isNotAllowedCancellation,
-    TResult Function(_IsAllowedTimeBasedCancellation value)?
-        isAllowedTimeBasedCancellation,
-    TResult Function(_IsAllowedFeeBasedCancellation value)?
-        isAllowedFeeBasedCancellation,
-    TResult Function(_TimeBasedCancellationChanged value)?
-        timeBasedCancellationChanged,
-    TResult Function(_FeeBasedCancellationChanged value)?
-        feeBasedCancellationChanged,
-    TResult Function(_RuleOptionChanged value)? ruleOptionChanged,
-    TResult Function(_CheckInSettingsChanged value)? checkInSettingsChanged,
-    TResult Function(_CustomFieldRuleSettingsChanged value)?
-        customFieldRuleSettingsChanged,
-    TResult Function(_CustomRuleOptionChanged value)? customRuleOptionChanged,
-    TResult Function(_SkillLevelToReachChanged value)? skillLevelToReachChanged,
-    TResult Function(_VendorFormsChanged value)? vendorFormsChanged,
-    TResult Function(_AllowedDonationTypesChanged value)?
-        allowedDonationTypesChanged,
-    TResult Function(_IsAllowedExternalContributions value)?
-        isAllowedExternalContributions,
-    TResult Function(_CurrencyTypeChanged value)? currencyTypeChanged,
-    TResult Function(_IsTicketBasedAttendanceChanged value)?
-        isTicketBasedAttendanceChanged,
-    TResult Function(_IsPassBasedAttendanceChanged value)?
-        isPassBasedAttendanceChanged,
-    TResult Function(_IsLimitedAttendanceChanged value)?
-        isLimitedAttendanceChanged,
-    TResult Function(_AttendanceLimitChanged value)? attendanceLimitChanged,
-    TResult Function(_IsTicketFixedChanged value)? isTicketFixedChanged,
-    TResult Function(_IsTicketSlotBasedOnly value)? isTicketSlotBasedOnly,
-    TResult Function(_IsPassFixedChanged value)? isPassFixedChanged,
-    TResult Function(_DefaultTicketChanged value)? defaultTicketChanged,
-    TResult Function(_ActivityTicketsChanged value)? activityTicketsChanged,
-    TResult Function(_PassesAttendanceIsAllowedGroups value)?
-        passesAttendanceIsAllowedGroups,
-    TResult Function(_PassesMinimumGroupQuantityChanged value)?
-        passesMinimumGroupQuantityChanged,
-    TResult Function(_PassesMaximumGroupQuantityChanged value)?
-        passesMaximumGroupQuantityChanged,
-    TResult Function(_PassesFeeChanged value)? passesFeeChanged,
-    TResult Function(_PassesQuantityChanged value)? passesQuantityChanged,
-    TResult Function(_PassesCoverAllSessions value)? passesCoverAllSessions,
-    TResult Function(_PassesCoverLimitedSession value)?
-        passesCoverLimitedSession,
-    TResult Function(_ActivityPassesChanged value)? activityPassesChanged,
-    TResult Function(_CreateStripeOnBoardingAccountLink value)?
-        createStripeOnBoardingAccountLink,
-    TResult Function(_PresentStripeAccountDashboard value)?
-        presentStripeAccountDashboard,
-    TResult Function(CreateActivityFinished value)? createActivityFinished,
-    TResult Function(SaveActivityFinished value)? saveActivityFinished,
-    TResult Function(DeleteActivityFinished value)? deleteActivityFinished,
-    required TResult orElse(),
-  }) {
-    if (merchantFeeChanged != null) {
-      return merchantFeeChanged(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _MerchantFeeChanged implements UpdateActivityFormEvent {
-  const factory _MerchantFeeChanged(final int merchFee) =
-      _$MerchantFeeChangedImpl;
-
-  int get merchFee;
-  @JsonKey(ignore: true)
-  _$$MerchantFeeChangedImplCopyWith<_$MerchantFeeChangedImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -26857,9 +23796,6 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -26969,9 +23905,6 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -27074,9 +24007,6 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -27197,10 +24127,6 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -27341,10 +24267,6 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -27467,10 +24389,6 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -27667,9 +24585,6 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -27779,9 +24694,6 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -27884,9 +24796,6 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -28007,10 +24916,6 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -28151,10 +25056,6 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -28277,10 +25178,6 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -28477,9 +25374,6 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -28589,9 +25483,6 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -28694,9 +25585,6 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -28817,10 +25705,6 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -28961,10 +25845,6 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -29087,10 +25967,6 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -29287,9 +26163,6 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -29399,9 +26272,6 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -29504,9 +26374,6 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -29627,10 +26494,6 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -29771,10 +26634,6 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -29897,10 +26756,6 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -30097,9 +26952,6 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -30209,9 +27061,6 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -30314,9 +27163,6 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -30437,10 +27283,6 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -30581,10 +27423,6 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -30707,10 +27545,6 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -30907,9 +27741,6 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -31019,9 +27850,6 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -31124,9 +27952,6 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -31247,10 +28072,6 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -31391,10 +28212,6 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -31517,10 +28334,6 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -31717,9 +28530,6 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -31829,9 +28639,6 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -31934,9 +28741,6 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -32057,10 +28861,6 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -32201,10 +29001,6 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -32327,10 +29123,6 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -32527,9 +29319,6 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -32639,9 +29428,6 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -32744,9 +29530,6 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -32867,10 +29650,6 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -33011,10 +29790,6 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -33137,10 +29912,6 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -33338,9 +30109,6 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -33450,9 +30218,6 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -33555,9 +30320,6 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -33678,10 +30440,6 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -33822,10 +30580,6 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -33948,10 +30702,6 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -34148,9 +30898,6 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -34260,9 +31007,6 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -34365,9 +31109,6 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -34488,10 +31229,6 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -34632,10 +31369,6 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -34758,10 +31491,6 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -34959,9 +31688,6 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -35071,9 +31797,6 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -35176,9 +31899,6 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -35299,10 +32019,6 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -35443,10 +32159,6 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -35569,10 +32281,6 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -35777,9 +32485,6 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -35889,9 +32594,6 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -35994,9 +32696,6 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -36117,10 +32816,6 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -36261,10 +32956,6 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -36387,10 +33078,6 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -36588,9 +33275,6 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -36700,9 +33384,6 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -36805,9 +33486,6 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -36928,10 +33606,6 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -37072,10 +33746,6 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -37198,10 +33868,6 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -37401,9 +34067,6 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -37513,9 +34176,6 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -37618,9 +34278,6 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -37741,10 +34398,6 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -37885,10 +34538,6 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -38011,10 +34660,6 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -38214,9 +34859,6 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -38326,9 +34968,6 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -38431,9 +35070,6 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -38554,10 +35190,6 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -38698,10 +35330,6 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -38824,10 +35452,6 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -39027,9 +35651,6 @@ class _$IsAllowedTimeBasedCancellationImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -39139,9 +35760,6 @@ class _$IsAllowedTimeBasedCancellationImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -39244,9 +35862,6 @@ class _$IsAllowedTimeBasedCancellationImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -39367,10 +35982,6 @@ class _$IsAllowedTimeBasedCancellationImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -39511,10 +36122,6 @@ class _$IsAllowedTimeBasedCancellationImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -39637,10 +36244,6 @@ class _$IsAllowedTimeBasedCancellationImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -39842,9 +36445,6 @@ class _$IsAllowedFeeBasedCancellationImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -39954,9 +36554,6 @@ class _$IsAllowedFeeBasedCancellationImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -40059,9 +36656,6 @@ class _$IsAllowedFeeBasedCancellationImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -40182,10 +36776,6 @@ class _$IsAllowedFeeBasedCancellationImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -40326,10 +36916,6 @@ class _$IsAllowedFeeBasedCancellationImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -40452,10 +37038,6 @@ class _$IsAllowedFeeBasedCancellationImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -40666,9 +37248,6 @@ class _$TimeBasedCancellationChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -40778,9 +37357,6 @@ class _$TimeBasedCancellationChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -40883,9 +37459,6 @@ class _$TimeBasedCancellationChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -41006,10 +37579,6 @@ class _$TimeBasedCancellationChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -41150,10 +37719,6 @@ class _$TimeBasedCancellationChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -41276,10 +37841,6 @@ class _$TimeBasedCancellationChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -41490,9 +38051,6 @@ class _$FeeBasedCancellationChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -41602,9 +38160,6 @@ class _$FeeBasedCancellationChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -41707,9 +38262,6 @@ class _$FeeBasedCancellationChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -41830,10 +38382,6 @@ class _$FeeBasedCancellationChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -41974,10 +38522,6 @@ class _$FeeBasedCancellationChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -42100,10 +38644,6 @@ class _$FeeBasedCancellationChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -42298,9 +38838,6 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -42410,9 +38947,6 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -42515,9 +39049,6 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -42638,10 +39169,6 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -42782,10 +39309,6 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -42908,10 +39431,6 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -43116,9 +39635,6 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -43228,9 +39744,6 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -43333,9 +39846,6 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -43456,10 +39966,6 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -43600,10 +40106,6 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -43726,10 +40228,6 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -43937,9 +40435,6 @@ class _$CustomFieldRuleSettingsChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -44049,9 +40544,6 @@ class _$CustomFieldRuleSettingsChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -44154,9 +40646,6 @@ class _$CustomFieldRuleSettingsChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -44277,10 +40766,6 @@ class _$CustomFieldRuleSettingsChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -44421,10 +40906,6 @@ class _$CustomFieldRuleSettingsChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -44547,10 +41028,6 @@ class _$CustomFieldRuleSettingsChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -44751,9 +41228,6 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -44863,9 +41337,6 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -44968,9 +41439,6 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -45091,10 +41559,6 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -45235,10 +41699,6 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -45361,10 +41821,6 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -45569,9 +42025,6 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -45681,9 +42134,6 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -45786,9 +42236,6 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -45909,10 +42356,6 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -46053,10 +42496,6 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -46179,10 +42618,6 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -46384,9 +42819,6 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -46496,9 +42928,6 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -46601,9 +43030,6 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -46724,10 +43150,6 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -46868,10 +43290,6 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -46994,10 +43412,6 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -47204,9 +43618,6 @@ class _$AllowedDonationTypesChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -47316,9 +43727,6 @@ class _$AllowedDonationTypesChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -47421,9 +43829,6 @@ class _$AllowedDonationTypesChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -47544,10 +43949,6 @@ class _$AllowedDonationTypesChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -47688,10 +44089,6 @@ class _$AllowedDonationTypesChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -47814,10 +44211,6 @@ class _$AllowedDonationTypesChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -48017,9 +44410,6 @@ class _$IsAllowedExternalContributionsImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -48129,9 +44519,6 @@ class _$IsAllowedExternalContributionsImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -48234,9 +44621,6 @@ class _$IsAllowedExternalContributionsImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -48357,10 +44741,6 @@ class _$IsAllowedExternalContributionsImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -48501,10 +44881,6 @@ class _$IsAllowedExternalContributionsImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -48627,10 +45003,6 @@ class _$IsAllowedExternalContributionsImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -48828,9 +45200,6 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -48940,9 +45309,6 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -49045,9 +45411,6 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -49168,10 +45531,6 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -49312,10 +45671,6 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -49438,10 +45793,6 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -49641,9 +45992,6 @@ class _$IsTicketBasedAttendanceChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -49753,9 +46101,6 @@ class _$IsTicketBasedAttendanceChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -49858,9 +46203,6 @@ class _$IsTicketBasedAttendanceChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -49981,10 +46323,6 @@ class _$IsTicketBasedAttendanceChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -50125,10 +46463,6 @@ class _$IsTicketBasedAttendanceChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -50251,10 +46585,6 @@ class _$IsTicketBasedAttendanceChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -50456,9 +46786,6 @@ class _$IsPassBasedAttendanceChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -50568,9 +46895,6 @@ class _$IsPassBasedAttendanceChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -50673,9 +46997,6 @@ class _$IsPassBasedAttendanceChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -50796,10 +47117,6 @@ class _$IsPassBasedAttendanceChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -50940,10 +47257,6 @@ class _$IsPassBasedAttendanceChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -51066,10 +47379,6 @@ class _$IsPassBasedAttendanceChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -51269,9 +47578,6 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -51381,9 +47687,6 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -51486,9 +47789,6 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -51609,10 +47909,6 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -51753,10 +48049,6 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -51879,10 +48171,6 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -52080,9 +48368,6 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -52192,9 +48477,6 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -52297,9 +48579,6 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -52420,10 +48699,6 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -52564,10 +48839,6 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -52690,10 +48961,6 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -52890,9 +49157,6 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -53002,9 +49266,6 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -53107,9 +49368,6 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -53230,10 +49488,6 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -53374,10 +49628,6 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -53500,10 +49750,6 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -53700,9 +49946,6 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -53812,9 +50055,6 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -53917,9 +50157,6 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -54040,10 +50277,6 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -54184,10 +50417,6 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -54310,10 +50539,6 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -54509,9 +50734,6 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -54621,9 +50843,6 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -54726,9 +50945,6 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -54849,10 +51065,6 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -54993,10 +51205,6 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -55119,10 +51327,6 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -55328,9 +51532,6 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -55440,9 +51641,6 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -55545,9 +51743,6 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -55668,10 +51863,6 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -55812,10 +52003,6 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -55938,10 +52125,6 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -56149,9 +52332,6 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -56261,9 +52441,6 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -56366,9 +52543,6 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -56489,10 +52663,6 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -56633,10 +52803,6 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -56759,10 +52925,6 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -56963,9 +53125,6 @@ class _$PassesAttendanceIsAllowedGroupsImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -57075,9 +53234,6 @@ class _$PassesAttendanceIsAllowedGroupsImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -57180,9 +53336,6 @@ class _$PassesAttendanceIsAllowedGroupsImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -57303,10 +53456,6 @@ class _$PassesAttendanceIsAllowedGroupsImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -57447,10 +53596,6 @@ class _$PassesAttendanceIsAllowedGroupsImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -57573,10 +53718,6 @@ class _$PassesAttendanceIsAllowedGroupsImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -57777,9 +53918,6 @@ class _$PassesMinimumGroupQuantityChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -57889,9 +54027,6 @@ class _$PassesMinimumGroupQuantityChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -57994,9 +54129,6 @@ class _$PassesMinimumGroupQuantityChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -58117,10 +54249,6 @@ class _$PassesMinimumGroupQuantityChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -58261,10 +54389,6 @@ class _$PassesMinimumGroupQuantityChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -58387,10 +54511,6 @@ class _$PassesMinimumGroupQuantityChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -58591,9 +54711,6 @@ class _$PassesMaximumGroupQuantityChangedImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -58703,9 +54820,6 @@ class _$PassesMaximumGroupQuantityChangedImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -58808,9 +54922,6 @@ class _$PassesMaximumGroupQuantityChangedImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -58931,10 +55042,6 @@ class _$PassesMaximumGroupQuantityChangedImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -59075,10 +55182,6 @@ class _$PassesMaximumGroupQuantityChangedImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -59201,10 +55304,6 @@ class _$PassesMaximumGroupQuantityChangedImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -59400,9 +55499,6 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -59512,9 +55608,6 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -59617,9 +55710,6 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -59740,10 +55830,6 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -59884,10 +55970,6 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -60010,10 +56092,6 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -60209,9 +56287,6 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -60321,9 +56396,6 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -60426,9 +56498,6 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -60549,10 +56618,6 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -60693,10 +56758,6 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -60819,10 +56880,6 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -61020,9 +57077,6 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -61132,9 +57186,6 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -61237,9 +57288,6 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -61360,10 +57408,6 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -61504,10 +57548,6 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -61630,10 +57670,6 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -61831,9 +57867,6 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -61943,9 +57976,6 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -62048,9 +58078,6 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -62171,10 +58198,6 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -62315,10 +58338,6 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -62441,10 +58460,6 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -62648,9 +58663,6 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -62760,9 +58772,6 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -62865,9 +58874,6 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -62988,10 +58994,6 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -63132,10 +59134,6 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -63258,10 +59256,6 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -63471,9 +59465,6 @@ class _$CreateStripeOnBoardingAccountLinkImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -63583,9 +59574,6 @@ class _$CreateStripeOnBoardingAccountLinkImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -63688,9 +59676,6 @@ class _$CreateStripeOnBoardingAccountLinkImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -63811,10 +59796,6 @@ class _$CreateStripeOnBoardingAccountLinkImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -63955,10 +59936,6 @@ class _$CreateStripeOnBoardingAccountLinkImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -64081,10 +60058,6 @@ class _$CreateStripeOnBoardingAccountLinkImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -64295,9 +60268,6 @@ class _$PresentStripeAccountDashboardImpl
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -64407,9 +60377,6 @@ class _$PresentStripeAccountDashboardImpl
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -64512,9 +60479,6 @@ class _$PresentStripeAccountDashboardImpl
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -64635,10 +60599,6 @@ class _$PresentStripeAccountDashboardImpl
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -64779,10 +60739,6 @@ class _$PresentStripeAccountDashboardImpl
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -64905,10 +60861,6 @@ class _$PresentStripeAccountDashboardImpl
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -65081,9 +61033,6 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -65193,9 +61142,6 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -65298,9 +61244,6 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -65421,10 +61364,6 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -65565,10 +61504,6 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -65691,10 +61626,6 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -65857,9 +61788,6 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -65969,9 +61897,6 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -66074,9 +61999,6 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -66197,10 +62119,6 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -66341,10 +62259,6 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -66467,10 +62381,6 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,
@@ -66635,9 +62545,6 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
     required TResult Function(bool anaBool) isAnalyticsProvidedChanged,
     required TResult Function(bool offBool) isOfficiatorProvidedChanged,
     required TResult Function(bool merchBool) isMerchantSupportedChanged,
-    required TResult Function(bool inviteBool) isMerchantInviteOnlyChanged,
-    required TResult Function(int merchLimit) merchantLimitChanged,
-    required TResult Function(int merchFee) merchantFeeChanged,
     required TResult Function(bool alcBool) isAlcoholForSaleChanged,
     required TResult Function(bool foodBool) isFoodForSaleChanged,
     required TResult Function(bool alcBool) isAlcoholProvidedChanged,
@@ -66747,9 +62654,6 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
     TResult? Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult? Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult? Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult? Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult? Function(int merchLimit)? merchantLimitChanged,
-    TResult? Function(int merchFee)? merchantFeeChanged,
     TResult? Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult? Function(bool foodBool)? isFoodForSaleChanged,
     TResult? Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -66852,9 +62756,6 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
     TResult Function(bool anaBool)? isAnalyticsProvidedChanged,
     TResult Function(bool offBool)? isOfficiatorProvidedChanged,
     TResult Function(bool merchBool)? isMerchantSupportedChanged,
-    TResult Function(bool inviteBool)? isMerchantInviteOnlyChanged,
-    TResult Function(int merchLimit)? merchantLimitChanged,
-    TResult Function(int merchFee)? merchantFeeChanged,
     TResult Function(bool alcBool)? isAlcoholForSaleChanged,
     TResult Function(bool foodBool)? isFoodForSaleChanged,
     TResult Function(bool alcBool)? isAlcoholProvidedChanged,
@@ -66975,10 +62876,6 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
         isOfficiatorProvidedChanged,
     required TResult Function(_IsMerchantSupportedChanged value)
         isMerchantSupportedChanged,
-    required TResult Function(_IsMerchantInviteOnlyChanged value)
-        isMerchantInviteOnlyChanged,
-    required TResult Function(_MerchantLimitChanged value) merchantLimitChanged,
-    required TResult Function(_MerchantFeeChanged value) merchantFeeChanged,
     required TResult Function(_IsAlcoholForSaleChanged value)
         isAlcoholForSaleChanged,
     required TResult Function(_IsFoodForSaleChanged value) isFoodForSaleChanged,
@@ -67119,10 +63016,6 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
         isOfficiatorProvidedChanged,
     TResult? Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult? Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult? Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult? Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult? Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult? Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult? Function(_IsAlcoholProvidedChanged value)?
@@ -67245,10 +63138,6 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
         isOfficiatorProvidedChanged,
     TResult Function(_IsMerchantSupportedChanged value)?
         isMerchantSupportedChanged,
-    TResult Function(_IsMerchantInviteOnlyChanged value)?
-        isMerchantInviteOnlyChanged,
-    TResult Function(_MerchantLimitChanged value)? merchantLimitChanged,
-    TResult Function(_MerchantFeeChanged value)? merchantFeeChanged,
     TResult Function(_IsAlcoholForSaleChanged value)? isAlcoholForSaleChanged,
     TResult Function(_IsFoodForSaleChanged value)? isFoodForSaleChanged,
     TResult Function(_IsAlcoholProvidedChanged value)? isAlcoholProvidedChanged,

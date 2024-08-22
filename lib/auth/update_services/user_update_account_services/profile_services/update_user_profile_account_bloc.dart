@@ -970,7 +970,7 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
                 authFailureOrSuccessOption: none()
               );
 
-              failureOrSuccess = state.isSubmitting ? await _authFacade.updateUserProfileSocials(socials: state.profile.profileSocials) : left(AuthFailure.serverError());
+              failureOrSuccess = await _authFacade.updateUserProfileSocials(socials: state.profile.profileSocials);
 
               yield state.copyWith(
                 authFailureOrSuccessOption: optionOf(failureOrSuccess),
@@ -996,7 +996,7 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
                 authFailureOrSuccessOption: none(),
               );
 
-              failureOrSuccess = state.isSubmitting ? left(AuthFailure.serverError()) : await _authFacade.updateUserPassword(password: state.password);
+              failureOrSuccess = await _authFacade.updateUserPassword(password: state.password);
 
               yield state.copyWith(
                   authFailureOrSuccessOption: optionOf(failureOrSuccess));
@@ -1019,12 +1019,12 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
                 authFailureOrSuccessOption: none(),
               );
 
-              failureOrSuccess = state.isSubmitting ? await _authFacade.updateUserProfile(
+              failureOrSuccess = await _authFacade.updateUserProfile(
                   profile: state.profile.profileUser,
                   profileImageData: state.profileImagePath,
                   photoIDUrl: state.photoIdImageUrl,
                   photoSelfieUrl: state.photoSelfieImageUrl,
-              ) : left(AuthFailure.serverError());
+              );
 
               yield state.copyWith(
               // isEditingProfile: true,
@@ -1054,7 +1054,7 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
                 authFailureOrSuccessOption: none(),
               );
 
-              failureOrSuccess = state.isSubmitting ? left(AuthFailure.serverError()) : await _authFacade.createNewUserProfileLocation(location: state.profile.profileLocations);
+              failureOrSuccess = await _authFacade.createNewUserProfileLocation(location: state.profile.profileLocations);
 
               yield state.copyWith(
               authFailureOrSuccessOption: optionOf(failureOrSuccess)

@@ -81,7 +81,7 @@ class PaymentServicesBloc extends Bloc<PaymentServicesEvent, PaymentServicesStat
                   isSaving: true,
                 );
 
-                failureOrSuccessOption = state.isSaving ? await _stripeFacade.createNewPaymentMethod(userProfile: state.userProfile!, cardToken: state.cardToken!) : left(const PaymentMethodValueFailure.paymentServerError(failedValue: 'something went wrong'));
+                failureOrSuccessOption = await _stripeFacade.createNewPaymentMethod(userProfile: state.userProfile!, cardToken: state.cardToken!);
 
 
                 yield state.copyWith(
@@ -100,7 +100,7 @@ class PaymentServicesBloc extends Bloc<PaymentServicesEvent, PaymentServicesStat
                   isSaving: true,
               );
 
-              failureOrSuccessOption = state.isSaving ? await _iAuthFacade.updateDefaultPaymentMethod(profile: state.userProfile!) : left(AuthFailure.serverError());
+              failureOrSuccessOption = await _iAuthFacade.updateDefaultPaymentMethod(profile: state.userProfile!);
 
                 yield state.copyWith(
                   defaultPaymentFailureOrSuccessOption: optionOf(failureOrSuccessOption),
@@ -119,14 +119,14 @@ class PaymentServicesBloc extends Bloc<PaymentServicesEvent, PaymentServicesStat
                         isSaving: true,
                       );
 
-                    failureOrSuccessOption = state.isSaving ? await _stripeFacade.deletePaymentMethod(userProfile: state.userProfile!, cardItem: state.cancellationList ?? []) : left(PaymentMethodValueFailure.paymentServerError(failedValue: 'something went wrong'));
+                    failureOrSuccessOption = await _stripeFacade.deletePaymentMethod(userProfile: state.userProfile!, cardItem: state.cancellationList ?? []);
 
                     yield state.copyWith(
                       failureOrSuccessOption: optionOf(failureOrSuccessOption),
                       isSaving: false,
                     );
 
-                  }
+                }
               },
 
               finishedNewStripePayoutMethod: (e) async* {
@@ -155,6 +155,38 @@ class PaymentServicesBloc extends Bloc<PaymentServicesEvent, PaymentServicesStat
                 );
 
                 failureOrSuccess = await _stripeFacade.presentStripeAccountWithLoginLink(profile: e.profile);
+
+                yield state.copyWith(
+                    isSaving: false,
+                    defaultPaymentFailureOrSuccessOption: optionOf(failureOrSuccess)
+                );
+              },
+
+              finishedUpdateStripePayoutAccount: (e) async* {
+                Either<AuthFailure, Unit> failureOrSuccess;
+
+                yield state.copyWith(
+                    isSaving: true,
+                    defaultPaymentFailureOrSuccessOption: none()
+                );
+
+                failureOrSuccess = await _stripeFacade.updateStripeAccountSettingsLink(profile: e.profile);
+
+                yield state.copyWith(
+                    isSaving: false,
+                    defaultPaymentFailureOrSuccessOption: optionOf(failureOrSuccess)
+                );
+              },
+
+              finishedDeletePayoutAccount: (e) async* {
+                Either<AuthFailure, Unit> failureOrSuccess;
+
+                yield state.copyWith(
+                    isSaving: true,
+                    defaultPaymentFailureOrSuccessOption: none()
+                );
+
+                failureOrSuccess = await _stripeFacade.deleteStripeConnectAccountLink(profile: e.profile);
 
                 yield state.copyWith(
                     isSaving: false,

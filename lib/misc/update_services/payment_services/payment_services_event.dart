@@ -15,6 +15,8 @@ class PaymentServicesEvent with _$PaymentServicesEvent {
   factory PaymentServicesEvent.finishedNewDefaultPaymentMethod() = _FinishedNewDefaultPaymentMethod;
   factory PaymentServicesEvent.finishedDeleteSelectedPayments() = _FinishedDeleteSelectedPayments;
 
+  factory PaymentServicesEvent.finishedUpdateStripePayoutAccount(UserProfileModel profile) = _FinishedUpdateStripePayoutAccount;
+  factory PaymentServicesEvent.finishedDeletePayoutAccount(UserProfileModel profile) = _FinishedDeletePayoutAccount;
   factory PaymentServicesEvent.finishedNewStripePayoutMethod(UserProfileModel profile) = _FinishedNewStripePayoutMethod;
   factory PaymentServicesEvent.presentStripePayoutAccount(UserProfileModel profile) = _PresentStripePayoutAccount;
 

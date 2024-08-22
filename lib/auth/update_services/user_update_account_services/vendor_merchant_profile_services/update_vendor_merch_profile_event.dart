@@ -13,10 +13,16 @@ class UpdateVendorMerchProfileEvent with _$UpdateVendorMerchProfileEvent {
 
   const factory UpdateVendorMerchProfileEvent.websiteURLChanged(String instStr) = _VendorMerchWebsiteURLChanged;
   const factory UpdateVendorMerchProfileEvent.instagramContactChanged(String instStr) = _VendorMerchInstagramContactChanged;
+
+  const factory UpdateVendorMerchProfileEvent.stripeBusinessIDChanged(String busStr) = _StripeBusinessIDChanged;
+  const factory UpdateVendorMerchProfileEvent.stripeHSTRegistrationNumberChanged(String hstStr) = _StripeHSTRegistrationNumberChanged;
+  const factory UpdateVendorMerchProfileEvent.stripeBusinessAddress(StripeBusinessAddress businessAdd) = _StripeBusinessAddress;
+
   const factory UpdateVendorMerchProfileEvent.typesDidChange(List<MerchantVendorTypes> types) = _VendorMerchTypesDidChange;
   const factory UpdateVendorMerchProfileEvent.isLookingDidChange(bool lookingBool) = _VendorMerchIsLookingDidChange;
   const factory UpdateVendorMerchProfileEvent.isPrivateProfileDidChange(bool isPrivateBool) = _VendorMerchIsPrivateProfileDidChange;
 
   const factory UpdateVendorMerchProfileEvent.saveVendorProfileFinished() = _SaveVendorProfileFinished;
   const factory UpdateVendorMerchProfileEvent.deleteVendorProfileFinished() = _DeleteVendorProfileFinished;
+
 }

@@ -9,6 +9,8 @@ class PublicListingWatcherBloc extends Bloc<PublicListingWatcherEvent, PublicLis
 
   StreamSubscription<Either<ListingFormFailure, List<ListingManagerForm>>>? _allListingItemsStreamSubscription;
   StreamSubscription<Either<ListingFormFailure, List<ListingManagerForm>>>? _allSearchedListingItemsStreamSubscription;
+  StreamSubscription<Either<ListingFormFailure, List<ListingManagerForm>>>? _selectedUsersAllListingsStreamSubscription;
+
 
   @override
   Stream<PublicListingWatcherState> mapEventToState(
@@ -50,7 +52,25 @@ class PublicListingWatcherBloc extends Bloc<PublicListingWatcherEvent, PublicLis
                   (f) => PublicListingWatcherState.loadAllSearchedPublicListingItemsFailure(f),
                   (r) => PublicListingWatcherState.loadAllSearchedPublicListingItemsSuccess(r)
               );
-            }
+            },
+
+            watchSelectedUsersPublicListingsStarted: (e) async* {
+                yield const PublicListingWatcherState.listingsLoadInProgress();
+                await _selectedUsersAllListingsStreamSubscription?.cancel();
+
+                _selectedUsersAllListingsStreamSubscription = _lFacade.watchUsersListingItems(status: e.status, userId: e.userId, isVerified: e.isVerified).listen((event) {
+                    return add(PublicListingWatcherEvent.allSelectedUsersListingsReceived(event));
+                });
+            },
+
+            allSelectedUsersListingsReceived: (e) async* {
+              yield e.failedItems.fold(
+                  (f) => PublicListingWatcherState.loadAllSelectedUsersPublicListingsFailure(f),
+                  (r) => PublicListingWatcherState.loadAllSelectedUsersPublicListingsSuccess(r),
+              );
+            },
+
+
 
     );
   }

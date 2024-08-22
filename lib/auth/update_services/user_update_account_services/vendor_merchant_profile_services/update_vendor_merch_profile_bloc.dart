@@ -75,6 +75,33 @@ class UpdateVendorMerchProfileBloc extends Bloc<UpdateVendorMerchProfileEvent, U
           );
         },
 
+        stripeBusinessIDChanged: (e) async* {
+            yield state.copyWith(
+              profile: state.profile.copyWith(
+                  stripeBusinessID: e.busStr,
+              ),
+              isEditingProfile: true,
+            );
+        },
+
+        stripeHSTRegistrationNumberChanged: (e) async* {
+          yield state.copyWith(
+            profile: state.profile.copyWith(
+                stripeHSTRegistrationNumber: e.hstStr,
+            ),
+            isEditingProfile: true,
+          );
+        },
+
+        stripeBusinessAddress: (e) async* {
+          yield state.copyWith(
+            profile: state.profile.copyWith(
+                stripeBusinessAddress: e.businessAdd,
+            ),
+            isEditingProfile: true,
+          );
+        },
+
         typesDidChange: (e) async* {
           yield state.copyWith(
             profile: state.profile.copyWith(
@@ -118,7 +145,11 @@ class UpdateVendorMerchProfileBloc extends Bloc<UpdateVendorMerchProfileEvent, U
             return;
           }
 
-          failureOrSuccess = state.isSubmitting ? await _mvAuthFacade.createUpdateMerchantVendor(merchProfileItem: state.profile) : left(const ProfileValueFailure.profileServerError(serverResponse: 'could not save - please try again later'));
+
+          failureOrSuccess = await _mvAuthFacade.createUpdateMerchantVendor(merchProfileItem: state.profile);
+          // : left(const ProfileValueFailure.profileServerError(serverResponse: 'could not save - please try again later'));
+
+          print('ffaiile ${failureOrSuccess}');
 
           yield state.copyWith(
             isSubmitting: false,

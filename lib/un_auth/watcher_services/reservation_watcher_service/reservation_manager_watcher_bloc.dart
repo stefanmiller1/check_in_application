@@ -60,7 +60,7 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
             yield const ReservationManagerWatcherState.resLoadInProgress();
             await _currentUserReservationsListStreamSubscription?.cancel();
 
-            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(resState: e.resState, currentUser: e.currentUser, isResInvitation: e.isResInvitation).listen((event) {
+            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(resState: e.resState, currentUser: e.currentUser, isResInvitation: e.isResInvitation, limit: e.limit, isActivity: e.isActivity).listen((event) {
                 return add(ReservationManagerWatcherEvent.currentUsersReservationsReceived(event));
             });
           },
@@ -99,7 +99,7 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
                 yield const ReservationManagerWatcherState.resLoadInProgress();
                 await _reservationDiscoveryListStreamSubscription?.cancel();
 
-                _reservationDiscoveryListStreamSubscription = _resAuthFacade.watchDiscoveryReservationItems(resState: e.resState, hoursTimeAhead: e.hoursAhead, hoursTimeBefore: e.hoursPast).listen((event) {
+                _reservationDiscoveryListStreamSubscription = _resAuthFacade.watchDiscoveryReservationItems(resState: e.resState, hoursTimeAhead: e.hoursAhead, hoursTimeBefore: e.hoursPast, isActivity: e.isActivity).listen((event) {
                   return add(ReservationManagerWatcherEvent.discoveryReservationListReceived(event));
                 });
           },

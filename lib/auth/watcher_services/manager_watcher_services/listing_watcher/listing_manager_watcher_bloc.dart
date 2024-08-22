@@ -5,7 +5,7 @@ class ListingManagerWatcherBloc extends Bloc<ListingManagerWatcherEvent, Listing
 
   final facade.LMWatcherFacade _lmFacade;
 
-  ListingManagerWatcherBloc(this._lmFacade) : super(ListingManagerWatcherState.initial());
+  ListingManagerWatcherBloc(this._lmFacade) : super(const ListingManagerWatcherState.initial());
 
   StreamSubscription<Either<ListingFormFailure, ListingManagerForm>>? _listingManagerItemStreamSubscription;
 
@@ -22,6 +22,7 @@ class ListingManagerWatcherBloc extends Bloc<ListingManagerWatcherEvent, Listing
 
               _listingManagerItemStreamSubscription = _lmFacade.watchListingManagerItem(listingId: e.listingId).listen(
                       (event) {
+
                         return add(ListingManagerWatcherEvent.listingManagerItemReceived(event));
                   });
         },

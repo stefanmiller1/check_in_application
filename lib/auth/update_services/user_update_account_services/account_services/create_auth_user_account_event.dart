@@ -9,6 +9,8 @@ class CreateAuthUserAccountEvent with _$CreateAuthUserAccountEvent {
   const factory CreateAuthUserAccountEvent.lastNameChanged(String lastNameStr) = _LastNameChanged;
   const factory CreateAuthUserAccountEvent.emailChanged(String emailStr) = EmailChanged;
 
+  const factory CreateAuthUserAccountEvent.updateFirstTimeSignIn() = _UpdateFirstTimeSignIn;
+
   const factory CreateAuthUserAccountEvent.privacyTermsChanged(bool privacyBool) = PrivacyTermsBool;
 
   const factory CreateAuthUserAccountEvent.loginPasswordChanged(String passwordStr) = LoginPasswordChanged;

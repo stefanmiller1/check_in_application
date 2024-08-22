@@ -25,15 +25,12 @@ class VendorSettingsFormBloc extends Bloc<VendorSettingsFormEvent, VendorSetting
       yield* event.map(
 
           initialVendorForm: (e) async* {
-
             yield state.copyWith(
               vendorMerchantForm: e.initializeVendorMerchantForm.fold(
                       () => state.vendorMerchantForm,
                       (form) => form
               )
             );
-
-
           },
 
           didChangeWelcomeMessage: (e) async* {
@@ -117,14 +114,14 @@ class VendorSettingsFormBloc extends Bloc<VendorSettingsFormEvent, VendorSetting
             );
 
             if (isVendorFormValid(state.vendorMerchantForm, e.resItem)) {
-              yield state.copyWith(
-                isPublishing: false,
-                showErrorMessages: AutovalidateMode.disabled,
-                authFailureOrSuccessOption: optionOf(right(true)),
-                vendorMerchantForm: state.vendorMerchantForm.copyWith(
-                  formStatus: FormStatus.published
-                )
-              );
+                yield state.copyWith(
+                  isPublishing: false,
+                  showErrorMessages: AutovalidateMode.disabled,
+                  authFailureOrSuccessOption: optionOf(right(true)),
+                  vendorMerchantForm: state.vendorMerchantForm.copyWith(
+                    formStatus: FormStatus.published
+                  )
+                );
             } else {
               yield state.copyWith(
                 isPublishing: false,
@@ -132,9 +129,6 @@ class VendorSettingsFormBloc extends Bloc<VendorSettingsFormEvent, VendorSetting
                 authFailureOrSuccessOption: optionOf(left(VendorFormFailure.vendorServerError())),
               );
             }
-
-           
-
       }
     );
   }

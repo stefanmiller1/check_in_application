@@ -19,6 +19,8 @@ class AttendeeFormState with _$AttendeeFormState {
     required Option<Either<PaymentMethodValueFailure, StringStringItems>> authPaymentFailureOrSuccessOption,
     required Option<Either<AttendeeFormFailure, Unit>> authFailureOrSuccessOnHoldTicketOption,
     required Option<Either<AttendeeFormFailure, UserProfileModel>> authFailureOrSuccessPaymentOption,
+    required Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>> authVendorPaymentFailureOrSuccessOption,
+    required Option<Either<PaymentMethodValueFailure, List<StripeRefundModel>>> authRefundFailureOrSuccessOption,
     required Option<Either<AttendeeFormFailure, Unit>> authFailureOrSuccessOption,
   }) = _AttendeeFormState;
 
@@ -31,8 +33,10 @@ class AttendeeFormState with _$AttendeeFormState {
       isSubmitting: false,
       showErrorMessages: AutovalidateMode.disabled,
       authPaymentFailureOrSuccessOption: none(),
+      authVendorPaymentFailureOrSuccessOption: none(),
       authFailureOrSuccessOnHoldTicketOption: none(),
       authFailureOrSuccessPaymentOption: none(),
+      authRefundFailureOrSuccessOption: none(),
       authFailureOrSuccessOption: none()
   );
 

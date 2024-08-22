@@ -23,6 +23,6 @@ class ReservationFormEvent with _$ReservationFormEvent {
 
   const factory ReservationFormEvent.isFinishedReservationCancelRefund(ReservationCancellationRequestType cancelType, String reasonResponse, String amount, String currency) = _IsFinishedReservationCancelRefund;
   const factory ReservationFormEvent.isFinishedChangeEditsRequest() = _IsFinishedChangeEditsRequest;
-  const factory ReservationFormEvent.isFinishedCreatingReservation(UserProfileModel profile, String amount, String currency, String? paymentMethod, bool resRequiresReview) = _IsFinishedCreatingReservation;
+  const factory ReservationFormEvent.isFinishedCreatingReservation(UserProfileModel profile, int amount, String currency, String? paymentMethod, bool resRequiresReview) = _IsFinishedCreatingReservation;
   const factory ReservationFormEvent.isFinishedCreatingReservationWeb(String paymentIntentId) = _IsFinishedCreatingReservationWeb;
 }

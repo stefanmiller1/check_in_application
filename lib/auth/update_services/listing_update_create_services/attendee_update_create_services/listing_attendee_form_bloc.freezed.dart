@@ -52,11 +52,26 @@ mixin _$AttendeeFormEvent {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -89,11 +104,26 @@ mixin _$AttendeeFormEvent {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -126,11 +156,26 @@ mixin _$AttendeeFormEvent {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -163,11 +208,21 @@ mixin _$AttendeeFormEvent {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -196,11 +251,17 @@ mixin _$AttendeeFormEvent {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -229,11 +290,17 @@ mixin _$AttendeeFormEvent {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -392,11 +459,26 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return initializeAttendeeForm(initialAttendeeForm, initialReservation,
         initialActivityForm, initialResOwner);
@@ -433,11 +515,26 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return initializeAttendeeForm?.call(initialAttendeeForm, initialReservation,
         initialActivityForm, initialResOwner);
@@ -474,11 +571,26 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (initializeAttendeeForm != null) {
@@ -518,11 +630,21 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return initializeAttendeeForm(this);
   }
@@ -554,11 +676,17 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return initializeAttendeeForm?.call(this);
   }
@@ -590,11 +718,17 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (initializeAttendeeForm != null) {
@@ -720,11 +854,26 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return attendeeIsSaving(save);
   }
@@ -760,11 +909,26 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return attendeeIsSaving?.call(save);
   }
@@ -800,11 +964,26 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (attendeeIsSaving != null) {
@@ -843,11 +1022,21 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return attendeeIsSaving(this);
   }
@@ -879,11 +1068,17 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return attendeeIsSaving?.call(this);
   }
@@ -915,11 +1110,17 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (attendeeIsSaving != null) {
@@ -1053,11 +1254,26 @@ class _$UpdateAttendeeContactDetailsImpl
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return updateAttendeeContactDetails(contacts);
   }
@@ -1093,11 +1309,26 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return updateAttendeeContactDetails?.call(contacts);
   }
@@ -1133,11 +1364,26 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateAttendeeContactDetails != null) {
@@ -1176,11 +1422,21 @@ class _$UpdateAttendeeContactDetailsImpl
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return updateAttendeeContactDetails(this);
   }
@@ -1212,11 +1468,17 @@ class _$UpdateAttendeeContactDetailsImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return updateAttendeeContactDetails?.call(this);
   }
@@ -1248,11 +1510,17 @@ class _$UpdateAttendeeContactDetailsImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateAttendeeContactDetails != null) {
@@ -1382,11 +1650,26 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return updateCustomRules(rules);
   }
@@ -1422,11 +1705,26 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return updateCustomRules?.call(rules);
   }
@@ -1462,11 +1760,26 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateCustomRules != null) {
@@ -1505,11 +1818,21 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return updateCustomRules(this);
   }
@@ -1541,11 +1864,17 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return updateCustomRules?.call(this);
   }
@@ -1577,11 +1906,17 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateCustomRules != null) {
@@ -1709,11 +2044,26 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return updateCheckInSettings(checkInSettings);
   }
@@ -1749,11 +2099,26 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return updateCheckInSettings?.call(checkInSettings);
   }
@@ -1789,11 +2154,26 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateCheckInSettings != null) {
@@ -1832,11 +2212,21 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return updateCheckInSettings(this);
   }
@@ -1868,11 +2258,17 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return updateCheckInSettings?.call(this);
   }
@@ -1904,11 +2300,17 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateCheckInSettings != null) {
@@ -2038,11 +2440,26 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return updateSelectedTicketOption(ticketItems);
   }
@@ -2078,11 +2495,26 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return updateSelectedTicketOption?.call(ticketItems);
   }
@@ -2118,11 +2550,26 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateSelectedTicketOption != null) {
@@ -2161,11 +2608,21 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return updateSelectedTicketOption(this);
   }
@@ -2197,11 +2654,17 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return updateSelectedTicketOption?.call(this);
   }
@@ -2233,11 +2696,17 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateSelectedTicketOption != null) {
@@ -2361,11 +2830,26 @@ class _$UpdateClassesInstructorFormImpl
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return updateClassesInstructorForm(instructorProfile);
   }
@@ -2401,11 +2885,26 @@ class _$UpdateClassesInstructorFormImpl
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return updateClassesInstructorForm?.call(instructorProfile);
   }
@@ -2441,11 +2940,26 @@ class _$UpdateClassesInstructorFormImpl
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateClassesInstructorForm != null) {
@@ -2484,11 +2998,21 @@ class _$UpdateClassesInstructorFormImpl
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return updateClassesInstructorForm(this);
   }
@@ -2520,11 +3044,17 @@ class _$UpdateClassesInstructorFormImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return updateClassesInstructorForm?.call(this);
   }
@@ -2556,11 +3086,17 @@ class _$UpdateClassesInstructorFormImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateClassesInstructorForm != null) {
@@ -2683,11 +3219,26 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return updateMerchantVendorProfileId(merchVendorProfile);
   }
@@ -2723,11 +3274,26 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return updateMerchantVendorProfileId?.call(merchVendorProfile);
   }
@@ -2763,11 +3329,26 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateMerchantVendorProfileId != null) {
@@ -2806,11 +3387,21 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return updateMerchantVendorProfileId(this);
   }
@@ -2842,11 +3433,17 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return updateMerchantVendorProfileId?.call(this);
   }
@@ -2878,11 +3475,17 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateMerchantVendorProfileId != null) {
@@ -3015,11 +3618,26 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return updateVendorForm(form);
   }
@@ -3055,11 +3673,26 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return updateVendorForm?.call(form);
   }
@@ -3095,11 +3728,26 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateVendorForm != null) {
@@ -3138,11 +3786,21 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return updateVendorForm(this);
   }
@@ -3174,11 +3832,17 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return updateVendorForm?.call(this);
   }
@@ -3210,11 +3874,17 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (updateVendorForm != null) {
@@ -3380,11 +4050,26 @@ class _$CreatePaymentIntentForAttendeeImpl
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return createPaymentIntentForAttendee(
         profile, amount, currency, paymentMethod);
@@ -3421,11 +4106,26 @@ class _$CreatePaymentIntentForAttendeeImpl
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return createPaymentIntentForAttendee?.call(
         profile, amount, currency, paymentMethod);
@@ -3462,11 +4162,26 @@ class _$CreatePaymentIntentForAttendeeImpl
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (createPaymentIntentForAttendee != null) {
@@ -3506,11 +4221,21 @@ class _$CreatePaymentIntentForAttendeeImpl
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return createPaymentIntentForAttendee(this);
   }
@@ -3542,11 +4267,17 @@ class _$CreatePaymentIntentForAttendeeImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return createPaymentIntentForAttendee?.call(this);
   }
@@ -3578,11 +4309,17 @@ class _$CreatePaymentIntentForAttendeeImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (createPaymentIntentForAttendee != null) {
@@ -3714,11 +4451,26 @@ class _$CreateAttendeeFormForReservationImpl
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return createAttendeeFormForReservation(paymentIntentId);
   }
@@ -3754,11 +4506,26 @@ class _$CreateAttendeeFormForReservationImpl
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return createAttendeeFormForReservation?.call(paymentIntentId);
   }
@@ -3794,11 +4561,26 @@ class _$CreateAttendeeFormForReservationImpl
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (createAttendeeFormForReservation != null) {
@@ -3837,11 +4619,21 @@ class _$CreateAttendeeFormForReservationImpl
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return createAttendeeFormForReservation(this);
   }
@@ -3873,11 +4665,17 @@ class _$CreateAttendeeFormForReservationImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return createAttendeeFormForReservation?.call(this);
   }
@@ -3909,11 +4707,17 @@ class _$CreateAttendeeFormForReservationImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (createAttendeeFormForReservation != null) {
@@ -4044,11 +4848,26 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return checkTicketLimits(currentUserProfile);
   }
@@ -4084,11 +4903,26 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return checkTicketLimits?.call(currentUserProfile);
   }
@@ -4124,11 +4958,26 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (checkTicketLimits != null) {
@@ -4167,11 +5016,21 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return checkTicketLimits(this);
   }
@@ -4203,11 +5062,17 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return checkTicketLimits?.call(this);
   }
@@ -4239,11 +5104,17 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (checkTicketLimits != null) {
@@ -4336,11 +5207,26 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return createTicketsOnHold();
   }
@@ -4376,11 +5262,26 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return createTicketsOnHold?.call();
   }
@@ -4416,11 +5317,26 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (createTicketsOnHold != null) {
@@ -4459,11 +5375,21 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return createTicketsOnHold(this);
   }
@@ -4495,11 +5421,17 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return createTicketsOnHold?.call(this);
   }
@@ -4531,11 +5463,17 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (createTicketsOnHold != null) {
@@ -4659,11 +5597,26 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return checkVendorLimits(currentUserProfile);
   }
@@ -4699,11 +5652,26 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return checkVendorLimits?.call(currentUserProfile);
   }
@@ -4739,11 +5707,26 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (checkVendorLimits != null) {
@@ -4782,11 +5765,21 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return checkVendorLimits(this);
   }
@@ -4818,11 +5811,17 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return checkVendorLimits?.call(this);
   }
@@ -4854,11 +5853,17 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (checkVendorLimits != null) {
@@ -4983,11 +5988,26 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendeeWeb(paymentIntentId);
   }
@@ -5023,11 +6043,26 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendeeWeb?.call(paymentIntentId);
   }
@@ -5063,11 +6098,26 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedCreatingTicketAttendeeWeb != null) {
@@ -5106,11 +6156,21 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendeeWeb(this);
   }
@@ -5142,11 +6202,17 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendeeWeb?.call(this);
   }
@@ -5178,11 +6244,17 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedCreatingTicketAttendeeWeb != null) {
@@ -5350,11 +6422,26 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendee(
         profile, amount, currency, paymentMethod);
@@ -5391,11 +6478,26 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendee?.call(
         profile, amount, currency, paymentMethod);
@@ -5432,11 +6534,26 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedCreatingTicketAttendee != null) {
@@ -5476,11 +6593,21 @@ class _$IsFinishedCreatingTicketAttendeeImpl
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendee(this);
   }
@@ -5512,11 +6639,17 @@ class _$IsFinishedCreatingTicketAttendeeImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingTicketAttendee?.call(this);
   }
@@ -5548,11 +6681,17 @@ class _$IsFinishedCreatingTicketAttendeeImpl
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedCreatingTicketAttendee != null) {
@@ -5576,6 +6715,474 @@ abstract class _IsFinishedCreatingTicketAttendee implements AttendeeFormEvent {
   @JsonKey(ignore: true)
   _$$IsFinishedCreatingTicketAttendeeImplCopyWith<
           _$IsFinishedCreatingTicketAttendeeImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$IsFinishedCreatingVendorAttendeeImplCopyWith<$Res> {
+  factory _$$IsFinishedCreatingVendorAttendeeImplCopyWith(
+          _$IsFinishedCreatingVendorAttendeeImpl value,
+          $Res Function(_$IsFinishedCreatingVendorAttendeeImpl) then) =
+      __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call(
+      {UserProfileModel profile,
+      String currency,
+      String? paymentMethod,
+      StripeTaxRateDetails? taxRateDetail,
+      String? taxCalculationId});
+
+  $UserProfileModelCopyWith<$Res> get profile;
+  $StripeTaxRateDetailsCopyWith<$Res>? get taxRateDetail;
+}
+
+/// @nodoc
+class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
+    extends _$AttendeeFormEventCopyWithImpl<$Res,
+        _$IsFinishedCreatingVendorAttendeeImpl>
+    implements _$$IsFinishedCreatingVendorAttendeeImplCopyWith<$Res> {
+  __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl(
+      _$IsFinishedCreatingVendorAttendeeImpl _value,
+      $Res Function(_$IsFinishedCreatingVendorAttendeeImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? profile = null,
+    Object? currency = null,
+    Object? paymentMethod = freezed,
+    Object? taxRateDetail = freezed,
+    Object? taxCalculationId = freezed,
+  }) {
+    return _then(_$IsFinishedCreatingVendorAttendeeImpl(
+      null == profile
+          ? _value.profile
+          : profile // ignore: cast_nullable_to_non_nullable
+              as UserProfileModel,
+      null == currency
+          ? _value.currency
+          : currency // ignore: cast_nullable_to_non_nullable
+              as String,
+      freezed == paymentMethod
+          ? _value.paymentMethod
+          : paymentMethod // ignore: cast_nullable_to_non_nullable
+              as String?,
+      freezed == taxRateDetail
+          ? _value.taxRateDetail
+          : taxRateDetail // ignore: cast_nullable_to_non_nullable
+              as StripeTaxRateDetails?,
+      freezed == taxCalculationId
+          ? _value.taxCalculationId
+          : taxCalculationId // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $UserProfileModelCopyWith<$Res> get profile {
+    return $UserProfileModelCopyWith<$Res>(_value.profile, (value) {
+      return _then(_value.copyWith(profile: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $StripeTaxRateDetailsCopyWith<$Res>? get taxRateDetail {
+    if (_value.taxRateDetail == null) {
+      return null;
+    }
+
+    return $StripeTaxRateDetailsCopyWith<$Res>(_value.taxRateDetail!, (value) {
+      return _then(_value.copyWith(taxRateDetail: value));
+    });
+  }
+}
+
+/// @nodoc
+
+class _$IsFinishedCreatingVendorAttendeeImpl
+    implements _IsFinishedCreatingVendorAttendee {
+  const _$IsFinishedCreatingVendorAttendeeImpl(this.profile, this.currency,
+      this.paymentMethod, this.taxRateDetail, this.taxCalculationId);
+
+  @override
+  final UserProfileModel profile;
+  @override
+  final String currency;
+  @override
+  final String? paymentMethod;
+  @override
+  final StripeTaxRateDetails? taxRateDetail;
+  @override
+  final String? taxCalculationId;
+
+  @override
+  String toString() {
+    return 'AttendeeFormEvent.isFinishedCreatingVendorAttendee(profile: $profile, currency: $currency, paymentMethod: $paymentMethod, taxRateDetail: $taxRateDetail, taxCalculationId: $taxCalculationId)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$IsFinishedCreatingVendorAttendeeImpl &&
+            (identical(other.profile, profile) || other.profile == profile) &&
+            (identical(other.currency, currency) ||
+                other.currency == currency) &&
+            (identical(other.paymentMethod, paymentMethod) ||
+                other.paymentMethod == paymentMethod) &&
+            (identical(other.taxRateDetail, taxRateDetail) ||
+                other.taxRateDetail == taxRateDetail) &&
+            (identical(other.taxCalculationId, taxCalculationId) ||
+                other.taxCalculationId == taxCalculationId));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, profile, currency, paymentMethod,
+      taxRateDetail, taxCalculationId);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$IsFinishedCreatingVendorAttendeeImplCopyWith<
+          _$IsFinishedCreatingVendorAttendeeImpl>
+      get copyWith => __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<
+          _$IsFinishedCreatingVendorAttendeeImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)
+        initializeAttendeeForm,
+    required TResult Function(bool save) attendeeIsSaving,
+    required TResult Function(ContactDetails contacts)
+        updateAttendeeContactDetails,
+    required TResult Function(List<CustomRuleOption> rules) updateCustomRules,
+    required TResult Function(List<CheckInSetting> checkInSettings)
+        updateCheckInSettings,
+    required TResult Function(List<TicketItem> ticketItems)
+        updateSelectedTicketOption,
+    required TResult Function(UniqueId? instructorProfile)
+        updateClassesInstructorForm,
+    required TResult Function(UniqueId? merchVendorProfile)
+        updateMerchantVendorProfileId,
+    required TResult Function(VendorMerchantForm? form) updateVendorForm,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        createPaymentIntentForAttendee,
+    required TResult Function(String paymentIntentId)
+        createAttendeeFormForReservation,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkTicketLimits,
+    required TResult Function() createTicketsOnHold,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkVendorLimits,
+    required TResult Function(String paymentIntentId)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingAttendee,
+    required TResult Function() isFinishedInvitingAttendee,
+    required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
+  }) {
+    return isFinishedCreatingVendorAttendee(
+        profile, currency, paymentMethod, taxRateDetail, taxCalculationId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult? Function(bool save)? attendeeIsSaving,
+    TResult? Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult? Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult? Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult? Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult? Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult? Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult? Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult? Function()? createTicketsOnHold,
+    TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult? Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult? Function()? isFinishedInvitingAttendee,
+    TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+  }) {
+    return isFinishedCreatingVendorAttendee?.call(
+        profile, currency, paymentMethod, taxRateDetail, taxCalculationId);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult Function(bool save)? attendeeIsSaving,
+    TResult Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult Function()? createTicketsOnHold,
+    TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult Function()? isFinishedInvitingAttendee,
+    TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (isFinishedCreatingVendorAttendee != null) {
+      return isFinishedCreatingVendorAttendee(
+          profile, currency, paymentMethod, taxRateDetail, taxCalculationId);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitializeAttendeeForm value)
+        initializeAttendeeForm,
+    required TResult Function(_AttendeeIsSaving value) attendeeIsSaving,
+    required TResult Function(_UpdateAttendeeContactDetails value)
+        updateAttendeeContactDetails,
+    required TResult Function(_SelectedCustomRuleChanged value)
+        updateCustomRules,
+    required TResult Function(_UpdateCheckInSettings value)
+        updateCheckInSettings,
+    required TResult Function(_UpdateSelectedTicketOption value)
+        updateSelectedTicketOption,
+    required TResult Function(_UpdateClassesInstructorForm value)
+        updateClassesInstructorForm,
+    required TResult Function(_UpdateMerchantVendorForm value)
+        updateMerchantVendorProfileId,
+    required TResult Function(_UpdateVendorForm value) updateVendorForm,
+    required TResult Function(_CreatePaymentIntentForAttendee value)
+        createPaymentIntentForAttendee,
+    required TResult Function(_CreateAttendeeFormForReservation value)
+        createAttendeeFormForReservation,
+    required TResult Function(_CheckTicketLimits value) checkTicketLimits,
+    required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
+    required TResult Function(_CheckVendorLimits value) checkVendorLimits,
+    required TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(_IsFinishedCreatingTicketAttendee value)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(_IsFinishedCreatingAttendee value)
+        isFinishedCreatingAttendee,
+    required TResult Function(_IsFinishedInvitingAttendee value)
+        isFinishedInvitingAttendee,
+    required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
+  }) {
+    return isFinishedCreatingVendorAttendee(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult? Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult? Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult? Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult? Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult? Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult? Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult? Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult? Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult? Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult? Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult? Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult? Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+  }) {
+    return isFinishedCreatingVendorAttendee?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (isFinishedCreatingVendorAttendee != null) {
+      return isFinishedCreatingVendorAttendee(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _IsFinishedCreatingVendorAttendee implements AttendeeFormEvent {
+  const factory _IsFinishedCreatingVendorAttendee(
+      final UserProfileModel profile,
+      final String currency,
+      final String? paymentMethod,
+      final StripeTaxRateDetails? taxRateDetail,
+      final String? taxCalculationId) = _$IsFinishedCreatingVendorAttendeeImpl;
+
+  UserProfileModel get profile;
+  String get currency;
+  String? get paymentMethod;
+  StripeTaxRateDetails? get taxRateDetail;
+  String? get taxCalculationId;
+  @JsonKey(ignore: true)
+  _$$IsFinishedCreatingVendorAttendeeImplCopyWith<
+          _$IsFinishedCreatingVendorAttendeeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -5723,11 +7330,26 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingAttendee(profile, amount, currency, paymentMethod);
   }
@@ -5763,11 +7385,26 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingAttendee?.call(
         profile, amount, currency, paymentMethod);
@@ -5804,11 +7441,26 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedCreatingAttendee != null) {
@@ -5848,11 +7500,21 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingAttendee(this);
   }
@@ -5884,11 +7546,17 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return isFinishedCreatingAttendee?.call(this);
   }
@@ -5920,11 +7588,17 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedCreatingAttendee != null) {
@@ -6026,11 +7700,26 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedInvitingAttendee();
   }
@@ -6066,11 +7755,26 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedInvitingAttendee?.call();
   }
@@ -6106,11 +7810,26 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedInvitingAttendee != null) {
@@ -6149,11 +7868,21 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return isFinishedInvitingAttendee(this);
   }
@@ -6185,11 +7914,17 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return isFinishedInvitingAttendee?.call(this);
   }
@@ -6221,11 +7956,17 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (isFinishedInvitingAttendee != null) {
@@ -6312,11 +8053,26 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(UserProfileModel profile, String amount,
             String currency, String? paymentMethod)
         isFinishedCreatingAttendee,
     required TResult Function() isFinishedInvitingAttendee,
     required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
   }) {
     return didDeleteAttendee();
   }
@@ -6352,11 +8108,26 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult? Function()? isFinishedInvitingAttendee,
     TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
   }) {
     return didDeleteAttendee?.call();
   }
@@ -6392,11 +8163,26 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(UserProfileModel profile, String amount, String currency,
             String? paymentMethod)?
         isFinishedCreatingAttendee,
     TResult Function()? isFinishedInvitingAttendee,
     TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (didDeleteAttendee != null) {
@@ -6435,11 +8221,21 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     required TResult Function(_IsFinishedCreatingTicketAttendee value)
         isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
     required TResult Function(_IsFinishedCreatingAttendee value)
         isFinishedCreatingAttendee,
     required TResult Function(_IsFinishedInvitingAttendee value)
         isFinishedInvitingAttendee,
     required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
   }) {
     return didDeleteAttendee(this);
   }
@@ -6471,11 +8267,17 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     TResult? Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult? Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult? Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
   }) {
     return didDeleteAttendee?.call(this);
   }
@@ -6507,11 +8309,17 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
         isFinishedCreatingTicketAttendeeWeb,
     TResult Function(_IsFinishedCreatingTicketAttendee value)?
         isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
     TResult Function(_IsFinishedCreatingAttendee value)?
         isFinishedCreatingAttendee,
     TResult Function(_IsFinishedInvitingAttendee value)?
         isFinishedInvitingAttendee,
     TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
     required TResult orElse(),
   }) {
     if (didDeleteAttendee != null) {
@@ -6523,6 +8331,1590 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
 
 abstract class _DidDeleteAttendee implements AttendeeFormEvent {
   const factory _DidDeleteAttendee() = _$DidDeleteAttendeeImpl;
+}
+
+/// @nodoc
+abstract class _$$DidRejectAttendeesGroupImplCopyWith<$Res> {
+  factory _$$DidRejectAttendeesGroupImplCopyWith(
+          _$DidRejectAttendeesGroupImpl value,
+          $Res Function(_$DidRejectAttendeesGroupImpl) then) =
+      __$$DidRejectAttendeesGroupImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<VendorContactDetail> attendees});
+}
+
+/// @nodoc
+class __$$DidRejectAttendeesGroupImplCopyWithImpl<$Res>
+    extends _$AttendeeFormEventCopyWithImpl<$Res, _$DidRejectAttendeesGroupImpl>
+    implements _$$DidRejectAttendeesGroupImplCopyWith<$Res> {
+  __$$DidRejectAttendeesGroupImplCopyWithImpl(
+      _$DidRejectAttendeesGroupImpl _value,
+      $Res Function(_$DidRejectAttendeesGroupImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? attendees = null,
+  }) {
+    return _then(_$DidRejectAttendeesGroupImpl(
+      null == attendees
+          ? _value._attendees
+          : attendees // ignore: cast_nullable_to_non_nullable
+              as List<VendorContactDetail>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
+  const _$DidRejectAttendeesGroupImpl(final List<VendorContactDetail> attendees)
+      : _attendees = attendees;
+
+  final List<VendorContactDetail> _attendees;
+  @override
+  List<VendorContactDetail> get attendees {
+    if (_attendees is EqualUnmodifiableListView) return _attendees;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_attendees);
+  }
+
+  @override
+  String toString() {
+    return 'AttendeeFormEvent.didRejectAttendeesGroup(attendees: $attendees)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DidRejectAttendeesGroupImpl &&
+            const DeepCollectionEquality()
+                .equals(other._attendees, _attendees));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DidRejectAttendeesGroupImplCopyWith<_$DidRejectAttendeesGroupImpl>
+      get copyWith => __$$DidRejectAttendeesGroupImplCopyWithImpl<
+          _$DidRejectAttendeesGroupImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)
+        initializeAttendeeForm,
+    required TResult Function(bool save) attendeeIsSaving,
+    required TResult Function(ContactDetails contacts)
+        updateAttendeeContactDetails,
+    required TResult Function(List<CustomRuleOption> rules) updateCustomRules,
+    required TResult Function(List<CheckInSetting> checkInSettings)
+        updateCheckInSettings,
+    required TResult Function(List<TicketItem> ticketItems)
+        updateSelectedTicketOption,
+    required TResult Function(UniqueId? instructorProfile)
+        updateClassesInstructorForm,
+    required TResult Function(UniqueId? merchVendorProfile)
+        updateMerchantVendorProfileId,
+    required TResult Function(VendorMerchantForm? form) updateVendorForm,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        createPaymentIntentForAttendee,
+    required TResult Function(String paymentIntentId)
+        createAttendeeFormForReservation,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkTicketLimits,
+    required TResult Function() createTicketsOnHold,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkVendorLimits,
+    required TResult Function(String paymentIntentId)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingAttendee,
+    required TResult Function() isFinishedInvitingAttendee,
+    required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
+  }) {
+    return didRejectAttendeesGroup(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult? Function(bool save)? attendeeIsSaving,
+    TResult? Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult? Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult? Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult? Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult? Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult? Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult? Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult? Function()? createTicketsOnHold,
+    TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult? Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult? Function()? isFinishedInvitingAttendee,
+    TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+  }) {
+    return didRejectAttendeesGroup?.call(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult Function(bool save)? attendeeIsSaving,
+    TResult Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult Function()? createTicketsOnHold,
+    TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult Function()? isFinishedInvitingAttendee,
+    TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didRejectAttendeesGroup != null) {
+      return didRejectAttendeesGroup(attendees);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitializeAttendeeForm value)
+        initializeAttendeeForm,
+    required TResult Function(_AttendeeIsSaving value) attendeeIsSaving,
+    required TResult Function(_UpdateAttendeeContactDetails value)
+        updateAttendeeContactDetails,
+    required TResult Function(_SelectedCustomRuleChanged value)
+        updateCustomRules,
+    required TResult Function(_UpdateCheckInSettings value)
+        updateCheckInSettings,
+    required TResult Function(_UpdateSelectedTicketOption value)
+        updateSelectedTicketOption,
+    required TResult Function(_UpdateClassesInstructorForm value)
+        updateClassesInstructorForm,
+    required TResult Function(_UpdateMerchantVendorForm value)
+        updateMerchantVendorProfileId,
+    required TResult Function(_UpdateVendorForm value) updateVendorForm,
+    required TResult Function(_CreatePaymentIntentForAttendee value)
+        createPaymentIntentForAttendee,
+    required TResult Function(_CreateAttendeeFormForReservation value)
+        createAttendeeFormForReservation,
+    required TResult Function(_CheckTicketLimits value) checkTicketLimits,
+    required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
+    required TResult Function(_CheckVendorLimits value) checkVendorLimits,
+    required TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(_IsFinishedCreatingTicketAttendee value)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(_IsFinishedCreatingAttendee value)
+        isFinishedCreatingAttendee,
+    required TResult Function(_IsFinishedInvitingAttendee value)
+        isFinishedInvitingAttendee,
+    required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
+  }) {
+    return didRejectAttendeesGroup(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult? Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult? Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult? Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult? Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult? Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult? Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult? Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult? Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult? Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult? Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult? Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult? Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+  }) {
+    return didRejectAttendeesGroup?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didRejectAttendeesGroup != null) {
+      return didRejectAttendeesGroup(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DidRejectAttendeesGroup implements AttendeeFormEvent {
+  const factory _DidRejectAttendeesGroup(
+          final List<VendorContactDetail> attendees) =
+      _$DidRejectAttendeesGroupImpl;
+
+  List<VendorContactDetail> get attendees;
+  @JsonKey(ignore: true)
+  _$$DidRejectAttendeesGroupImplCopyWith<_$DidRejectAttendeesGroupImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DidCancelAttendeesGroupImplCopyWith<$Res> {
+  factory _$$DidCancelAttendeesGroupImplCopyWith(
+          _$DidCancelAttendeesGroupImpl value,
+          $Res Function(_$DidCancelAttendeesGroupImpl) then) =
+      __$$DidCancelAttendeesGroupImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<VendorContactDetail> attendees});
+}
+
+/// @nodoc
+class __$$DidCancelAttendeesGroupImplCopyWithImpl<$Res>
+    extends _$AttendeeFormEventCopyWithImpl<$Res, _$DidCancelAttendeesGroupImpl>
+    implements _$$DidCancelAttendeesGroupImplCopyWith<$Res> {
+  __$$DidCancelAttendeesGroupImplCopyWithImpl(
+      _$DidCancelAttendeesGroupImpl _value,
+      $Res Function(_$DidCancelAttendeesGroupImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? attendees = null,
+  }) {
+    return _then(_$DidCancelAttendeesGroupImpl(
+      null == attendees
+          ? _value._attendees
+          : attendees // ignore: cast_nullable_to_non_nullable
+              as List<VendorContactDetail>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
+  const _$DidCancelAttendeesGroupImpl(final List<VendorContactDetail> attendees)
+      : _attendees = attendees;
+
+  final List<VendorContactDetail> _attendees;
+  @override
+  List<VendorContactDetail> get attendees {
+    if (_attendees is EqualUnmodifiableListView) return _attendees;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_attendees);
+  }
+
+  @override
+  String toString() {
+    return 'AttendeeFormEvent.didCancelAttendeesGroup(attendees: $attendees)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DidCancelAttendeesGroupImpl &&
+            const DeepCollectionEquality()
+                .equals(other._attendees, _attendees));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DidCancelAttendeesGroupImplCopyWith<_$DidCancelAttendeesGroupImpl>
+      get copyWith => __$$DidCancelAttendeesGroupImplCopyWithImpl<
+          _$DidCancelAttendeesGroupImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)
+        initializeAttendeeForm,
+    required TResult Function(bool save) attendeeIsSaving,
+    required TResult Function(ContactDetails contacts)
+        updateAttendeeContactDetails,
+    required TResult Function(List<CustomRuleOption> rules) updateCustomRules,
+    required TResult Function(List<CheckInSetting> checkInSettings)
+        updateCheckInSettings,
+    required TResult Function(List<TicketItem> ticketItems)
+        updateSelectedTicketOption,
+    required TResult Function(UniqueId? instructorProfile)
+        updateClassesInstructorForm,
+    required TResult Function(UniqueId? merchVendorProfile)
+        updateMerchantVendorProfileId,
+    required TResult Function(VendorMerchantForm? form) updateVendorForm,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        createPaymentIntentForAttendee,
+    required TResult Function(String paymentIntentId)
+        createAttendeeFormForReservation,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkTicketLimits,
+    required TResult Function() createTicketsOnHold,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkVendorLimits,
+    required TResult Function(String paymentIntentId)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingAttendee,
+    required TResult Function() isFinishedInvitingAttendee,
+    required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
+  }) {
+    return didCancelAttendeesGroup(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult? Function(bool save)? attendeeIsSaving,
+    TResult? Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult? Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult? Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult? Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult? Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult? Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult? Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult? Function()? createTicketsOnHold,
+    TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult? Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult? Function()? isFinishedInvitingAttendee,
+    TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+  }) {
+    return didCancelAttendeesGroup?.call(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult Function(bool save)? attendeeIsSaving,
+    TResult Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult Function()? createTicketsOnHold,
+    TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult Function()? isFinishedInvitingAttendee,
+    TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didCancelAttendeesGroup != null) {
+      return didCancelAttendeesGroup(attendees);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitializeAttendeeForm value)
+        initializeAttendeeForm,
+    required TResult Function(_AttendeeIsSaving value) attendeeIsSaving,
+    required TResult Function(_UpdateAttendeeContactDetails value)
+        updateAttendeeContactDetails,
+    required TResult Function(_SelectedCustomRuleChanged value)
+        updateCustomRules,
+    required TResult Function(_UpdateCheckInSettings value)
+        updateCheckInSettings,
+    required TResult Function(_UpdateSelectedTicketOption value)
+        updateSelectedTicketOption,
+    required TResult Function(_UpdateClassesInstructorForm value)
+        updateClassesInstructorForm,
+    required TResult Function(_UpdateMerchantVendorForm value)
+        updateMerchantVendorProfileId,
+    required TResult Function(_UpdateVendorForm value) updateVendorForm,
+    required TResult Function(_CreatePaymentIntentForAttendee value)
+        createPaymentIntentForAttendee,
+    required TResult Function(_CreateAttendeeFormForReservation value)
+        createAttendeeFormForReservation,
+    required TResult Function(_CheckTicketLimits value) checkTicketLimits,
+    required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
+    required TResult Function(_CheckVendorLimits value) checkVendorLimits,
+    required TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(_IsFinishedCreatingTicketAttendee value)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(_IsFinishedCreatingAttendee value)
+        isFinishedCreatingAttendee,
+    required TResult Function(_IsFinishedInvitingAttendee value)
+        isFinishedInvitingAttendee,
+    required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
+  }) {
+    return didCancelAttendeesGroup(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult? Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult? Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult? Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult? Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult? Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult? Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult? Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult? Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult? Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult? Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult? Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult? Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+  }) {
+    return didCancelAttendeesGroup?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didCancelAttendeesGroup != null) {
+      return didCancelAttendeesGroup(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DidCancelAttendeesGroup implements AttendeeFormEvent {
+  const factory _DidCancelAttendeesGroup(
+          final List<VendorContactDetail> attendees) =
+      _$DidCancelAttendeesGroupImpl;
+
+  List<VendorContactDetail> get attendees;
+  @JsonKey(ignore: true)
+  _$$DidCancelAttendeesGroupImplCopyWith<_$DidCancelAttendeesGroupImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DidRefundAttendeesGroupImplCopyWith<$Res> {
+  factory _$$DidRefundAttendeesGroupImplCopyWith(
+          _$DidRefundAttendeesGroupImpl value,
+          $Res Function(_$DidRefundAttendeesGroupImpl) then) =
+      __$$DidRefundAttendeesGroupImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<VendorContactDetail> attendees});
+}
+
+/// @nodoc
+class __$$DidRefundAttendeesGroupImplCopyWithImpl<$Res>
+    extends _$AttendeeFormEventCopyWithImpl<$Res, _$DidRefundAttendeesGroupImpl>
+    implements _$$DidRefundAttendeesGroupImplCopyWith<$Res> {
+  __$$DidRefundAttendeesGroupImplCopyWithImpl(
+      _$DidRefundAttendeesGroupImpl _value,
+      $Res Function(_$DidRefundAttendeesGroupImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? attendees = null,
+  }) {
+    return _then(_$DidRefundAttendeesGroupImpl(
+      null == attendees
+          ? _value._attendees
+          : attendees // ignore: cast_nullable_to_non_nullable
+              as List<VendorContactDetail>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
+  const _$DidRefundAttendeesGroupImpl(final List<VendorContactDetail> attendees)
+      : _attendees = attendees;
+
+  final List<VendorContactDetail> _attendees;
+  @override
+  List<VendorContactDetail> get attendees {
+    if (_attendees is EqualUnmodifiableListView) return _attendees;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_attendees);
+  }
+
+  @override
+  String toString() {
+    return 'AttendeeFormEvent.didRefundAttendeesGroup(attendees: $attendees)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DidRefundAttendeesGroupImpl &&
+            const DeepCollectionEquality()
+                .equals(other._attendees, _attendees));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DidRefundAttendeesGroupImplCopyWith<_$DidRefundAttendeesGroupImpl>
+      get copyWith => __$$DidRefundAttendeesGroupImplCopyWithImpl<
+          _$DidRefundAttendeesGroupImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)
+        initializeAttendeeForm,
+    required TResult Function(bool save) attendeeIsSaving,
+    required TResult Function(ContactDetails contacts)
+        updateAttendeeContactDetails,
+    required TResult Function(List<CustomRuleOption> rules) updateCustomRules,
+    required TResult Function(List<CheckInSetting> checkInSettings)
+        updateCheckInSettings,
+    required TResult Function(List<TicketItem> ticketItems)
+        updateSelectedTicketOption,
+    required TResult Function(UniqueId? instructorProfile)
+        updateClassesInstructorForm,
+    required TResult Function(UniqueId? merchVendorProfile)
+        updateMerchantVendorProfileId,
+    required TResult Function(VendorMerchantForm? form) updateVendorForm,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        createPaymentIntentForAttendee,
+    required TResult Function(String paymentIntentId)
+        createAttendeeFormForReservation,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkTicketLimits,
+    required TResult Function() createTicketsOnHold,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkVendorLimits,
+    required TResult Function(String paymentIntentId)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingAttendee,
+    required TResult Function() isFinishedInvitingAttendee,
+    required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
+  }) {
+    return didRefundAttendeesGroup(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult? Function(bool save)? attendeeIsSaving,
+    TResult? Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult? Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult? Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult? Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult? Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult? Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult? Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult? Function()? createTicketsOnHold,
+    TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult? Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult? Function()? isFinishedInvitingAttendee,
+    TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+  }) {
+    return didRefundAttendeesGroup?.call(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult Function(bool save)? attendeeIsSaving,
+    TResult Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult Function()? createTicketsOnHold,
+    TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult Function()? isFinishedInvitingAttendee,
+    TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didRefundAttendeesGroup != null) {
+      return didRefundAttendeesGroup(attendees);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitializeAttendeeForm value)
+        initializeAttendeeForm,
+    required TResult Function(_AttendeeIsSaving value) attendeeIsSaving,
+    required TResult Function(_UpdateAttendeeContactDetails value)
+        updateAttendeeContactDetails,
+    required TResult Function(_SelectedCustomRuleChanged value)
+        updateCustomRules,
+    required TResult Function(_UpdateCheckInSettings value)
+        updateCheckInSettings,
+    required TResult Function(_UpdateSelectedTicketOption value)
+        updateSelectedTicketOption,
+    required TResult Function(_UpdateClassesInstructorForm value)
+        updateClassesInstructorForm,
+    required TResult Function(_UpdateMerchantVendorForm value)
+        updateMerchantVendorProfileId,
+    required TResult Function(_UpdateVendorForm value) updateVendorForm,
+    required TResult Function(_CreatePaymentIntentForAttendee value)
+        createPaymentIntentForAttendee,
+    required TResult Function(_CreateAttendeeFormForReservation value)
+        createAttendeeFormForReservation,
+    required TResult Function(_CheckTicketLimits value) checkTicketLimits,
+    required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
+    required TResult Function(_CheckVendorLimits value) checkVendorLimits,
+    required TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(_IsFinishedCreatingTicketAttendee value)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(_IsFinishedCreatingAttendee value)
+        isFinishedCreatingAttendee,
+    required TResult Function(_IsFinishedInvitingAttendee value)
+        isFinishedInvitingAttendee,
+    required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
+  }) {
+    return didRefundAttendeesGroup(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult? Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult? Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult? Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult? Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult? Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult? Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult? Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult? Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult? Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult? Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult? Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult? Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+  }) {
+    return didRefundAttendeesGroup?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didRefundAttendeesGroup != null) {
+      return didRefundAttendeesGroup(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DidRefundAttendeesGroup implements AttendeeFormEvent {
+  const factory _DidRefundAttendeesGroup(
+          final List<VendorContactDetail> attendees) =
+      _$DidRefundAttendeesGroupImpl;
+
+  List<VendorContactDetail> get attendees;
+  @JsonKey(ignore: true)
+  _$$DidRefundAttendeesGroupImplCopyWith<_$DidRefundAttendeesGroupImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DidUpdateAttendeesGroupImplCopyWith<$Res> {
+  factory _$$DidUpdateAttendeesGroupImplCopyWith(
+          _$DidUpdateAttendeesGroupImpl value,
+          $Res Function(_$DidUpdateAttendeesGroupImpl) then) =
+      __$$DidUpdateAttendeesGroupImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<VendorContactDetail> attendees});
+}
+
+/// @nodoc
+class __$$DidUpdateAttendeesGroupImplCopyWithImpl<$Res>
+    extends _$AttendeeFormEventCopyWithImpl<$Res, _$DidUpdateAttendeesGroupImpl>
+    implements _$$DidUpdateAttendeesGroupImplCopyWith<$Res> {
+  __$$DidUpdateAttendeesGroupImplCopyWithImpl(
+      _$DidUpdateAttendeesGroupImpl _value,
+      $Res Function(_$DidUpdateAttendeesGroupImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? attendees = null,
+  }) {
+    return _then(_$DidUpdateAttendeesGroupImpl(
+      null == attendees
+          ? _value._attendees
+          : attendees // ignore: cast_nullable_to_non_nullable
+              as List<VendorContactDetail>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
+  const _$DidUpdateAttendeesGroupImpl(final List<VendorContactDetail> attendees)
+      : _attendees = attendees;
+
+  final List<VendorContactDetail> _attendees;
+  @override
+  List<VendorContactDetail> get attendees {
+    if (_attendees is EqualUnmodifiableListView) return _attendees;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_attendees);
+  }
+
+  @override
+  String toString() {
+    return 'AttendeeFormEvent.didConfirmAttendeesGroup(attendees: $attendees)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DidUpdateAttendeesGroupImpl &&
+            const DeepCollectionEquality()
+                .equals(other._attendees, _attendees));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DidUpdateAttendeesGroupImplCopyWith<_$DidUpdateAttendeesGroupImpl>
+      get copyWith => __$$DidUpdateAttendeesGroupImplCopyWithImpl<
+          _$DidUpdateAttendeesGroupImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)
+        initializeAttendeeForm,
+    required TResult Function(bool save) attendeeIsSaving,
+    required TResult Function(ContactDetails contacts)
+        updateAttendeeContactDetails,
+    required TResult Function(List<CustomRuleOption> rules) updateCustomRules,
+    required TResult Function(List<CheckInSetting> checkInSettings)
+        updateCheckInSettings,
+    required TResult Function(List<TicketItem> ticketItems)
+        updateSelectedTicketOption,
+    required TResult Function(UniqueId? instructorProfile)
+        updateClassesInstructorForm,
+    required TResult Function(UniqueId? merchVendorProfile)
+        updateMerchantVendorProfileId,
+    required TResult Function(VendorMerchantForm? form) updateVendorForm,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        createPaymentIntentForAttendee,
+    required TResult Function(String paymentIntentId)
+        createAttendeeFormForReservation,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkTicketLimits,
+    required TResult Function() createTicketsOnHold,
+    required TResult Function(UserProfileModel currentUserProfile)
+        checkVendorLimits,
+    required TResult Function(String paymentIntentId)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(UserProfileModel profile, String amount,
+            String currency, String? paymentMethod)
+        isFinishedCreatingAttendee,
+    required TResult Function() isFinishedInvitingAttendee,
+    required TResult Function() didDeleteAttendee,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRejectAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didCancelAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didRefundAttendeesGroup,
+    required TResult Function(List<VendorContactDetail> attendees)
+        didConfirmAttendeesGroup,
+  }) {
+    return didConfirmAttendeesGroup(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult? Function(bool save)? attendeeIsSaving,
+    TResult? Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult? Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult? Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult? Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult? Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult? Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult? Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult? Function()? createTicketsOnHold,
+    TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult? Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult? Function()? isFinishedInvitingAttendee,
+    TResult? Function()? didDeleteAttendee,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult? Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+  }) {
+    return didConfirmAttendeesGroup?.call(attendees);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            Option<AttendeeItem> initialAttendeeForm,
+            Option<ReservationItem> initialReservation,
+            Option<ActivityManagerForm> initialActivityForm,
+            Option<UserProfileModel> initialResOwner)?
+        initializeAttendeeForm,
+    TResult Function(bool save)? attendeeIsSaving,
+    TResult Function(ContactDetails contacts)? updateAttendeeContactDetails,
+    TResult Function(List<CustomRuleOption> rules)? updateCustomRules,
+    TResult Function(List<CheckInSetting> checkInSettings)?
+        updateCheckInSettings,
+    TResult Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
+    TResult Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
+    TResult Function(UniqueId? merchVendorProfile)?
+        updateMerchantVendorProfileId,
+    TResult Function(VendorMerchantForm? form)? updateVendorForm,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        createPaymentIntentForAttendee,
+    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
+    TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
+    TResult Function()? createTicketsOnHold,
+    TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
+    TResult Function(String paymentIntentId)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(
+            UserProfileModel profile,
+            String currency,
+            String? paymentMethod,
+            StripeTaxRateDetails? taxRateDetail,
+            String? taxCalculationId)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(UserProfileModel profile, String amount, String currency,
+            String? paymentMethod)?
+        isFinishedCreatingAttendee,
+    TResult Function()? isFinishedInvitingAttendee,
+    TResult Function()? didDeleteAttendee,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRejectAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didCancelAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didRefundAttendeesGroup,
+    TResult Function(List<VendorContactDetail> attendees)?
+        didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didConfirmAttendeesGroup != null) {
+      return didConfirmAttendeesGroup(attendees);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitializeAttendeeForm value)
+        initializeAttendeeForm,
+    required TResult Function(_AttendeeIsSaving value) attendeeIsSaving,
+    required TResult Function(_UpdateAttendeeContactDetails value)
+        updateAttendeeContactDetails,
+    required TResult Function(_SelectedCustomRuleChanged value)
+        updateCustomRules,
+    required TResult Function(_UpdateCheckInSettings value)
+        updateCheckInSettings,
+    required TResult Function(_UpdateSelectedTicketOption value)
+        updateSelectedTicketOption,
+    required TResult Function(_UpdateClassesInstructorForm value)
+        updateClassesInstructorForm,
+    required TResult Function(_UpdateMerchantVendorForm value)
+        updateMerchantVendorProfileId,
+    required TResult Function(_UpdateVendorForm value) updateVendorForm,
+    required TResult Function(_CreatePaymentIntentForAttendee value)
+        createPaymentIntentForAttendee,
+    required TResult Function(_CreateAttendeeFormForReservation value)
+        createAttendeeFormForReservation,
+    required TResult Function(_CheckTicketLimits value) checkTicketLimits,
+    required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
+    required TResult Function(_CheckVendorLimits value) checkVendorLimits,
+    required TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)
+        isFinishedCreatingTicketAttendeeWeb,
+    required TResult Function(_IsFinishedCreatingTicketAttendee value)
+        isFinishedCreatingTicketAttendee,
+    required TResult Function(_IsFinishedCreatingVendorAttendee value)
+        isFinishedCreatingVendorAttendee,
+    required TResult Function(_IsFinishedCreatingAttendee value)
+        isFinishedCreatingAttendee,
+    required TResult Function(_IsFinishedInvitingAttendee value)
+        isFinishedInvitingAttendee,
+    required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
+    required TResult Function(_DidRejectAttendeesGroup value)
+        didRejectAttendeesGroup,
+    required TResult Function(_DidCancelAttendeesGroup value)
+        didCancelAttendeesGroup,
+    required TResult Function(_DidRefundAttendeesGroup value)
+        didRefundAttendeesGroup,
+    required TResult Function(_DidUpdateAttendeesGroup value)
+        didConfirmAttendeesGroup,
+  }) {
+    return didConfirmAttendeesGroup(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult? Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult? Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult? Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult? Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult? Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult? Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult? Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult? Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult? Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult? Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult? Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult? Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult? Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult? Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+  }) {
+    return didConfirmAttendeesGroup?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
+    TResult Function(_AttendeeIsSaving value)? attendeeIsSaving,
+    TResult Function(_UpdateAttendeeContactDetails value)?
+        updateAttendeeContactDetails,
+    TResult Function(_SelectedCustomRuleChanged value)? updateCustomRules,
+    TResult Function(_UpdateCheckInSettings value)? updateCheckInSettings,
+    TResult Function(_UpdateSelectedTicketOption value)?
+        updateSelectedTicketOption,
+    TResult Function(_UpdateClassesInstructorForm value)?
+        updateClassesInstructorForm,
+    TResult Function(_UpdateMerchantVendorForm value)?
+        updateMerchantVendorProfileId,
+    TResult Function(_UpdateVendorForm value)? updateVendorForm,
+    TResult Function(_CreatePaymentIntentForAttendee value)?
+        createPaymentIntentForAttendee,
+    TResult Function(_CreateAttendeeFormForReservation value)?
+        createAttendeeFormForReservation,
+    TResult Function(_CheckTicketLimits value)? checkTicketLimits,
+    TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
+    TResult Function(_CheckVendorLimits value)? checkVendorLimits,
+    TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)?
+        isFinishedCreatingTicketAttendeeWeb,
+    TResult Function(_IsFinishedCreatingTicketAttendee value)?
+        isFinishedCreatingTicketAttendee,
+    TResult Function(_IsFinishedCreatingVendorAttendee value)?
+        isFinishedCreatingVendorAttendee,
+    TResult Function(_IsFinishedCreatingAttendee value)?
+        isFinishedCreatingAttendee,
+    TResult Function(_IsFinishedInvitingAttendee value)?
+        isFinishedInvitingAttendee,
+    TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
+    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
+    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
+    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
+    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
+    required TResult orElse(),
+  }) {
+    if (didConfirmAttendeesGroup != null) {
+      return didConfirmAttendeesGroup(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DidUpdateAttendeesGroup implements AttendeeFormEvent {
+  const factory _DidUpdateAttendeesGroup(
+          final List<VendorContactDetail> attendees) =
+      _$DidUpdateAttendeesGroupImpl;
+
+  List<VendorContactDetail> get attendees;
+  @JsonKey(ignore: true)
+  _$$DidUpdateAttendeesGroupImplCopyWith<_$DidUpdateAttendeesGroupImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -6542,6 +9934,12 @@ mixin _$AttendeeFormState {
           throw _privateConstructorUsedError;
   Option<Either<AttendeeFormFailure, UserProfileModel>>
       get authFailureOrSuccessPaymentOption =>
+          throw _privateConstructorUsedError;
+  Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>>
+      get authVendorPaymentFailureOrSuccessOption =>
+          throw _privateConstructorUsedError;
+  Option<Either<PaymentMethodValueFailure, List<StripeRefundModel>>>
+      get authRefundFailureOrSuccessOption =>
           throw _privateConstructorUsedError;
   Option<Either<AttendeeFormFailure, Unit>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
@@ -6571,6 +9969,10 @@ abstract class $AttendeeFormStateCopyWith<$Res> {
           authFailureOrSuccessOnHoldTicketOption,
       Option<Either<AttendeeFormFailure, UserProfileModel>>
           authFailureOrSuccessPaymentOption,
+      Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>>
+          authVendorPaymentFailureOrSuccessOption,
+      Option<Either<PaymentMethodValueFailure, List<StripeRefundModel>>>
+          authRefundFailureOrSuccessOption,
       Option<Either<AttendeeFormFailure, Unit>> authFailureOrSuccessOption});
 
   $AttendeeItemCopyWith<$Res> get attendeeItem;
@@ -6602,6 +10004,8 @@ class _$AttendeeFormStateCopyWithImpl<$Res, $Val extends AttendeeFormState>
     Object? authPaymentFailureOrSuccessOption = null,
     Object? authFailureOrSuccessOnHoldTicketOption = null,
     Object? authFailureOrSuccessPaymentOption = null,
+    Object? authVendorPaymentFailureOrSuccessOption = null,
+    Object? authRefundFailureOrSuccessOption = null,
     Object? authFailureOrSuccessOption = null,
   }) {
     return _then(_value.copyWith(
@@ -6648,6 +10052,16 @@ class _$AttendeeFormStateCopyWithImpl<$Res, $Val extends AttendeeFormState>
           ? _value.authFailureOrSuccessPaymentOption
           : authFailureOrSuccessPaymentOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AttendeeFormFailure, UserProfileModel>>,
+      authVendorPaymentFailureOrSuccessOption: null ==
+              authVendorPaymentFailureOrSuccessOption
+          ? _value.authVendorPaymentFailureOrSuccessOption
+          : authVendorPaymentFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>>,
+      authRefundFailureOrSuccessOption: null == authRefundFailureOrSuccessOption
+          ? _value.authRefundFailureOrSuccessOption
+          : authRefundFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<
+                  Either<PaymentMethodValueFailure, List<StripeRefundModel>>>,
       authFailureOrSuccessOption: null == authFailureOrSuccessOption
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -6710,6 +10124,10 @@ abstract class _$$AttendeeFormStateImplCopyWith<$Res>
           authFailureOrSuccessOnHoldTicketOption,
       Option<Either<AttendeeFormFailure, UserProfileModel>>
           authFailureOrSuccessPaymentOption,
+      Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>>
+          authVendorPaymentFailureOrSuccessOption,
+      Option<Either<PaymentMethodValueFailure, List<StripeRefundModel>>>
+          authRefundFailureOrSuccessOption,
       Option<Either<AttendeeFormFailure, Unit>> authFailureOrSuccessOption});
 
   @override
@@ -6743,6 +10161,8 @@ class __$$AttendeeFormStateImplCopyWithImpl<$Res>
     Object? authPaymentFailureOrSuccessOption = null,
     Object? authFailureOrSuccessOnHoldTicketOption = null,
     Object? authFailureOrSuccessPaymentOption = null,
+    Object? authVendorPaymentFailureOrSuccessOption = null,
+    Object? authRefundFailureOrSuccessOption = null,
     Object? authFailureOrSuccessOption = null,
   }) {
     return _then(_$AttendeeFormStateImpl(
@@ -6789,6 +10209,16 @@ class __$$AttendeeFormStateImplCopyWithImpl<$Res>
           ? _value.authFailureOrSuccessPaymentOption
           : authFailureOrSuccessPaymentOption // ignore: cast_nullable_to_non_nullable
               as Option<Either<AttendeeFormFailure, UserProfileModel>>,
+      authVendorPaymentFailureOrSuccessOption: null ==
+              authVendorPaymentFailureOrSuccessOption
+          ? _value.authVendorPaymentFailureOrSuccessOption
+          : authVendorPaymentFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>>,
+      authRefundFailureOrSuccessOption: null == authRefundFailureOrSuccessOption
+          ? _value.authRefundFailureOrSuccessOption
+          : authRefundFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
+              as Option<
+                  Either<PaymentMethodValueFailure, List<StripeRefundModel>>>,
       authFailureOrSuccessOption: null == authFailureOrSuccessOption
           ? _value.authFailureOrSuccessOption
           : authFailureOrSuccessOption // ignore: cast_nullable_to_non_nullable
@@ -6811,6 +10241,8 @@ class _$AttendeeFormStateImpl extends _AttendeeFormState {
       required this.authPaymentFailureOrSuccessOption,
       required this.authFailureOrSuccessOnHoldTicketOption,
       required this.authFailureOrSuccessPaymentOption,
+      required this.authVendorPaymentFailureOrSuccessOption,
+      required this.authRefundFailureOrSuccessOption,
       required this.authFailureOrSuccessOption})
       : super._();
 
@@ -6838,11 +10270,17 @@ class _$AttendeeFormStateImpl extends _AttendeeFormState {
   final Option<Either<AttendeeFormFailure, UserProfileModel>>
       authFailureOrSuccessPaymentOption;
   @override
+  final Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>>
+      authVendorPaymentFailureOrSuccessOption;
+  @override
+  final Option<Either<PaymentMethodValueFailure, List<StripeRefundModel>>>
+      authRefundFailureOrSuccessOption;
+  @override
   final Option<Either<AttendeeFormFailure, Unit>> authFailureOrSuccessOption;
 
   @override
   String toString() {
-    return 'AttendeeFormState(attendeeItem: $attendeeItem, reservation: $reservation, reservationOwner: $reservationOwner, activityForm: $activityForm, isTermsConditionsAccepted: $isTermsConditionsAccepted, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authPaymentFailureOrSuccessOption: $authPaymentFailureOrSuccessOption, authFailureOrSuccessOnHoldTicketOption: $authFailureOrSuccessOnHoldTicketOption, authFailureOrSuccessPaymentOption: $authFailureOrSuccessPaymentOption, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
+    return 'AttendeeFormState(attendeeItem: $attendeeItem, reservation: $reservation, reservationOwner: $reservationOwner, activityForm: $activityForm, isTermsConditionsAccepted: $isTermsConditionsAccepted, isSubmitting: $isSubmitting, showErrorMessages: $showErrorMessages, authPaymentFailureOrSuccessOption: $authPaymentFailureOrSuccessOption, authFailureOrSuccessOnHoldTicketOption: $authFailureOrSuccessOnHoldTicketOption, authFailureOrSuccessPaymentOption: $authFailureOrSuccessPaymentOption, authVendorPaymentFailureOrSuccessOption: $authVendorPaymentFailureOrSuccessOption, authRefundFailureOrSuccessOption: $authRefundFailureOrSuccessOption, authFailureOrSuccessOption: $authFailureOrSuccessOption)';
   }
 
   @override
@@ -6858,15 +10296,13 @@ class _$AttendeeFormStateImpl extends _AttendeeFormState {
                 other.reservationOwner == reservationOwner) &&
             (identical(other.activityForm, activityForm) ||
                 other.activityForm == activityForm) &&
-            (identical(other.isTermsConditionsAccepted,
-                    isTermsConditionsAccepted) ||
+            (identical(other.isTermsConditionsAccepted, isTermsConditionsAccepted) ||
                 other.isTermsConditionsAccepted == isTermsConditionsAccepted) &&
             (identical(other.isSubmitting, isSubmitting) ||
                 other.isSubmitting == isSubmitting) &&
             (identical(other.showErrorMessages, showErrorMessages) ||
                 other.showErrorMessages == showErrorMessages) &&
-            (identical(other.authPaymentFailureOrSuccessOption,
-                    authPaymentFailureOrSuccessOption) ||
+            (identical(other.authPaymentFailureOrSuccessOption, authPaymentFailureOrSuccessOption) ||
                 other.authPaymentFailureOrSuccessOption ==
                     authPaymentFailureOrSuccessOption) &&
             (identical(other.authFailureOrSuccessOnHoldTicketOption,
@@ -6877,10 +10313,16 @@ class _$AttendeeFormStateImpl extends _AttendeeFormState {
                     authFailureOrSuccessPaymentOption) ||
                 other.authFailureOrSuccessPaymentOption ==
                     authFailureOrSuccessPaymentOption) &&
-            (identical(other.authFailureOrSuccessOption,
-                    authFailureOrSuccessOption) ||
-                other.authFailureOrSuccessOption ==
-                    authFailureOrSuccessOption));
+            (identical(other.authVendorPaymentFailureOrSuccessOption,
+                    authVendorPaymentFailureOrSuccessOption) ||
+                other.authVendorPaymentFailureOrSuccessOption ==
+                    authVendorPaymentFailureOrSuccessOption) &&
+            (identical(other.authRefundFailureOrSuccessOption, authRefundFailureOrSuccessOption) ||
+                other.authRefundFailureOrSuccessOption ==
+                    authRefundFailureOrSuccessOption) &&
+            (identical(
+                    other.authFailureOrSuccessOption, authFailureOrSuccessOption) ||
+                other.authFailureOrSuccessOption == authFailureOrSuccessOption));
   }
 
   @override
@@ -6896,6 +10338,8 @@ class _$AttendeeFormStateImpl extends _AttendeeFormState {
       authPaymentFailureOrSuccessOption,
       authFailureOrSuccessOnHoldTicketOption,
       authFailureOrSuccessPaymentOption,
+      authVendorPaymentFailureOrSuccessOption,
+      authRefundFailureOrSuccessOption,
       authFailureOrSuccessOption);
 
   @JsonKey(ignore: true)
@@ -6922,6 +10366,12 @@ abstract class _AttendeeFormState extends AttendeeFormState {
           authFailureOrSuccessOnHoldTicketOption,
       required final Option<Either<AttendeeFormFailure, UserProfileModel>>
           authFailureOrSuccessPaymentOption,
+      required final Option<
+              Either<PaymentMethodValueFailure, List<PaymentIntent>>>
+          authVendorPaymentFailureOrSuccessOption,
+      required final Option<
+              Either<PaymentMethodValueFailure, List<StripeRefundModel>>>
+          authRefundFailureOrSuccessOption,
       required final Option<Either<AttendeeFormFailure, Unit>>
           authFailureOrSuccessOption}) = _$AttendeeFormStateImpl;
   _AttendeeFormState._() : super._();
@@ -6949,6 +10399,12 @@ abstract class _AttendeeFormState extends AttendeeFormState {
   @override
   Option<Either<AttendeeFormFailure, UserProfileModel>>
       get authFailureOrSuccessPaymentOption;
+  @override
+  Option<Either<PaymentMethodValueFailure, List<PaymentIntent>>>
+      get authVendorPaymentFailureOrSuccessOption;
+  @override
+  Option<Either<PaymentMethodValueFailure, List<StripeRefundModel>>>
+      get authRefundFailureOrSuccessOption;
   @override
   Option<Either<AttendeeFormFailure, Unit>> get authFailureOrSuccessOption;
   @override

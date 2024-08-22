@@ -85,9 +85,6 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
   const factory UpdateActivityFormEvent.isOfficiatorProvidedChanged(bool offBool) = _IsOfficiatorProvidedChanged;
 
   const factory UpdateActivityFormEvent.isMerchantSupportedChanged(bool merchBool) = _IsMerchantSupportedChanged;
-  const factory UpdateActivityFormEvent.isMerchantInviteOnlyChanged(bool inviteBool) = _IsMerchantInviteOnlyChanged;
-  const factory UpdateActivityFormEvent.merchantLimitChanged(int merchLimit) = _MerchantLimitChanged;
-  const factory UpdateActivityFormEvent.merchantFeeChanged(int merchFee) = _MerchantFeeChanged;
 
   const factory UpdateActivityFormEvent.isAlcoholForSaleChanged(bool alcBool) = _IsAlcoholForSaleChanged;
   const factory UpdateActivityFormEvent.isFoodForSaleChanged(bool foodBool) = _IsFoodForSaleChanged;

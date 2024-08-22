@@ -5,7 +5,7 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
 
   final facade.AAuthWatcherFacade _aAuthFacade;
 
-  ActivityManagerWatcherBloc(this._aAuthFacade) : super(ActivityManagerWatcherState.initial());
+  ActivityManagerWatcherBloc(this._aAuthFacade) : super(const ActivityManagerWatcherState.activityMInitial());
 
   // StreamSubscription<Either<ActivityFormFailure, ActivityManagerProfile>>? _activityManagerItemStreamSubscription;
   StreamSubscription<Either<ActivityFormFailure, ActivityManagerForm>>? _activityCreatorFormStreamSubscription;
@@ -74,7 +74,9 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
             yield const ActivityManagerWatcherState.loadInProgress();
             _allActivityCreatorFormFromResStreamSubscription?.cancel();
 
-            _allActivityCreatorFormFromResStreamSubscription = _aAuthFacade.watchAllActivityFormsFromRes(reservationIds: e.reservationIds).listen((event) {
+            print('WHAT?');
+            print(e.reservationIds);
+            _allActivityCreatorFormFromResStreamSubscription = _aAuthFacade.watchAllActivityFormsFromRes(reservationIds: e.reservationIds.map((e) => e.getOrCrash()).toList()).listen((event) {
                 return add(ActivityManagerWatcherEvent.activityManagerForsmFromReservationsReceived(event));
             });
           },

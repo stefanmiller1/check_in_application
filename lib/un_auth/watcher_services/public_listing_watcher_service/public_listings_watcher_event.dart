@@ -8,4 +8,8 @@ class PublicListingWatcherEvent with _$PublicListingWatcherEvent {
 
   const factory PublicListingWatcherEvent.watchAllPublicListingsSearchStarted(List<ManagerListingStatusType> status, String? city, String? stateProvince, bool? isVerified) = _WatchAllPublicListingsSearchStarted;
   const factory PublicListingWatcherEvent.allSearchedListingItemsReceived(Either<ListingFormFailure, List<ListingManagerForm>> failedItems) = _AllSearchedListingItemsReceived;
+
+  const factory PublicListingWatcherEvent.watchSelectedUsersPublicListingsStarted(List<ManagerListingStatusType> status, String? userId, bool? isVerified) = _WatchSelectedUsersPublicListingsStarted;
+  const factory PublicListingWatcherEvent.allSelectedUsersListingsReceived(Either<ListingFormFailure, List<ListingManagerForm>> failedItems) = _AllSelectedUsersListingsReceived;
+
 }

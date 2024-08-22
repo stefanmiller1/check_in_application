@@ -15,4 +15,6 @@ class VendorMerchProfileWatcherState with _$VendorMerchProfileWatcherState {
   const factory VendorMerchProfileWatcherState.loadCurrentPartnersVMSuccess(List<UniqueId> items) = _LoadCurrentPartnersVMSuccess;
   const factory VendorMerchProfileWatcherState.loadCurrentPartnersVMFailure(ProfileValueFailure failure) = _LoadCurrentPartnersVMFailure;
 
+  const factory VendorMerchProfileWatcherState.loadAllMerchVendorFromIdsSuccess(List<EventMerchantVendorProfile> items) = _LoadAllMerchVendorFromIdsSuccess;
+  const factory VendorMerchProfileWatcherState.loadAllMerchVendorFromIdsFailure(ProfileValueFailure failure) = _LoadAllMerchVendorFromIdsFailure;
 }

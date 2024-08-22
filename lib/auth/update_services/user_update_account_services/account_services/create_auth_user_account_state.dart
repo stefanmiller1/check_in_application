@@ -13,7 +13,7 @@ class CreateAuthUserAccountState with _$CreateAuthUserAccountState {
       required AutovalidateMode showErrorMessages,
       required bool isSubmitting,
       required bool isEditing,
-      required Option<Either<AuthFailure, Unit>> authFailureOrSuccessOption,
+      required Option<Either<AuthFailure, bool>> authFailureOrSuccessOption,
       required Option<Either<AuthFailure, Unit>> authEmailFailOrSuccessOption,
   }) = _CreateAuthUserAccountState;
 

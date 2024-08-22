@@ -13,12 +13,14 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
   StreamSubscription<Either<AuthFailure, UserProfileModel>>? _userProfileFromEmailSubscription;
   StreamSubscription<Either<AuthFailure, List<UserProfileModel>>>? _allUserProfileStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<ProfileSession>>>? _userProfileSessionStreamSubscription;
+  StreamSubscription<Either<AuthFailure, List<UserProfileModel>>>? _allUserProfileFromIdstreamSubscription;
 
   StreamSubscription<Either<AuthFailure, ProfileNotificationItems>>? _userNotificationStreamSubscription;
   StreamSubscription<Either<AuthFailure, SocialsItem>>? _userSocialsStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<LocationModel>>>? _userLocationsStreamSubscription;
   StreamSubscription<Either<AuthFailure, List<UserProfileModel>>>? _searchUserProfilesStreamSubscription;
   StreamSubscription<Either<AttendeeFormFailure, List<AttendeeItem>>>? _userAttendingResStreamSubscription;
+
 
   @override
   Stream<UserProfileWatcherState> mapEventToState(
@@ -34,7 +36,7 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
             _userProfileStreamSubscription = _authFacade.watchUserProfile().listen((failedProfile) {
                 return add(UserProfileWatcherEvent.userProfileReceived(failedProfile));
             });
-          
+
         },
 
         userProfileReceived: (e) async* {
@@ -63,8 +65,8 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
 
         selectedUserProfileReceived: (e) async* {
           yield e.failedProfile.fold(
-                  (f) => UserProfileWatcherState.loadSelectedProfileFailure(f),
-                  (r) => UserProfileWatcherState.loadSelectedProfileSuccess(r)
+              (f) => UserProfileWatcherState.loadSelectedProfileFailure(f),
+              (r) => UserProfileWatcherState.loadSelectedProfileSuccess(r)
           );
         },
 
@@ -193,7 +195,7 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
           yield const UserProfileWatcherState.loadInProgress();
           await _userAttendingResStreamSubscription?.cancel();
 
-          _userAttendingResStreamSubscription = _attendeeFacade.watchUserProfileAttending(status: e.status, attendingType: e.attendingType, limit: e.limit).listen((event) {
+          _userAttendingResStreamSubscription = _attendeeFacade.watchUserProfileAttending(status: e.status, attendingType: e.attendingType, limit: e.limit, userId: e.userId).listen((event) {
             return add(UserProfileWatcherEvent.profileAllAttendingResReceived(event));
           });
         },
@@ -204,6 +206,26 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
                   (r) => UserProfileWatcherState.loadProfileAttendingResSuccess(r)
         );
       },
+
+       watchAllProfileFromUserIdsStarted: (e) async* {
+          yield const UserProfileWatcherState.loadInProgress();
+
+          await _allUserProfileFromIdstreamSubscription?.cancel();
+
+          _allUserProfileFromIdstreamSubscription = _authFacade.watchAllUsersFromUserList(userIds: e.userIds).listen((event) {
+              return add(UserProfileWatcherEvent.allProfilesFromUserIdsReceived(event));
+          });
+       },
+
+       allProfilesFromUserIdsReceived: (e) async* {
+          yield e.failedItems.fold(
+              (f) => UserProfileWatcherState.loadAllProfileFromIdsFailure(f),
+              (r) => UserProfileWatcherState.loadAllProfileFromIdsSuccess(r)
+          );
+
+       },
+
+
     );
   }
 }

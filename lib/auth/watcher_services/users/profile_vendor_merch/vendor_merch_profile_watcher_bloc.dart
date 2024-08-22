@@ -10,6 +10,7 @@ class VendorMerchProfileWatcherBloc extends Bloc<VendorMerchProfileWatcherEvent,
   StreamSubscription<Either<ProfileValueFailure, EventMerchantVendorProfile>>? _watchEventMerchProfileStreamSubscription;
   StreamSubscription<Either<ProfileValueFailure, List<EventMerchantVendorProfile>>>? _watchCurrentUsersMerchVendorListSubscription;
   StreamSubscription<Either<ProfileValueFailure, List<UniqueId>>>? _watchCurrentPartnersMerchVendorsSubscription;
+  StreamSubscription<Either<ProfileValueFailure, List<EventMerchantVendorProfile>>>? _watchAllEventMerchProfileFromIdsStreamSubscription;
 
   @override
   Stream<VendorMerchProfileWatcherState> mapEventToState(
@@ -63,6 +64,22 @@ class VendorMerchProfileWatcherBloc extends Bloc<VendorMerchProfileWatcherEvent,
           yield e.failedItems.fold(
                   (f) => VendorMerchProfileWatcherState.loadCurrentPartnersVMFailure(f),
                   (r) => VendorMerchProfileWatcherState.loadCurrentPartnersVMSuccess(r)
+          );
+        },
+
+        watchAllEventMerchProfileFromIds: (e) async* {
+          yield const VendorMerchProfileWatcherState.vmLoadInProgress();
+
+          await _watchAllEventMerchProfileFromIdsStreamSubscription?.cancel();
+          _watchAllEventMerchProfileFromIdsStreamSubscription = _mvAuthWatcherFacade.watchAllEventMerchProfiles(profileIds: e.profileIds).listen((event) {
+            return add(VendorMerchProfileWatcherEvent.allEventMerchProfilesFromIdsReceived(event));
+          });
+        },
+
+        allEventMerchProfilesFromIdsReceived: (e) async* {
+          yield e.failedItem.fold(
+                  (f) => VendorMerchProfileWatcherState.loadAllMerchVendorFromIdsFailure(f),
+                  (r) => VendorMerchProfileWatcherState.loadAllMerchVendorFromIdsSuccess(r)
           );
         }
     );

@@ -22,8 +22,6 @@ class AttendeeFormEvent with _$AttendeeFormEvent {
   /// fill out form for organization/partner
   /// fill out form for ticket
   /// fill out form for passes
-
-
   const factory AttendeeFormEvent.createPaymentIntentForAttendee(UserProfileModel profile, String amount, String currency, String? paymentMethod) = _CreatePaymentIntentForAttendee;
   const factory AttendeeFormEvent.createAttendeeFormForReservation(String paymentIntentId) = _CreateAttendeeFormForReservation;
 
@@ -31,13 +29,19 @@ class AttendeeFormEvent with _$AttendeeFormEvent {
   const factory AttendeeFormEvent.checkTicketLimits(UserProfileModel currentUserProfile) = _CheckTicketLimits;
   const factory AttendeeFormEvent.createTicketsOnHold() = _CreateTicketsOnHold;
   const factory AttendeeFormEvent.checkVendorLimits(UserProfileModel currentUserProfile) = _CheckVendorLimits;
+
   const factory AttendeeFormEvent.isFinishedCreatingTicketAttendeeWeb(String paymentIntentId) = _IsFinishedCreatingTicketAttendeeWeb;
   const factory AttendeeFormEvent.isFinishedCreatingTicketAttendee(UserProfileModel profile, String amount, String currency, String? paymentMethod) = _IsFinishedCreatingTicketAttendee;
 
+  const factory AttendeeFormEvent.isFinishedCreatingVendorAttendee(UserProfileModel profile, String currency, String? paymentMethod, StripeTaxRateDetails? taxRateDetail, String? taxCalculationId) = _IsFinishedCreatingVendorAttendee;
 
   const factory AttendeeFormEvent.isFinishedCreatingAttendee(UserProfileModel profile, String amount, String currency, String? paymentMethod) = _IsFinishedCreatingAttendee;
   const factory AttendeeFormEvent.isFinishedInvitingAttendee() = _IsFinishedInvitingAttendee;
 
   const factory AttendeeFormEvent.didDeleteAttendee() = _DidDeleteAttendee;
+  const factory AttendeeFormEvent.didRejectAttendeesGroup(List<VendorContactDetail> attendees) = _DidRejectAttendeesGroup;
+  const factory AttendeeFormEvent.didCancelAttendeesGroup(List<VendorContactDetail> attendees) = _DidCancelAttendeesGroup;
+  const factory AttendeeFormEvent.didRefundAttendeesGroup(List<VendorContactDetail> attendees) = _DidRefundAttendeesGroup;
+  const factory AttendeeFormEvent.didConfirmAttendeesGroup(List<VendorContactDetail> attendees) = _DidUpdateAttendeesGroup;
 
 }

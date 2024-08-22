@@ -6,6 +6,7 @@ import 'package:check_in_domain/domain/misc/attendee_services/attendee_item/atte
 import 'package:dartz/dartz.dart';
 import 'package:check_in_credentials/check_in_credentials.dart';
 import 'package:check_in_domain/check_in_domain.dart';
+import 'package:check_in_domain/domain/misc/stripe/business_address_service/stripe_business_address.dart';
 import 'package:check_in_facade/check_in_facade.dart' as facade;
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

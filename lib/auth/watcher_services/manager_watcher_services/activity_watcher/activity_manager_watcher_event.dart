@@ -6,7 +6,7 @@ class ActivityManagerWatcherEvent with _$ActivityManagerWatcherEvent {
   // const factory ActivityManagerWatcherEvent.watchActivityManagerItemStarted(String activityId) = _WatchActivityManagerItemStarted;
   // const factory ActivityManagerWatcherEvent.activityManagerItemReceived(Either<ActivityFormFailure, ActivityManagerProfile> failedItems) = _ActivityManagerItemReceived;
 
-  const factory ActivityManagerWatcherEvent.watchActivityManagerFromReservations(List<String> reservationIds) = _WatchActivityManagerFromReservations;
+  const factory ActivityManagerWatcherEvent.watchActivityManagerFromReservations(List<UniqueId> reservationIds) = _WatchActivityManagerFromReservations;
   const factory ActivityManagerWatcherEvent.activityManagerForsmFromReservationsReceived(Either<ActivityFormFailure, List<ActivityManagerForm>> failedItems) = _ActivityManagerForsmFromReservationsReceived;
 
   const factory ActivityManagerWatcherEvent.watchActivityManagerFormStarted(String activityId) = _WatchActivityCreatorFormStarted;

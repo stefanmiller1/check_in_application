@@ -5,7 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:check_in_domain/domain/misc/attendee_services/attendee_item/attendee_item.dart';
+import 'package:check_in_domain/domain/misc/filter_services/vendor_contact_filter_model.dart';
+import 'package:check_in_domain/domain/misc/stripe/business_address_service/stripe_business_address.dart';
 import 'package:injectable/injectable.dart';
+import 'package:check_in_domain/domain/misc/stripe/tax_calculation/stripe_tax_calculation.dart';
 
 part 'listing_attendee_form_event.dart';
 part 'listing_attendee_form_state.dart';
@@ -88,7 +91,9 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
             yield state.copyWith(
               attendeeItem: state.attendeeItem.copyWith(
                   vendorForm: e.form
-              )
+              ),
+              authVendorPaymentFailureOrSuccessOption: none(),
+              authFailureOrSuccessOption: none(),
             );
         },
 
@@ -96,7 +101,9 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           yield state.copyWith(
             attendeeItem: state.attendeeItem.copyWith(
               eventMerchantVendorProfile: e.merchVendorProfile
-            )
+            ),
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
           );
         },
 
@@ -137,9 +144,12 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           );
 
           failureOrSuccess = await _attFacade.createNewAttendee(
+              activityOwner: state.reservationOwner,
               attendeeItem: state.attendeeItem,
               activityForm: state.activityForm,
-              paymentIntentId: null);
+              paymentIntentId: null,
+              payments: null
+          );
 
           yield state.copyWith(
               isSubmitting: false,
@@ -233,9 +243,12 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
 
           failureOrSuccess = await _attFacade.createNewAttendee(
+                  activityOwner: state.reservationOwner,
                   attendeeItem: state.attendeeItem,
                   activityForm: state.activityForm,
-                  paymentIntentId: e.paymentIntentId);
+                  paymentIntentId: e.paymentIntentId,
+                  payments: null
+          );
 
 
           failureOrSuccess = await _attFacade.createNewTicket(
@@ -295,9 +308,11 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           failureOrSuccess = await failurePaymentClientFailureOrSuccess.fold(
                   (l) => left(const AttendeeFormFailure.attendeeWaitingForPaymentConfirmation()),
                   (r) => _attFacade.createNewAttendee(
+                      activityOwner: state.reservationOwner,
                       attendeeItem: state.attendeeItem,
                       activityForm: state.activityForm,
-                      paymentIntentId: r.stringItemTwo
+                      paymentIntentId: r.stringItemTwo,
+                      payments: null
           ));
 
           failureOrSuccess = await failurePaymentClientFailureOrSuccess.fold(
@@ -308,8 +323,6 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
                             isOnHold: false
                           )
                         );
-
-
 
           yield state.copyWith(
             authPaymentFailureOrSuccessOption: optionOf(failurePaymentClientFailureOrSuccess),
@@ -347,9 +360,11 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
 
           failureOrSuccess = state.isSubmitting ?
           await _attFacade.createNewAttendee(
+              activityOwner: state.reservationOwner,
               attendeeItem: state.attendeeItem,
               activityForm: state.activityForm,
-              paymentIntentId: null
+              paymentIntentId: null,
+              payments: null
           ) : left(const AttendeeFormFailure.attendeeServerError(failed: 'cannot invite new attendee'));
 
           yield state.copyWith(
@@ -375,6 +390,337 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
             authFailureOrSuccessOption: optionOf(failureOrSuccess)
         );
 
+      },
+
+      didRefundAttendeesGroup: (e) async* {
+        Either<PaymentMethodValueFailure, List<StripeRefundModel>> refundFailureOrSuccess;
+        Either<AttendeeFormFailure, Unit> failureOrSuccess;
+
+
+        final paymentOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent != null && element.boothItem.status == AvailabilityStatus.confirmed).toList();
+        final freeOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent == null && element.boothItem.status == AvailabilityStatus.confirmed).toList();
+
+        /// 1. submit if payment confirmation exists?
+        /// 2. submit for non-payment options
+        if (paymentOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authRefundFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          refundFailureOrSuccess = await _stripeFacade.refundExistingStripePayment(
+              payments: e.attendees.where((element) => element.boothItem.stripePaymentIntent != null).toList().map((e) => e.boothItem.stripePaymentIntent!).toList(),
+              refundAmount: null
+          );
+
+          failureOrSuccess = await refundFailureOrSuccess.fold(
+                  (l) =>  l.maybeMap(
+                paymentCaptureFailure: (intent) => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Cancel Payment')),
+                orElse: () => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Cancel Payment')),
+              ),
+                  (r) => _attFacade.updateVendorBoothStatus(
+                  attendeeItems: paymentOptions,
+                  activityOwner: state.reservationOwner,
+                  status: AvailabilityStatus.refunded,
+                  activityForm: state.activityForm,
+                  payments: null,
+            )
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authRefundFailureOrSuccessOption: optionOf(refundFailureOrSuccess),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess),
+          );
+        }
+
+
+        if (freeOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authRefundFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          failureOrSuccess = await _attFacade.updateVendorBoothStatus(
+              attendeeItems: freeOptions,
+              activityOwner: state.reservationOwner,
+              status: AvailabilityStatus.refunded,
+              activityForm: state.activityForm,
+              payments: null
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authRefundFailureOrSuccessOption: none(),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+        }
+      },
+
+      didCancelAttendeesGroup: (e) async* {
+        Either<PaymentMethodValueFailure, List<PaymentIntent>> payFailureOrSuccess;
+        Either<AttendeeFormFailure, Unit> failureOrSuccess;
+
+
+        final paymentOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent != null && element.boothItem.status == AvailabilityStatus.requested).toList();
+        final freeOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent == null && element.boothItem.status == AvailabilityStatus.requested).toList();
+
+        /// 1. submit if payment confirmation exists?
+        /// 2. submit for non-payment options
+        if (paymentOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          payFailureOrSuccess = await _stripeFacade.cancelPaymentIntent(
+              payments: e.attendees.where((element) => element.boothItem.stripePaymentIntent != null).toList().map((e) => e.boothItem.stripePaymentIntent!).toList()
+          );
+
+          failureOrSuccess = await payFailureOrSuccess.fold(
+                  (l) =>  l.maybeMap(
+                paymentCaptureFailure: (intent) => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Cancel Payment')),
+                orElse: () => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Cancel Payment')),
+              ),
+                  (r) => _attFacade.updateVendorBoothStatus(
+                  attendeeItems: paymentOptions,
+                  activityOwner: state.reservationOwner,
+                  status: AvailabilityStatus.cancelled,
+                  activityForm: state.activityForm,
+                  payments: r
+              )
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authVendorPaymentFailureOrSuccessOption: optionOf(payFailureOrSuccess),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess),
+          );
+        }
+
+
+        if (freeOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          failureOrSuccess = await _attFacade.updateVendorBoothStatus(
+              attendeeItems: freeOptions,
+              activityOwner: state.reservationOwner,
+              status: AvailabilityStatus.cancelled,
+              activityForm: state.activityForm,
+              payments: null
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authVendorPaymentFailureOrSuccessOption: none(),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+        }
+      },
+
+      didRejectAttendeesGroup: (e) async* {
+        Either<PaymentMethodValueFailure, List<PaymentIntent>> payFailureOrSuccess;
+        Either<AttendeeFormFailure, Unit> failureOrSuccess;
+
+        final paymentOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent != null && element.boothItem.status == AvailabilityStatus.requested).toList();
+        final freeOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent == null && element.boothItem.status == AvailabilityStatus.requested).toList();
+
+        /// 1. submit if payment confirmation exists?
+        /// 2. submit for non-payment options
+        if (paymentOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          payFailureOrSuccess = await _stripeFacade.cancelPaymentIntent(
+              payments: e.attendees.where((element) => element.boothItem.stripePaymentIntent != null).toList().map((e) => e.boothItem.stripePaymentIntent!).toList()
+          );
+
+          failureOrSuccess = await payFailureOrSuccess.fold(
+                  (l) =>  l.maybeMap(
+                paymentCaptureFailure: (intent) => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Cancel Payment')),
+                orElse: () => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Cancel Payment')),
+              ),
+                  (r) => _attFacade.updateVendorBoothStatus(
+                  attendeeItems: paymentOptions,
+                  activityOwner: state.reservationOwner,
+                  status: AvailabilityStatus.denied,
+                  activityForm: state.activityForm,
+                  payments: r
+              )
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authVendorPaymentFailureOrSuccessOption: optionOf(payFailureOrSuccess),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess),
+          );
+        }
+
+
+        if (freeOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          failureOrSuccess = await _attFacade.updateVendorBoothStatus(
+              attendeeItems: freeOptions,
+              activityOwner: state.reservationOwner,
+              status: AvailabilityStatus.denied,
+              activityForm: state.activityForm,
+              payments: null
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authVendorPaymentFailureOrSuccessOption: none(),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+        }
+
+      },
+
+      didConfirmAttendeesGroup: (e) async* {
+        Either<PaymentMethodValueFailure, List<PaymentIntent>> payFailureOrSuccess;
+        Either<AttendeeFormFailure, Unit> failureOrSuccess;
+
+
+        final paymentOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent != null && element.boothItem.status == AvailabilityStatus.requested).toList();
+        final freeOptions = e.attendees.where((element) => element.boothItem.stripePaymentIntent == null && element.boothItem.status == AvailabilityStatus.requested).toList();
+
+        /// 1. submit if payment confirmation exists?
+        /// 2. submit for non-payment options
+        if (paymentOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          payFailureOrSuccess = await _stripeFacade.processAndCapturePayments(
+              payments: e.attendees.where(
+                      (element) => element.boothItem.stripePaymentIntent != null).toList().map((e) => e.boothItem.stripePaymentIntent!).toList()
+            );
+
+          failureOrSuccess = await payFailureOrSuccess.fold(
+                (l) =>  l.maybeMap(
+                    paymentCaptureFailure: (intent) => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Capture Payment')),
+                    orElse: () => left(const AttendeeFormFailure.attendeeServerError(failed: 'Could Not Capture Payment')),
+                ),
+                (r) => _attFacade.updateVendorBoothStatus(
+                    attendeeItems: paymentOptions,
+                    activityOwner: state.reservationOwner,
+                    status: AvailabilityStatus.confirmed,
+                    activityForm: state.activityForm,
+                    payments: r
+              )
+            );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authVendorPaymentFailureOrSuccessOption: optionOf(payFailureOrSuccess),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess),
+          );
+        }
+
+
+
+        if (freeOptions.isNotEmpty) {
+          yield state.copyWith(
+            isSubmitting: true,
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: none(),
+          );
+
+          failureOrSuccess = await _attFacade.updateVendorBoothStatus(
+              attendeeItems: freeOptions,
+              activityOwner: state.reservationOwner,
+              status: AvailabilityStatus.confirmed,
+              activityForm: state.activityForm,
+              payments: null
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authVendorPaymentFailureOrSuccessOption: none(),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+        }
+      },
+
+
+      isFinishedCreatingVendorAttendee: (e) async* {
+        Either<PaymentMethodValueFailure, List<PaymentIntent>> payFailureOrSuccess;
+        Either<AttendeeFormFailure, Unit> failureOrSuccess;
+
+        yield state.copyWith(
+          isSubmitting: true,
+          authVendorPaymentFailureOrSuccessOption: none(),
+          authFailureOrSuccessOption: none(),
+        );
+
+
+        /// 1. is submission fee requiring
+        if (activityRequiresVendorFee(state.attendeeItem.vendorForm) && e.paymentMethod != null) {
+          /// go through and hold payment using provided payment method
+          payFailureOrSuccess = await _stripeFacade.processAndHoldPayment(
+                  userProfile: e.profile,
+                  stripeSellerAccountId: state.reservationOwner.stripeAccountId,
+                  activityId: state.reservation.reservationId,
+                  amounts: state.attendeeItem.vendorForm?.boothPaymentOptions ?? [],
+                  currency: e.currency,
+                  paymentMethod: e.paymentMethod!,
+                  description: 'Vendor Application Fees',
+                  taxCalculationId: e.taxCalculationId,
+                  taxRateDetail: e.taxRateDetail
+          );
+
+          /// 2. save attendee item with payment intent for each paid item
+          failureOrSuccess = await payFailureOrSuccess.fold(
+                  (l) => left(const AttendeeFormFailure.attendeeWaitingForPaymentConfirmation()),
+                  (r) => _attFacade.createNewAttendee(
+                  activityOwner: state.reservationOwner,
+                  attendeeItem: state.attendeeItem,
+                  activityForm: state.activityForm,
+                  paymentIntentId: null,
+                  payments: r
+              )
+          );
+
+          yield state.copyWith(
+              isSubmitting: false,
+              authVendorPaymentFailureOrSuccessOption: optionOf(payFailureOrSuccess),
+              authFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+
+        /// 3. if not fee based save new attendee
+        } else {
+
+          failureOrSuccess = await _attFacade.createNewAttendee(
+            activityOwner: state.reservationOwner,
+            attendeeItem: state.attendeeItem,
+            activityForm: state.activityForm,
+            paymentIntentId: null,
+            payments: null
+          );
+
+          yield state.copyWith(
+            isSubmitting: false,
+            authVendorPaymentFailureOrSuccessOption: none(),
+            authFailureOrSuccessOption: optionOf(failureOrSuccess)
+          );
+        }
       },
     );
   }
