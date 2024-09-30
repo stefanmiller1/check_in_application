@@ -9,6 +9,7 @@ import 'package:check_in_domain/domain/misc/filter_services/vendor_contact_filte
 import 'package:check_in_domain/domain/misc/stripe/business_address_service/stripe_business_address.dart';
 import 'package:injectable/injectable.dart';
 import 'package:check_in_domain/domain/misc/stripe/tax_calculation/stripe_tax_calculation.dart';
+import 'package:check_in_domain/domain/misc/discount_code_service/discount_code_item.dart';
 
 part 'listing_attendee_form_event.dart';
 part 'listing_attendee_form_state.dart';
@@ -683,7 +684,8 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
                   paymentMethod: e.paymentMethod!,
                   description: 'Vendor Application Fees',
                   taxCalculationId: e.taxCalculationId,
-                  taxRateDetail: e.taxRateDetail
+                  taxRateDetail: e.taxRateDetail,
+                  discount: e.discount
           );
 
           /// 2. save attendee item with payment intent for each paid item

@@ -36,7 +36,12 @@ class NotificationWatcherBloc extends Bloc<NotificationWatcherEvent, Notificatio
 
     );
 
+  }
 
+  @override
+  Future<void> close() {
+    _accountNotificationSubscription?.cancel();
+    return super.close();
   }
 
 

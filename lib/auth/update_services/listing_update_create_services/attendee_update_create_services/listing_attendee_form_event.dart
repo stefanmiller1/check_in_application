@@ -33,7 +33,7 @@ class AttendeeFormEvent with _$AttendeeFormEvent {
   const factory AttendeeFormEvent.isFinishedCreatingTicketAttendeeWeb(String paymentIntentId) = _IsFinishedCreatingTicketAttendeeWeb;
   const factory AttendeeFormEvent.isFinishedCreatingTicketAttendee(UserProfileModel profile, String amount, String currency, String? paymentMethod) = _IsFinishedCreatingTicketAttendee;
 
-  const factory AttendeeFormEvent.isFinishedCreatingVendorAttendee(UserProfileModel profile, String currency, String? paymentMethod, StripeTaxRateDetails? taxRateDetail, String? taxCalculationId) = _IsFinishedCreatingVendorAttendee;
+  const factory AttendeeFormEvent.isFinishedCreatingVendorAttendee(UserProfileModel profile, String currency, CardItem? paymentMethod, DiscountCode? discount, StripeTaxRateDetails? taxRateDetail, String? taxCalculationId) = _IsFinishedCreatingVendorAttendee;
 
   const factory AttendeeFormEvent.isFinishedCreatingAttendee(UserProfileModel profile, String amount, String currency, String? paymentMethod) = _IsFinishedCreatingAttendee;
   const factory AttendeeFormEvent.isFinishedInvitingAttendee() = _IsFinishedInvitingAttendee;

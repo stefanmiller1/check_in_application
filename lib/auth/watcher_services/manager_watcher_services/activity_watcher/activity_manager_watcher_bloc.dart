@@ -74,8 +74,6 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
             yield const ActivityManagerWatcherState.loadInProgress();
             _allActivityCreatorFormFromResStreamSubscription?.cancel();
 
-            print('WHAT?');
-            print(e.reservationIds);
             _allActivityCreatorFormFromResStreamSubscription = _aAuthFacade.watchAllActivityFormsFromRes(reservationIds: e.reservationIds.map((e) => e.getOrCrash()).toList()).listen((event) {
                 return add(ActivityManagerWatcherEvent.activityManagerForsmFromReservationsReceived(event));
             });
@@ -90,6 +88,14 @@ class ActivityManagerWatcherBloc extends Bloc<ActivityManagerWatcherEvent, Activ
           }
       );
 
+  }
+
+  @override
+  Future<void> close() {
+    _activityCreatorFormStreamSubscription?.cancel();
+    _allActivityCreatorFormsStreamSubscription?.cancel();
+    _allActivityCreatorFormFromResStreamSubscription?.cancel();
+    return super.close();
   }
 
 }

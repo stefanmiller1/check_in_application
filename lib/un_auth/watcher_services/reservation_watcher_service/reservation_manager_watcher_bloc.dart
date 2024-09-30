@@ -113,4 +113,15 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
 
     );
   }
+
+  @override
+  Future<void> close() {
+    // Dispose of the stream subscription when the bloc is closed
+     _reservationsListStreamSubscription?.cancel();
+     _currentUserReservationsListStreamSubscription?.cancel();
+     _reservationPostListStreamSubscription?.cancel();
+     _reservationItemSubscription?.cancel();
+     _reservationDiscoveryListStreamSubscription?.cancel();
+    return super.close();
+  }
 }

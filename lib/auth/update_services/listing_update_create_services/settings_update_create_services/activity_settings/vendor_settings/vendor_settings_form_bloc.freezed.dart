@@ -21,6 +21,7 @@ mixin _$VendorSettingsFormEvent {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -31,6 +32,8 @@ mixin _$VendorSettingsFormEvent {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -40,6 +43,7 @@ mixin _$VendorSettingsFormEvent {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -50,6 +54,8 @@ mixin _$VendorSettingsFormEvent {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -59,6 +65,7 @@ mixin _$VendorSettingsFormEvent {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -69,6 +76,8 @@ mixin _$VendorSettingsFormEvent {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -78,6 +87,7 @@ mixin _$VendorSettingsFormEvent {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -90,6 +100,8 @@ mixin _$VendorSettingsFormEvent {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -98,6 +110,7 @@ mixin _$VendorSettingsFormEvent {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -108,6 +121,8 @@ mixin _$VendorSettingsFormEvent {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -116,6 +131,7 @@ mixin _$VendorSettingsFormEvent {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -126,6 +142,8 @@ mixin _$VendorSettingsFormEvent {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -224,6 +242,7 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -234,6 +253,8 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -246,6 +267,7 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -256,6 +278,8 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -268,6 +292,7 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -278,6 +303,8 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -293,6 +320,7 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -305,6 +333,8 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -316,6 +346,7 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -326,6 +357,8 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -337,6 +370,7 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -347,6 +381,8 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -367,6 +403,238 @@ abstract class _InitialVendorForm implements VendorSettingsFormEvent {
   Option<VendorMerchantForm> get initializeVendorMerchantForm;
   @JsonKey(ignore: true)
   _$$InitialVendorFormImplCopyWith<_$InitialVendorFormImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DidChangeFormTitleImplCopyWith<$Res> {
+  factory _$$DidChangeFormTitleImplCopyWith(_$DidChangeFormTitleImpl value,
+          $Res Function(_$DidChangeFormTitleImpl) then) =
+      __$$DidChangeFormTitleImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String? title});
+}
+
+/// @nodoc
+class __$$DidChangeFormTitleImplCopyWithImpl<$Res>
+    extends _$VendorSettingsFormEventCopyWithImpl<$Res,
+        _$DidChangeFormTitleImpl>
+    implements _$$DidChangeFormTitleImplCopyWith<$Res> {
+  __$$DidChangeFormTitleImplCopyWithImpl(_$DidChangeFormTitleImpl _value,
+      $Res Function(_$DidChangeFormTitleImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? title = freezed,
+  }) {
+    return _then(_$DidChangeFormTitleImpl(
+      freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DidChangeFormTitleImpl implements _DidChangeFormTitle {
+  const _$DidChangeFormTitleImpl(this.title);
+
+  @override
+  final String? title;
+
+  @override
+  String toString() {
+    return 'VendorSettingsFormEvent.didChangeFormTitle(title: $title)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DidChangeFormTitleImpl &&
+            (identical(other.title, title) || other.title == title));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, title);
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DidChangeFormTitleImplCopyWith<_$DidChangeFormTitleImpl> get copyWith =>
+      __$$DidChangeFormTitleImplCopyWithImpl<_$DidChangeFormTitleImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<VendorMerchantForm> initializeVendorMerchantForm)
+        initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
+    required TResult Function(String? message) didChangeWelcomeMessage,
+    required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
+    required TResult Function(List<MCCustomAvailability>? availability)
+        didChangeAvailableTimeOption,
+    required TResult Function(List<MVBoothPayments>? booths)
+        didChangeBoothPaymentOptions,
+    required TResult Function(List<MVCustomOption>? customOptions)
+        didChangeCustomOptions,
+    required TResult Function(List<MVCustomOption>? disclaimerOptions)
+        didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
+    required TResult Function(FormStatus status) didChangeFormStatus,
+    required TResult Function() didFinishSaving,
+    required TResult Function(ReservationItem? resItem) didFinishPublishing,
+  }) {
+    return didChangeFormTitle(title);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
+        initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
+    TResult? Function(String? message)? didChangeWelcomeMessage,
+    TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
+    TResult? Function(List<MCCustomAvailability>? availability)?
+        didChangeAvailableTimeOption,
+    TResult? Function(List<MVBoothPayments>? booths)?
+        didChangeBoothPaymentOptions,
+    TResult? Function(List<MVCustomOption>? customOptions)?
+        didChangeCustomOptions,
+    TResult? Function(List<MVCustomOption>? disclaimerOptions)?
+        didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
+    TResult? Function(FormStatus status)? didChangeFormStatus,
+    TResult? Function()? didFinishSaving,
+    TResult? Function(ReservationItem? resItem)? didFinishPublishing,
+  }) {
+    return didChangeFormTitle?.call(title);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
+        initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
+    TResult Function(String? message)? didChangeWelcomeMessage,
+    TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
+    TResult Function(List<MCCustomAvailability>? availability)?
+        didChangeAvailableTimeOption,
+    TResult Function(List<MVBoothPayments>? booths)?
+        didChangeBoothPaymentOptions,
+    TResult Function(List<MVCustomOption>? customOptions)?
+        didChangeCustomOptions,
+    TResult Function(List<MVCustomOption>? disclaimerOptions)?
+        didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
+    TResult Function(FormStatus status)? didChangeFormStatus,
+    TResult Function()? didFinishSaving,
+    TResult Function(ReservationItem? resItem)? didFinishPublishing,
+    required TResult orElse(),
+  }) {
+    if (didChangeFormTitle != null) {
+      return didChangeFormTitle(title);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
+    required TResult Function(_DidChangeWelcomeMessage value)
+        didChangeWelcomeMessage,
+    required TResult Function(_DidChangeFormStartEndDates value)
+        didChangeFormStartEndDates,
+    required TResult Function(_DidChangeAvailableTimeOption value)
+        didChangeAvailableTimeOption,
+    required TResult Function(_DidChangeBoothPaymentOptions value)
+        didChangeBoothPaymentOptions,
+    required TResult Function(_DidChangeCustomOptions value)
+        didChangeCustomOptions,
+    required TResult Function(_DidChangeDisclaimerOptions value)
+        didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
+    required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
+    required TResult Function(_DidFinishSaving value) didFinishSaving,
+    required TResult Function(_DidFinishPublishing value) didFinishPublishing,
+  }) {
+    return didChangeFormTitle(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
+    TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
+    TResult? Function(_DidChangeFormStartEndDates value)?
+        didChangeFormStartEndDates,
+    TResult? Function(_DidChangeAvailableTimeOption value)?
+        didChangeAvailableTimeOption,
+    TResult? Function(_DidChangeBoothPaymentOptions value)?
+        didChangeBoothPaymentOptions,
+    TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
+    TResult? Function(_DidChangeDisclaimerOptions value)?
+        didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
+    TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
+    TResult? Function(_DidFinishSaving value)? didFinishSaving,
+    TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
+  }) {
+    return didChangeFormTitle?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
+    TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
+    TResult Function(_DidChangeFormStartEndDates value)?
+        didChangeFormStartEndDates,
+    TResult Function(_DidChangeAvailableTimeOption value)?
+        didChangeAvailableTimeOption,
+    TResult Function(_DidChangeBoothPaymentOptions value)?
+        didChangeBoothPaymentOptions,
+    TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
+    TResult Function(_DidChangeDisclaimerOptions value)?
+        didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
+    TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
+    TResult Function(_DidFinishSaving value)? didFinishSaving,
+    TResult Function(_DidFinishPublishing value)? didFinishPublishing,
+    required TResult orElse(),
+  }) {
+    if (didChangeFormTitle != null) {
+      return didChangeFormTitle(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DidChangeFormTitle implements VendorSettingsFormEvent {
+  const factory _DidChangeFormTitle(final String? title) =
+      _$DidChangeFormTitleImpl;
+
+  String? get title;
+  @JsonKey(ignore: true)
+  _$$DidChangeFormTitleImplCopyWith<_$DidChangeFormTitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -441,6 +709,7 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -451,6 +720,8 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -463,6 +734,7 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -473,6 +745,8 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -485,6 +759,7 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -495,6 +770,8 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -510,6 +787,7 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -522,6 +800,8 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -533,6 +813,7 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -543,6 +824,8 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -554,6 +837,7 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -564,6 +848,8 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -657,6 +943,7 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -667,6 +954,8 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -679,6 +968,7 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -689,6 +979,8 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -701,6 +993,7 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -711,6 +1004,8 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -726,6 +1021,7 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -738,6 +1034,8 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -749,6 +1047,7 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -759,6 +1058,8 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -770,6 +1071,7 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -780,6 +1082,8 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -886,6 +1190,7 @@ class _$DidChangeAvailableTimeOptionImpl
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -896,6 +1201,8 @@ class _$DidChangeAvailableTimeOptionImpl
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -908,6 +1215,7 @@ class _$DidChangeAvailableTimeOptionImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -918,6 +1226,8 @@ class _$DidChangeAvailableTimeOptionImpl
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -930,6 +1240,7 @@ class _$DidChangeAvailableTimeOptionImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -940,6 +1251,8 @@ class _$DidChangeAvailableTimeOptionImpl
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -955,6 +1268,7 @@ class _$DidChangeAvailableTimeOptionImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -967,6 +1281,8 @@ class _$DidChangeAvailableTimeOptionImpl
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -978,6 +1294,7 @@ class _$DidChangeAvailableTimeOptionImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -988,6 +1305,8 @@ class _$DidChangeAvailableTimeOptionImpl
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -999,6 +1318,7 @@ class _$DidChangeAvailableTimeOptionImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1009,6 +1329,8 @@ class _$DidChangeAvailableTimeOptionImpl
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1116,6 +1438,7 @@ class _$DidChangeBoothPaymentOptionsImpl
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -1126,6 +1449,8 @@ class _$DidChangeBoothPaymentOptionsImpl
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -1138,6 +1463,7 @@ class _$DidChangeBoothPaymentOptionsImpl
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -1148,6 +1474,8 @@ class _$DidChangeBoothPaymentOptionsImpl
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1160,6 +1488,7 @@ class _$DidChangeBoothPaymentOptionsImpl
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -1170,6 +1499,8 @@ class _$DidChangeBoothPaymentOptionsImpl
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1185,6 +1516,7 @@ class _$DidChangeBoothPaymentOptionsImpl
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -1197,6 +1529,8 @@ class _$DidChangeBoothPaymentOptionsImpl
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -1208,6 +1542,7 @@ class _$DidChangeBoothPaymentOptionsImpl
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1218,6 +1553,8 @@ class _$DidChangeBoothPaymentOptionsImpl
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1229,6 +1566,7 @@ class _$DidChangeBoothPaymentOptionsImpl
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1239,6 +1577,8 @@ class _$DidChangeBoothPaymentOptionsImpl
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1344,6 +1684,7 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -1354,6 +1695,8 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -1366,6 +1709,7 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -1376,6 +1720,8 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1388,6 +1734,7 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -1398,6 +1745,8 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1413,6 +1762,7 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -1425,6 +1775,8 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -1436,6 +1788,7 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1446,6 +1799,8 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1457,6 +1812,7 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1467,6 +1823,8 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1572,6 +1930,7 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -1582,6 +1941,8 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -1594,6 +1955,7 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -1604,6 +1966,8 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1616,6 +1980,7 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -1626,6 +1991,8 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1641,6 +2008,7 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -1653,6 +2021,8 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -1664,6 +2034,7 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1674,6 +2045,8 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1685,6 +2058,7 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1695,6 +2069,8 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1715,6 +2091,256 @@ abstract class _DidChangeDisclaimerOptions implements VendorSettingsFormEvent {
   List<MVCustomOption>? get disclaimerOptions;
   @JsonKey(ignore: true)
   _$$DidChangeDisclaimerOptionsImplCopyWith<_$DidChangeDisclaimerOptionsImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$DidChangeDiscountCodeOptionsImplCopyWith<$Res> {
+  factory _$$DidChangeDiscountCodeOptionsImplCopyWith(
+          _$DidChangeDiscountCodeOptionsImpl value,
+          $Res Function(_$DidChangeDiscountCodeOptionsImpl) then) =
+      __$$DidChangeDiscountCodeOptionsImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<DiscountCode>? discountOptions});
+}
+
+/// @nodoc
+class __$$DidChangeDiscountCodeOptionsImplCopyWithImpl<$Res>
+    extends _$VendorSettingsFormEventCopyWithImpl<$Res,
+        _$DidChangeDiscountCodeOptionsImpl>
+    implements _$$DidChangeDiscountCodeOptionsImplCopyWith<$Res> {
+  __$$DidChangeDiscountCodeOptionsImplCopyWithImpl(
+      _$DidChangeDiscountCodeOptionsImpl _value,
+      $Res Function(_$DidChangeDiscountCodeOptionsImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? discountOptions = freezed,
+  }) {
+    return _then(_$DidChangeDiscountCodeOptionsImpl(
+      freezed == discountOptions
+          ? _value._discountOptions
+          : discountOptions // ignore: cast_nullable_to_non_nullable
+              as List<DiscountCode>?,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$DidChangeDiscountCodeOptionsImpl
+    implements _DidChangeDiscountCodeOptions {
+  const _$DidChangeDiscountCodeOptionsImpl(
+      final List<DiscountCode>? discountOptions)
+      : _discountOptions = discountOptions;
+
+  final List<DiscountCode>? _discountOptions;
+  @override
+  List<DiscountCode>? get discountOptions {
+    final value = _discountOptions;
+    if (value == null) return null;
+    if (_discountOptions is EqualUnmodifiableListView) return _discountOptions;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'VendorSettingsFormEvent.didChangeDiscountCodeOptions(discountOptions: $discountOptions)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$DidChangeDiscountCodeOptionsImpl &&
+            const DeepCollectionEquality()
+                .equals(other._discountOptions, _discountOptions));
+  }
+
+  @override
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_discountOptions));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$DidChangeDiscountCodeOptionsImplCopyWith<
+          _$DidChangeDiscountCodeOptionsImpl>
+      get copyWith => __$$DidChangeDiscountCodeOptionsImplCopyWithImpl<
+          _$DidChangeDiscountCodeOptionsImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function(
+            Option<VendorMerchantForm> initializeVendorMerchantForm)
+        initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
+    required TResult Function(String? message) didChangeWelcomeMessage,
+    required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
+    required TResult Function(List<MCCustomAvailability>? availability)
+        didChangeAvailableTimeOption,
+    required TResult Function(List<MVBoothPayments>? booths)
+        didChangeBoothPaymentOptions,
+    required TResult Function(List<MVCustomOption>? customOptions)
+        didChangeCustomOptions,
+    required TResult Function(List<MVCustomOption>? disclaimerOptions)
+        didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
+    required TResult Function(FormStatus status) didChangeFormStatus,
+    required TResult Function() didFinishSaving,
+    required TResult Function(ReservationItem? resItem) didFinishPublishing,
+  }) {
+    return didChangeDiscountCodeOptions(discountOptions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
+        initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
+    TResult? Function(String? message)? didChangeWelcomeMessage,
+    TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
+    TResult? Function(List<MCCustomAvailability>? availability)?
+        didChangeAvailableTimeOption,
+    TResult? Function(List<MVBoothPayments>? booths)?
+        didChangeBoothPaymentOptions,
+    TResult? Function(List<MVCustomOption>? customOptions)?
+        didChangeCustomOptions,
+    TResult? Function(List<MVCustomOption>? disclaimerOptions)?
+        didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
+    TResult? Function(FormStatus status)? didChangeFormStatus,
+    TResult? Function()? didFinishSaving,
+    TResult? Function(ReservationItem? resItem)? didFinishPublishing,
+  }) {
+    return didChangeDiscountCodeOptions?.call(discountOptions);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
+        initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
+    TResult Function(String? message)? didChangeWelcomeMessage,
+    TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
+    TResult Function(List<MCCustomAvailability>? availability)?
+        didChangeAvailableTimeOption,
+    TResult Function(List<MVBoothPayments>? booths)?
+        didChangeBoothPaymentOptions,
+    TResult Function(List<MVCustomOption>? customOptions)?
+        didChangeCustomOptions,
+    TResult Function(List<MVCustomOption>? disclaimerOptions)?
+        didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
+    TResult Function(FormStatus status)? didChangeFormStatus,
+    TResult Function()? didFinishSaving,
+    TResult Function(ReservationItem? resItem)? didFinishPublishing,
+    required TResult orElse(),
+  }) {
+    if (didChangeDiscountCodeOptions != null) {
+      return didChangeDiscountCodeOptions(discountOptions);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
+    required TResult Function(_DidChangeWelcomeMessage value)
+        didChangeWelcomeMessage,
+    required TResult Function(_DidChangeFormStartEndDates value)
+        didChangeFormStartEndDates,
+    required TResult Function(_DidChangeAvailableTimeOption value)
+        didChangeAvailableTimeOption,
+    required TResult Function(_DidChangeBoothPaymentOptions value)
+        didChangeBoothPaymentOptions,
+    required TResult Function(_DidChangeCustomOptions value)
+        didChangeCustomOptions,
+    required TResult Function(_DidChangeDisclaimerOptions value)
+        didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
+    required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
+    required TResult Function(_DidFinishSaving value) didFinishSaving,
+    required TResult Function(_DidFinishPublishing value) didFinishPublishing,
+  }) {
+    return didChangeDiscountCodeOptions(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
+    TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
+    TResult? Function(_DidChangeFormStartEndDates value)?
+        didChangeFormStartEndDates,
+    TResult? Function(_DidChangeAvailableTimeOption value)?
+        didChangeAvailableTimeOption,
+    TResult? Function(_DidChangeBoothPaymentOptions value)?
+        didChangeBoothPaymentOptions,
+    TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
+    TResult? Function(_DidChangeDisclaimerOptions value)?
+        didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
+    TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
+    TResult? Function(_DidFinishSaving value)? didFinishSaving,
+    TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
+  }) {
+    return didChangeDiscountCodeOptions?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
+    TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
+    TResult Function(_DidChangeFormStartEndDates value)?
+        didChangeFormStartEndDates,
+    TResult Function(_DidChangeAvailableTimeOption value)?
+        didChangeAvailableTimeOption,
+    TResult Function(_DidChangeBoothPaymentOptions value)?
+        didChangeBoothPaymentOptions,
+    TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
+    TResult Function(_DidChangeDisclaimerOptions value)?
+        didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
+    TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
+    TResult Function(_DidFinishSaving value)? didFinishSaving,
+    TResult Function(_DidFinishPublishing value)? didFinishPublishing,
+    required TResult orElse(),
+  }) {
+    if (didChangeDiscountCodeOptions != null) {
+      return didChangeDiscountCodeOptions(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _DidChangeDiscountCodeOptions
+    implements VendorSettingsFormEvent {
+  const factory _DidChangeDiscountCodeOptions(
+          final List<DiscountCode>? discountOptions) =
+      _$DidChangeDiscountCodeOptionsImpl;
+
+  List<DiscountCode>? get discountOptions;
+  @JsonKey(ignore: true)
+  _$$DidChangeDiscountCodeOptionsImplCopyWith<
+          _$DidChangeDiscountCodeOptionsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -1787,6 +2413,7 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -1797,6 +2424,8 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -1809,6 +2438,7 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -1819,6 +2449,8 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1831,6 +2463,7 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -1841,6 +2474,8 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -1856,6 +2491,7 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -1868,6 +2504,8 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -1879,6 +2517,7 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1889,6 +2528,8 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1900,6 +2541,7 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -1910,6 +2552,8 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -1973,6 +2617,7 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -1983,6 +2628,8 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -1995,6 +2642,7 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -2005,6 +2653,8 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -2017,6 +2667,7 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -2027,6 +2678,8 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -2042,6 +2695,7 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -2054,6 +2708,8 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -2065,6 +2721,7 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -2075,6 +2732,8 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -2086,6 +2745,7 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -2096,6 +2756,8 @@ class _$DidFinishSavingImpl implements _DidFinishSaving {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -2195,6 +2857,7 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
     required TResult Function(
             Option<VendorMerchantForm> initializeVendorMerchantForm)
         initialVendorForm,
+    required TResult Function(String? title) didChangeFormTitle,
     required TResult Function(String? message) didChangeWelcomeMessage,
     required TResult Function(DateTimeRange? dates) didChangeFormStartEndDates,
     required TResult Function(List<MCCustomAvailability>? availability)
@@ -2205,6 +2868,8 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
         didChangeCustomOptions,
     required TResult Function(List<MVCustomOption>? disclaimerOptions)
         didChangeDisclaimerOptions,
+    required TResult Function(List<DiscountCode>? discountOptions)
+        didChangeDiscountCodeOptions,
     required TResult Function(FormStatus status) didChangeFormStatus,
     required TResult Function() didFinishSaving,
     required TResult Function(ReservationItem? resItem) didFinishPublishing,
@@ -2217,6 +2882,7 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult? Function(String? title)? didChangeFormTitle,
     TResult? Function(String? message)? didChangeWelcomeMessage,
     TResult? Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult? Function(List<MCCustomAvailability>? availability)?
@@ -2227,6 +2893,8 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
         didChangeCustomOptions,
     TResult? Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult? Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult? Function(FormStatus status)? didChangeFormStatus,
     TResult? Function()? didFinishSaving,
     TResult? Function(ReservationItem? resItem)? didFinishPublishing,
@@ -2239,6 +2907,7 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
   TResult maybeWhen<TResult extends Object?>({
     TResult Function(Option<VendorMerchantForm> initializeVendorMerchantForm)?
         initialVendorForm,
+    TResult Function(String? title)? didChangeFormTitle,
     TResult Function(String? message)? didChangeWelcomeMessage,
     TResult Function(DateTimeRange? dates)? didChangeFormStartEndDates,
     TResult Function(List<MCCustomAvailability>? availability)?
@@ -2249,6 +2918,8 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
         didChangeCustomOptions,
     TResult Function(List<MVCustomOption>? disclaimerOptions)?
         didChangeDisclaimerOptions,
+    TResult Function(List<DiscountCode>? discountOptions)?
+        didChangeDiscountCodeOptions,
     TResult Function(FormStatus status)? didChangeFormStatus,
     TResult Function()? didFinishSaving,
     TResult Function(ReservationItem? resItem)? didFinishPublishing,
@@ -2264,6 +2935,7 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_InitialVendorForm value) initialVendorForm,
+    required TResult Function(_DidChangeFormTitle value) didChangeFormTitle,
     required TResult Function(_DidChangeWelcomeMessage value)
         didChangeWelcomeMessage,
     required TResult Function(_DidChangeFormStartEndDates value)
@@ -2276,6 +2948,8 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
         didChangeCustomOptions,
     required TResult Function(_DidChangeDisclaimerOptions value)
         didChangeDisclaimerOptions,
+    required TResult Function(_DidChangeDiscountCodeOptions value)
+        didChangeDiscountCodeOptions,
     required TResult Function(_DidChangeFormStatus value) didChangeFormStatus,
     required TResult Function(_DidFinishSaving value) didFinishSaving,
     required TResult Function(_DidFinishPublishing value) didFinishPublishing,
@@ -2287,6 +2961,7 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_InitialVendorForm value)? initialVendorForm,
+    TResult? Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult? Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult? Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -2297,6 +2972,8 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
     TResult? Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult? Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult? Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult? Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult? Function(_DidFinishSaving value)? didFinishSaving,
     TResult? Function(_DidFinishPublishing value)? didFinishPublishing,
@@ -2308,6 +2985,7 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_InitialVendorForm value)? initialVendorForm,
+    TResult Function(_DidChangeFormTitle value)? didChangeFormTitle,
     TResult Function(_DidChangeWelcomeMessage value)? didChangeWelcomeMessage,
     TResult Function(_DidChangeFormStartEndDates value)?
         didChangeFormStartEndDates,
@@ -2318,6 +2996,8 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
     TResult Function(_DidChangeCustomOptions value)? didChangeCustomOptions,
     TResult Function(_DidChangeDisclaimerOptions value)?
         didChangeDisclaimerOptions,
+    TResult Function(_DidChangeDiscountCodeOptions value)?
+        didChangeDiscountCodeOptions,
     TResult Function(_DidChangeFormStatus value)? didChangeFormStatus,
     TResult Function(_DidFinishSaving value)? didFinishSaving,
     TResult Function(_DidFinishPublishing value)? didFinishPublishing,

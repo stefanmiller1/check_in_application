@@ -7,6 +7,7 @@ import 'package:dartz/dartz.dart';
 import 'package:check_in_domain/domain/misc/attendee_services/form/merchant_vendor/custom_availability/mv_custom_availability.dart';
 import 'package:check_in_domain/domain/misc/attendee_services/form/merchant_vendor/booth_payments/mv_booth_payments.dart';
 import 'package:check_in_domain/domain/misc/attendee_services/form/merchant_vendor/custom_options/mv_custom_options.dart';
+import 'package:check_in_domain/domain/misc/discount_code_service/discount_code_item.dart';
 
 
 part 'vendor_settings_form_event.dart';
@@ -30,6 +31,15 @@ class VendorSettingsFormBloc extends Bloc<VendorSettingsFormEvent, VendorSetting
                       () => state.vendorMerchantForm,
                       (form) => form
               )
+            );
+          },
+
+          didChangeFormTitle: (e) async* {
+            yield state.copyWith(
+              vendorMerchantForm: state.vendorMerchantForm.copyWith(
+                  formTitle: e.title
+              ),
+              isEditingForm: true
             );
           },
 
@@ -88,6 +98,15 @@ class VendorSettingsFormBloc extends Bloc<VendorSettingsFormEvent, VendorSetting
              );
           },
 
+          didChangeDiscountCodeOptions: (e) async* {
+            yield state.copyWith(
+              vendorMerchantForm: state.vendorMerchantForm.copyWith(
+                discountOptions: e.discountOptions
+              ),
+              isEditingForm: true
+            );
+          },
+
           didChangeFormStatus: (e) async* {
             yield state.copyWith(
               vendorMerchantForm: state.vendorMerchantForm.copyWith(
@@ -129,7 +148,7 @@ class VendorSettingsFormBloc extends Bloc<VendorSettingsFormEvent, VendorSetting
                 authFailureOrSuccessOption: optionOf(left(VendorFormFailure.vendorServerError())),
               );
             }
-      }
+      },
     );
   }
 

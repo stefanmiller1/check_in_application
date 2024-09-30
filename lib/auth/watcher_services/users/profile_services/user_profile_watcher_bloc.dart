@@ -224,8 +224,24 @@ class UserProfileWatcherBloc extends Bloc<UserProfileWatcherEvent, UserProfileWa
           );
 
        },
-
-
     );
   }
+
+  @override
+  Future<void> close() {
+    _userProfileStreamSubscription?.cancel();
+    _selectedUserProfileStreamSubscription?.cancel();
+    _userProfileFromEmailSubscription?.cancel();
+    _allUserProfileStreamSubscription?.cancel();
+    _userProfileSessionStreamSubscription?.cancel();
+    _allUserProfileFromIdstreamSubscription?.cancel();
+
+    _userNotificationStreamSubscription?.cancel();
+    _userSocialsStreamSubscription?.cancel();
+    _userLocationsStreamSubscription?.cancel();
+    _searchUserProfilesStreamSubscription?.cancel();
+    _userAttendingResStreamSubscription?.cancel();
+    return super.close();
+  }
+
 }

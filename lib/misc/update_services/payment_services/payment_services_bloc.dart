@@ -30,37 +30,56 @@ class PaymentServicesBloc extends Bloc<PaymentServicesEvent, PaymentServicesStat
             },
 
             didChangeDefaultPayment: (e) async* {
-
               yield state.copyWith(
-                  userProfile: UserProfileModel(
-                    userId: state.userProfile!.userId,
-                    legalName: state.userProfile!.legalName,
-                    legalSurname: state.userProfile!.legalSurname,
-                    age: state.userProfile!.age,
-                    gender: state.userProfile!.gender,
-                    dateOfBirth: state.userProfile!.dateOfBirth,
-                    emailAddress: state.userProfile!.emailAddress,
-                    userAddress: state.userProfile!.userAddress,
-                    photoUri: state.userProfile!.photoUri,
-                    photoIdUri: state.userProfile!.photoIdUri,
-                    photoSelfieUri: state.userProfile!.photoSelfieUri,
-                    profileImage: state.userProfile!.profileImage,
-                    contactPhones: state.userProfile!.contactPhones,
-                    emergencyContact: state.userProfile!.emergencyContact,
-                    isEmailAuth: state.userProfile!.isEmailAuth,
-                    isPhoneAuth: state.userProfile!.isPhoneAuth,
-                    isVerified: state.userProfile!.isVerified,
-                    identificationState: state.userProfile!.identificationState,
-                    joinedDate: state.userProfile!.joinedDate,
-                    stripeAccountId: state.userProfile!.stripeAccountId,
-                    stripeCustomerId: state.userProfile!.stripeCustomerId,
-                    defaultPaymentMethod: e.cardId,
-                    stripeAccountDetailsSubmitted: state.userProfile!.stripeAccountDetailsSubmitted
+                userProfile: state.userProfile?.copyWith(
+                  defaultPaymentMethod: e.cardId
                 ),
               );
             },
 
-            didDChangePaymentsToDelete: (e) async* {
+          profileStripeCompanyName: (e) async* {
+            yield state.copyWith(
+              userProfile: state.userProfile?.copyWith(
+                    stripeCompanyName: e.bussName
+                  ),
+              isEditing: true,
+              failureOrSuccessOption: none()
+            );
+          },
+
+          profileStripeBusinessIDChanged: (e) async* {
+            yield state.copyWith(
+                userProfile: state.userProfile?.copyWith(
+                    stripeBusinessID: e.busStr
+                ),
+                isEditing: true,
+                failureOrSuccessOption: none()
+            );
+
+          },
+
+          profileStripeHSTRegistrationNumberChanged: (e) async* {
+            yield state.copyWith(
+                userProfile: state.userProfile?.copyWith(
+                    stripeHSTRegistrationNumber: e.hstStr
+                ),
+                isEditing: true,
+                failureOrSuccessOption: none()
+            );
+          },
+
+          profileStripeBusinessAddress: (e) async* {
+            yield state.copyWith(
+                userProfile: state.userProfile?.copyWith(
+                    stripeBusinessAddress: e.businessAdd
+                ),
+                isEditing: true,
+                failureOrSuccessOption: none()
+            );
+          },
+
+
+          didDChangePaymentsToDelete: (e) async* {
                 yield state.copyWith(
                     cancellationList: e.cardItems
                 );

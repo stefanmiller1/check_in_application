@@ -34,4 +34,11 @@ class ListingManagerWatcherBloc extends Bloc<ListingManagerWatcherEvent, Listing
        },
     );
   }
+
+  @override
+  Future<void> close() {
+    // Dispose of the stream subscription when the bloc is closed
+    _listingManagerItemStreamSubscription?.cancel();
+    return super.close();
+  }
 }

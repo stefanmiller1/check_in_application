@@ -27,7 +27,7 @@ class ListingsSearchRequirementsState with _$ListingsSearchRequirementsState {
 }) = _SearchListingsState;
 
   factory ListingsSearchRequirementsState.initial() => ListingsSearchRequirementsState(
-    currentDashboardMarker: DashboardMarker.home,
+    currentDashboardMarker: DashboardMarker.search,
     locationItemId: null,
     locationCityFromMap: null,
     historyLocationSearch: [],

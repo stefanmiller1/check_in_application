@@ -81,31 +81,9 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
         firstLastLegalNameChanged: (e) async* {
             yield state.copyWith(
              profile: state.profile.copyWith(
-                profileUser: UserProfileModel(
-                    userId: state.profile.profileUser.userId,
-                    legalName: FirstLastName(e.legalNameStr),
-                    legalSurname: state.profile.profileUser.legalSurname,
-                    age: state.profile.profileUser.age,
-                    gender: state.profile.profileUser.gender,
-                    dateOfBirth: state.profile.profileUser.dateOfBirth,
-                    emailAddress: state.profile.profileUser.emailAddress,
-                    userAddress: state.profile.profileUser.userAddress,
-                    photoUri: state.profile.profileUser.photoUri,
-                    photoIdUri: state.profile.profileUser.photoIdUri,
-                    photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                    profileImage: state.profile.profileUser.profileImage,
-                    contactPhones: state.profile.profileUser.contactPhones,
-                    emergencyContact: state.profile.profileUser.emergencyContact,
-                    isEmailAuth: state.profile.profileUser.isEmailAuth,
-                    isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                    isVerified: state.profile.profileUser.isVerified,
-                    identificationState: state.profile.profileUser.identificationState,
-                    joinedDate: state.profile.profileUser.joinedDate,
-                    stripeAccountId: state.profile.profileUser.stripeAccountId,
-                    stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                    defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                    stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
-                ),
+               profileUser: state.profile.profileUser.copyWith(
+                   legalName: FirstLastName(e.legalNameStr),
+               ),
              ),
             isEditingProfile: true,
             authFailureOrSuccessOption: none()
@@ -115,30 +93,8 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
         lastNameLegalChanged: (e) async* {
             yield state.copyWith(
                 profile: state.profile.copyWith(
-                  profileUser: UserProfileModel(
-                      userId: state.profile.profileUser.userId,
-                      legalName: state.profile.profileUser.legalName,
-                      legalSurname: FirstLastName(e.lastNameStr),
-                      age: state.profile.profileUser.age,
-                      gender: state.profile.profileUser.gender,
-                      dateOfBirth: state.profile.profileUser.dateOfBirth,
-                      emailAddress: state.profile.profileUser.emailAddress,
-                      userAddress: state.profile.profileUser.userAddress,
-                      photoUri: state.profile.profileUser.photoUri,
-                      photoIdUri: state.profile.profileUser.photoIdUri,
-                      photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                      profileImage: state.profile.profileUser.profileImage,
-                      contactPhones: state.profile.profileUser.contactPhones,
-                      emergencyContact: state.profile.profileUser.emergencyContact,
-                      isEmailAuth: state.profile.profileUser.isEmailAuth,
-                      isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                      isVerified: state.profile.profileUser.isVerified,
-                      identificationState: state.profile.profileUser.identificationState,
-                      joinedDate: state.profile.profileUser.joinedDate,
-                      stripeAccountId: state.profile.profileUser.stripeAccountId,
-                      stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                      defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                      stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
+                  profileUser: state.profile.profileUser.copyWith(
+                    legalSurname: FirstLastName(e.lastNameStr),
                   ),
                 ),
                 isEditingProfile: true,
@@ -149,31 +105,9 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
           genderChanged: (e) async* {
               yield state.copyWith(
                   profile: state.profile.copyWith(
-                      profileUser: UserProfileModel(
-                          userId: state.profile.profileUser.userId,
-                          legalName: state.profile.profileUser.legalName,
-                          legalSurname: state.profile.profileUser.legalSurname,
-                          age: state.profile.profileUser.age,
-                          gender: e.genderStr,
-                          dateOfBirth: state.profile.profileUser.dateOfBirth,
-                          emailAddress: state.profile.profileUser.emailAddress,
-                          userAddress: state.profile.profileUser.userAddress,
-                          photoUri: state.profile.profileUser.photoUri,
-                          photoIdUri: state.profile.profileUser.photoIdUri,
-                          photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                          profileImage: state.profile.profileUser.profileImage,
-                          contactPhones: state.profile.profileUser.contactPhones,
-                          emergencyContact: state.profile.profileUser.emergencyContact,
-                          isEmailAuth: state.profile.profileUser.isEmailAuth,
-                          isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                          isVerified: state.profile.profileUser.isVerified,
-                          identificationState: state.profile.profileUser.identificationState,
-                          joinedDate: state.profile.profileUser.joinedDate,
-                          stripeAccountId: state.profile.profileUser.stripeAccountId,
-                          stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                          defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                          stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
-                      ),
+                    profileUser: state.profile.profileUser.copyWith(
+                      gender: e.genderStr,
+                    ),
                   ),
                   isEditingProfile: true,
                   authFailureOrSuccessOption: none()
@@ -183,30 +117,8 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
           birthDateChanged: (e) async* {
               yield state.copyWith(
                   profile: state.profile.copyWith(
-                      profileUser: UserProfileModel(
-                          userId: state.profile.profileUser.userId,
-                          legalName: state.profile.profileUser.legalName,
-                          legalSurname: state.profile.profileUser.legalSurname,
-                          age: Age(e.dateStr),
-                          gender: state.profile.profileUser.gender,
-                          dateOfBirth: state.profile.profileUser.dateOfBirth,
-                          emailAddress: state.profile.profileUser.emailAddress,
-                          userAddress: state.profile.profileUser.userAddress,
-                          photoUri: state.profile.profileUser.photoUri,
-                          photoIdUri: state.profile.profileUser.photoIdUri,
-                          photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                          profileImage: state.profile.profileUser.profileImage,
-                          contactPhones: state.profile.profileUser.contactPhones,
-                          emergencyContact: state.profile.profileUser.emergencyContact,
-                          isEmailAuth: state.profile.profileUser.isEmailAuth,
-                          isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                          isVerified: state.profile.profileUser.isVerified,
-                          identificationState: state.profile.profileUser.identificationState,
-                          joinedDate: state.profile.profileUser.joinedDate,
-                          stripeAccountId: state.profile.profileUser.stripeAccountId,
-                          stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                          defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                          stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
+                      profileUser: state.profile.profileUser.copyWith(
+                        age: Age(e.dateStr),
                       ),
                   ),
                   isEditingProfile: true,
@@ -217,31 +129,9 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
           phoneNumberChanged: (e) async* {
               yield state.copyWith(
                   profile: state.profile.copyWith(
-                      profileUser: UserProfileModel(
-                          userId: state.profile.profileUser.userId,
-                          legalName: state.profile.profileUser.legalName,
-                          legalSurname: state.profile.profileUser.legalSurname,
-                          age: state.profile.profileUser.age,
-                          gender: state.profile.profileUser.gender,
-                          dateOfBirth: state.profile.profileUser.dateOfBirth,
-                          emailAddress: state.profile.profileUser.emailAddress,
-                          userAddress: state.profile.profileUser.userAddress,
-                          photoUri: state.profile.profileUser.photoUri,
-                          photoIdUri: state.profile.profileUser.photoIdUri,
-                          photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                          profileImage: state.profile.profileUser.profileImage,
-                          contactPhones: e.phoneNumbers,
-                          emergencyContact: state.profile.profileUser.emergencyContact,
-                          isEmailAuth: state.profile.profileUser.isEmailAuth,
-                          isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                          isVerified: state.profile.profileUser.isVerified,
-                          identificationState: state.profile.profileUser.identificationState,
-                          joinedDate: state.profile.profileUser.joinedDate,
-                          stripeAccountId: state.profile.profileUser.stripeAccountId,
-                          stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                          defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                          stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
-                      ),
+                    profileUser: state.profile.profileUser.copyWith(
+                      contactPhones: e.phoneNumbers,
+                    ),
                   ),
                   isEditingProfile: true,
                   authFailureOrSuccessOption: none()
@@ -251,31 +141,9 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
           emergencyPhoneChanged: (e) async* {
               yield state.copyWith(
                   profile: state.profile.copyWith(
-                      profileUser: UserProfileModel(
-                          userId: state.profile.profileUser.userId,
-                          legalName: state.profile.profileUser.legalName,
-                          legalSurname: state.profile.profileUser.legalSurname,
-                          age: state.profile.profileUser.age,
-                          gender: state.profile.profileUser.gender,
-                          dateOfBirth: state.profile.profileUser.dateOfBirth,
-                          emailAddress: state.profile.profileUser.emailAddress,
-                          userAddress: state.profile.profileUser.userAddress,
-                          photoUri: state.profile.profileUser.photoUri,
-                          photoIdUri: state.profile.profileUser.photoIdUri,
-                          photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                          profileImage: state.profile.profileUser.profileImage,
-                          contactPhones: state.profile.profileUser.contactPhones,
-                          emergencyContact: e.phoneNumber,
-                          isEmailAuth: state.profile.profileUser.isEmailAuth,
-                          isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                          isVerified: state.profile.profileUser.isVerified,
-                          identificationState: state.profile.profileUser.identificationState,
-                          joinedDate: state.profile.profileUser.joinedDate,
-                          stripeAccountId: state.profile.profileUser.stripeAccountId,
-                          stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                          defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                          stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
-                      ),
+                    profileUser: state.profile.profileUser.copyWith(
+                      emergencyContact: e.phoneNumber,
+                    ),
                   ),
                   isEditingProfile: true,
                   authFailureOrSuccessOption: none()
@@ -818,7 +686,6 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
 
 
           finishedUpdatingAddressFromCoordinates: (e) async* {
-
             yield state.copyWith(
               profile: state.profile.copyWith(
                 profileLocations: LocationModel(
@@ -844,6 +711,7 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
             );
           },
 
+
           didSelectIsSubmitting: (e) async* {
               yield state.copyWith(
                   isSubmitting: e.selectBool
@@ -855,30 +723,8 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
             Either<AuthFailure, Unit> failureOrSuccess;
             yield state.copyWith(
                 profile: state.profile.copyWith(
-                  profileUser: UserProfileModel(
-                      userId: state.profile.profileUser.userId,
-                      legalName: state.profile.profileUser.legalName,
-                      legalSurname: state.profile.profileUser.legalSurname,
-                      age: state.profile.profileUser.age,
-                      gender: state.profile.profileUser.gender,
-                      dateOfBirth: state.profile.profileUser.dateOfBirth,
-                      emailAddress: state.profile.profileUser.emailAddress,
-                      userAddress: state.profile.profileUser.userAddress,
-                      photoUri: state.profile.profileUser.photoUri,
-                      photoIdUri: state.profile.profileUser.photoIdUri,
-                      photoSelfieUri: state.profile.profileUser.photoSelfieUri,
-                      profileImage: state.profile.profileUser.profileImage,
-                      contactPhones: state.profile.profileUser.contactPhones,
-                      emergencyContact: state.profile.profileUser.emergencyContact,
-                      isEmailAuth: state.profile.profileUser.isEmailAuth,
-                      isPhoneAuth: state.profile.profileUser.isPhoneAuth,
-                      isVerified: state.profile.profileUser.isVerified,
-                      identificationState: PhotoIdentificationState.noRequest,
-                      joinedDate: state.profile.profileUser.joinedDate,
-                      stripeAccountId: state.profile.profileUser.stripeAccountId,
-                      stripeCustomerId: state.profile.profileUser.stripeCustomerId,
-                      defaultPaymentMethod: state.profile.profileUser.defaultPaymentMethod,
-                      stripeAccountDetailsSubmitted: state.profile.profileUser.stripeAccountDetailsSubmitted
+                  profileUser: state.profile.profileUser.copyWith(
+                    identificationState: PhotoIdentificationState.noRequest,
                   ),
                 ),
                 authFailureOrSuccessOption: none()
@@ -1080,6 +926,9 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
               isSubmitting: false,
               deleteAuthFailureOrSuccessOption: optionOf(failureOrSuccess)
           );
+
+
+
 
         },
       );

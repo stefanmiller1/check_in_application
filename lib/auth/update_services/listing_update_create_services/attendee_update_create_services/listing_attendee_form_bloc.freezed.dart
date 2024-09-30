@@ -55,7 +55,8 @@ mixin _$AttendeeFormEvent {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -107,7 +108,8 @@ mixin _$AttendeeFormEvent {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -159,7 +161,8 @@ mixin _$AttendeeFormEvent {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -462,7 +465,8 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -518,7 +522,8 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -574,7 +579,8 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -857,7 +863,8 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -912,7 +919,8 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -967,7 +975,8 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -1257,7 +1266,8 @@ class _$UpdateAttendeeContactDetailsImpl
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -1312,7 +1322,8 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -1367,7 +1378,8 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -1653,7 +1665,8 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -1708,7 +1721,8 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -1763,7 +1777,8 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -2047,7 +2062,8 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -2102,7 +2118,8 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -2157,7 +2174,8 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -2443,7 +2461,8 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -2498,7 +2517,8 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -2553,7 +2573,8 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -2833,7 +2854,8 @@ class _$UpdateClassesInstructorFormImpl
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -2888,7 +2910,8 @@ class _$UpdateClassesInstructorFormImpl
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -2943,7 +2966,8 @@ class _$UpdateClassesInstructorFormImpl
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -3222,7 +3246,8 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -3277,7 +3302,8 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -3332,7 +3358,8 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -3621,7 +3648,8 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -3676,7 +3704,8 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -3731,7 +3760,8 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -4053,7 +4083,8 @@ class _$CreatePaymentIntentForAttendeeImpl
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -4109,7 +4140,8 @@ class _$CreatePaymentIntentForAttendeeImpl
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -4165,7 +4197,8 @@ class _$CreatePaymentIntentForAttendeeImpl
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -4454,7 +4487,8 @@ class _$CreateAttendeeFormForReservationImpl
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -4509,7 +4543,8 @@ class _$CreateAttendeeFormForReservationImpl
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -4564,7 +4599,8 @@ class _$CreateAttendeeFormForReservationImpl
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -4851,7 +4887,8 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -4906,7 +4943,8 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -4961,7 +4999,8 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -5210,7 +5249,8 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -5265,7 +5305,8 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -5320,7 +5361,8 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -5600,7 +5642,8 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -5655,7 +5698,8 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -5710,7 +5754,8 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -5991,7 +6036,8 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -6046,7 +6092,8 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -6101,7 +6148,8 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -6425,7 +6473,8 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -6481,7 +6530,8 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -6537,7 +6587,8 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -6728,11 +6779,14 @@ abstract class _$$IsFinishedCreatingVendorAttendeeImplCopyWith<$Res> {
   $Res call(
       {UserProfileModel profile,
       String currency,
-      String? paymentMethod,
+      CardItem? paymentMethod,
+      DiscountCode? discount,
       StripeTaxRateDetails? taxRateDetail,
       String? taxCalculationId});
 
   $UserProfileModelCopyWith<$Res> get profile;
+  $CardItemCopyWith<$Res>? get paymentMethod;
+  $DiscountCodeCopyWith<$Res>? get discount;
   $StripeTaxRateDetailsCopyWith<$Res>? get taxRateDetail;
 }
 
@@ -6752,6 +6806,7 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
     Object? profile = null,
     Object? currency = null,
     Object? paymentMethod = freezed,
+    Object? discount = freezed,
     Object? taxRateDetail = freezed,
     Object? taxCalculationId = freezed,
   }) {
@@ -6767,7 +6822,11 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
       freezed == paymentMethod
           ? _value.paymentMethod
           : paymentMethod // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as CardItem?,
+      freezed == discount
+          ? _value.discount
+          : discount // ignore: cast_nullable_to_non_nullable
+              as DiscountCode?,
       freezed == taxRateDetail
           ? _value.taxRateDetail
           : taxRateDetail // ignore: cast_nullable_to_non_nullable
@@ -6789,6 +6848,30 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
 
   @override
   @pragma('vm:prefer-inline')
+  $CardItemCopyWith<$Res>? get paymentMethod {
+    if (_value.paymentMethod == null) {
+      return null;
+    }
+
+    return $CardItemCopyWith<$Res>(_value.paymentMethod!, (value) {
+      return _then(_value.copyWith(paymentMethod: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $DiscountCodeCopyWith<$Res>? get discount {
+    if (_value.discount == null) {
+      return null;
+    }
+
+    return $DiscountCodeCopyWith<$Res>(_value.discount!, (value) {
+      return _then(_value.copyWith(discount: value));
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $StripeTaxRateDetailsCopyWith<$Res>? get taxRateDetail {
     if (_value.taxRateDetail == null) {
       return null;
@@ -6804,15 +6887,22 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
 
 class _$IsFinishedCreatingVendorAttendeeImpl
     implements _IsFinishedCreatingVendorAttendee {
-  const _$IsFinishedCreatingVendorAttendeeImpl(this.profile, this.currency,
-      this.paymentMethod, this.taxRateDetail, this.taxCalculationId);
+  const _$IsFinishedCreatingVendorAttendeeImpl(
+      this.profile,
+      this.currency,
+      this.paymentMethod,
+      this.discount,
+      this.taxRateDetail,
+      this.taxCalculationId);
 
   @override
   final UserProfileModel profile;
   @override
   final String currency;
   @override
-  final String? paymentMethod;
+  final CardItem? paymentMethod;
+  @override
+  final DiscountCode? discount;
   @override
   final StripeTaxRateDetails? taxRateDetail;
   @override
@@ -6820,7 +6910,7 @@ class _$IsFinishedCreatingVendorAttendeeImpl
 
   @override
   String toString() {
-    return 'AttendeeFormEvent.isFinishedCreatingVendorAttendee(profile: $profile, currency: $currency, paymentMethod: $paymentMethod, taxRateDetail: $taxRateDetail, taxCalculationId: $taxCalculationId)';
+    return 'AttendeeFormEvent.isFinishedCreatingVendorAttendee(profile: $profile, currency: $currency, paymentMethod: $paymentMethod, discount: $discount, taxRateDetail: $taxRateDetail, taxCalculationId: $taxCalculationId)';
   }
 
   @override
@@ -6833,6 +6923,8 @@ class _$IsFinishedCreatingVendorAttendeeImpl
                 other.currency == currency) &&
             (identical(other.paymentMethod, paymentMethod) ||
                 other.paymentMethod == paymentMethod) &&
+            (identical(other.discount, discount) ||
+                other.discount == discount) &&
             (identical(other.taxRateDetail, taxRateDetail) ||
                 other.taxRateDetail == taxRateDetail) &&
             (identical(other.taxCalculationId, taxCalculationId) ||
@@ -6841,7 +6933,7 @@ class _$IsFinishedCreatingVendorAttendeeImpl
 
   @override
   int get hashCode => Object.hash(runtimeType, profile, currency, paymentMethod,
-      taxRateDetail, taxCalculationId);
+      discount, taxRateDetail, taxCalculationId);
 
   @JsonKey(ignore: true)
   @override
@@ -6891,7 +6983,8 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -6909,8 +7002,8 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     required TResult Function(List<VendorContactDetail> attendees)
         didConfirmAttendeesGroup,
   }) {
-    return isFinishedCreatingVendorAttendee(
-        profile, currency, paymentMethod, taxRateDetail, taxCalculationId);
+    return isFinishedCreatingVendorAttendee(profile, currency, paymentMethod,
+        discount, taxRateDetail, taxCalculationId);
   }
 
   @override
@@ -6947,7 +7040,8 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -6965,8 +7059,8 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     TResult? Function(List<VendorContactDetail> attendees)?
         didConfirmAttendeesGroup,
   }) {
-    return isFinishedCreatingVendorAttendee?.call(
-        profile, currency, paymentMethod, taxRateDetail, taxCalculationId);
+    return isFinishedCreatingVendorAttendee?.call(profile, currency,
+        paymentMethod, discount, taxRateDetail, taxCalculationId);
   }
 
   @override
@@ -7003,7 +7097,8 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -7023,8 +7118,8 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     required TResult orElse(),
   }) {
     if (isFinishedCreatingVendorAttendee != null) {
-      return isFinishedCreatingVendorAttendee(
-          profile, currency, paymentMethod, taxRateDetail, taxCalculationId);
+      return isFinishedCreatingVendorAttendee(profile, currency, paymentMethod,
+          discount, taxRateDetail, taxCalculationId);
     }
     return orElse();
   }
@@ -7171,13 +7266,15 @@ abstract class _IsFinishedCreatingVendorAttendee implements AttendeeFormEvent {
   const factory _IsFinishedCreatingVendorAttendee(
       final UserProfileModel profile,
       final String currency,
-      final String? paymentMethod,
+      final CardItem? paymentMethod,
+      final DiscountCode? discount,
       final StripeTaxRateDetails? taxRateDetail,
       final String? taxCalculationId) = _$IsFinishedCreatingVendorAttendeeImpl;
 
   UserProfileModel get profile;
   String get currency;
-  String? get paymentMethod;
+  CardItem? get paymentMethod;
+  DiscountCode? get discount;
   StripeTaxRateDetails? get taxRateDetail;
   String? get taxCalculationId;
   @JsonKey(ignore: true)
@@ -7333,7 +7430,8 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -7388,7 +7486,8 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -7444,7 +7543,8 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -7703,7 +7803,8 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -7758,7 +7859,8 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -7813,7 +7915,8 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -8056,7 +8159,8 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -8111,7 +8215,8 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -8166,7 +8271,8 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -8445,7 +8551,8 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -8500,7 +8607,8 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -8555,7 +8663,8 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -8841,7 +8950,8 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -8896,7 +9006,8 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -8951,7 +9062,8 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -9237,7 +9349,8 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -9292,7 +9405,8 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -9347,7 +9461,8 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -9633,7 +9748,8 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     required TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)
         isFinishedCreatingVendorAttendee,
@@ -9688,7 +9804,8 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     TResult? Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,
@@ -9743,7 +9860,8 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     TResult Function(
             UserProfileModel profile,
             String currency,
-            String? paymentMethod,
+            CardItem? paymentMethod,
+            DiscountCode? discount,
             StripeTaxRateDetails? taxRateDetail,
             String? taxCalculationId)?
         isFinishedCreatingVendorAttendee,

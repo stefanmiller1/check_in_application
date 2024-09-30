@@ -116,4 +116,12 @@ class AttendeeManagerWatcherBloc extends Bloc<AttendeeManagerWatcherEvent, Atten
 
   }
 
+  @override
+  Future<void> close() {
+    _attendanceListStreamSubscription?.cancel();
+    _attendanceCountStreamSubscription?.cancel();
+    _allAttendanceListStreamSubscription?.cancel();
+    return super.close();
+  }
+
 }
