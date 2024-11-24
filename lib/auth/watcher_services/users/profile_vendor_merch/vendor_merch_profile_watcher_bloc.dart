@@ -11,6 +11,7 @@ class VendorMerchProfileWatcherBloc extends Bloc<VendorMerchProfileWatcherEvent,
   StreamSubscription<Either<ProfileValueFailure, List<EventMerchantVendorProfile>>>? _watchCurrentUsersMerchVendorListSubscription;
   StreamSubscription<Either<ProfileValueFailure, List<UniqueId>>>? _watchCurrentPartnersMerchVendorsSubscription;
   StreamSubscription<Either<ProfileValueFailure, List<EventMerchantVendorProfile>>>? _watchAllEventMerchProfileFromIdsStreamSubscription;
+  StreamSubscription<Either<ProfileValueFailure, List<EventMerchantVendorProfile>>>? _watchMerchVendorFilteredListSubscription;
 
   @override
   Stream<VendorMerchProfileWatcherState> mapEventToState(
@@ -80,6 +81,23 @@ class VendorMerchProfileWatcherBloc extends Bloc<VendorMerchProfileWatcherEvent,
           yield e.failedItem.fold(
                   (f) => VendorMerchProfileWatcherState.loadAllMerchVendorFromIdsFailure(f),
                   (r) => VendorMerchProfileWatcherState.loadAllMerchVendorFromIdsSuccess(r)
+          );
+        },
+
+        watchAllEventMerchProfileFiltered: (e) async* {
+          yield const VendorMerchProfileWatcherState.vmLoadInProgress();
+
+          await _watchMerchVendorFilteredListSubscription?.cancel();
+          _watchMerchVendorFilteredListSubscription = _mvAuthWatcherFacade.watchEventMerchByFilter(merchType: e.merchType, seekingWork: e.seekingWork, minimumRating: e.minimumRating, limit: e.limit).listen((event) {
+            return add(VendorMerchProfileWatcherEvent.allEventMerchProfileProfileFilteredReceived(event));
+          });
+
+        },
+
+        allEventMerchProfileProfileFilteredReceived: (e) async* {
+          yield e.failedItem.fold(
+              (f) => VendorMerchProfileWatcherState.loadAllMerchVendorFilteredListFailure(f),
+              (r) => VendorMerchProfileWatcherState.loadAllMerchVendorFilteredListSuccess(r),
           );
         }
     );

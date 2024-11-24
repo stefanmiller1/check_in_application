@@ -23,30 +23,8 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
 
               firstLastLegalNameChanged: (e) async* {
                 yield state.copyWith(
-                  user: UserProfileModel(
-                      userId: state.user.userId,
-                      legalName: FirstLastName(e.legalNameStr),
-                      legalSurname: state.user.legalSurname,
-                      age: state.user.age,
-                      gender: state.user.gender,
-                      dateOfBirth: state.user.dateOfBirth,
-                      emailAddress: state.user.emailAddress,
-                      userAddress: state.user.userAddress,
-                      photoUri: state.user.photoUri,
-                      photoIdUri: state.user.photoIdUri,
-                      photoSelfieUri: state.user.photoSelfieUri,
-                      profileImage: state.user.profileImage,
-                      contactPhones: state.user.contactPhones,
-                      emergencyContact: state.user.emergencyContact,
-                      isEmailAuth: state.user.isEmailAuth,
-                      isPhoneAuth: state.user.isPhoneAuth,
-                      joinedDate: state.user.joinedDate,
-                      isVerified: state.user.isVerified,
-                      identificationState: state.user.identificationState,
-                      stripeAccountId: state.user.stripeAccountId,
-                      stripeCustomerId: state.user.stripeCustomerId,
-                      defaultPaymentMethod: state.user.defaultPaymentMethod,
-                      stripeAccountDetailsSubmitted: state.user.stripeAccountDetailsSubmitted
+                  user: state.user.copyWith(
+                    legalName: FirstLastName(e.legalNameStr),
                   ),
                   authFailureOrSuccessOption: none()
                 );
@@ -54,32 +32,10 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
 
               lastNameChanged: (e) async* {
                 yield state.copyWith(
-                    user: UserProfileModel(
-                      userId: state.user.userId,
-                      legalName: state.user.legalName,
+                  user: state.user.copyWith(
                       legalSurname: FirstLastName(e.lastNameStr),
-                      age: state.user.age,
-                      gender: state.user.gender,
-                      dateOfBirth: state.user.dateOfBirth,
-                      emailAddress: state.user.emailAddress,
-                      userAddress: state.user.userAddress,
-                      photoUri: state.user.photoUri,
-                      photoIdUri: state.user.photoIdUri,
-                      photoSelfieUri: state.user.photoSelfieUri,
-                      profileImage: state.user.profileImage,
-                      contactPhones: state.user.contactPhones,
-                      emergencyContact: state.user.emergencyContact,
-                      isEmailAuth: state.user.isEmailAuth,
-                      isPhoneAuth: state.user.isPhoneAuth,
-                      joinedDate: state.user.joinedDate,
-                      isVerified: state.user.isVerified,
-                      identificationState: state.user.identificationState,
-                      stripeAccountId: state.user.stripeAccountId,
-                      stripeCustomerId: state.user.stripeCustomerId,
-                      defaultPaymentMethod: state.user.defaultPaymentMethod,
-                      stripeAccountDetailsSubmitted: state.user.stripeAccountDetailsSubmitted
                     ),
-                    authFailureOrSuccessOption: none()
+                  authFailureOrSuccessOption: none()
                 );
               },
 
@@ -87,32 +43,10 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
                 Either<AuthFailure, Unit> failureOrSuccess;
 
                 yield state.copyWith(
-                    user: UserProfileModel(
-                        userId: state.user.userId,
-                        legalName: state.user.legalName,
-                        legalSurname: state.user.legalSurname,
-                        age: state.user.age,
-                        gender: state.user.gender,
-                        dateOfBirth: state.user.dateOfBirth,
-                        emailAddress: EmailAddress(e.emailStr),
-                        userAddress: state.user.userAddress,
-                        photoUri: state.user.photoUri,
-                        photoIdUri: state.user.photoIdUri,
-                        photoSelfieUri: state.user.photoSelfieUri,
-                        profileImage: state.user.profileImage,
-                        contactPhones: state.user.contactPhones,
-                        emergencyContact: state.user.emergencyContact,
-                        isEmailAuth: state.user.isEmailAuth,
-                        isPhoneAuth: state.user.isPhoneAuth,
-                        isVerified: state.user.isVerified,
-                        identificationState: state.user.identificationState,
-                        joinedDate: state.user.joinedDate,
-                        stripeAccountId: state.user.stripeAccountId,
-                        stripeCustomerId: state.user.stripeCustomerId,
-                        defaultPaymentMethod: state.user.defaultPaymentMethod,
-                        stripeAccountDetailsSubmitted: state.user.stripeAccountDetailsSubmitted
+                  user: state.user.copyWith(
+                      emailAddress: EmailAddress(e.emailStr),
                     ),
-                    authFailureOrSuccessOption: none()
+                  authFailureOrSuccessOption: none()
                 );
 
 
