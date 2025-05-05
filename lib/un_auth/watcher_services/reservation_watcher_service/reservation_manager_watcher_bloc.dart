@@ -60,7 +60,7 @@ class ReservationManagerWatcherBloc extends Bloc<ReservationManagerWatcherEvent,
             yield const ReservationManagerWatcherState.resLoadInProgress();
             await _currentUserReservationsListStreamSubscription?.cancel();
 
-            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(resState: e.resState, currentUser: e.currentUser, isResInvitation: e.isResInvitation, limit: e.limit, isActivity: e.isActivity).listen((event) {
+            _currentUserReservationsListStreamSubscription = _resAuthFacade.watchCurrentUserReservationItem(resState: e.resState, currentUser: e.currentUser, isResInvitation: e.isResInvitation, limit: e.limit, hoursTimeAhead: e.hoursTimeAhead, hoursTimeBefore: e.hoursTimeBefore, isActivity: e.isActivity, isPrivate: e.isPrivate, isReversedSort: e.isReversedSort, formState: e.formState).listen((event) {
                 return add(ReservationManagerWatcherEvent.currentUsersReservationsReceived(event));
             });
           },

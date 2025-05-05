@@ -116,15 +116,6 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
           );
         },
 
-        createPaymentIntentForAttendee: (e) async* {
-
-        },
-
-        createAttendeeFormForReservation: (e) async* {
-
-        },
-
-
 
         isFinishedCreatingAttendee: (e) async* {
           Either<AttendeeFormFailure, Unit> failureOrSuccess;
@@ -723,7 +714,7 @@ class AttendeeFormBloc extends Bloc<AttendeeFormEvent, AttendeeFormState> {
             authFailureOrSuccessOption: optionOf(failureOrSuccess)
           );
         }
-      },
+      },  
     );
   }
 

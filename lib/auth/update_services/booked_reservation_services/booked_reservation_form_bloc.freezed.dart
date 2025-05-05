@@ -26,7 +26,9 @@ mixin _$BookedReservationFormState {
   Option<Either<ReservationFormFailure, Unit>> get authFailureOrSuccess =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $BookedReservationFormStateCopyWith<BookedReservationFormState>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -61,6 +63,8 @@ class _$BookedReservationFormStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of BookedReservationFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -99,6 +103,8 @@ class _$BookedReservationFormStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of BookedReservationFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get reservationPost {
@@ -140,6 +146,8 @@ class __$$ReservationChatFormStateImplCopyWithImpl<$Res>
       $Res Function(_$ReservationChatFormStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -241,7 +249,9 @@ class _$ReservationChatFormStateImpl implements _ReservationChatFormState {
       authFailureOrSuccessInviteLink,
       authFailureOrSuccess);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ReservationChatFormStateImplCopyWith<_$ReservationChatFormStateImpl>
@@ -263,8 +273,9 @@ abstract class _ReservationChatFormState implements BookedReservationFormState {
   @override
   Post get reservationPost;
   @override
-  bool get isUploadingAttachment;
-  @override // required SubmitPostButtonVisibilityMode submitVisibility,
+  bool
+      get isUploadingAttachment; // required SubmitPostButtonVisibilityMode submitVisibility,
+  @override
   bool get isCreatingLink;
   @override
   bool get isSubmitting;
@@ -273,8 +284,11 @@ abstract class _ReservationChatFormState implements BookedReservationFormState {
       get authFailureOrSuccessInviteLink;
   @override
   Option<Either<ReservationFormFailure, Unit>> get authFailureOrSuccess;
+
+  /// Create a copy of BookedReservationFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ReservationChatFormStateImplCopyWith<_$ReservationChatFormStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -472,6 +486,9 @@ class _$BookedReservationFormEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -492,6 +509,8 @@ class __$$InitializedPostFormImplCopyWithImpl<$Res>
       $Res Function(_$InitializedPostFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -531,7 +550,9 @@ class _$InitializedPostFormImpl implements _InitializedPostForm {
   @override
   int get hashCode => Object.hash(runtimeType, initialPost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitializedPostFormImplCopyWith<_$InitializedPostFormImpl> get copyWith =>
@@ -739,7 +760,10 @@ abstract class _InitializedPostForm implements BookedReservationFormEvent {
       _$InitializedPostFormImpl;
 
   Option<Post> get initialPost;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitializedPostFormImplCopyWith<_$InitializedPostFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -761,6 +785,8 @@ class __$$PostIsSavingImplCopyWithImpl<$Res>
       _$PostIsSavingImpl _value, $Res Function(_$PostIsSavingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -799,7 +825,9 @@ class _$PostIsSavingImpl implements _PostIsSaving {
   @override
   int get hashCode => Object.hash(runtimeType, save);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PostIsSavingImplCopyWith<_$PostIsSavingImpl> get copyWith =>
@@ -1005,7 +1033,10 @@ abstract class _PostIsSaving implements BookedReservationFormEvent {
   const factory _PostIsSaving(final bool save) = _$PostIsSavingImpl;
 
   bool get save;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PostIsSavingImplCopyWith<_$PostIsSavingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1029,6 +1060,8 @@ class __$$TextPostChangedImplCopyWithImpl<$Res>
       _$TextPostChangedImpl _value, $Res Function(_$TextPostChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1042,6 +1075,8 @@ class __$$TextPostChangedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $TextPostCopyWith<$Res> get textPost {
@@ -1076,7 +1111,9 @@ class _$TextPostChangedImpl implements _TextPostChanged {
   @override
   int get hashCode => Object.hash(runtimeType, textPost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TextPostChangedImplCopyWith<_$TextPostChangedImpl> get copyWith =>
@@ -1284,7 +1321,10 @@ abstract class _TextPostChanged implements BookedReservationFormEvent {
       _$TextPostChangedImpl;
 
   TextPost get textPost;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TextPostChangedImplCopyWith<_$TextPostChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1309,6 +1349,8 @@ class __$$AudioPostChangedImplCopyWithImpl<$Res>
       $Res Function(_$AudioPostChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1322,6 +1364,8 @@ class __$$AudioPostChangedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AudioPostCopyWith<$Res> get audioPost {
@@ -1356,7 +1400,9 @@ class _$AudioPostChangedImpl implements _AudioPostChanged {
   @override
   int get hashCode => Object.hash(runtimeType, audioPost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AudioPostChangedImplCopyWith<_$AudioPostChangedImpl> get copyWith =>
@@ -1564,7 +1610,10 @@ abstract class _AudioPostChanged implements BookedReservationFormEvent {
       _$AudioPostChangedImpl;
 
   AudioPost get audioPost;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AudioPostChangedImplCopyWith<_$AudioPostChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1586,6 +1635,8 @@ class __$$ImagesChangedImplCopyWithImpl<$Res>
       _$ImagesChangedImpl _value, $Res Function(_$ImagesChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1632,7 +1683,9 @@ class _$ImagesChangedImpl implements _ImagesChanged {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_videoPosts));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ImagesChangedImplCopyWith<_$ImagesChangedImpl> get copyWith =>
@@ -1839,7 +1892,10 @@ abstract class _ImagesChanged implements BookedReservationFormEvent {
       _$ImagesChangedImpl;
 
   List<ImagePost> get videoPosts;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ImagesChangedImplCopyWith<_$ImagesChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1861,6 +1917,8 @@ class __$$VideosChangedImplCopyWithImpl<$Res>
       _$VideosChangedImpl _value, $Res Function(_$VideosChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1905,7 +1963,9 @@ class _$VideosChangedImpl implements _VideosChanged {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_videos));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VideosChangedImplCopyWith<_$VideosChangedImpl> get copyWith =>
@@ -2112,7 +2172,10 @@ abstract class _VideosChanged implements BookedReservationFormEvent {
       _$VideosChangedImpl;
 
   List<VideoPost> get videos;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VideosChangedImplCopyWith<_$VideosChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2137,6 +2200,8 @@ class __$$DidFinishLikePostImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishLikePostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2150,6 +2215,8 @@ class __$$DidFinishLikePostImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get selectedPost {
@@ -2184,7 +2251,9 @@ class _$DidFinishLikePostImpl implements _DidFinishLikePost {
   @override
   int get hashCode => Object.hash(runtimeType, selectedPost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishLikePostImplCopyWith<_$DidFinishLikePostImpl> get copyWith =>
@@ -2392,7 +2461,10 @@ abstract class _DidFinishLikePost implements BookedReservationFormEvent {
       _$DidFinishLikePostImpl;
 
   Post get selectedPost;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishLikePostImplCopyWith<_$DidFinishLikePostImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2418,6 +2490,8 @@ class __$$DidFinishBookmarkPostImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishBookmarkPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2431,6 +2505,8 @@ class __$$DidFinishBookmarkPostImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get selectedPost {
@@ -2465,7 +2541,9 @@ class _$DidFinishBookmarkPostImpl implements _DidFinishBookmarkPost {
   @override
   int get hashCode => Object.hash(runtimeType, selectedPost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishBookmarkPostImplCopyWith<_$DidFinishBookmarkPostImpl>
@@ -2673,7 +2751,10 @@ abstract class _DidFinishBookmarkPost implements BookedReservationFormEvent {
       _$DidFinishBookmarkPostImpl;
 
   Post get selectedPost;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishBookmarkPostImplCopyWith<_$DidFinishBookmarkPostImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2699,6 +2780,8 @@ class __$$DidFinishFlaggingPostImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishFlaggingPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2712,6 +2795,8 @@ class __$$DidFinishFlaggingPostImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get selectedPost {
@@ -2746,7 +2831,9 @@ class _$DidFinishFlaggingPostImpl implements _DidFinishFlaggingPost {
   @override
   int get hashCode => Object.hash(runtimeType, selectedPost);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishFlaggingPostImplCopyWith<_$DidFinishFlaggingPostImpl>
@@ -2954,7 +3041,10 @@ abstract class _DidFinishFlaggingPost implements BookedReservationFormEvent {
       _$DidFinishFlaggingPostImpl;
 
   Post get selectedPost;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishFlaggingPostImplCopyWith<_$DidFinishFlaggingPostImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2981,6 +3071,8 @@ class __$$DidLeaveBookedReservationImplCopyWithImpl<$Res>
       $Res Function(_$DidLeaveBookedReservationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2999,6 +3091,8 @@ class __$$DidLeaveBookedReservationImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReservationItemCopyWith<$Res> get reservation {
@@ -3045,7 +3139,9 @@ class _$DidLeaveBookedReservationImpl implements _DidLeaveBookedReservation {
   int get hashCode => Object.hash(runtimeType, reservation,
       const DeepCollectionEquality().hash(_affiliates));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidLeaveBookedReservationImplCopyWith<_$DidLeaveBookedReservationImpl>
@@ -3255,7 +3351,10 @@ abstract class _DidLeaveBookedReservation
 
   ReservationItem get reservation;
   List<ContactDetails> get affiliates;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidLeaveBookedReservationImplCopyWith<_$DidLeaveBookedReservationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3282,6 +3381,8 @@ class __$$DidJoinBookedReservationImplCopyWithImpl<$Res>
       $Res Function(_$DidJoinBookedReservationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3300,6 +3401,8 @@ class __$$DidJoinBookedReservationImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReservationItemCopyWith<$Res> get reservation {
@@ -3346,7 +3449,9 @@ class _$DidJoinBookedReservationImpl implements _DidJoinBookedReservation {
   int get hashCode => Object.hash(runtimeType, reservation,
       const DeepCollectionEquality().hash(_affiliates));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidJoinBookedReservationImplCopyWith<_$DidJoinBookedReservationImpl>
@@ -3555,7 +3660,10 @@ abstract class _DidJoinBookedReservation implements BookedReservationFormEvent {
 
   ReservationItem get reservation;
   List<ContactDetails> get affiliates;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidJoinBookedReservationImplCopyWith<_$DidJoinBookedReservationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3580,6 +3688,8 @@ class __$$DidRemoveAffiliateImplCopyWithImpl<$Res>
       $Res Function(_$DidRemoveAffiliateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3598,6 +3708,8 @@ class __$$DidRemoveAffiliateImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReservationItemCopyWith<$Res> get reservation {
@@ -3644,7 +3756,9 @@ class _$DidRemoveAffiliateImpl implements _DidRemoveAffiliate {
   int get hashCode => Object.hash(runtimeType, reservation,
       const DeepCollectionEquality().hash(_affiliates));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidRemoveAffiliateImplCopyWith<_$DidRemoveAffiliateImpl> get copyWith =>
@@ -3853,7 +3967,10 @@ abstract class _DidRemoveAffiliate implements BookedReservationFormEvent {
 
   ReservationItem get reservation;
   List<ContactDetails> get affiliates;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidRemoveAffiliateImplCopyWith<_$DidRemoveAffiliateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3875,6 +3992,9 @@ class __$$DidRequestRefundCancellationImplCopyWithImpl<$Res>
       _$DidRequestRefundCancellationImpl _value,
       $Res Function(_$DidRequestRefundCancellationImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4117,6 +4237,9 @@ class __$$DidRequestReservationChangeImplCopyWithImpl<$Res>
       _$DidRequestReservationChangeImpl _value,
       $Res Function(_$DidRequestReservationChangeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -4364,6 +4487,8 @@ class __$$DidFinishSubmittingReplyImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishSubmittingReplyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4382,6 +4507,8 @@ class __$$DidFinishSubmittingReplyImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PostCopyWith<$Res> get replyingPost {
@@ -4428,7 +4555,9 @@ class _$DidFinishSubmittingReplyImpl implements _DidFinishSubmittingReply {
   int get hashCode => Object.hash(runtimeType, replyingPost,
       const DeepCollectionEquality().hash(_attendees));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishSubmittingReplyImplCopyWith<_$DidFinishSubmittingReplyImpl>
@@ -4638,7 +4767,10 @@ abstract class _DidFinishSubmittingReply implements BookedReservationFormEvent {
 
   Post get replyingPost;
   List<AttendeeItem> get attendees;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishSubmittingReplyImplCopyWith<_$DidFinishSubmittingReplyImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4663,6 +4795,8 @@ class __$$DidFinishSubmittingPostImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishSubmittingPostImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4709,7 +4843,9 @@ class _$DidFinishSubmittingPostImpl implements _DidFinishSubmittingPost {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishSubmittingPostImplCopyWith<_$DidFinishSubmittingPostImpl>
@@ -4917,7 +5053,10 @@ abstract class _DidFinishSubmittingPost implements BookedReservationFormEvent {
       _$DidFinishSubmittingPostImpl;
 
   List<AttendeeItem> get attendees;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishSubmittingPostImplCopyWith<_$DidFinishSubmittingPostImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4944,6 +5083,8 @@ class __$$DidFinishCreateNewInviteLinkImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishCreateNewInviteLinkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4957,6 +5098,8 @@ class __$$DidFinishCreateNewInviteLinkImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReservationItemCopyWith<$Res> get reservation {
@@ -4992,7 +5135,9 @@ class _$DidFinishCreateNewInviteLinkImpl
   @override
   int get hashCode => Object.hash(runtimeType, reservation);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishCreateNewInviteLinkImplCopyWith<
@@ -5202,7 +5347,10 @@ abstract class _DidFinishCreateNewInviteLink
       final ReservationItem reservation) = _$DidFinishCreateNewInviteLinkImpl;
 
   ReservationItem get reservation;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of BookedReservationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishCreateNewInviteLinkImplCopyWith<
           _$DidFinishCreateNewInviteLinkImpl>
       get copyWith => throw _privateConstructorUsedError;

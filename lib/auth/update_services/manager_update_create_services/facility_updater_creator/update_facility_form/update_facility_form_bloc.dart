@@ -65,22 +65,22 @@ class UpdateFacilityFormBloc extends Bloc<UpdateFacilityFormEvent, UpdateFacilit
             isLocationConfirmed: (e) async* {
               yield state.copyWith(
                   facilityCreatorForm: state.facilityCreatorForm.copyWith(
-                      facilityLocation: LocationModel(
-                        ownerId: state.facilityCreatorForm.facilityLocation.ownerId,
-                        locationType: state.facilityCreatorForm.facilityLocation.locationType,
-                        placeId: state.facilityCreatorForm.facilityLocation.placeId,
-                        longLat: state.facilityCreatorForm.facilityLocation.longLat,
-                        countryRegion: state.facilityCreatorForm.facilityLocation.countryRegion,
-                        city: state.facilityCreatorForm.facilityLocation.city,
-                        provinceState: state.facilityCreatorForm.facilityLocation.provinceState,
-                        street: state.facilityCreatorForm.facilityLocation.street,
-                        postalCode: state.facilityCreatorForm.facilityLocation.postalCode,
-                        isLocationConfirmed: e.isConfirmedBool,
-                        isUnverified: state.facilityCreatorForm.facilityLocation.isUnverified,
-                        isVerified: state.facilityCreatorForm.facilityLocation.isVerified,
-                        isVerifiedAlready: state.facilityCreatorForm.facilityLocation.isVerifiedAlready,
-                        isCompleted: state.facilityCreatorForm.facilityLocation.isCompleted,
-                        aptUnitNumber: state.facilityCreatorForm.facilityLocation.aptUnitNumber,
+                    facilityLocation: LocationModel(
+                      ownerId: state.facilityCreatorForm.facilityLocation.ownerId,
+                      locationType: state.facilityCreatorForm.facilityLocation.locationType,
+                      placeId: state.facilityCreatorForm.facilityLocation.placeId,
+                      longLat: state.facilityCreatorForm.facilityLocation.longLat,
+                      countryRegion: state.facilityCreatorForm.facilityLocation.countryRegion,
+                      city: state.facilityCreatorForm.facilityLocation.city,
+                      provinceState: state.facilityCreatorForm.facilityLocation.provinceState,
+                      street: state.facilityCreatorForm.facilityLocation.street,
+                      postalCode: state.facilityCreatorForm.facilityLocation.postalCode,
+                      isLocationConfirmed: e.isConfirmedBool,
+                      isUnverified: state.facilityCreatorForm.facilityLocation.isUnverified,
+                      isVerified: state.facilityCreatorForm.facilityLocation.isVerified,
+                      isVerifiedAlready: state.facilityCreatorForm.facilityLocation.isVerifiedAlready,
+                      isCompleted: state.facilityCreatorForm.facilityLocation.isCompleted,
+                      aptUnitNumber: state.facilityCreatorForm.facilityLocation.aptUnitNumber,
                   )
                 ),
                 authFailureOrSuccessOptionLocation: none(),
@@ -110,6 +110,7 @@ class UpdateFacilityFormBloc extends Bloc<UpdateFacilityFormEvent, UpdateFacilit
                 )
               );
             },
+
 
             rentalDescription1Changed: (e) async* {
               yield state.copyWith(

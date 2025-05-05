@@ -105,7 +105,7 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
                 if (isEmailValid) {
                   failureOrSuccess = await _authFacade.validateEmailRegisterer(email: state.user.emailAddress);
                   yield state.copyWith(
-                      authEmailFailOrSuccessOption: optionOf(failureOrSuccess)
+                      unitFailOrSuccessOption: optionOf(failureOrSuccess)
                   );
                 }
 
@@ -113,13 +113,13 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
                 if (isNameValid && isEmailValid && isTermsValid && isPassValid && isPassCheckValid) {
                   yield state.copyWith(
                     isSubmitting: true,
-                    authEmailFailOrSuccessOption: none(),
+                    unitFailOrSuccessOption: none(),
                   );
 
                   failureOrSuccess = state.isSubmitting ? left(AuthFailure.serverError()) : await _authFacade.createAuthUserProfile(profile: state.user, password: state.password);
 
                   yield state.copyWith(
-                    authEmailFailOrSuccessOption: optionOf(failureOrSuccess),
+                    unitFailOrSuccessOption: optionOf(failureOrSuccess),
                   );
 
                 }
@@ -133,7 +133,7 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
 
 
               signInWithApplePressed: (e) async* {
-                Either<AuthFailure, bool> failureOrSuccess;
+                Either<AuthFailure, UserProfileModel> failureOrSuccess;
 
                 yield state.copyWith(
                     isSubmitting: true,
@@ -150,7 +150,7 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
               },
 
               signInWithGooglePressed: (e) async* {
-                Either<AuthFailure, bool> failureOrSuccess;
+                Either<AuthFailure, UserProfileModel> failureOrSuccess;
 
                 yield state.copyWith(
                     isSubmitting: true,
@@ -190,19 +190,19 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
                 Either<AuthFailure, Unit> failureOrSuccess;
 
                 yield state.copyWith(
-                    authEmailFailOrSuccessOption: none()
+                    unitFailOrSuccessOption: none()
                 );
 
                 failureOrSuccess = await _authFacade.updateFirstTimeSignIn();
 
                 yield state.copyWith(
-                    authEmailFailOrSuccessOption: optionOf(failureOrSuccess),
+                    unitFailOrSuccessOption: optionOf(failureOrSuccess),
                 );
 
               },
 
               signInPressed: (e) async* {
-                Either<AuthFailure, Unit> failureOrSuccess;
+                Either<AuthFailure, UserProfileModel> failureOrSuccess;
 
                   final isEmailIsValid = state.user.emailAddress.isValid();
                   final isPassValid = state.loginPassword.isNotEmpty;
@@ -238,13 +238,13 @@ class CreateAuthUserAccountBloc extends Bloc<CreateAuthUserAccountEvent, CreateA
                 if (isEmailValid) {
                   yield state.copyWith(
                     isSubmitting: true,
-                      authEmailFailOrSuccessOption: none()
+                      unitFailOrSuccessOption: none()
                   );
 
                   failureOrSuccess = state.isSubmitting ? await _authFacade.sendPasswordResetEmail(email: state.user.emailAddress.getOrCrash()) : left(AuthFailure.serverError());
 
                   yield state.copyWith(
-                      authEmailFailOrSuccessOption: optionOf(failureOrSuccess)
+                      unitFailOrSuccessOption: optionOf(failureOrSuccess)
                   );
                 }
 

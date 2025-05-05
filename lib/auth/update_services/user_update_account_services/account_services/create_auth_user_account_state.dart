@@ -13,8 +13,9 @@ class CreateAuthUserAccountState with _$CreateAuthUserAccountState {
       required AutovalidateMode showErrorMessages,
       required bool isSubmitting,
       required bool isEditing,
-      required Option<Either<AuthFailure, bool>> authFailureOrSuccessOption,
-      required Option<Either<AuthFailure, Unit>> authEmailFailOrSuccessOption,
+      required Option<Either<AuthFailure, UserProfileModel>> authFailureOrSuccessOption,
+      required Option<Either<AuthFailure, UserProfileModel>> authEmailFailOrSuccessOption,
+      required Option<Either<AuthFailure, Unit>> unitFailOrSuccessOption,
   }) = _CreateAuthUserAccountState;
 
   factory CreateAuthUserAccountState.initial() => CreateAuthUserAccountState(
@@ -28,7 +29,8 @@ class CreateAuthUserAccountState with _$CreateAuthUserAccountState {
       isSubmitting: false,
       isEditing: false,
       authFailureOrSuccessOption: none(),
-      authEmailFailOrSuccessOption: none()
+      authEmailFailOrSuccessOption: none(),
+      unitFailOrSuccessOption: none(),
   );
 
 } 

@@ -125,6 +125,9 @@ class _$StripePaymentWatcherEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -147,6 +150,8 @@ class __$$WatchAllPaymentMethodsImplCopyWithImpl<$Res>
       $Res Function(_$WatchAllPaymentMethodsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -186,7 +191,9 @@ class _$WatchAllPaymentMethodsImpl implements _WatchAllPaymentMethods {
   @override
   int get hashCode => Object.hash(runtimeType, customerId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WatchAllPaymentMethodsImplCopyWith<_$WatchAllPaymentMethodsImpl>
@@ -313,7 +320,10 @@ abstract class _WatchAllPaymentMethods implements StripePaymentWatcherEvent {
       _$WatchAllPaymentMethodsImpl;
 
   String get customerId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WatchAllPaymentMethodsImplCopyWith<_$WatchAllPaymentMethodsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -338,6 +348,8 @@ class __$$PaymentMethodsReceivedImplCopyWithImpl<$Res>
       $Res Function(_$PaymentMethodsReceivedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -377,7 +389,9 @@ class _$PaymentMethodsReceivedImpl implements _PaymentMethodsReceived {
   @override
   int get hashCode => Object.hash(runtimeType, failedItems);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PaymentMethodsReceivedImplCopyWith<_$PaymentMethodsReceivedImpl>
@@ -505,7 +519,10 @@ abstract class _PaymentMethodsReceived implements StripePaymentWatcherEvent {
       _$PaymentMethodsReceivedImpl;
 
   Either<PaymentMethodValueFailure, List<CardItem>> get failedItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PaymentMethodsReceivedImplCopyWith<_$PaymentMethodsReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -530,6 +547,8 @@ class __$$WatchAllPaymentIntentHistoryImplCopyWithImpl<$Res>
       $Res Function(_$WatchAllPaymentIntentHistoryImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -570,7 +589,9 @@ class _$WatchAllPaymentIntentHistoryImpl
   @override
   int get hashCode => Object.hash(runtimeType, customerId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WatchAllPaymentIntentHistoryImplCopyWith<
@@ -699,7 +720,10 @@ abstract class _WatchAllPaymentIntentHistory
       _$WatchAllPaymentIntentHistoryImpl;
 
   String get customerId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WatchAllPaymentIntentHistoryImplCopyWith<
           _$WatchAllPaymentIntentHistoryImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -726,6 +750,8 @@ class __$$paymentIntentHistoryReceivedImplCopyWithImpl<$Res>
       $Res Function(_$paymentIntentHistoryReceivedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -766,7 +792,9 @@ class _$paymentIntentHistoryReceivedImpl
   @override
   int get hashCode => Object.hash(runtimeType, failedItems);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$paymentIntentHistoryReceivedImplCopyWith<
@@ -896,7 +924,10 @@ abstract class _paymentIntentHistoryReceived
           failedItems) = _$paymentIntentHistoryReceivedImpl;
 
   Either<PaymentMethodValueFailure, List<PaymentIntent>> get failedItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$paymentIntentHistoryReceivedImplCopyWith<
           _$paymentIntentHistoryReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -918,6 +949,9 @@ class __$$WatchAllPayoutHistoryImplCopyWithImpl<$Res>
   __$$WatchAllPayoutHistoryImplCopyWithImpl(_$WatchAllPayoutHistoryImpl _value,
       $Res Function(_$WatchAllPayoutHistoryImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1078,6 +1112,8 @@ class __$$PayoutHistoryReceivedImplCopyWithImpl<$Res>
       $Res Function(_$PayoutHistoryReceivedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1117,7 +1153,9 @@ class _$PayoutHistoryReceivedImpl implements _PayoutHistoryReceived {
   @override
   int get hashCode => Object.hash(runtimeType, failedItems);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PayoutHistoryReceivedImplCopyWith<_$PayoutHistoryReceivedImpl>
@@ -1245,7 +1283,10 @@ abstract class _PayoutHistoryReceived implements StripePaymentWatcherEvent {
           failedItems) = _$PayoutHistoryReceivedImpl;
 
   Either<PaymentMethodValueFailure, List<PayoutModel>> get failedItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PayoutHistoryReceivedImplCopyWith<_$PayoutHistoryReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1373,6 +1414,9 @@ class _$StripePaymentWatcherStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1389,6 +1433,9 @@ class __$$InitialImplCopyWithImpl<$Res>
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1555,6 +1602,9 @@ class __$$LoadInProgressImplCopyWithImpl<$Res>
   __$$LoadInProgressImplCopyWithImpl(
       _$LoadInProgressImpl _value, $Res Function(_$LoadInProgressImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -1727,6 +1777,8 @@ class __$$LoadAllPaymentMethodsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllPaymentMethodsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1773,7 +1825,9 @@ class _$LoadAllPaymentMethodsSuccessImpl
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_cards));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllPaymentMethodsSuccessImplCopyWith<
@@ -1914,7 +1968,10 @@ abstract class _LoadAllPaymentMethodsSuccess
       _$LoadAllPaymentMethodsSuccessImpl;
 
   List<CardItem> get cards;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllPaymentMethodsSuccessImplCopyWith<
           _$LoadAllPaymentMethodsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1942,6 +1999,8 @@ class __$$LoadAllPaymentMethodsFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllPaymentMethodsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1955,6 +2014,8 @@ class __$$LoadAllPaymentMethodsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PaymentMethodValueFailureCopyWith<dynamic, $Res> get failure {
@@ -1990,7 +2051,9 @@ class _$LoadAllPaymentMethodsFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllPaymentMethodsFailureImplCopyWith<
@@ -2132,7 +2195,10 @@ abstract class _LoadAllPaymentMethodsFailure
       _$LoadAllPaymentMethodsFailureImpl;
 
   PaymentMethodValueFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllPaymentMethodsFailureImplCopyWith<
           _$LoadAllPaymentMethodsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2158,6 +2224,8 @@ class __$$LoadAllPaymentIntentsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllPaymentIntentsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2206,7 +2274,9 @@ class _$LoadAllPaymentIntentsSuccessImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_paymentIntent));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllPaymentIntentsSuccessImplCopyWith<
@@ -2348,7 +2418,10 @@ abstract class _LoadAllPaymentIntentsSuccess
       _$LoadAllPaymentIntentsSuccessImpl;
 
   List<PaymentIntent> get paymentIntent;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllPaymentIntentsSuccessImplCopyWith<
           _$LoadAllPaymentIntentsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2376,6 +2449,8 @@ class __$$LoadAllPaymentIntentsFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllPaymentIntentsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2389,6 +2464,8 @@ class __$$LoadAllPaymentIntentsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PaymentMethodValueFailureCopyWith<dynamic, $Res> get failure {
@@ -2424,7 +2501,9 @@ class _$LoadAllPaymentIntentsFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllPaymentIntentsFailureImplCopyWith<
@@ -2566,7 +2645,10 @@ abstract class _LoadAllPaymentIntentsFailure
       _$LoadAllPaymentIntentsFailureImpl;
 
   PaymentMethodValueFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllPaymentIntentsFailureImplCopyWith<
           _$LoadAllPaymentIntentsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2591,6 +2673,8 @@ class __$$LoadAllPayoutsSuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllPayoutsSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2637,7 +2721,9 @@ class _$LoadAllPayoutsSuccessImpl implements _LoadAllPayoutsSuccess {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_payoutModel));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllPayoutsSuccessImplCopyWith<_$LoadAllPayoutsSuccessImpl>
@@ -2776,7 +2862,10 @@ abstract class _LoadAllPayoutsSuccess implements StripePaymentWatcherState {
       _$LoadAllPayoutsSuccessImpl;
 
   List<PayoutModel> get payoutModel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllPayoutsSuccessImplCopyWith<_$LoadAllPayoutsSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2802,6 +2891,8 @@ class __$$LoadAllPayoutsFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllPayoutsFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2815,6 +2906,8 @@ class __$$LoadAllPayoutsFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $PaymentMethodValueFailureCopyWith<dynamic, $Res> get failure {
@@ -2849,7 +2942,9 @@ class _$LoadAllPayoutsFailureImpl implements _LoadAllPayoutsFailure {
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllPayoutsFailureImplCopyWith<_$LoadAllPayoutsFailureImpl>
@@ -2989,7 +3084,10 @@ abstract class _LoadAllPayoutsFailure implements StripePaymentWatcherState {
       _$LoadAllPayoutsFailureImpl;
 
   PaymentMethodValueFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of StripePaymentWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllPayoutsFailureImplCopyWith<_$LoadAllPayoutsFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

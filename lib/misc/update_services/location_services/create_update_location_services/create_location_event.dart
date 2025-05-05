@@ -18,8 +18,19 @@ class CreateLocationEvent with _$CreateLocationEvent {
   const factory CreateLocationEvent.isTemporaryChanged(bool isTemp) = CreateIsTemporaryChanged;
   const factory CreateLocationEvent.isLongTermChanged(bool isLong) = CreateIsLongTermChanged;
   const factory CreateLocationEvent.isPrivateChanged(bool isPrivate) = CreateIsPrivateChanged;
-  const factory CreateLocationEvent.isPublicChanged(bool isPublic) = CreateIsPublicChanged;
   const factory CreateLocationEvent.locationOwnerChanged(String ownerStr) = CreateLocationOwnerChanged;
+
+  const factory CreateLocationEvent.locationMediaChanged(List<ImageUpload> media) = CreateLocationMediaChanged;
+  const factory CreateLocationEvent.estimatedSquareFootageChanged(int estimation) = CreateLocationEstimatedSquareFootageChanged;
+  const factory CreateLocationEvent.locationNameChanged(String locationNameStr) = CreateLocationNameChanged;
+  const factory CreateLocationEvent.parkingAvailabilityChanged(bool isParkingAvailable) = CreateParkingAvailabilityChanged;
+  const factory CreateLocationEvent.nearTransitChanged(bool isNearTransit) = CreateNearTransitChanged;
+  const factory CreateLocationEvent.overnightStorageProvisionChanged(bool isOvernightStorageProvided) = CreateOvernightStorageProvisionChanged;
+  const factory CreateLocationEvent.barrierFreeAccessibleChanged(bool isBarrierFreeAccessible) = CreateBarrierFreeAccessibleChanged;
+  const factory CreateLocationEvent.barrierFreeProvisionChanged(List<LocationBarrierFreeTypes> barrierProvisions) = CreateBarrierFreeProvisionChanged;
+  const factory CreateLocationEvent.amenityProvisionChanged(List<LocationAmenities> amentiyProvisions) = CreateAmenityProvisionChanged;
+  const factory CreateLocationEvent.equipmentProvisionChanged(List<LocationEquipment> equipmentProvisions) = CreateEquipmentProvisionChanged;
+  const factory CreateLocationEvent.rentalOptionChanged(LocationRentalOptions rentalOption) = CreateRentalOptionChanged;
 
   const factory CreateLocationEvent.finishedUpdatingAddressFromGoogle(String cityStr, String provinceStr) = FinishedUpdatingCreateAddressFromGoogle;
   const factory CreateLocationEvent.finishedUpdatingAddressFromCoordinates(String countryStr, String streetStr, String cityStr, String stateStr, String postalStr) = FinishedUpdatingCreateAddressFromCoordinates;

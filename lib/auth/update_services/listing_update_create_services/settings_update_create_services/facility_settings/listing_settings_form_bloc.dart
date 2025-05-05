@@ -747,7 +747,7 @@ class ListingSettingFormBloc extends Bloc<ListingSettingFormEvent, ListingSettin
                         quotaRuleSettings: state.listingManagerForm.listingRulesService.quotaRuleSettings,
                         conditionServices: state.listingManagerForm.listingRulesService.conditionServices
                     ),
-                    listingProfileService: state.listingManagerForm.listingProfileService
+                  listingProfileService: state.listingManagerForm.listingProfileService
                 )
             );
           },

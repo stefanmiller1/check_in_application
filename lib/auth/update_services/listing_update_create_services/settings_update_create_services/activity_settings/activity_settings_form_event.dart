@@ -4,8 +4,8 @@ part of 'activity_settings_form_bloc.dart';
 class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
 
   factory UpdateActivityFormEvent.initializeActivityForm(Option<ActivityManagerForm> initializeActivityForm, Option<ReservationItem> initializeResForm) = _InitializeActivityForm;
-  const factory UpdateActivityFormEvent.activityOptionChanged(ActivityOption activityOption) = ActivityOptionChanged;
-
+  const factory UpdateActivityFormEvent.activityOptionChanged(List<ActivityOption> activityOption) = ActivityOptionChanged;
+// 
   // const factory UpdateActivityFormEvent.startingDateChanged(DateTime dateChanged) = _StartingDateChanged;
   // const factory UpdateActivityFormEvent.endingDateChanged(DateTime dateChanged) = _EndingDateChanged;
   // const factory UpdateActivityFormEvent.isInviteOnlyChanged(bool inviteBool) = _IsInviteOnlyChanged;

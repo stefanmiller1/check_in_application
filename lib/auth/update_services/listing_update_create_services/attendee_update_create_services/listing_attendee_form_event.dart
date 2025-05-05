@@ -22,9 +22,7 @@ class AttendeeFormEvent with _$AttendeeFormEvent {
   /// fill out form for organization/partner
   /// fill out form for ticket
   /// fill out form for passes
-  const factory AttendeeFormEvent.createPaymentIntentForAttendee(UserProfileModel profile, String amount, String currency, String? paymentMethod) = _CreatePaymentIntentForAttendee;
-  const factory AttendeeFormEvent.createAttendeeFormForReservation(String paymentIntentId) = _CreateAttendeeFormForReservation;
-
+ 
   /// ticket based events
   const factory AttendeeFormEvent.checkTicketLimits(UserProfileModel currentUserProfile) = _CheckTicketLimits;
   const factory AttendeeFormEvent.createTicketsOnHold() = _CreateTicketsOnHold;

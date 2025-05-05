@@ -22,7 +22,7 @@ mixin _$UpdateActivityFormEvent {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -130,7 +130,8 @@ mixin _$UpdateActivityFormEvent {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -230,7 +231,8 @@ mixin _$UpdateActivityFormEvent {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -724,6 +726,9 @@ class _$UpdateActivityFormEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -748,6 +753,8 @@ class __$$InitializeActivityFormImplCopyWithImpl<$Res>
       $Res Function(_$InitializeActivityFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -798,7 +805,9 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
   int get hashCode =>
       Object.hash(runtimeType, initializeActivityForm, initializeResForm);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitializeActivityFormImplCopyWith<_$InitializeActivityFormImpl>
@@ -812,7 +821,7 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -924,7 +933,8 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -1028,7 +1038,8 @@ class _$InitializeActivityFormImpl implements _InitializeActivityForm {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -1530,7 +1541,10 @@ abstract class _InitializeActivityForm implements UpdateActivityFormEvent {
 
   Option<ActivityManagerForm> get initializeActivityForm;
   Option<ReservationItem> get initializeResForm;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitializeActivityFormImplCopyWith<_$InitializeActivityFormImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1542,9 +1556,7 @@ abstract class _$$ActivityOptionChangedImplCopyWith<$Res> {
           $Res Function(_$ActivityOptionChangedImpl) then) =
       __$$ActivityOptionChangedImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({ActivityOption activityOption});
-
-  $ActivityOptionCopyWith<$Res> get activityOption;
+  $Res call({List<ActivityOption> activityOption});
 }
 
 /// @nodoc
@@ -1556,6 +1568,8 @@ class __$$ActivityOptionChangedImplCopyWithImpl<$Res>
       $Res Function(_$ActivityOptionChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1563,28 +1577,26 @@ class __$$ActivityOptionChangedImplCopyWithImpl<$Res>
   }) {
     return _then(_$ActivityOptionChangedImpl(
       null == activityOption
-          ? _value.activityOption
+          ? _value._activityOption
           : activityOption // ignore: cast_nullable_to_non_nullable
-              as ActivityOption,
+              as List<ActivityOption>,
     ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $ActivityOptionCopyWith<$Res> get activityOption {
-    return $ActivityOptionCopyWith<$Res>(_value.activityOption, (value) {
-      return _then(_value.copyWith(activityOption: value));
-    });
   }
 }
 
 /// @nodoc
 
 class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
-  const _$ActivityOptionChangedImpl(this.activityOption);
+  const _$ActivityOptionChangedImpl(final List<ActivityOption> activityOption)
+      : _activityOption = activityOption;
 
+  final List<ActivityOption> _activityOption;
   @override
-  final ActivityOption activityOption;
+  List<ActivityOption> get activityOption {
+    if (_activityOption is EqualUnmodifiableListView) return _activityOption;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_activityOption);
+  }
 
   @override
   String toString() {
@@ -1596,14 +1608,17 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ActivityOptionChangedImpl &&
-            (identical(other.activityOption, activityOption) ||
-                other.activityOption == activityOption));
+            const DeepCollectionEquality()
+                .equals(other._activityOption, _activityOption));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, activityOption);
+  int get hashCode => Object.hash(
+      runtimeType, const DeepCollectionEquality().hash(_activityOption));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityOptionChangedImplCopyWith<_$ActivityOptionChangedImpl>
@@ -1617,7 +1632,7 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -1728,7 +1743,8 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -1831,7 +1847,8 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -2325,11 +2342,14 @@ class _$ActivityOptionChangedImpl implements ActivityOptionChanged {
 }
 
 abstract class ActivityOptionChanged implements UpdateActivityFormEvent {
-  const factory ActivityOptionChanged(final ActivityOption activityOption) =
-      _$ActivityOptionChangedImpl;
+  const factory ActivityOptionChanged(
+      final List<ActivityOption> activityOption) = _$ActivityOptionChangedImpl;
 
-  ActivityOption get activityOption;
-  @JsonKey(ignore: true)
+  List<ActivityOption> get activityOption;
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityOptionChangedImplCopyWith<_$ActivityOptionChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2351,6 +2371,8 @@ class __$$IsSavingChangedImplCopyWithImpl<$Res>
       _$IsSavingChangedImpl _value, $Res Function(_$IsSavingChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2390,7 +2412,9 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
   @override
   int get hashCode => Object.hash(runtimeType, boolSave);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsSavingChangedImplCopyWith<_$IsSavingChangedImpl> get copyWith =>
@@ -2404,7 +2428,7 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -2515,7 +2539,8 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -2618,7 +2643,8 @@ class _$IsSavingChangedImpl implements _IsSavingChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -3115,7 +3141,10 @@ abstract class _IsSavingChanged implements UpdateActivityFormEvent {
   const factory _IsSavingChanged(final bool boolSave) = _$IsSavingChangedImpl;
 
   bool get boolSave;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsSavingChangedImplCopyWith<_$IsSavingChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3138,6 +3167,8 @@ class __$$ActivityTitleChangedImplCopyWithImpl<$Res>
       $Res Function(_$ActivityTitleChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3177,7 +3208,9 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
   @override
   int get hashCode => Object.hash(runtimeType, titleChanged);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityTitleChangedImplCopyWith<_$ActivityTitleChangedImpl>
@@ -3192,7 +3225,7 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -3303,7 +3336,8 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -3406,7 +3440,8 @@ class _$ActivityTitleChangedImpl implements _ActivityTitleChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -3904,7 +3939,10 @@ abstract class _ActivityTitleChanged implements UpdateActivityFormEvent {
       _$ActivityTitleChangedImpl;
 
   BackgroundInfoTitle get titleChanged;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityTitleChangedImplCopyWith<_$ActivityTitleChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3929,6 +3967,8 @@ class __$$ActivityDescriptionChangedImplCopyWithImpl<$Res>
       $Res Function(_$ActivityDescriptionChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3968,7 +4008,9 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
   @override
   int get hashCode => Object.hash(runtimeType, descriptionChanged);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityDescriptionChangedImplCopyWith<_$ActivityDescriptionChangedImpl>
@@ -3982,7 +4024,7 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -4093,7 +4135,8 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -4196,7 +4239,8 @@ class _$ActivityDescriptionChangedImpl implements _ActivityDescriptionChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -4695,7 +4739,10 @@ abstract class _ActivityDescriptionChanged implements UpdateActivityFormEvent {
       _$ActivityDescriptionChangedImpl;
 
   BackgroundInfoDescription get descriptionChanged;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityDescriptionChangedImplCopyWith<_$ActivityDescriptionChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -4720,6 +4767,8 @@ class __$$ActivityDescriptionChangedTwoImplCopyWithImpl<$Res>
       $Res Function(_$ActivityDescriptionChangedTwoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4760,7 +4809,9 @@ class _$ActivityDescriptionChangedTwoImpl
   @override
   int get hashCode => Object.hash(runtimeType, descriptionChanged);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityDescriptionChangedTwoImplCopyWith<
@@ -4775,7 +4826,7 @@ class _$ActivityDescriptionChangedTwoImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -4886,7 +4937,8 @@ class _$ActivityDescriptionChangedTwoImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -4989,7 +5041,8 @@ class _$ActivityDescriptionChangedTwoImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -5489,7 +5542,10 @@ abstract class _ActivityDescriptionChangedTwo
       _$ActivityDescriptionChangedTwoImpl;
 
   BackgroundInfoDescription get descriptionChanged;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityDescriptionChangedTwoImplCopyWith<
           _$ActivityDescriptionChangedTwoImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5515,6 +5571,8 @@ class __$$activityProfileImagesChangedImplCopyWithImpl<$Res>
       $Res Function(_$activityProfileImagesChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5562,7 +5620,9 @@ class _$activityProfileImagesChangedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_imagesList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$activityProfileImagesChangedImplCopyWith<
@@ -5577,7 +5637,7 @@ class _$activityProfileImagesChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -5688,7 +5748,8 @@ class _$activityProfileImagesChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -5791,7 +5852,8 @@ class _$activityProfileImagesChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -6290,7 +6352,10 @@ abstract class _activityProfileImagesChanged
       final List<ImageUpload> imagesList) = _$activityProfileImagesChangedImpl;
 
   List<ImageUpload> get imagesList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$activityProfileImagesChangedImplCopyWith<
           _$activityProfileImagesChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -6314,6 +6379,8 @@ class __$$IsPartnersInviteOnlyImplCopyWithImpl<$Res>
       $Res Function(_$IsPartnersInviteOnlyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6353,7 +6420,9 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
   @override
   int get hashCode => Object.hash(runtimeType, inviteBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsPartnersInviteOnlyImplCopyWith<_$IsPartnersInviteOnlyImpl>
@@ -6368,7 +6437,7 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -6479,7 +6548,8 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -6582,7 +6652,8 @@ class _$IsPartnersInviteOnlyImpl implements _IsPartnersInviteOnly {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -7080,7 +7151,10 @@ abstract class _IsPartnersInviteOnly implements UpdateActivityFormEvent {
       _$IsPartnersInviteOnlyImpl;
 
   bool get inviteBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsPartnersInviteOnlyImplCopyWith<_$IsPartnersInviteOnlyImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7105,6 +7179,8 @@ class __$$IsInstructorInviteOnlyImplCopyWithImpl<$Res>
       $Res Function(_$IsInstructorInviteOnlyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7144,7 +7220,9 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
   @override
   int get hashCode => Object.hash(runtimeType, inviteBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsInstructorInviteOnlyImplCopyWith<_$IsInstructorInviteOnlyImpl>
@@ -7158,7 +7236,7 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -7269,7 +7347,8 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -7372,7 +7451,8 @@ class _$IsInstructorInviteOnlyImpl implements _IsInstructorInviteOnly {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -7870,7 +7950,10 @@ abstract class _IsInstructorInviteOnly implements UpdateActivityFormEvent {
       _$IsInstructorInviteOnlyImpl;
 
   bool get inviteBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsInstructorInviteOnlyImplCopyWith<_$IsInstructorInviteOnlyImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7895,6 +7978,8 @@ class __$$ActivityPostedOnBehalfImplCopyWithImpl<$Res>
       $Res Function(_$ActivityPostedOnBehalfImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7934,7 +8019,9 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
   @override
   int get hashCode => Object.hash(runtimeType, isPostBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityPostedOnBehalfImplCopyWith<_$ActivityPostedOnBehalfImpl>
@@ -7948,7 +8035,7 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -8059,7 +8146,8 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -8162,7 +8250,8 @@ class _$ActivityPostedOnBehalfImpl implements _ActivityPostedOnBehalf {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -8660,7 +8749,10 @@ abstract class _ActivityPostedOnBehalf implements UpdateActivityFormEvent {
       _$ActivityPostedOnBehalfImpl;
 
   bool get isPostBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityPostedOnBehalfImplCopyWith<_$ActivityPostedOnBehalfImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -8685,6 +8777,8 @@ class __$$ActivityPostContactWebsiteImplCopyWithImpl<$Res>
       $Res Function(_$ActivityPostContactWebsiteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8724,7 +8818,9 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
   @override
   int get hashCode => Object.hash(runtimeType, websiteStr);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityPostContactWebsiteImplCopyWith<_$ActivityPostContactWebsiteImpl>
@@ -8738,7 +8834,7 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -8849,7 +8945,8 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -8952,7 +9049,8 @@ class _$ActivityPostContactWebsiteImpl implements _ActivityPostContactWebsite {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -9450,7 +9548,10 @@ abstract class _ActivityPostContactWebsite implements UpdateActivityFormEvent {
       _$ActivityPostContactWebsiteImpl;
 
   String get websiteStr;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityPostContactWebsiteImplCopyWith<_$ActivityPostContactWebsiteImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -9475,6 +9576,8 @@ class __$$ActivityPostContactEmailImplCopyWithImpl<$Res>
       $Res Function(_$ActivityPostContactEmailImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9514,7 +9617,9 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
   @override
   int get hashCode => Object.hash(runtimeType, emailStr);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityPostContactEmailImplCopyWith<_$ActivityPostContactEmailImpl>
@@ -9528,7 +9633,7 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -9639,7 +9744,8 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -9742,7 +9848,8 @@ class _$ActivityPostContactEmailImpl implements _ActivityPostContactEmail {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -10240,7 +10347,10 @@ abstract class _ActivityPostContactEmail implements UpdateActivityFormEvent {
       _$ActivityPostContactEmailImpl;
 
   String get emailStr;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityPostContactEmailImplCopyWith<_$ActivityPostContactEmailImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -10265,6 +10375,8 @@ class __$$ActivityPostContactInstagramImplCopyWithImpl<$Res>
       $Res Function(_$ActivityPostContactInstagramImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10305,7 +10417,9 @@ class _$ActivityPostContactInstagramImpl
   @override
   int get hashCode => Object.hash(runtimeType, instaStr);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityPostContactInstagramImplCopyWith<
@@ -10320,7 +10434,7 @@ class _$ActivityPostContactInstagramImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -10431,7 +10545,8 @@ class _$ActivityPostContactInstagramImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -10534,7 +10649,8 @@ class _$ActivityPostContactInstagramImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -11033,7 +11149,10 @@ abstract class _ActivityPostContactInstagram
       _$ActivityPostContactInstagramImpl;
 
   String get instaStr;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityPostContactInstagramImplCopyWith<
           _$ActivityPostContactInstagramImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -11057,6 +11176,8 @@ class __$$ActivityGoalsChangedImplCopyWithImpl<$Res>
       $Res Function(_$ActivityGoalsChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11104,7 +11225,9 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_activityGoals));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityGoalsChangedImplCopyWith<_$ActivityGoalsChangedImpl>
@@ -11119,7 +11242,7 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -11230,7 +11353,8 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -11333,7 +11457,8 @@ class _$ActivityGoalsChangedImpl implements _ActivityGoalsChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -11832,7 +11957,10 @@ abstract class _ActivityGoalsChanged implements UpdateActivityFormEvent {
       _$ActivityGoalsChangedImpl;
 
   List<BackgroundInfoDescription> get activityGoals;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityGoalsChangedImplCopyWith<_$ActivityGoalsChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -11857,6 +11985,8 @@ class __$$ActivityInterestsChangedImplCopyWithImpl<$Res>
       $Res Function(_$ActivityInterestsChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -11905,7 +12035,9 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_activityInterests));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityInterestsChangedImplCopyWith<_$ActivityInterestsChangedImpl>
@@ -11919,7 +12051,7 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -12030,7 +12162,8 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -12133,7 +12266,8 @@ class _$ActivityInterestsChangedImpl implements _ActivityInterestsChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -12632,7 +12766,10 @@ abstract class _ActivityInterestsChanged implements UpdateActivityFormEvent {
       _$ActivityInterestsChangedImpl;
 
   List<BackgroundInfoDescription> get activityInterests;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityInterestsChangedImplCopyWith<_$ActivityInterestsChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -12657,6 +12794,8 @@ class __$$IsSeventeenAndUnderChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsSeventeenAndUnderChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -12695,7 +12834,9 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
   @override
   int get hashCode => Object.hash(runtimeType, ageBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsSeventeenAndUnderChangedImplCopyWith<_$IsSeventeenAndUnderChangedImpl>
@@ -12709,7 +12850,7 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -12820,7 +12961,8 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -12923,7 +13065,8 @@ class _$IsSeventeenAndUnderChangedImpl implements _IsSeventeenAndUnderChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -13421,7 +13564,10 @@ abstract class _IsSeventeenAndUnderChanged implements UpdateActivityFormEvent {
       _$IsSeventeenAndUnderChangedImpl;
 
   bool get ageBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsSeventeenAndUnderChangedImplCopyWith<_$IsSeventeenAndUnderChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -13443,6 +13589,8 @@ class __$$MinimumAgeChangedImplCopyWithImpl<$Res>
       $Res Function(_$MinimumAgeChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -13481,7 +13629,9 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
   @override
   int get hashCode => Object.hash(runtimeType, ageInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MinimumAgeChangedImplCopyWith<_$MinimumAgeChangedImpl> get copyWith =>
@@ -13495,7 +13645,7 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -13606,7 +13756,8 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -13709,7 +13860,8 @@ class _$MinimumAgeChangedImpl implements _MinimumAgeChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -14206,7 +14358,10 @@ abstract class _MinimumAgeChanged implements UpdateActivityFormEvent {
   const factory _MinimumAgeChanged(final int ageInt) = _$MinimumAgeChangedImpl;
 
   int get ageInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MinimumAgeChangedImplCopyWith<_$MinimumAgeChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -14228,6 +14383,8 @@ class __$$IsMenOnlyChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsMenOnlyChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -14266,7 +14423,9 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
   @override
   int get hashCode => Object.hash(runtimeType, menBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsMenOnlyChangedImplCopyWith<_$IsMenOnlyChangedImpl> get copyWith =>
@@ -14280,7 +14439,7 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -14391,7 +14550,8 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -14494,7 +14654,8 @@ class _$IsMenOnlyChangedImpl implements _IsMenOnlyChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -14991,7 +15152,10 @@ abstract class _IsMenOnlyChanged implements UpdateActivityFormEvent {
   const factory _IsMenOnlyChanged(final bool menBool) = _$IsMenOnlyChangedImpl;
 
   bool get menBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsMenOnlyChangedImplCopyWith<_$IsMenOnlyChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -15014,6 +15178,8 @@ class __$$IsWomenOnlyChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsWomenOnlyChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -15053,7 +15219,9 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
   @override
   int get hashCode => Object.hash(runtimeType, womenBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsWomenOnlyChangedImplCopyWith<_$IsWomenOnlyChangedImpl> get copyWith =>
@@ -15067,7 +15235,7 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -15178,7 +15346,8 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -15281,7 +15450,8 @@ class _$IsWomenOnlyChangedImpl implements _IsWomenOnlyChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -15779,7 +15949,10 @@ abstract class _IsWomenOnlyChanged implements UpdateActivityFormEvent {
       _$IsWomenOnlyChangedImpl;
 
   bool get womenBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsWomenOnlyChangedImplCopyWith<_$IsWomenOnlyChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -15801,6 +15974,8 @@ class __$$IsCoEdOnlyChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsCoEdOnlyChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -15840,7 +16015,9 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
   @override
   int get hashCode => Object.hash(runtimeType, coedBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsCoEdOnlyChangedImplCopyWith<_$IsCoEdOnlyChangedImpl> get copyWith =>
@@ -15854,7 +16031,7 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -15965,7 +16142,8 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -16068,7 +16246,8 @@ class _$IsCoEdOnlyChangedImpl implements _IsCoEdOnlyChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -16566,7 +16745,10 @@ abstract class _IsCoEdOnlyChanged implements UpdateActivityFormEvent {
       _$IsCoEdOnlyChangedImpl;
 
   bool get coedBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsCoEdOnlyChangedImplCopyWith<_$IsCoEdOnlyChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -16591,6 +16773,8 @@ class __$$SkillLevelExpectationChangedImplCopyWithImpl<$Res>
       $Res Function(_$SkillLevelExpectationChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -16638,7 +16822,9 @@ class _$SkillLevelExpectationChangedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_skillLevel));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SkillLevelExpectationChangedImplCopyWith<
@@ -16653,7 +16839,7 @@ class _$SkillLevelExpectationChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -16764,7 +16950,8 @@ class _$SkillLevelExpectationChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -16867,7 +17054,8 @@ class _$SkillLevelExpectationChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -17366,7 +17554,10 @@ abstract class _SkillLevelExpectationChanged
       final List<SkillLevel> skillLevel) = _$SkillLevelExpectationChangedImpl;
 
   List<SkillLevel> get skillLevel;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SkillLevelExpectationChangedImplCopyWith<
           _$SkillLevelExpectationChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -17391,6 +17582,8 @@ class __$$SuggestedYearsChangedImplCopyWithImpl<$Res>
       $Res Function(_$SuggestedYearsChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -17430,7 +17623,9 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
   @override
   int get hashCode => Object.hash(runtimeType, yearsInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SuggestedYearsChangedImplCopyWith<_$SuggestedYearsChangedImpl>
@@ -17444,7 +17639,7 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -17555,7 +17750,8 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -17658,7 +17854,8 @@ class _$SuggestedYearsChangedImpl implements _SuggestedYearsChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -18156,7 +18353,10 @@ abstract class _SuggestedYearsChanged implements UpdateActivityFormEvent {
       _$SuggestedYearsChangedImpl;
 
   int get yearsInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SuggestedYearsChangedImplCopyWith<_$SuggestedYearsChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -18181,6 +18381,8 @@ class __$$IsEquipmentProvidedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsEquipmentProvidedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -18220,7 +18422,9 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, equipBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsEquipmentProvidedChangedImplCopyWith<_$IsEquipmentProvidedChangedImpl>
@@ -18234,7 +18438,7 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -18345,7 +18549,8 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -18448,7 +18653,8 @@ class _$IsEquipmentProvidedChangedImpl implements _IsEquipmentProvidedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -18946,7 +19152,10 @@ abstract class _IsEquipmentProvidedChanged implements UpdateActivityFormEvent {
       _$IsEquipmentProvidedChangedImpl;
 
   bool get equipBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsEquipmentProvidedChangedImplCopyWith<_$IsEquipmentProvidedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -18971,6 +19180,8 @@ class __$$IsFacilityEquipmentChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsFacilityEquipmentChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -19010,7 +19221,9 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
   @override
   int get hashCode => Object.hash(runtimeType, equipBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFacilityEquipmentChangedImplCopyWith<_$IsFacilityEquipmentChangedImpl>
@@ -19024,7 +19237,7 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -19135,7 +19348,8 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -19238,7 +19452,8 @@ class _$IsFacilityEquipmentChangedImpl implements _IsFacilityEquipmentChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -19736,7 +19951,10 @@ abstract class _IsFacilityEquipmentChanged implements UpdateActivityFormEvent {
       _$IsFacilityEquipmentChangedImpl;
 
   bool get equipBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFacilityEquipmentChangedImplCopyWith<_$IsFacilityEquipmentChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -19760,6 +19978,8 @@ class __$$IsGearProvidedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsGearProvidedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -19799,7 +20019,9 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, gearBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsGearProvidedChangedImplCopyWith<_$IsGearProvidedChangedImpl>
@@ -19813,7 +20035,7 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -19924,7 +20146,8 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -20027,7 +20250,8 @@ class _$IsGearProvidedChangedImpl implements _IsGearProvidedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -20525,7 +20749,10 @@ abstract class _IsGearProvidedChanged implements UpdateActivityFormEvent {
       _$IsGearProvidedChangedImpl;
 
   bool get gearBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsGearProvidedChangedImplCopyWith<_$IsGearProvidedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -20549,6 +20776,8 @@ class __$$IsFacilityGearChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsFacilityGearChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -20588,7 +20817,9 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
   @override
   int get hashCode => Object.hash(runtimeType, gearBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFacilityGearChangedImplCopyWith<_$IsFacilityGearChangedImpl>
@@ -20602,7 +20833,7 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -20713,7 +20944,8 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -20816,7 +21048,8 @@ class _$IsFacilityGearChangedImpl implements _IsFacilityGearChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -21314,7 +21547,10 @@ abstract class _IsFacilityGearChanged implements UpdateActivityFormEvent {
       _$IsFacilityGearChangedImpl;
 
   bool get gearBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFacilityGearChangedImplCopyWith<_$IsFacilityGearChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -21339,6 +21575,8 @@ class __$$IsAnalyticsProvidedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsAnalyticsProvidedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -21377,7 +21615,9 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, anaBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAnalyticsProvidedChangedImplCopyWith<_$IsAnalyticsProvidedChangedImpl>
@@ -21391,7 +21631,7 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -21502,7 +21742,8 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -21605,7 +21846,8 @@ class _$IsAnalyticsProvidedChangedImpl implements _IsAnalyticsProvidedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -22103,7 +22345,10 @@ abstract class _IsAnalyticsProvidedChanged implements UpdateActivityFormEvent {
       _$IsAnalyticsProvidedChangedImpl;
 
   bool get anaBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAnalyticsProvidedChangedImplCopyWith<_$IsAnalyticsProvidedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -22128,6 +22373,8 @@ class __$$IsOfficiatorProvidedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsOfficiatorProvidedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -22167,7 +22414,9 @@ class _$IsOfficiatorProvidedChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, offBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsOfficiatorProvidedChangedImplCopyWith<_$IsOfficiatorProvidedChangedImpl>
@@ -22181,7 +22430,7 @@ class _$IsOfficiatorProvidedChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -22292,7 +22541,8 @@ class _$IsOfficiatorProvidedChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -22395,7 +22645,8 @@ class _$IsOfficiatorProvidedChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -22893,7 +23144,10 @@ abstract class _IsOfficiatorProvidedChanged implements UpdateActivityFormEvent {
       _$IsOfficiatorProvidedChangedImpl;
 
   bool get offBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsOfficiatorProvidedChangedImplCopyWith<_$IsOfficiatorProvidedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -22918,6 +23172,8 @@ class __$$IsMerchantSupportedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsMerchantSupportedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -22957,7 +23213,9 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, merchBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsMerchantSupportedChangedImplCopyWith<_$IsMerchantSupportedChangedImpl>
@@ -22971,7 +23229,7 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -23082,7 +23340,8 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -23185,7 +23444,8 @@ class _$IsMerchantSupportedChangedImpl implements _IsMerchantSupportedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -23683,7 +23943,10 @@ abstract class _IsMerchantSupportedChanged implements UpdateActivityFormEvent {
       _$IsMerchantSupportedChangedImpl;
 
   bool get merchBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsMerchantSupportedChangedImplCopyWith<_$IsMerchantSupportedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -23708,6 +23971,8 @@ class __$$IsAlcoholForSaleChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsAlcoholForSaleChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -23746,7 +24011,9 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
   @override
   int get hashCode => Object.hash(runtimeType, alcBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAlcoholForSaleChangedImplCopyWith<_$IsAlcoholForSaleChangedImpl>
@@ -23760,7 +24027,7 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -23871,7 +24138,8 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -23974,7 +24242,8 @@ class _$IsAlcoholForSaleChangedImpl implements _IsAlcoholForSaleChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -24472,7 +24741,10 @@ abstract class _IsAlcoholForSaleChanged implements UpdateActivityFormEvent {
       _$IsAlcoholForSaleChangedImpl;
 
   bool get alcBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAlcoholForSaleChangedImplCopyWith<_$IsAlcoholForSaleChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -24495,6 +24767,8 @@ class __$$IsFoodForSaleChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsFoodForSaleChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -24534,7 +24808,9 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
   @override
   int get hashCode => Object.hash(runtimeType, foodBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFoodForSaleChangedImplCopyWith<_$IsFoodForSaleChangedImpl>
@@ -24549,7 +24825,7 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -24660,7 +24936,8 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -24763,7 +25040,8 @@ class _$IsFoodForSaleChangedImpl implements _IsFoodForSaleChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -25261,7 +25539,10 @@ abstract class _IsFoodForSaleChanged implements UpdateActivityFormEvent {
       _$IsFoodForSaleChangedImpl;
 
   bool get foodBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFoodForSaleChangedImplCopyWith<_$IsFoodForSaleChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -25286,6 +25567,8 @@ class __$$IsAlcoholProvidedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsAlcoholProvidedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -25324,7 +25607,9 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, alcBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAlcoholProvidedChangedImplCopyWith<_$IsAlcoholProvidedChangedImpl>
@@ -25338,7 +25623,7 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -25449,7 +25734,8 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -25552,7 +25838,8 @@ class _$IsAlcoholProvidedChangedImpl implements _IsAlcoholProvidedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -26050,7 +26337,10 @@ abstract class _IsAlcoholProvidedChanged implements UpdateActivityFormEvent {
       _$IsAlcoholProvidedChangedImpl;
 
   bool get alcBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAlcoholProvidedChangedImplCopyWith<_$IsAlcoholProvidedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -26075,6 +26365,8 @@ class __$$IsFacilityAlcoholChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsFacilityAlcoholChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -26113,7 +26405,9 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
   @override
   int get hashCode => Object.hash(runtimeType, alcBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFacilityAlcoholChangedImplCopyWith<_$IsFacilityAlcoholChangedImpl>
@@ -26127,7 +26421,7 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -26238,7 +26532,8 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -26341,7 +26636,8 @@ class _$IsFacilityAlcoholChangedImpl implements _IsFacilityAlcoholChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -26839,7 +27135,10 @@ abstract class _IsFacilityAlcoholChanged implements UpdateActivityFormEvent {
       _$IsFacilityAlcoholChangedImpl;
 
   bool get alcBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFacilityAlcoholChangedImplCopyWith<_$IsFacilityAlcoholChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -26863,6 +27162,8 @@ class __$$IsFoodProvidedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsFoodProvidedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -26902,7 +27203,9 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, foodBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFoodProvidedChangedImplCopyWith<_$IsFoodProvidedChangedImpl>
@@ -26916,7 +27219,7 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -27027,7 +27330,8 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -27130,7 +27434,8 @@ class _$IsFoodProvidedChangedImpl implements _IsFoodProvidedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -27628,7 +27933,10 @@ abstract class _IsFoodProvidedChanged implements UpdateActivityFormEvent {
       _$IsFoodProvidedChangedImpl;
 
   bool get foodBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFoodProvidedChangedImplCopyWith<_$IsFoodProvidedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -27652,6 +27960,8 @@ class __$$IsFacilityFoodChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsFacilityFoodChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -27691,7 +28001,9 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
   @override
   int get hashCode => Object.hash(runtimeType, foodBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFacilityFoodChangedImplCopyWith<_$IsFacilityFoodChangedImpl>
@@ -27705,7 +28017,7 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -27816,7 +28128,8 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -27919,7 +28232,8 @@ class _$IsFacilityFoodChangedImpl implements _IsFacilityFoodChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -28417,7 +28731,10 @@ abstract class _IsFacilityFoodChanged implements UpdateActivityFormEvent {
       _$IsFacilityFoodChangedImpl;
 
   bool get foodBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFacilityFoodChangedImplCopyWith<_$IsFacilityFoodChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -28442,6 +28759,8 @@ class __$$IsSecurityProvidedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsSecurityProvidedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -28480,7 +28799,9 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, secBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsSecurityProvidedChangedImplCopyWith<_$IsSecurityProvidedChangedImpl>
@@ -28494,7 +28815,7 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -28605,7 +28926,8 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -28708,7 +29030,8 @@ class _$IsSecurityProvidedChangedImpl implements _IsSecurityProvidedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -29206,7 +29529,10 @@ abstract class _IsSecurityProvidedChanged implements UpdateActivityFormEvent {
       _$IsSecurityProvidedChangedImpl;
 
   bool get secBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsSecurityProvidedChangedImplCopyWith<_$IsSecurityProvidedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -29231,6 +29557,8 @@ class __$$IsFacilitySecurityChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsFacilitySecurityChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -29269,7 +29597,9 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
   @override
   int get hashCode => Object.hash(runtimeType, secBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFacilitySecurityChangedImplCopyWith<_$IsFacilitySecurityChangedImpl>
@@ -29283,7 +29613,7 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -29394,7 +29724,8 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -29497,7 +29828,8 @@ class _$IsFacilitySecurityChangedImpl implements _IsFacilitySecurityChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -29995,7 +30327,10 @@ abstract class _IsFacilitySecurityChanged implements UpdateActivityFormEvent {
       _$IsFacilitySecurityChangedImpl;
 
   bool get secBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFacilitySecurityChangedImplCopyWith<_$IsFacilitySecurityChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -30020,6 +30355,8 @@ class __$$IsReviewRequiredChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsReviewRequiredChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -30059,7 +30396,9 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
   @override
   int get hashCode => Object.hash(runtimeType, isReviewBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsReviewRequiredChangedImplCopyWith<_$IsReviewRequiredChangedImpl>
@@ -30073,7 +30412,7 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -30184,7 +30523,8 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -30287,7 +30627,8 @@ class _$IsReviewRequiredChangedImpl implements _IsReviewRequiredChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -30785,7 +31126,10 @@ abstract class _IsReviewRequiredChanged implements UpdateActivityFormEvent {
       _$IsReviewRequiredChangedImpl;
 
   bool get isReviewBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsReviewRequiredChangedImplCopyWith<_$IsReviewRequiredChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -30808,6 +31152,8 @@ class __$$IsPrivateOnlyChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsPrivateOnlyChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -30847,7 +31193,9 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
   @override
   int get hashCode => Object.hash(runtimeType, isPrivateBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsPrivateOnlyChangedImplCopyWith<_$IsPrivateOnlyChangedImpl>
@@ -30862,7 +31210,7 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -30973,7 +31321,8 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -31076,7 +31425,8 @@ class _$IsPrivateOnlyChangedImpl implements _IsPrivateOnlyChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -31574,7 +31924,10 @@ abstract class _IsPrivateOnlyChanged implements UpdateActivityFormEvent {
       _$IsPrivateOnlyChangedImpl;
 
   bool get isPrivateBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsPrivateOnlyChangedImplCopyWith<_$IsPrivateOnlyChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -31599,6 +31952,8 @@ class __$$ListingIsInviteOnlyChangedImplCopyWithImpl<$Res>
       $Res Function(_$ListingIsInviteOnlyChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -31638,7 +31993,9 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
   @override
   int get hashCode => Object.hash(runtimeType, isPublicBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ListingIsInviteOnlyChangedImplCopyWith<_$ListingIsInviteOnlyChangedImpl>
@@ -31652,7 +32009,7 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -31763,7 +32120,8 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -31866,7 +32224,8 @@ class _$ListingIsInviteOnlyChangedImpl implements _ListingIsInviteOnlyChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -32364,7 +32723,10 @@ abstract class _ListingIsInviteOnlyChanged implements UpdateActivityFormEvent {
       _$ListingIsInviteOnlyChangedImpl;
 
   bool get isPublicBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ListingIsInviteOnlyChangedImplCopyWith<_$ListingIsInviteOnlyChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -32389,6 +32751,8 @@ class __$$PrivateInviteListChangedImplCopyWithImpl<$Res>
       $Res Function(_$PrivateInviteListChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -32435,7 +32799,9 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_contactList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PrivateInviteListChangedImplCopyWith<_$PrivateInviteListChangedImpl>
@@ -32449,7 +32815,7 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -32560,7 +32926,8 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -32663,7 +33030,8 @@ class _$PrivateInviteListChangedImpl implements _PrivateInviteListChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -33161,7 +33529,10 @@ abstract class _PrivateInviteListChanged implements UpdateActivityFormEvent {
       final List<ContactDetails> contactList) = _$PrivateInviteListChangedImpl;
 
   List<ContactDetails> get contactList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PrivateInviteListChangedImplCopyWith<_$PrivateInviteListChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -33186,6 +33557,8 @@ class __$$IsAllowedEarlyEndChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsAllowedEarlyEndChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -33225,7 +33598,9 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
   @override
   int get hashCode => Object.hash(runtimeType, earlyEndBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAllowedEarlyEndChangedImplCopyWith<_$IsAllowedEarlyEndChangedImpl>
@@ -33239,7 +33614,7 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -33350,7 +33725,8 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -33453,7 +33829,8 @@ class _$IsAllowedEarlyEndChangedImpl implements _IsAllowedEarlyEndChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -33951,7 +34328,10 @@ abstract class _IsAllowedEarlyEndChanged implements UpdateActivityFormEvent {
       _$IsAllowedEarlyEndChangedImpl;
 
   bool get earlyEndBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAllowedEarlyEndChangedImplCopyWith<_$IsAllowedEarlyEndChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -33976,6 +34356,8 @@ class __$$IsAllowedChangeWithoutEarlyEndImplCopyWithImpl<$Res>
       $Res Function(_$IsAllowedChangeWithoutEarlyEndImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -34016,7 +34398,9 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
   @override
   int get hashCode => Object.hash(runtimeType, changeOnlyBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAllowedChangeWithoutEarlyEndImplCopyWith<
@@ -34031,7 +34415,7 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -34142,7 +34526,8 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -34245,7 +34630,8 @@ class _$IsAllowedChangeWithoutEarlyEndImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -34744,7 +35130,10 @@ abstract class _IsAllowedChangeWithoutEarlyEnd
       _$IsAllowedChangeWithoutEarlyEndImpl;
 
   bool get changeOnlyBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAllowedChangeWithoutEarlyEndImplCopyWith<
           _$IsAllowedChangeWithoutEarlyEndImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -34770,6 +35159,8 @@ class __$$IsNotAllowedCancellationImplCopyWithImpl<$Res>
       $Res Function(_$IsNotAllowedCancellationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -34809,7 +35200,9 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
   @override
   int get hashCode => Object.hash(runtimeType, noCancelBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsNotAllowedCancellationImplCopyWith<_$IsNotAllowedCancellationImpl>
@@ -34823,7 +35216,7 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -34934,7 +35327,8 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -35037,7 +35431,8 @@ class _$IsNotAllowedCancellationImpl implements _IsNotAllowedCancellation {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -35535,7 +35930,10 @@ abstract class _IsNotAllowedCancellation implements UpdateActivityFormEvent {
       _$IsNotAllowedCancellationImpl;
 
   bool get noCancelBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsNotAllowedCancellationImplCopyWith<_$IsNotAllowedCancellationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -35560,6 +35958,8 @@ class __$$IsAllowedTimeBasedCancellationImplCopyWithImpl<$Res>
       $Res Function(_$IsAllowedTimeBasedCancellationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -35600,7 +36000,9 @@ class _$IsAllowedTimeBasedCancellationImpl
   @override
   int get hashCode => Object.hash(runtimeType, timeBasedBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAllowedTimeBasedCancellationImplCopyWith<
@@ -35615,7 +36017,7 @@ class _$IsAllowedTimeBasedCancellationImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -35726,7 +36128,8 @@ class _$IsAllowedTimeBasedCancellationImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -35829,7 +36232,8 @@ class _$IsAllowedTimeBasedCancellationImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -36328,7 +36732,10 @@ abstract class _IsAllowedTimeBasedCancellation
       _$IsAllowedTimeBasedCancellationImpl;
 
   bool get timeBasedBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAllowedTimeBasedCancellationImplCopyWith<
           _$IsAllowedTimeBasedCancellationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -36354,6 +36761,8 @@ class __$$IsAllowedFeeBasedCancellationImplCopyWithImpl<$Res>
       $Res Function(_$IsAllowedFeeBasedCancellationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -36394,7 +36803,9 @@ class _$IsAllowedFeeBasedCancellationImpl
   @override
   int get hashCode => Object.hash(runtimeType, feeBasedBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAllowedFeeBasedCancellationImplCopyWith<
@@ -36409,7 +36820,7 @@ class _$IsAllowedFeeBasedCancellationImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -36520,7 +36931,8 @@ class _$IsAllowedFeeBasedCancellationImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -36623,7 +37035,8 @@ class _$IsAllowedFeeBasedCancellationImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -37122,7 +37535,10 @@ abstract class _IsAllowedFeeBasedCancellation
       _$IsAllowedFeeBasedCancellationImpl;
 
   bool get feeBasedBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAllowedFeeBasedCancellationImplCopyWith<
           _$IsAllowedFeeBasedCancellationImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -37148,6 +37564,8 @@ class __$$TimeBasedCancellationChangedImplCopyWithImpl<$Res>
       $Res Function(_$TimeBasedCancellationChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -37197,7 +37615,9 @@ class _$TimeBasedCancellationChangedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_timeBasedCancellation));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$TimeBasedCancellationChangedImplCopyWith<
@@ -37212,7 +37632,7 @@ class _$TimeBasedCancellationChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -37323,7 +37743,8 @@ class _$TimeBasedCancellationChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -37426,7 +37847,8 @@ class _$TimeBasedCancellationChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -37926,7 +38348,10 @@ abstract class _TimeBasedCancellationChanged
       _$TimeBasedCancellationChangedImpl;
 
   List<TimeBasedCancellation> get timeBasedCancellation;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$TimeBasedCancellationChangedImplCopyWith<
           _$TimeBasedCancellationChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -37952,6 +38377,8 @@ class __$$FeeBasedCancellationChangedImplCopyWithImpl<$Res>
       $Res Function(_$FeeBasedCancellationChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -38001,7 +38428,9 @@ class _$FeeBasedCancellationChangedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_feeBasedCancellation));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FeeBasedCancellationChangedImplCopyWith<_$FeeBasedCancellationChangedImpl>
@@ -38015,7 +38444,7 @@ class _$FeeBasedCancellationChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -38126,7 +38555,8 @@ class _$FeeBasedCancellationChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -38229,7 +38659,8 @@ class _$FeeBasedCancellationChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -38728,7 +39159,10 @@ abstract class _FeeBasedCancellationChanged implements UpdateActivityFormEvent {
       _$FeeBasedCancellationChangedImpl;
 
   List<FeeBasedCancellation> get feeBasedCancellation;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FeeBasedCancellationChangedImplCopyWith<_$FeeBasedCancellationChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -38750,6 +39184,8 @@ class __$$RuleOptionChangedImplCopyWithImpl<$Res>
       $Res Function(_$RuleOptionChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -38788,7 +39224,9 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
   @override
   int get hashCode => Object.hash(runtimeType, rules);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RuleOptionChangedImplCopyWith<_$RuleOptionChangedImpl> get copyWith =>
@@ -38802,7 +39240,7 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -38913,7 +39351,8 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -39016,7 +39455,8 @@ class _$RuleOptionChangedImpl implements _RuleOptionChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -39514,7 +39954,10 @@ abstract class _RuleOptionChanged implements UpdateActivityFormEvent {
       _$RuleOptionChangedImpl;
 
   ListK<DetailOption> get rules;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RuleOptionChangedImplCopyWith<_$RuleOptionChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -39539,6 +39982,8 @@ class __$$CheckInSettingsChangedImplCopyWithImpl<$Res>
       $Res Function(_$CheckInSettingsChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -39585,7 +40030,9 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_checkInList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CheckInSettingsChangedImplCopyWith<_$CheckInSettingsChangedImpl>
@@ -39599,7 +40046,7 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -39710,7 +40157,8 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -39813,7 +40261,8 @@ class _$CheckInSettingsChangedImpl implements _CheckInSettingsChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -40311,7 +40760,10 @@ abstract class _CheckInSettingsChanged implements UpdateActivityFormEvent {
       final List<CheckInSetting> checkInList) = _$CheckInSettingsChangedImpl;
 
   List<CheckInSetting> get checkInList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CheckInSettingsChangedImplCopyWith<_$CheckInSettingsChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -40336,6 +40788,8 @@ class __$$CustomFieldRuleSettingsChangedImplCopyWithImpl<$Res>
       $Res Function(_$CustomFieldRuleSettingsChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -40384,7 +40838,9 @@ class _$CustomFieldRuleSettingsChangedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_customRulesList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CustomFieldRuleSettingsChangedImplCopyWith<
@@ -40399,7 +40855,7 @@ class _$CustomFieldRuleSettingsChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -40510,7 +40966,8 @@ class _$CustomFieldRuleSettingsChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -40613,7 +41070,8 @@ class _$CustomFieldRuleSettingsChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -41113,7 +41571,10 @@ abstract class _CustomFieldRuleSettingsChanged
       _$CustomFieldRuleSettingsChangedImpl;
 
   List<CustomRuleOption> get customRulesList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CustomFieldRuleSettingsChangedImplCopyWith<
           _$CustomFieldRuleSettingsChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -41139,6 +41600,8 @@ class __$$CustomRuleOptionChangedImplCopyWithImpl<$Res>
       $Res Function(_$CustomRuleOptionChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -41178,7 +41641,9 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
   @override
   int get hashCode => Object.hash(runtimeType, customRules);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CustomRuleOptionChangedImplCopyWith<_$CustomRuleOptionChangedImpl>
@@ -41192,7 +41657,7 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -41303,7 +41768,8 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -41406,7 +41872,8 @@ class _$CustomRuleOptionChangedImpl implements _CustomRuleOptionChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -41905,7 +42372,10 @@ abstract class _CustomRuleOptionChanged implements UpdateActivityFormEvent {
       _$CustomRuleOptionChangedImpl;
 
   ListK<DetailCustomOption> get customRules;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CustomRuleOptionChangedImplCopyWith<_$CustomRuleOptionChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -41930,6 +42400,8 @@ class __$$SkillLevelToReachChangedImplCopyWithImpl<$Res>
       $Res Function(_$SkillLevelToReachChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -41975,7 +42447,9 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_skills));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SkillLevelToReachChangedImplCopyWith<_$SkillLevelToReachChangedImpl>
@@ -41989,7 +42463,7 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -42100,7 +42574,8 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -42203,7 +42678,8 @@ class _$SkillLevelToReachChangedImpl implements _SkillLevelToReachChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -42701,7 +43177,10 @@ abstract class _SkillLevelToReachChanged implements UpdateActivityFormEvent {
       _$SkillLevelToReachChangedImpl;
 
   List<SkillLevel> get skills;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SkillLevelToReachChangedImplCopyWith<_$SkillLevelToReachChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -42724,6 +43203,8 @@ class __$$VendorFormsChangedImplCopyWithImpl<$Res>
       $Res Function(_$VendorFormsChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -42769,7 +43250,9 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_forms));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VendorFormsChangedImplCopyWith<_$VendorFormsChangedImpl> get copyWith =>
@@ -42783,7 +43266,7 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -42894,7 +43377,8 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -42997,7 +43481,8 @@ class _$VendorFormsChangedImpl implements _VendorFormsChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -43495,7 +43980,10 @@ abstract class _VendorFormsChanged implements UpdateActivityFormEvent {
       _$VendorFormsChangedImpl;
 
   List<VendorMerchantForm> get forms;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VendorFormsChangedImplCopyWith<_$VendorFormsChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43520,6 +44008,8 @@ class __$$AllowedDonationTypesChangedImplCopyWithImpl<$Res>
       $Res Function(_$AllowedDonationTypesChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -43568,7 +44058,9 @@ class _$AllowedDonationTypesChangedImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_donationTypes));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AllowedDonationTypesChangedImplCopyWith<_$AllowedDonationTypesChangedImpl>
@@ -43582,7 +44074,7 @@ class _$AllowedDonationTypesChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -43693,7 +44185,8 @@ class _$AllowedDonationTypesChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -43796,7 +44289,8 @@ class _$AllowedDonationTypesChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -44295,7 +44789,10 @@ abstract class _AllowedDonationTypesChanged implements UpdateActivityFormEvent {
       _$AllowedDonationTypesChangedImpl;
 
   List<DonationType> get donationTypes;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AllowedDonationTypesChangedImplCopyWith<_$AllowedDonationTypesChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -44320,6 +44817,8 @@ class __$$IsAllowedExternalContributionsImplCopyWithImpl<$Res>
       $Res Function(_$IsAllowedExternalContributionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -44359,7 +44858,9 @@ class _$IsAllowedExternalContributionsImpl
   @override
   int get hashCode => Object.hash(runtimeType, exBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsAllowedExternalContributionsImplCopyWith<
@@ -44374,7 +44875,7 @@ class _$IsAllowedExternalContributionsImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -44485,7 +44986,8 @@ class _$IsAllowedExternalContributionsImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -44588,7 +45090,8 @@ class _$IsAllowedExternalContributionsImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -45087,7 +45590,10 @@ abstract class _IsAllowedExternalContributions
       _$IsAllowedExternalContributionsImpl;
 
   bool get exBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsAllowedExternalContributionsImplCopyWith<
           _$IsAllowedExternalContributionsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -45111,6 +45617,8 @@ class __$$CurrencyTypeChangedImplCopyWithImpl<$Res>
       $Res Function(_$CurrencyTypeChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -45150,7 +45658,9 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
   @override
   int get hashCode => Object.hash(runtimeType, currency);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CurrencyTypeChangedImplCopyWith<_$CurrencyTypeChangedImpl> get copyWith =>
@@ -45164,7 +45674,7 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -45275,7 +45785,8 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -45378,7 +45889,8 @@ class _$CurrencyTypeChangedImpl implements _CurrencyTypeChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -45876,7 +46388,10 @@ abstract class _CurrencyTypeChanged implements UpdateActivityFormEvent {
       _$CurrencyTypeChangedImpl;
 
   String get currency;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CurrencyTypeChangedImplCopyWith<_$CurrencyTypeChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -45901,6 +46416,8 @@ class __$$IsTicketBasedAttendanceChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsTicketBasedAttendanceChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -45941,7 +46458,9 @@ class _$IsTicketBasedAttendanceChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, ticketBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsTicketBasedAttendanceChangedImplCopyWith<
@@ -45956,7 +46475,7 @@ class _$IsTicketBasedAttendanceChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -46067,7 +46586,8 @@ class _$IsTicketBasedAttendanceChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -46170,7 +46690,8 @@ class _$IsTicketBasedAttendanceChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -46669,7 +47190,10 @@ abstract class _IsTicketBasedAttendanceChanged
       _$IsTicketBasedAttendanceChangedImpl;
 
   bool get ticketBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsTicketBasedAttendanceChangedImplCopyWith<
           _$IsTicketBasedAttendanceChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -46695,6 +47219,8 @@ class __$$IsPassBasedAttendanceChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsPassBasedAttendanceChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -46735,7 +47261,9 @@ class _$IsPassBasedAttendanceChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, passBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsPassBasedAttendanceChangedImplCopyWith<
@@ -46750,7 +47278,7 @@ class _$IsPassBasedAttendanceChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -46861,7 +47389,8 @@ class _$IsPassBasedAttendanceChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -46964,7 +47493,8 @@ class _$IsPassBasedAttendanceChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -47463,7 +47993,10 @@ abstract class _IsPassBasedAttendanceChanged
       _$IsPassBasedAttendanceChangedImpl;
 
   bool get passBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsPassBasedAttendanceChangedImplCopyWith<
           _$IsPassBasedAttendanceChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -47489,6 +48022,8 @@ class __$$IsLimitedAttendanceChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsLimitedAttendanceChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -47528,7 +48063,9 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
   @override
   int get hashCode => Object.hash(runtimeType, limitBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsLimitedAttendanceChangedImplCopyWith<_$IsLimitedAttendanceChangedImpl>
@@ -47542,7 +48079,7 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -47653,7 +48190,8 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -47756,7 +48294,8 @@ class _$IsLimitedAttendanceChangedImpl implements _IsLimitedAttendanceChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -48254,7 +48793,10 @@ abstract class _IsLimitedAttendanceChanged implements UpdateActivityFormEvent {
       _$IsLimitedAttendanceChangedImpl;
 
   bool get limitBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsLimitedAttendanceChangedImplCopyWith<_$IsLimitedAttendanceChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -48279,6 +48821,8 @@ class __$$AttendanceLimitChangedImplCopyWithImpl<$Res>
       $Res Function(_$AttendanceLimitChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -48318,7 +48862,9 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
   @override
   int get hashCode => Object.hash(runtimeType, limitInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AttendanceLimitChangedImplCopyWith<_$AttendanceLimitChangedImpl>
@@ -48332,7 +48878,7 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -48443,7 +48989,8 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -48546,7 +49093,8 @@ class _$AttendanceLimitChangedImpl implements _AttendanceLimitChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -49044,7 +49592,10 @@ abstract class _AttendanceLimitChanged implements UpdateActivityFormEvent {
       _$AttendanceLimitChangedImpl;
 
   int get limitInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AttendanceLimitChangedImplCopyWith<_$AttendanceLimitChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -49067,6 +49618,8 @@ class __$$IsTicketFixedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsTicketFixedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -49106,7 +49659,9 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, ticketBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsTicketFixedChangedImplCopyWith<_$IsTicketFixedChangedImpl>
@@ -49121,7 +49676,7 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -49232,7 +49787,8 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -49335,7 +49891,8 @@ class _$IsTicketFixedChangedImpl implements _IsTicketFixedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -49833,7 +50390,10 @@ abstract class _IsTicketFixedChanged implements UpdateActivityFormEvent {
       _$IsTicketFixedChangedImpl;
 
   bool get ticketBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsTicketFixedChangedImplCopyWith<_$IsTicketFixedChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -49857,6 +50417,8 @@ class __$$IsTicketSlotBasedOnlyImplCopyWithImpl<$Res>
       $Res Function(_$IsTicketSlotBasedOnlyImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -49896,7 +50458,9 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
   @override
   int get hashCode => Object.hash(runtimeType, ticketBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsTicketSlotBasedOnlyImplCopyWith<_$IsTicketSlotBasedOnlyImpl>
@@ -49910,7 +50474,7 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -50021,7 +50585,8 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -50124,7 +50689,8 @@ class _$IsTicketSlotBasedOnlyImpl implements _IsTicketSlotBasedOnly {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -50622,7 +51188,10 @@ abstract class _IsTicketSlotBasedOnly implements UpdateActivityFormEvent {
       _$IsTicketSlotBasedOnlyImpl;
 
   bool get ticketBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsTicketSlotBasedOnlyImplCopyWith<_$IsTicketSlotBasedOnlyImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -50645,6 +51214,8 @@ class __$$IsPassFixedChangedImplCopyWithImpl<$Res>
       $Res Function(_$IsPassFixedChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -50684,7 +51255,9 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
   @override
   int get hashCode => Object.hash(runtimeType, passBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsPassFixedChangedImplCopyWith<_$IsPassFixedChangedImpl> get copyWith =>
@@ -50698,7 +51271,7 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -50809,7 +51382,8 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -50912,7 +51486,8 @@ class _$IsPassFixedChangedImpl implements _IsPassFixedChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -51410,7 +51985,10 @@ abstract class _IsPassFixedChanged implements UpdateActivityFormEvent {
       _$IsPassFixedChangedImpl;
 
   bool get passBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsPassFixedChangedImplCopyWith<_$IsPassFixedChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -51435,6 +52013,8 @@ class __$$DefaultTicketChangedImplCopyWithImpl<$Res>
       $Res Function(_$DefaultTicketChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -51448,6 +52028,8 @@ class __$$DefaultTicketChangedImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ActivityTicketOptionCopyWith<$Res> get aTicket {
@@ -51481,7 +52063,9 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
   @override
   int get hashCode => Object.hash(runtimeType, aTicket);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DefaultTicketChangedImplCopyWith<_$DefaultTicketChangedImpl>
@@ -51496,7 +52080,7 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -51607,7 +52191,8 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -51710,7 +52295,8 @@ class _$DefaultTicketChangedImpl implements _DefaultTicketChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -52208,7 +52794,10 @@ abstract class _DefaultTicketChanged implements UpdateActivityFormEvent {
       _$DefaultTicketChangedImpl;
 
   ActivityTicketOption get aTicket;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DefaultTicketChangedImplCopyWith<_$DefaultTicketChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -52233,6 +52822,8 @@ class __$$ActivityTicketsChangedImplCopyWithImpl<$Res>
       $Res Function(_$ActivityTicketsChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -52282,7 +52873,9 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_ticketList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityTicketsChangedImplCopyWith<_$ActivityTicketsChangedImpl>
@@ -52296,7 +52889,7 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -52407,7 +53000,8 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -52510,7 +53104,8 @@ class _$ActivityTicketsChangedImpl implements _ActivityTicketsChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -53009,7 +53604,10 @@ abstract class _ActivityTicketsChanged implements UpdateActivityFormEvent {
       _$ActivityTicketsChangedImpl;
 
   List<ActivityTicketOption>? get ticketList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityTicketsChangedImplCopyWith<_$ActivityTicketsChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -53034,6 +53632,8 @@ class __$$PassesAttendanceIsAllowedGroupsImplCopyWithImpl<$Res>
       $Res Function(_$PassesAttendanceIsAllowedGroupsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -53074,7 +53674,9 @@ class _$PassesAttendanceIsAllowedGroupsImpl
   @override
   int get hashCode => Object.hash(runtimeType, groupBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PassesAttendanceIsAllowedGroupsImplCopyWith<
@@ -53089,7 +53691,7 @@ class _$PassesAttendanceIsAllowedGroupsImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -53200,7 +53802,8 @@ class _$PassesAttendanceIsAllowedGroupsImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -53303,7 +53906,8 @@ class _$PassesAttendanceIsAllowedGroupsImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -53802,7 +54406,10 @@ abstract class _PassesAttendanceIsAllowedGroups
       _$PassesAttendanceIsAllowedGroupsImpl;
 
   bool get groupBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PassesAttendanceIsAllowedGroupsImplCopyWith<
           _$PassesAttendanceIsAllowedGroupsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -53828,6 +54435,8 @@ class __$$PassesMinimumGroupQuantityChangedImplCopyWithImpl<$Res>
       $Res Function(_$PassesMinimumGroupQuantityChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -53867,7 +54476,9 @@ class _$PassesMinimumGroupQuantityChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, minInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PassesMinimumGroupQuantityChangedImplCopyWith<
@@ -53882,7 +54493,7 @@ class _$PassesMinimumGroupQuantityChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -53993,7 +54604,8 @@ class _$PassesMinimumGroupQuantityChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -54096,7 +54708,8 @@ class _$PassesMinimumGroupQuantityChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -54595,7 +55208,10 @@ abstract class _PassesMinimumGroupQuantityChanged
       _$PassesMinimumGroupQuantityChangedImpl;
 
   int get minInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PassesMinimumGroupQuantityChangedImplCopyWith<
           _$PassesMinimumGroupQuantityChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -54621,6 +55237,8 @@ class __$$PassesMaximumGroupQuantityChangedImplCopyWithImpl<$Res>
       $Res Function(_$PassesMaximumGroupQuantityChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -54660,7 +55278,9 @@ class _$PassesMaximumGroupQuantityChangedImpl
   @override
   int get hashCode => Object.hash(runtimeType, maxInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PassesMaximumGroupQuantityChangedImplCopyWith<
@@ -54675,7 +55295,7 @@ class _$PassesMaximumGroupQuantityChangedImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -54786,7 +55406,8 @@ class _$PassesMaximumGroupQuantityChangedImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -54889,7 +55510,8 @@ class _$PassesMaximumGroupQuantityChangedImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -55388,7 +56010,10 @@ abstract class _PassesMaximumGroupQuantityChanged
       _$PassesMaximumGroupQuantityChangedImpl;
 
   int get maxInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PassesMaximumGroupQuantityChangedImplCopyWith<
           _$PassesMaximumGroupQuantityChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -55411,6 +56036,8 @@ class __$$PassesFeeChangedImplCopyWithImpl<$Res>
       $Res Function(_$PassesFeeChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -55449,7 +56076,9 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
   @override
   int get hashCode => Object.hash(runtimeType, maxInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PassesFeeChangedImplCopyWith<_$PassesFeeChangedImpl> get copyWith =>
@@ -55463,7 +56092,7 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -55574,7 +56203,8 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -55677,7 +56307,8 @@ class _$PassesFeeChangedImpl implements _PassesFeeChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -56174,7 +56805,10 @@ abstract class _PassesFeeChanged implements UpdateActivityFormEvent {
   const factory _PassesFeeChanged(final int maxInt) = _$PassesFeeChangedImpl;
 
   int get maxInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PassesFeeChangedImplCopyWith<_$PassesFeeChangedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56198,6 +56832,8 @@ class __$$PassesQuantityChangedImplCopyWithImpl<$Res>
       $Res Function(_$PassesQuantityChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -56237,7 +56873,9 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
   @override
   int get hashCode => Object.hash(runtimeType, passesInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PassesQuantityChangedImplCopyWith<_$PassesQuantityChangedImpl>
@@ -56251,7 +56889,7 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -56362,7 +57000,8 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -56465,7 +57104,8 @@ class _$PassesQuantityChangedImpl implements _PassesQuantityChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -56963,7 +57603,10 @@ abstract class _PassesQuantityChanged implements UpdateActivityFormEvent {
       _$PassesQuantityChangedImpl;
 
   int get passesInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PassesQuantityChangedImplCopyWith<_$PassesQuantityChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -56988,6 +57631,8 @@ class __$$PassesCoverAllSessionsImplCopyWithImpl<$Res>
       $Res Function(_$PassesCoverAllSessionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -57027,7 +57672,9 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
   @override
   int get hashCode => Object.hash(runtimeType, sessionBool);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PassesCoverAllSessionsImplCopyWith<_$PassesCoverAllSessionsImpl>
@@ -57041,7 +57688,7 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -57152,7 +57799,8 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -57255,7 +57903,8 @@ class _$PassesCoverAllSessionsImpl implements _PassesCoverAllSessions {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -57753,7 +58402,10 @@ abstract class _PassesCoverAllSessions implements UpdateActivityFormEvent {
       _$PassesCoverAllSessionsImpl;
 
   bool get sessionBool;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PassesCoverAllSessionsImplCopyWith<_$PassesCoverAllSessionsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -57778,6 +58430,8 @@ class __$$PassesCoverLimitedSessionImplCopyWithImpl<$Res>
       $Res Function(_$PassesCoverLimitedSessionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -57817,7 +58471,9 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
   @override
   int get hashCode => Object.hash(runtimeType, limitInt);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PassesCoverLimitedSessionImplCopyWith<_$PassesCoverLimitedSessionImpl>
@@ -57831,7 +58487,7 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -57942,7 +58598,8 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -58045,7 +58702,8 @@ class _$PassesCoverLimitedSessionImpl implements _PassesCoverLimitedSession {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -58543,7 +59201,10 @@ abstract class _PassesCoverLimitedSession implements UpdateActivityFormEvent {
       _$PassesCoverLimitedSessionImpl;
 
   int get limitInt;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PassesCoverLimitedSessionImplCopyWith<_$PassesCoverLimitedSessionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -58567,6 +59228,8 @@ class __$$ActivityPassesChangedImplCopyWithImpl<$Res>
       $Res Function(_$ActivityPassesChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -58613,7 +59276,9 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_passesList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$ActivityPassesChangedImplCopyWith<_$ActivityPassesChangedImpl>
@@ -58627,7 +59292,7 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -58738,7 +59403,8 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -58841,7 +59507,8 @@ class _$ActivityPassesChangedImpl implements _ActivityPassesChanged {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -59340,7 +60007,10 @@ abstract class _ActivityPassesChanged implements UpdateActivityFormEvent {
       _$ActivityPassesChangedImpl;
 
   List<ActivityPassesOption> get passesList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ActivityPassesChangedImplCopyWith<_$ActivityPassesChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -59367,6 +60037,8 @@ class __$$CreateStripeOnBoardingAccountLinkImplCopyWithImpl<$Res>
       $Res Function(_$CreateStripeOnBoardingAccountLinkImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -59380,6 +60052,8 @@ class __$$CreateStripeOnBoardingAccountLinkImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get profile {
@@ -59414,7 +60088,9 @@ class _$CreateStripeOnBoardingAccountLinkImpl
   @override
   int get hashCode => Object.hash(runtimeType, profile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CreateStripeOnBoardingAccountLinkImplCopyWith<
@@ -59429,7 +60105,7 @@ class _$CreateStripeOnBoardingAccountLinkImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -59540,7 +60216,8 @@ class _$CreateStripeOnBoardingAccountLinkImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -59643,7 +60320,8 @@ class _$CreateStripeOnBoardingAccountLinkImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -60142,7 +60820,10 @@ abstract class _CreateStripeOnBoardingAccountLink
       final UserProfileModel profile) = _$CreateStripeOnBoardingAccountLinkImpl;
 
   UserProfileModel get profile;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CreateStripeOnBoardingAccountLinkImplCopyWith<
           _$CreateStripeOnBoardingAccountLinkImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -60170,6 +60851,8 @@ class __$$PresentStripeAccountDashboardImplCopyWithImpl<$Res>
       $Res Function(_$PresentStripeAccountDashboardImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -60183,6 +60866,8 @@ class __$$PresentStripeAccountDashboardImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get profile {
@@ -60217,7 +60902,9 @@ class _$PresentStripeAccountDashboardImpl
   @override
   int get hashCode => Object.hash(runtimeType, profile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$PresentStripeAccountDashboardImplCopyWith<
@@ -60232,7 +60919,7 @@ class _$PresentStripeAccountDashboardImpl
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -60343,7 +61030,8 @@ class _$PresentStripeAccountDashboardImpl
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -60446,7 +61134,8 @@ class _$PresentStripeAccountDashboardImpl
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -60945,7 +61634,10 @@ abstract class _PresentStripeAccountDashboard
       _$PresentStripeAccountDashboardImpl;
 
   UserProfileModel get profile;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$PresentStripeAccountDashboardImplCopyWith<
           _$PresentStripeAccountDashboardImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -60968,6 +61660,9 @@ class __$$CreateActivityFinishedImplCopyWithImpl<$Res>
       _$CreateActivityFinishedImpl _value,
       $Res Function(_$CreateActivityFinishedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -60997,7 +61692,7 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -61108,7 +61803,8 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -61211,7 +61907,8 @@ class _$CreateActivityFinishedImpl implements CreateActivityFinished {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -61723,6 +62420,9 @@ class __$$SaveActivityFinishedImplCopyWithImpl<$Res>
   __$$SaveActivityFinishedImplCopyWithImpl(_$SaveActivityFinishedImpl _value,
       $Res Function(_$SaveActivityFinishedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -61752,7 +62452,7 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -61863,7 +62563,8 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -61966,7 +62667,8 @@ class _$SaveActivityFinishedImpl implements SaveActivityFinished {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -62480,6 +63182,9 @@ class __$$DeleteActivityFinishedImplCopyWithImpl<$Res>
       _$DeleteActivityFinishedImpl _value,
       $Res Function(_$DeleteActivityFinishedImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of UpdateActivityFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -62509,7 +63214,7 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
             Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)
         initializeActivityForm,
-    required TResult Function(ActivityOption activityOption)
+    required TResult Function(List<ActivityOption> activityOption)
         activityOptionChanged,
     required TResult Function(bool boolSave) isSavingChanged,
     required TResult Function(BackgroundInfoTitle titleChanged)
@@ -62620,7 +63325,8 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
     TResult? Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult? Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult? Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult? Function(bool boolSave)? isSavingChanged,
     TResult? Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult? Function(BackgroundInfoDescription descriptionChanged)?
@@ -62723,7 +63429,8 @@ class _$DeleteActivityFinishedImpl implements DeleteActivityFinished {
     TResult Function(Option<ActivityManagerForm> initializeActivityForm,
             Option<ReservationItem> initializeResForm)?
         initializeActivityForm,
-    TResult Function(ActivityOption activityOption)? activityOptionChanged,
+    TResult Function(List<ActivityOption> activityOption)?
+        activityOptionChanged,
     TResult Function(bool boolSave)? isSavingChanged,
     TResult Function(BackgroundInfoTitle titleChanged)? activityTitleChanged,
     TResult Function(BackgroundInfoDescription descriptionChanged)?
@@ -63238,7 +63945,9 @@ mixin _$UpdateActivityFormState {
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOptionStripe =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UpdateActivityFormStateCopyWith<UpdateActivityFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -63277,6 +63986,8 @@ class _$UpdateActivityFormStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UpdateActivityFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63331,6 +64042,8 @@ class _$UpdateActivityFormStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of UpdateActivityFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ActivityManagerFormCopyWith<$Res> get activitySettingsForm {
@@ -63340,6 +64053,8 @@ class _$UpdateActivityFormStateCopyWithImpl<$Res,
     });
   }
 
+  /// Create a copy of UpdateActivityFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReservationItemCopyWith<$Res> get reservationItem {
@@ -63387,6 +64102,8 @@ class __$$UpdateActivityFormStateImplCopyWithImpl<$Res>
       $Res Function(_$UpdateActivityFormStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UpdateActivityFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -63527,7 +64244,9 @@ class _$UpdateActivityFormStateImpl extends _UpdateActivityFormState {
       authFailureOrSuccessOptionSubmitting,
       authFailureOrSuccessOptionStripe);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UpdateActivityFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateActivityFormStateImplCopyWith<_$UpdateActivityFormStateImpl>
@@ -63571,8 +64290,11 @@ abstract class _UpdateActivityFormState extends UpdateActivityFormState {
       get authFailureOrSuccessOptionSubmitting;
   @override
   Option<Either<AuthFailure, Unit>> get authFailureOrSuccessOptionStripe;
+
+  /// Create a copy of UpdateActivityFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateActivityFormStateImplCopyWith<_$UpdateActivityFormStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

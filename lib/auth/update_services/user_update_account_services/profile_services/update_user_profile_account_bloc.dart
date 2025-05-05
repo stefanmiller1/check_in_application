@@ -858,7 +858,7 @@ class UpdateUserProfileAccountBloc extends Bloc<UpdateUserProfileAccountEvent, U
           finishedUpdatingUserProfile: (e) async* {
             Either<AuthFailure, Unit> failureOrSuccess;
 
-            if (isProfileItemValid(state.profile) && state.isEditingProfile) {
+            if (state.profile.profileUser.legalSurname.isValid() && state.profile.profileUser.legalName.isValid() && isProfileItemValid(state.profile) && state.isEditingProfile) {
               yield state.copyWith(
                 isEditingProfile: false,
                 isSubmitting: true,

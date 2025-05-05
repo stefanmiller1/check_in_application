@@ -169,6 +169,9 @@ class _$VendorSettingsFormEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -188,6 +191,8 @@ class __$$InitialVendorFormImplCopyWithImpl<$Res>
       $Res Function(_$InitialVendorFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -229,7 +234,9 @@ class _$InitialVendorFormImpl implements _InitialVendorForm {
   @override
   int get hashCode => Object.hash(runtimeType, initializeVendorMerchantForm);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitialVendorFormImplCopyWith<_$InitialVendorFormImpl> get copyWith =>
@@ -401,7 +408,10 @@ abstract class _InitialVendorForm implements VendorSettingsFormEvent {
       _$InitialVendorFormImpl;
 
   Option<VendorMerchantForm> get initializeVendorMerchantForm;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitialVendorFormImplCopyWith<_$InitialVendorFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -424,6 +434,8 @@ class __$$DidChangeFormTitleImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeFormTitleImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -462,7 +474,9 @@ class _$DidChangeFormTitleImpl implements _DidChangeFormTitle {
   @override
   int get hashCode => Object.hash(runtimeType, title);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeFormTitleImplCopyWith<_$DidChangeFormTitleImpl> get copyWith =>
@@ -633,7 +647,10 @@ abstract class _DidChangeFormTitle implements VendorSettingsFormEvent {
       _$DidChangeFormTitleImpl;
 
   String? get title;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeFormTitleImplCopyWith<_$DidChangeFormTitleImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -658,6 +675,8 @@ class __$$DidChangeWelcomeMessageImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeWelcomeMessageImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -696,7 +715,9 @@ class _$DidChangeWelcomeMessageImpl implements _DidChangeWelcomeMessage {
   @override
   int get hashCode => Object.hash(runtimeType, message);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeWelcomeMessageImplCopyWith<_$DidChangeWelcomeMessageImpl>
@@ -867,7 +888,10 @@ abstract class _DidChangeWelcomeMessage implements VendorSettingsFormEvent {
       _$DidChangeWelcomeMessageImpl;
 
   String? get message;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeWelcomeMessageImplCopyWith<_$DidChangeWelcomeMessageImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -892,6 +916,8 @@ class __$$DidChangeFormStartEndDatesImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeFormStartEndDatesImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -930,7 +956,9 @@ class _$DidChangeFormStartEndDatesImpl implements _DidChangeFormStartEndDates {
   @override
   int get hashCode => Object.hash(runtimeType, dates);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeFormStartEndDatesImplCopyWith<_$DidChangeFormStartEndDatesImpl>
@@ -1101,7 +1129,10 @@ abstract class _DidChangeFormStartEndDates implements VendorSettingsFormEvent {
       _$DidChangeFormStartEndDatesImpl;
 
   DateTimeRange? get dates;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeFormStartEndDatesImplCopyWith<_$DidChangeFormStartEndDatesImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1126,6 +1157,8 @@ class __$$DidChangeAvailableTimeOptionImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeAvailableTimeOptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1176,7 +1209,9 @@ class _$DidChangeAvailableTimeOptionImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_availability));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeAvailableTimeOptionImplCopyWith<
@@ -1350,7 +1385,10 @@ abstract class _DidChangeAvailableTimeOption
       _$DidChangeAvailableTimeOptionImpl;
 
   List<MCCustomAvailability>? get availability;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeAvailableTimeOptionImplCopyWith<
           _$DidChangeAvailableTimeOptionImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1376,6 +1414,8 @@ class __$$DidChangeBoothPaymentOptionsImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeBoothPaymentOptionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1424,7 +1464,9 @@ class _$DidChangeBoothPaymentOptionsImpl
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_booths));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeBoothPaymentOptionsImplCopyWith<
@@ -1597,7 +1639,10 @@ abstract class _DidChangeBoothPaymentOptions
       final List<MVBoothPayments>? booths) = _$DidChangeBoothPaymentOptionsImpl;
 
   List<MVBoothPayments>? get booths;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeBoothPaymentOptionsImplCopyWith<
           _$DidChangeBoothPaymentOptionsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1623,6 +1668,8 @@ class __$$DidChangeCustomOptionsImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeCustomOptionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1671,7 +1718,9 @@ class _$DidChangeCustomOptionsImpl implements _DidChangeCustomOptions {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_customOptions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeCustomOptionsImplCopyWith<_$DidChangeCustomOptionsImpl>
@@ -1842,7 +1891,10 @@ abstract class _DidChangeCustomOptions implements VendorSettingsFormEvent {
       final List<MVCustomOption>? customOptions) = _$DidChangeCustomOptionsImpl;
 
   List<MVCustomOption>? get customOptions;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeCustomOptionsImplCopyWith<_$DidChangeCustomOptionsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1867,6 +1919,8 @@ class __$$DidChangeDisclaimerOptionsImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeDisclaimerOptionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1917,7 +1971,9 @@ class _$DidChangeDisclaimerOptionsImpl implements _DidChangeDisclaimerOptions {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_disclaimerOptions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeDisclaimerOptionsImplCopyWith<_$DidChangeDisclaimerOptionsImpl>
@@ -2089,7 +2145,10 @@ abstract class _DidChangeDisclaimerOptions implements VendorSettingsFormEvent {
       _$DidChangeDisclaimerOptionsImpl;
 
   List<MVCustomOption>? get disclaimerOptions;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeDisclaimerOptionsImplCopyWith<_$DidChangeDisclaimerOptionsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2114,6 +2173,8 @@ class __$$DidChangeDiscountCodeOptionsImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeDiscountCodeOptionsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2164,7 +2225,9 @@ class _$DidChangeDiscountCodeOptionsImpl
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_discountOptions));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeDiscountCodeOptionsImplCopyWith<
@@ -2338,7 +2401,10 @@ abstract class _DidChangeDiscountCodeOptions
       _$DidChangeDiscountCodeOptionsImpl;
 
   List<DiscountCode>? get discountOptions;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeDiscountCodeOptionsImplCopyWith<
           _$DidChangeDiscountCodeOptionsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2362,6 +2428,8 @@ class __$$DidChangeFormStatusImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeFormStatusImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2400,7 +2468,9 @@ class _$DidChangeFormStatusImpl implements _DidChangeFormStatus {
   @override
   int get hashCode => Object.hash(runtimeType, status);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeFormStatusImplCopyWith<_$DidChangeFormStatusImpl> get copyWith =>
@@ -2571,7 +2641,10 @@ abstract class _DidChangeFormStatus implements VendorSettingsFormEvent {
       _$DidChangeFormStatusImpl;
 
   FormStatus get status;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeFormStatusImplCopyWith<_$DidChangeFormStatusImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -2590,6 +2663,9 @@ class __$$DidFinishSavingImplCopyWithImpl<$Res>
   __$$DidFinishSavingImplCopyWithImpl(
       _$DidFinishSavingImpl _value, $Res Function(_$DidFinishSavingImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2794,6 +2870,8 @@ class __$$DidFinishPublishingImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishPublishingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2807,6 +2885,8 @@ class __$$DidFinishPublishingImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReservationItemCopyWith<$Res>? get resItem {
@@ -2844,7 +2924,9 @@ class _$DidFinishPublishingImpl implements _DidFinishPublishing {
   @override
   int get hashCode => Object.hash(runtimeType, resItem);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishPublishingImplCopyWith<_$DidFinishPublishingImpl> get copyWith =>
@@ -3015,7 +3097,10 @@ abstract class _DidFinishPublishing implements VendorSettingsFormEvent {
       _$DidFinishPublishingImpl;
 
   ReservationItem? get resItem;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of VendorSettingsFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishPublishingImplCopyWith<_$DidFinishPublishingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3031,7 +3116,9 @@ mixin _$VendorSettingsFormState {
   Option<Either<VendorFormFailure, bool>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $VendorSettingsFormStateCopyWith<VendorSettingsFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -3064,6 +3151,8 @@ class _$VendorSettingsFormStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of VendorSettingsFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3102,6 +3191,8 @@ class _$VendorSettingsFormStateCopyWithImpl<$Res,
     ) as $Val);
   }
 
+  /// Create a copy of VendorSettingsFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VendorMerchantFormCopyWith<$Res> get vendorMerchantForm {
@@ -3143,6 +3234,8 @@ class __$$VendorSettingsFormStateImplCopyWithImpl<$Res>
       $Res Function(_$VendorSettingsFormStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of VendorSettingsFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3243,7 +3336,9 @@ class _$VendorSettingsFormStateImpl extends _VendorSettingsFormState {
       showErrorMessages,
       authFailureOrSuccessOption);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of VendorSettingsFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$VendorSettingsFormStateImplCopyWith<_$VendorSettingsFormStateImpl>
@@ -3274,8 +3369,11 @@ abstract class _VendorSettingsFormState extends VendorSettingsFormState {
   AutovalidateMode get showErrorMessages;
   @override
   Option<Either<VendorFormFailure, bool>> get authFailureOrSuccessOption;
+
+  /// Create a copy of VendorSettingsFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$VendorSettingsFormStateImplCopyWith<_$VendorSettingsFormStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

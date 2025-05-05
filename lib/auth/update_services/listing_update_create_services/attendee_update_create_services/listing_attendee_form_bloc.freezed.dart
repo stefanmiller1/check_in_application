@@ -37,11 +37,6 @@ mixin _$AttendeeFormEvent {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -93,10 +88,6 @@ mixin _$AttendeeFormEvent {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -146,10 +137,6 @@ mixin _$AttendeeFormEvent {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -200,10 +187,6 @@ mixin _$AttendeeFormEvent {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -243,10 +226,6 @@ mixin _$AttendeeFormEvent {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -282,10 +261,6 @@ mixin _$AttendeeFormEvent {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -325,6 +300,9 @@ class _$AttendeeFormEventCopyWithImpl<$Res, $Val extends AttendeeFormEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -350,6 +328,8 @@ class __$$InitializeAttendeeFormImplCopyWithImpl<$Res>
       $Res Function(_$InitializeAttendeeFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -418,7 +398,9 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
   int get hashCode => Object.hash(runtimeType, initialAttendeeForm,
       initialReservation, initialActivityForm, initialResOwner);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitializeAttendeeFormImplCopyWith<_$InitializeAttendeeFormImpl>
@@ -447,11 +429,6 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -507,10 +484,6 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -564,10 +537,6 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -625,10 +594,6 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -671,10 +636,6 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -713,10 +674,6 @@ class _$InitializeAttendeeFormImpl implements _InitializeAttendeeForm {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -756,7 +713,10 @@ abstract class _InitializeAttendeeForm implements AttendeeFormEvent {
   Option<ReservationItem> get initialReservation;
   Option<ActivityManagerForm> get initialActivityForm;
   Option<UserProfileModel> get initialResOwner;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitializeAttendeeFormImplCopyWith<_$InitializeAttendeeFormImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -778,6 +738,8 @@ class __$$AttendeeIsSavingImplCopyWithImpl<$Res>
       $Res Function(_$AttendeeIsSavingImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -816,7 +778,9 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
   @override
   int get hashCode => Object.hash(runtimeType, save);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AttendeeIsSavingImplCopyWith<_$AttendeeIsSavingImpl> get copyWith =>
@@ -845,11 +809,6 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -904,10 +863,6 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -960,10 +915,6 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -1020,10 +971,6 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -1066,10 +1013,6 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -1108,10 +1051,6 @@ class _$AttendeeIsSavingImpl implements _AttendeeIsSaving {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -1143,7 +1082,10 @@ abstract class _AttendeeIsSaving implements AttendeeFormEvent {
   const factory _AttendeeIsSaving(final bool save) = _$AttendeeIsSavingImpl;
 
   bool get save;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AttendeeIsSavingImplCopyWith<_$AttendeeIsSavingImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1170,6 +1112,8 @@ class __$$UpdateAttendeeContactDetailsImplCopyWithImpl<$Res>
       $Res Function(_$UpdateAttendeeContactDetailsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1183,6 +1127,8 @@ class __$$UpdateAttendeeContactDetailsImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ContactDetailsCopyWith<$Res> get contacts {
@@ -1218,7 +1164,9 @@ class _$UpdateAttendeeContactDetailsImpl
   @override
   int get hashCode => Object.hash(runtimeType, contacts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateAttendeeContactDetailsImplCopyWith<
@@ -1248,11 +1196,6 @@ class _$UpdateAttendeeContactDetailsImpl
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -1307,10 +1250,6 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -1363,10 +1302,6 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -1423,10 +1358,6 @@ class _$UpdateAttendeeContactDetailsImpl
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -1469,10 +1400,6 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -1511,10 +1438,6 @@ class _$UpdateAttendeeContactDetailsImpl
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -1547,7 +1470,10 @@ abstract class _UpdateAttendeeContactDetails implements AttendeeFormEvent {
       _$UpdateAttendeeContactDetailsImpl;
 
   ContactDetails get contacts;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateAttendeeContactDetailsImplCopyWith<
           _$UpdateAttendeeContactDetailsImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1573,6 +1499,8 @@ class __$$SelectedCustomRuleChangedImplCopyWithImpl<$Res>
       $Res Function(_$SelectedCustomRuleChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1618,7 +1546,9 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_rules));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$SelectedCustomRuleChangedImplCopyWith<_$SelectedCustomRuleChangedImpl>
@@ -1647,11 +1577,6 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -1706,10 +1631,6 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -1762,10 +1683,6 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -1822,10 +1739,6 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -1868,10 +1781,6 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -1910,10 +1819,6 @@ class _$SelectedCustomRuleChangedImpl implements _SelectedCustomRuleChanged {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -1946,7 +1851,10 @@ abstract class _SelectedCustomRuleChanged implements AttendeeFormEvent {
       _$SelectedCustomRuleChangedImpl;
 
   List<CustomRuleOption> get rules;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$SelectedCustomRuleChangedImplCopyWith<_$SelectedCustomRuleChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1969,6 +1877,8 @@ class __$$UpdateCheckInSettingsImplCopyWithImpl<$Res>
       $Res Function(_$UpdateCheckInSettingsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2015,7 +1925,9 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_checkInSettings));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateCheckInSettingsImplCopyWith<_$UpdateCheckInSettingsImpl>
@@ -2044,11 +1956,6 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -2103,10 +2010,6 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -2159,10 +2062,6 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -2219,10 +2118,6 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -2265,10 +2160,6 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -2307,10 +2198,6 @@ class _$UpdateCheckInSettingsImpl implements _UpdateCheckInSettings {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -2343,7 +2230,10 @@ abstract class _UpdateCheckInSettings implements AttendeeFormEvent {
       final List<CheckInSetting> checkInSettings) = _$UpdateCheckInSettingsImpl;
 
   List<CheckInSetting> get checkInSettings;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateCheckInSettingsImplCopyWith<_$UpdateCheckInSettingsImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2368,6 +2258,8 @@ class __$$UpdateSelectedTicketOptionImplCopyWithImpl<$Res>
       $Res Function(_$UpdateSelectedTicketOptionImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2414,7 +2306,9 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_ticketItems));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateSelectedTicketOptionImplCopyWith<_$UpdateSelectedTicketOptionImpl>
@@ -2443,11 +2337,6 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -2502,10 +2391,6 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -2558,10 +2443,6 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -2618,10 +2499,6 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -2664,10 +2541,6 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -2706,10 +2579,6 @@ class _$UpdateSelectedTicketOptionImpl implements _UpdateSelectedTicketOption {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -2742,7 +2611,10 @@ abstract class _UpdateSelectedTicketOption implements AttendeeFormEvent {
       final List<TicketItem> ticketItems) = _$UpdateSelectedTicketOptionImpl;
 
   List<TicketItem> get ticketItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateSelectedTicketOptionImplCopyWith<_$UpdateSelectedTicketOptionImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2767,6 +2639,8 @@ class __$$UpdateClassesInstructorFormImplCopyWithImpl<$Res>
       $Res Function(_$UpdateClassesInstructorFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2807,7 +2681,9 @@ class _$UpdateClassesInstructorFormImpl
   @override
   int get hashCode => Object.hash(runtimeType, instructorProfile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateClassesInstructorFormImplCopyWith<_$UpdateClassesInstructorFormImpl>
@@ -2836,11 +2712,6 @@ class _$UpdateClassesInstructorFormImpl
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -2895,10 +2766,6 @@ class _$UpdateClassesInstructorFormImpl
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -2951,10 +2818,6 @@ class _$UpdateClassesInstructorFormImpl
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -3011,10 +2874,6 @@ class _$UpdateClassesInstructorFormImpl
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -3057,10 +2916,6 @@ class _$UpdateClassesInstructorFormImpl
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -3099,10 +2954,6 @@ class _$UpdateClassesInstructorFormImpl
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -3135,7 +2986,10 @@ abstract class _UpdateClassesInstructorForm implements AttendeeFormEvent {
       final UniqueId? instructorProfile) = _$UpdateClassesInstructorFormImpl;
 
   UniqueId? get instructorProfile;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateClassesInstructorFormImplCopyWith<_$UpdateClassesInstructorFormImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3160,6 +3014,8 @@ class __$$UpdateMerchantVendorFormImplCopyWithImpl<$Res>
       $Res Function(_$UpdateMerchantVendorFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3199,7 +3055,9 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
   @override
   int get hashCode => Object.hash(runtimeType, merchVendorProfile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateMerchantVendorFormImplCopyWith<_$UpdateMerchantVendorFormImpl>
@@ -3228,11 +3086,6 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -3287,10 +3140,6 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -3343,10 +3192,6 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -3403,10 +3248,6 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -3449,10 +3290,6 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -3491,10 +3328,6 @@ class _$UpdateMerchantVendorFormImpl implements _UpdateMerchantVendorForm {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -3527,7 +3360,10 @@ abstract class _UpdateMerchantVendorForm implements AttendeeFormEvent {
       _$UpdateMerchantVendorFormImpl;
 
   UniqueId? get merchVendorProfile;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateMerchantVendorFormImplCopyWith<_$UpdateMerchantVendorFormImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3551,6 +3387,8 @@ class __$$UpdateVendorFormImplCopyWithImpl<$Res>
       $Res Function(_$UpdateVendorFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3564,6 +3402,8 @@ class __$$UpdateVendorFormImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $VendorMerchantFormCopyWith<$Res>? get form {
@@ -3601,7 +3441,9 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
   @override
   int get hashCode => Object.hash(runtimeType, form);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateVendorFormImplCopyWith<_$UpdateVendorFormImpl> get copyWith =>
@@ -3630,11 +3472,6 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -3689,10 +3526,6 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -3745,10 +3578,6 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -3805,10 +3634,6 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -3851,10 +3676,6 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -3893,10 +3714,6 @@ class _$UpdateVendorFormImpl implements _UpdateVendorForm {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -3929,849 +3746,12 @@ abstract class _UpdateVendorForm implements AttendeeFormEvent {
       _$UpdateVendorFormImpl;
 
   VendorMerchantForm? get form;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateVendorFormImplCopyWith<_$UpdateVendorFormImpl> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CreatePaymentIntentForAttendeeImplCopyWith<$Res> {
-  factory _$$CreatePaymentIntentForAttendeeImplCopyWith(
-          _$CreatePaymentIntentForAttendeeImpl value,
-          $Res Function(_$CreatePaymentIntentForAttendeeImpl) then) =
-      __$$CreatePaymentIntentForAttendeeImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call(
-      {UserProfileModel profile,
-      String amount,
-      String currency,
-      String? paymentMethod});
-
-  $UserProfileModelCopyWith<$Res> get profile;
-}
-
-/// @nodoc
-class __$$CreatePaymentIntentForAttendeeImplCopyWithImpl<$Res>
-    extends _$AttendeeFormEventCopyWithImpl<$Res,
-        _$CreatePaymentIntentForAttendeeImpl>
-    implements _$$CreatePaymentIntentForAttendeeImplCopyWith<$Res> {
-  __$$CreatePaymentIntentForAttendeeImplCopyWithImpl(
-      _$CreatePaymentIntentForAttendeeImpl _value,
-      $Res Function(_$CreatePaymentIntentForAttendeeImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? profile = null,
-    Object? amount = null,
-    Object? currency = null,
-    Object? paymentMethod = freezed,
-  }) {
-    return _then(_$CreatePaymentIntentForAttendeeImpl(
-      null == profile
-          ? _value.profile
-          : profile // ignore: cast_nullable_to_non_nullable
-              as UserProfileModel,
-      null == amount
-          ? _value.amount
-          : amount // ignore: cast_nullable_to_non_nullable
-              as String,
-      null == currency
-          ? _value.currency
-          : currency // ignore: cast_nullable_to_non_nullable
-              as String,
-      freezed == paymentMethod
-          ? _value.paymentMethod
-          : paymentMethod // ignore: cast_nullable_to_non_nullable
-              as String?,
-    ));
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $UserProfileModelCopyWith<$Res> get profile {
-    return $UserProfileModelCopyWith<$Res>(_value.profile, (value) {
-      return _then(_value.copyWith(profile: value));
-    });
-  }
-}
-
-/// @nodoc
-
-class _$CreatePaymentIntentForAttendeeImpl
-    implements _CreatePaymentIntentForAttendee {
-  const _$CreatePaymentIntentForAttendeeImpl(
-      this.profile, this.amount, this.currency, this.paymentMethod);
-
-  @override
-  final UserProfileModel profile;
-  @override
-  final String amount;
-  @override
-  final String currency;
-  @override
-  final String? paymentMethod;
-
-  @override
-  String toString() {
-    return 'AttendeeFormEvent.createPaymentIntentForAttendee(profile: $profile, amount: $amount, currency: $currency, paymentMethod: $paymentMethod)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CreatePaymentIntentForAttendeeImpl &&
-            (identical(other.profile, profile) || other.profile == profile) &&
-            (identical(other.amount, amount) || other.amount == amount) &&
-            (identical(other.currency, currency) ||
-                other.currency == currency) &&
-            (identical(other.paymentMethod, paymentMethod) ||
-                other.paymentMethod == paymentMethod));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, profile, amount, currency, paymentMethod);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CreatePaymentIntentForAttendeeImplCopyWith<
-          _$CreatePaymentIntentForAttendeeImpl>
-      get copyWith => __$$CreatePaymentIntentForAttendeeImplCopyWithImpl<
-          _$CreatePaymentIntentForAttendeeImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            Option<AttendeeItem> initialAttendeeForm,
-            Option<ReservationItem> initialReservation,
-            Option<ActivityManagerForm> initialActivityForm,
-            Option<UserProfileModel> initialResOwner)
-        initializeAttendeeForm,
-    required TResult Function(bool save) attendeeIsSaving,
-    required TResult Function(ContactDetails contacts)
-        updateAttendeeContactDetails,
-    required TResult Function(List<CustomRuleOption> rules) updateCustomRules,
-    required TResult Function(List<CheckInSetting> checkInSettings)
-        updateCheckInSettings,
-    required TResult Function(List<TicketItem> ticketItems)
-        updateSelectedTicketOption,
-    required TResult Function(UniqueId? instructorProfile)
-        updateClassesInstructorForm,
-    required TResult Function(UniqueId? merchVendorProfile)
-        updateMerchantVendorProfileId,
-    required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
-    required TResult Function(UserProfileModel currentUserProfile)
-        checkTicketLimits,
-    required TResult Function() createTicketsOnHold,
-    required TResult Function(UserProfileModel currentUserProfile)
-        checkVendorLimits,
-    required TResult Function(String paymentIntentId)
-        isFinishedCreatingTicketAttendeeWeb,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        isFinishedCreatingTicketAttendee,
-    required TResult Function(
-            UserProfileModel profile,
-            String currency,
-            CardItem? paymentMethod,
-            DiscountCode? discount,
-            StripeTaxRateDetails? taxRateDetail,
-            String? taxCalculationId)
-        isFinishedCreatingVendorAttendee,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        isFinishedCreatingAttendee,
-    required TResult Function() isFinishedInvitingAttendee,
-    required TResult Function() didDeleteAttendee,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didRejectAttendeesGroup,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didCancelAttendeesGroup,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didRefundAttendeesGroup,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didConfirmAttendeesGroup,
-  }) {
-    return createPaymentIntentForAttendee(
-        profile, amount, currency, paymentMethod);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            Option<AttendeeItem> initialAttendeeForm,
-            Option<ReservationItem> initialReservation,
-            Option<ActivityManagerForm> initialActivityForm,
-            Option<UserProfileModel> initialResOwner)?
-        initializeAttendeeForm,
-    TResult? Function(bool save)? attendeeIsSaving,
-    TResult? Function(ContactDetails contacts)? updateAttendeeContactDetails,
-    TResult? Function(List<CustomRuleOption> rules)? updateCustomRules,
-    TResult? Function(List<CheckInSetting> checkInSettings)?
-        updateCheckInSettings,
-    TResult? Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
-    TResult? Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
-    TResult? Function(UniqueId? merchVendorProfile)?
-        updateMerchantVendorProfileId,
-    TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
-    TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
-    TResult? Function()? createTicketsOnHold,
-    TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
-    TResult? Function(String paymentIntentId)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingTicketAttendee,
-    TResult? Function(
-            UserProfileModel profile,
-            String currency,
-            CardItem? paymentMethod,
-            DiscountCode? discount,
-            StripeTaxRateDetails? taxRateDetail,
-            String? taxCalculationId)?
-        isFinishedCreatingVendorAttendee,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingAttendee,
-    TResult? Function()? isFinishedInvitingAttendee,
-    TResult? Function()? didDeleteAttendee,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didRejectAttendeesGroup,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didCancelAttendeesGroup,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didRefundAttendeesGroup,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didConfirmAttendeesGroup,
-  }) {
-    return createPaymentIntentForAttendee?.call(
-        profile, amount, currency, paymentMethod);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            Option<AttendeeItem> initialAttendeeForm,
-            Option<ReservationItem> initialReservation,
-            Option<ActivityManagerForm> initialActivityForm,
-            Option<UserProfileModel> initialResOwner)?
-        initializeAttendeeForm,
-    TResult Function(bool save)? attendeeIsSaving,
-    TResult Function(ContactDetails contacts)? updateAttendeeContactDetails,
-    TResult Function(List<CustomRuleOption> rules)? updateCustomRules,
-    TResult Function(List<CheckInSetting> checkInSettings)?
-        updateCheckInSettings,
-    TResult Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
-    TResult Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
-    TResult Function(UniqueId? merchVendorProfile)?
-        updateMerchantVendorProfileId,
-    TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
-    TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
-    TResult Function()? createTicketsOnHold,
-    TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
-    TResult Function(String paymentIntentId)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingTicketAttendee,
-    TResult Function(
-            UserProfileModel profile,
-            String currency,
-            CardItem? paymentMethod,
-            DiscountCode? discount,
-            StripeTaxRateDetails? taxRateDetail,
-            String? taxCalculationId)?
-        isFinishedCreatingVendorAttendee,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingAttendee,
-    TResult Function()? isFinishedInvitingAttendee,
-    TResult Function()? didDeleteAttendee,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didRejectAttendeesGroup,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didCancelAttendeesGroup,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didRefundAttendeesGroup,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didConfirmAttendeesGroup,
-    required TResult orElse(),
-  }) {
-    if (createPaymentIntentForAttendee != null) {
-      return createPaymentIntentForAttendee(
-          profile, amount, currency, paymentMethod);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitializeAttendeeForm value)
-        initializeAttendeeForm,
-    required TResult Function(_AttendeeIsSaving value) attendeeIsSaving,
-    required TResult Function(_UpdateAttendeeContactDetails value)
-        updateAttendeeContactDetails,
-    required TResult Function(_SelectedCustomRuleChanged value)
-        updateCustomRules,
-    required TResult Function(_UpdateCheckInSettings value)
-        updateCheckInSettings,
-    required TResult Function(_UpdateSelectedTicketOption value)
-        updateSelectedTicketOption,
-    required TResult Function(_UpdateClassesInstructorForm value)
-        updateClassesInstructorForm,
-    required TResult Function(_UpdateMerchantVendorForm value)
-        updateMerchantVendorProfileId,
-    required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
-    required TResult Function(_CheckTicketLimits value) checkTicketLimits,
-    required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
-    required TResult Function(_CheckVendorLimits value) checkVendorLimits,
-    required TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)
-        isFinishedCreatingTicketAttendeeWeb,
-    required TResult Function(_IsFinishedCreatingTicketAttendee value)
-        isFinishedCreatingTicketAttendee,
-    required TResult Function(_IsFinishedCreatingVendorAttendee value)
-        isFinishedCreatingVendorAttendee,
-    required TResult Function(_IsFinishedCreatingAttendee value)
-        isFinishedCreatingAttendee,
-    required TResult Function(_IsFinishedInvitingAttendee value)
-        isFinishedInvitingAttendee,
-    required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
-    required TResult Function(_DidRejectAttendeesGroup value)
-        didRejectAttendeesGroup,
-    required TResult Function(_DidCancelAttendeesGroup value)
-        didCancelAttendeesGroup,
-    required TResult Function(_DidRefundAttendeesGroup value)
-        didRefundAttendeesGroup,
-    required TResult Function(_DidUpdateAttendeesGroup value)
-        didConfirmAttendeesGroup,
-  }) {
-    return createPaymentIntentForAttendee(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
-    TResult? Function(_AttendeeIsSaving value)? attendeeIsSaving,
-    TResult? Function(_UpdateAttendeeContactDetails value)?
-        updateAttendeeContactDetails,
-    TResult? Function(_SelectedCustomRuleChanged value)? updateCustomRules,
-    TResult? Function(_UpdateCheckInSettings value)? updateCheckInSettings,
-    TResult? Function(_UpdateSelectedTicketOption value)?
-        updateSelectedTicketOption,
-    TResult? Function(_UpdateClassesInstructorForm value)?
-        updateClassesInstructorForm,
-    TResult? Function(_UpdateMerchantVendorForm value)?
-        updateMerchantVendorProfileId,
-    TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
-    TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
-    TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
-    TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
-    TResult? Function(_IsFinishedCreatingTicketAttendeeWeb value)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult? Function(_IsFinishedCreatingTicketAttendee value)?
-        isFinishedCreatingTicketAttendee,
-    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
-        isFinishedCreatingVendorAttendee,
-    TResult? Function(_IsFinishedCreatingAttendee value)?
-        isFinishedCreatingAttendee,
-    TResult? Function(_IsFinishedInvitingAttendee value)?
-        isFinishedInvitingAttendee,
-    TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
-    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
-    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
-    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
-    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
-  }) {
-    return createPaymentIntentForAttendee?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
-    TResult Function(_AttendeeIsSaving value)? attendeeIsSaving,
-    TResult Function(_UpdateAttendeeContactDetails value)?
-        updateAttendeeContactDetails,
-    TResult Function(_SelectedCustomRuleChanged value)? updateCustomRules,
-    TResult Function(_UpdateCheckInSettings value)? updateCheckInSettings,
-    TResult Function(_UpdateSelectedTicketOption value)?
-        updateSelectedTicketOption,
-    TResult Function(_UpdateClassesInstructorForm value)?
-        updateClassesInstructorForm,
-    TResult Function(_UpdateMerchantVendorForm value)?
-        updateMerchantVendorProfileId,
-    TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
-    TResult Function(_CheckTicketLimits value)? checkTicketLimits,
-    TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
-    TResult Function(_CheckVendorLimits value)? checkVendorLimits,
-    TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult Function(_IsFinishedCreatingTicketAttendee value)?
-        isFinishedCreatingTicketAttendee,
-    TResult Function(_IsFinishedCreatingVendorAttendee value)?
-        isFinishedCreatingVendorAttendee,
-    TResult Function(_IsFinishedCreatingAttendee value)?
-        isFinishedCreatingAttendee,
-    TResult Function(_IsFinishedInvitingAttendee value)?
-        isFinishedInvitingAttendee,
-    TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
-    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
-    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
-    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
-    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
-    required TResult orElse(),
-  }) {
-    if (createPaymentIntentForAttendee != null) {
-      return createPaymentIntentForAttendee(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CreatePaymentIntentForAttendee implements AttendeeFormEvent {
-  const factory _CreatePaymentIntentForAttendee(
-      final UserProfileModel profile,
-      final String amount,
-      final String currency,
-      final String? paymentMethod) = _$CreatePaymentIntentForAttendeeImpl;
-
-  UserProfileModel get profile;
-  String get amount;
-  String get currency;
-  String? get paymentMethod;
-  @JsonKey(ignore: true)
-  _$$CreatePaymentIntentForAttendeeImplCopyWith<
-          _$CreatePaymentIntentForAttendeeImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$CreateAttendeeFormForReservationImplCopyWith<$Res> {
-  factory _$$CreateAttendeeFormForReservationImplCopyWith(
-          _$CreateAttendeeFormForReservationImpl value,
-          $Res Function(_$CreateAttendeeFormForReservationImpl) then) =
-      __$$CreateAttendeeFormForReservationImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String paymentIntentId});
-}
-
-/// @nodoc
-class __$$CreateAttendeeFormForReservationImplCopyWithImpl<$Res>
-    extends _$AttendeeFormEventCopyWithImpl<$Res,
-        _$CreateAttendeeFormForReservationImpl>
-    implements _$$CreateAttendeeFormForReservationImplCopyWith<$Res> {
-  __$$CreateAttendeeFormForReservationImplCopyWithImpl(
-      _$CreateAttendeeFormForReservationImpl _value,
-      $Res Function(_$CreateAttendeeFormForReservationImpl) _then)
-      : super(_value, _then);
-
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? paymentIntentId = null,
-  }) {
-    return _then(_$CreateAttendeeFormForReservationImpl(
-      null == paymentIntentId
-          ? _value.paymentIntentId
-          : paymentIntentId // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$CreateAttendeeFormForReservationImpl
-    implements _CreateAttendeeFormForReservation {
-  const _$CreateAttendeeFormForReservationImpl(this.paymentIntentId);
-
-  @override
-  final String paymentIntentId;
-
-  @override
-  String toString() {
-    return 'AttendeeFormEvent.createAttendeeFormForReservation(paymentIntentId: $paymentIntentId)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$CreateAttendeeFormForReservationImpl &&
-            (identical(other.paymentIntentId, paymentIntentId) ||
-                other.paymentIntentId == paymentIntentId));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, paymentIntentId);
-
-  @JsonKey(ignore: true)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$CreateAttendeeFormForReservationImplCopyWith<
-          _$CreateAttendeeFormForReservationImpl>
-      get copyWith => __$$CreateAttendeeFormForReservationImplCopyWithImpl<
-          _$CreateAttendeeFormForReservationImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function(
-            Option<AttendeeItem> initialAttendeeForm,
-            Option<ReservationItem> initialReservation,
-            Option<ActivityManagerForm> initialActivityForm,
-            Option<UserProfileModel> initialResOwner)
-        initializeAttendeeForm,
-    required TResult Function(bool save) attendeeIsSaving,
-    required TResult Function(ContactDetails contacts)
-        updateAttendeeContactDetails,
-    required TResult Function(List<CustomRuleOption> rules) updateCustomRules,
-    required TResult Function(List<CheckInSetting> checkInSettings)
-        updateCheckInSettings,
-    required TResult Function(List<TicketItem> ticketItems)
-        updateSelectedTicketOption,
-    required TResult Function(UniqueId? instructorProfile)
-        updateClassesInstructorForm,
-    required TResult Function(UniqueId? merchVendorProfile)
-        updateMerchantVendorProfileId,
-    required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
-    required TResult Function(UserProfileModel currentUserProfile)
-        checkTicketLimits,
-    required TResult Function() createTicketsOnHold,
-    required TResult Function(UserProfileModel currentUserProfile)
-        checkVendorLimits,
-    required TResult Function(String paymentIntentId)
-        isFinishedCreatingTicketAttendeeWeb,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        isFinishedCreatingTicketAttendee,
-    required TResult Function(
-            UserProfileModel profile,
-            String currency,
-            CardItem? paymentMethod,
-            DiscountCode? discount,
-            StripeTaxRateDetails? taxRateDetail,
-            String? taxCalculationId)
-        isFinishedCreatingVendorAttendee,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        isFinishedCreatingAttendee,
-    required TResult Function() isFinishedInvitingAttendee,
-    required TResult Function() didDeleteAttendee,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didRejectAttendeesGroup,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didCancelAttendeesGroup,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didRefundAttendeesGroup,
-    required TResult Function(List<VendorContactDetail> attendees)
-        didConfirmAttendeesGroup,
-  }) {
-    return createAttendeeFormForReservation(paymentIntentId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(
-            Option<AttendeeItem> initialAttendeeForm,
-            Option<ReservationItem> initialReservation,
-            Option<ActivityManagerForm> initialActivityForm,
-            Option<UserProfileModel> initialResOwner)?
-        initializeAttendeeForm,
-    TResult? Function(bool save)? attendeeIsSaving,
-    TResult? Function(ContactDetails contacts)? updateAttendeeContactDetails,
-    TResult? Function(List<CustomRuleOption> rules)? updateCustomRules,
-    TResult? Function(List<CheckInSetting> checkInSettings)?
-        updateCheckInSettings,
-    TResult? Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
-    TResult? Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
-    TResult? Function(UniqueId? merchVendorProfile)?
-        updateMerchantVendorProfileId,
-    TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
-    TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
-    TResult? Function()? createTicketsOnHold,
-    TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
-    TResult? Function(String paymentIntentId)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingTicketAttendee,
-    TResult? Function(
-            UserProfileModel profile,
-            String currency,
-            CardItem? paymentMethod,
-            DiscountCode? discount,
-            StripeTaxRateDetails? taxRateDetail,
-            String? taxCalculationId)?
-        isFinishedCreatingVendorAttendee,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingAttendee,
-    TResult? Function()? isFinishedInvitingAttendee,
-    TResult? Function()? didDeleteAttendee,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didRejectAttendeesGroup,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didCancelAttendeesGroup,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didRefundAttendeesGroup,
-    TResult? Function(List<VendorContactDetail> attendees)?
-        didConfirmAttendeesGroup,
-  }) {
-    return createAttendeeFormForReservation?.call(paymentIntentId);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function(
-            Option<AttendeeItem> initialAttendeeForm,
-            Option<ReservationItem> initialReservation,
-            Option<ActivityManagerForm> initialActivityForm,
-            Option<UserProfileModel> initialResOwner)?
-        initializeAttendeeForm,
-    TResult Function(bool save)? attendeeIsSaving,
-    TResult Function(ContactDetails contacts)? updateAttendeeContactDetails,
-    TResult Function(List<CustomRuleOption> rules)? updateCustomRules,
-    TResult Function(List<CheckInSetting> checkInSettings)?
-        updateCheckInSettings,
-    TResult Function(List<TicketItem> ticketItems)? updateSelectedTicketOption,
-    TResult Function(UniqueId? instructorProfile)? updateClassesInstructorForm,
-    TResult Function(UniqueId? merchVendorProfile)?
-        updateMerchantVendorProfileId,
-    TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
-    TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
-    TResult Function()? createTicketsOnHold,
-    TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
-    TResult Function(String paymentIntentId)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingTicketAttendee,
-    TResult Function(
-            UserProfileModel profile,
-            String currency,
-            CardItem? paymentMethod,
-            DiscountCode? discount,
-            StripeTaxRateDetails? taxRateDetail,
-            String? taxCalculationId)?
-        isFinishedCreatingVendorAttendee,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        isFinishedCreatingAttendee,
-    TResult Function()? isFinishedInvitingAttendee,
-    TResult Function()? didDeleteAttendee,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didRejectAttendeesGroup,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didCancelAttendeesGroup,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didRefundAttendeesGroup,
-    TResult Function(List<VendorContactDetail> attendees)?
-        didConfirmAttendeesGroup,
-    required TResult orElse(),
-  }) {
-    if (createAttendeeFormForReservation != null) {
-      return createAttendeeFormForReservation(paymentIntentId);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_InitializeAttendeeForm value)
-        initializeAttendeeForm,
-    required TResult Function(_AttendeeIsSaving value) attendeeIsSaving,
-    required TResult Function(_UpdateAttendeeContactDetails value)
-        updateAttendeeContactDetails,
-    required TResult Function(_SelectedCustomRuleChanged value)
-        updateCustomRules,
-    required TResult Function(_UpdateCheckInSettings value)
-        updateCheckInSettings,
-    required TResult Function(_UpdateSelectedTicketOption value)
-        updateSelectedTicketOption,
-    required TResult Function(_UpdateClassesInstructorForm value)
-        updateClassesInstructorForm,
-    required TResult Function(_UpdateMerchantVendorForm value)
-        updateMerchantVendorProfileId,
-    required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
-    required TResult Function(_CheckTicketLimits value) checkTicketLimits,
-    required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
-    required TResult Function(_CheckVendorLimits value) checkVendorLimits,
-    required TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)
-        isFinishedCreatingTicketAttendeeWeb,
-    required TResult Function(_IsFinishedCreatingTicketAttendee value)
-        isFinishedCreatingTicketAttendee,
-    required TResult Function(_IsFinishedCreatingVendorAttendee value)
-        isFinishedCreatingVendorAttendee,
-    required TResult Function(_IsFinishedCreatingAttendee value)
-        isFinishedCreatingAttendee,
-    required TResult Function(_IsFinishedInvitingAttendee value)
-        isFinishedInvitingAttendee,
-    required TResult Function(_DidDeleteAttendee value) didDeleteAttendee,
-    required TResult Function(_DidRejectAttendeesGroup value)
-        didRejectAttendeesGroup,
-    required TResult Function(_DidCancelAttendeesGroup value)
-        didCancelAttendeesGroup,
-    required TResult Function(_DidRefundAttendeesGroup value)
-        didRefundAttendeesGroup,
-    required TResult Function(_DidUpdateAttendeesGroup value)
-        didConfirmAttendeesGroup,
-  }) {
-    return createAttendeeFormForReservation(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
-    TResult? Function(_AttendeeIsSaving value)? attendeeIsSaving,
-    TResult? Function(_UpdateAttendeeContactDetails value)?
-        updateAttendeeContactDetails,
-    TResult? Function(_SelectedCustomRuleChanged value)? updateCustomRules,
-    TResult? Function(_UpdateCheckInSettings value)? updateCheckInSettings,
-    TResult? Function(_UpdateSelectedTicketOption value)?
-        updateSelectedTicketOption,
-    TResult? Function(_UpdateClassesInstructorForm value)?
-        updateClassesInstructorForm,
-    TResult? Function(_UpdateMerchantVendorForm value)?
-        updateMerchantVendorProfileId,
-    TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
-    TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
-    TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
-    TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
-    TResult? Function(_IsFinishedCreatingTicketAttendeeWeb value)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult? Function(_IsFinishedCreatingTicketAttendee value)?
-        isFinishedCreatingTicketAttendee,
-    TResult? Function(_IsFinishedCreatingVendorAttendee value)?
-        isFinishedCreatingVendorAttendee,
-    TResult? Function(_IsFinishedCreatingAttendee value)?
-        isFinishedCreatingAttendee,
-    TResult? Function(_IsFinishedInvitingAttendee value)?
-        isFinishedInvitingAttendee,
-    TResult? Function(_DidDeleteAttendee value)? didDeleteAttendee,
-    TResult? Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
-    TResult? Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
-    TResult? Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
-    TResult? Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
-  }) {
-    return createAttendeeFormForReservation?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_InitializeAttendeeForm value)? initializeAttendeeForm,
-    TResult Function(_AttendeeIsSaving value)? attendeeIsSaving,
-    TResult Function(_UpdateAttendeeContactDetails value)?
-        updateAttendeeContactDetails,
-    TResult Function(_SelectedCustomRuleChanged value)? updateCustomRules,
-    TResult Function(_UpdateCheckInSettings value)? updateCheckInSettings,
-    TResult Function(_UpdateSelectedTicketOption value)?
-        updateSelectedTicketOption,
-    TResult Function(_UpdateClassesInstructorForm value)?
-        updateClassesInstructorForm,
-    TResult Function(_UpdateMerchantVendorForm value)?
-        updateMerchantVendorProfileId,
-    TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
-    TResult Function(_CheckTicketLimits value)? checkTicketLimits,
-    TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
-    TResult Function(_CheckVendorLimits value)? checkVendorLimits,
-    TResult Function(_IsFinishedCreatingTicketAttendeeWeb value)?
-        isFinishedCreatingTicketAttendeeWeb,
-    TResult Function(_IsFinishedCreatingTicketAttendee value)?
-        isFinishedCreatingTicketAttendee,
-    TResult Function(_IsFinishedCreatingVendorAttendee value)?
-        isFinishedCreatingVendorAttendee,
-    TResult Function(_IsFinishedCreatingAttendee value)?
-        isFinishedCreatingAttendee,
-    TResult Function(_IsFinishedInvitingAttendee value)?
-        isFinishedInvitingAttendee,
-    TResult Function(_DidDeleteAttendee value)? didDeleteAttendee,
-    TResult Function(_DidRejectAttendeesGroup value)? didRejectAttendeesGroup,
-    TResult Function(_DidCancelAttendeesGroup value)? didCancelAttendeesGroup,
-    TResult Function(_DidRefundAttendeesGroup value)? didRefundAttendeesGroup,
-    TResult Function(_DidUpdateAttendeesGroup value)? didConfirmAttendeesGroup,
-    required TResult orElse(),
-  }) {
-    if (createAttendeeFormForReservation != null) {
-      return createAttendeeFormForReservation(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _CreateAttendeeFormForReservation implements AttendeeFormEvent {
-  const factory _CreateAttendeeFormForReservation(
-      final String paymentIntentId) = _$CreateAttendeeFormForReservationImpl;
-
-  String get paymentIntentId;
-  @JsonKey(ignore: true)
-  _$$CreateAttendeeFormForReservationImplCopyWith<
-          _$CreateAttendeeFormForReservationImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -4793,6 +3773,8 @@ class __$$CheckTicketLimitsImplCopyWithImpl<$Res>
       $Res Function(_$CheckTicketLimitsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4806,6 +3788,8 @@ class __$$CheckTicketLimitsImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get currentUserProfile {
@@ -4840,7 +3824,9 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
   @override
   int get hashCode => Object.hash(runtimeType, currentUserProfile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CheckTicketLimitsImplCopyWith<_$CheckTicketLimitsImpl> get copyWith =>
@@ -4869,11 +3855,6 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -4928,10 +3909,6 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -4984,10 +3961,6 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -5044,10 +4017,6 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -5090,10 +4059,6 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -5132,10 +4097,6 @@ class _$CheckTicketLimitsImpl implements _CheckTicketLimits {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -5168,7 +4129,10 @@ abstract class _CheckTicketLimits implements AttendeeFormEvent {
       _$CheckTicketLimitsImpl;
 
   UserProfileModel get currentUserProfile;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CheckTicketLimitsImplCopyWith<_$CheckTicketLimitsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5187,6 +4151,9 @@ class __$$CreateTicketsOnHoldImplCopyWithImpl<$Res>
   __$$CreateTicketsOnHoldImplCopyWithImpl(_$CreateTicketsOnHoldImpl _value,
       $Res Function(_$CreateTicketsOnHoldImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -5231,11 +4198,6 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -5290,10 +4252,6 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -5346,10 +4304,6 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -5406,10 +4360,6 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -5452,10 +4402,6 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -5494,10 +4440,6 @@ class _$CreateTicketsOnHoldImpl implements _CreateTicketsOnHold {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -5548,6 +4490,8 @@ class __$$CheckVendorLimitsImplCopyWithImpl<$Res>
       $Res Function(_$CheckVendorLimitsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5561,6 +4505,8 @@ class __$$CheckVendorLimitsImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get currentUserProfile {
@@ -5595,7 +4541,9 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
   @override
   int get hashCode => Object.hash(runtimeType, currentUserProfile);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CheckVendorLimitsImplCopyWith<_$CheckVendorLimitsImpl> get copyWith =>
@@ -5624,11 +4572,6 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -5683,10 +4626,6 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -5739,10 +4678,6 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -5799,10 +4734,6 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -5845,10 +4776,6 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -5887,10 +4814,6 @@ class _$CheckVendorLimitsImpl implements _CheckVendorLimits {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -5923,7 +4846,10 @@ abstract class _CheckVendorLimits implements AttendeeFormEvent {
       _$CheckVendorLimitsImpl;
 
   UserProfileModel get currentUserProfile;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CheckVendorLimitsImplCopyWith<_$CheckVendorLimitsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -5948,6 +4874,8 @@ class __$$IsFinishedCreatingTicketAttendeeWebImplCopyWithImpl<$Res>
       $Res Function(_$IsFinishedCreatingTicketAttendeeWebImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5988,7 +4916,9 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
   @override
   int get hashCode => Object.hash(runtimeType, paymentIntentId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFinishedCreatingTicketAttendeeWebImplCopyWith<
@@ -6018,11 +4948,6 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -6077,10 +5002,6 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -6133,10 +5054,6 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -6193,10 +5110,6 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -6239,10 +5152,6 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -6281,10 +5190,6 @@ class _$IsFinishedCreatingTicketAttendeeWebImpl
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -6318,7 +5223,10 @@ abstract class _IsFinishedCreatingTicketAttendeeWeb
       final String paymentIntentId) = _$IsFinishedCreatingTicketAttendeeWebImpl;
 
   String get paymentIntentId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFinishedCreatingTicketAttendeeWebImplCopyWith<
           _$IsFinishedCreatingTicketAttendeeWebImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -6350,6 +5258,8 @@ class __$$IsFinishedCreatingTicketAttendeeImplCopyWithImpl<$Res>
       $Res Function(_$IsFinishedCreatingTicketAttendeeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6378,6 +5288,8 @@ class __$$IsFinishedCreatingTicketAttendeeImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get profile {
@@ -6425,7 +5337,9 @@ class _$IsFinishedCreatingTicketAttendeeImpl
   int get hashCode =>
       Object.hash(runtimeType, profile, amount, currency, paymentMethod);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFinishedCreatingTicketAttendeeImplCopyWith<
@@ -6455,11 +5369,6 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -6515,10 +5424,6 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -6572,10 +5477,6 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -6633,10 +5534,6 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -6679,10 +5576,6 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -6721,10 +5614,6 @@ class _$IsFinishedCreatingTicketAttendeeImpl
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -6763,7 +5652,10 @@ abstract class _IsFinishedCreatingTicketAttendee implements AttendeeFormEvent {
   String get amount;
   String get currency;
   String? get paymentMethod;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFinishedCreatingTicketAttendeeImplCopyWith<
           _$IsFinishedCreatingTicketAttendeeImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -6800,6 +5692,8 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
       $Res Function(_$IsFinishedCreatingVendorAttendeeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -6838,6 +5732,8 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get profile {
@@ -6846,6 +5742,8 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $CardItemCopyWith<$Res>? get paymentMethod {
@@ -6858,6 +5756,8 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $DiscountCodeCopyWith<$Res>? get discount {
@@ -6870,6 +5770,8 @@ class __$$IsFinishedCreatingVendorAttendeeImplCopyWithImpl<$Res>
     });
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $StripeTaxRateDetailsCopyWith<$Res>? get taxRateDetail {
@@ -6935,7 +5837,9 @@ class _$IsFinishedCreatingVendorAttendeeImpl
   int get hashCode => Object.hash(runtimeType, profile, currency, paymentMethod,
       discount, taxRateDetail, taxCalculationId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFinishedCreatingVendorAttendeeImplCopyWith<
@@ -6965,11 +5869,6 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -7025,10 +5924,6 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -7082,10 +5977,6 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -7143,10 +6034,6 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -7189,10 +6076,6 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -7231,10 +6114,6 @@ class _$IsFinishedCreatingVendorAttendeeImpl
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -7277,7 +6156,10 @@ abstract class _IsFinishedCreatingVendorAttendee implements AttendeeFormEvent {
   DiscountCode? get discount;
   StripeTaxRateDetails? get taxRateDetail;
   String? get taxCalculationId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFinishedCreatingVendorAttendeeImplCopyWith<
           _$IsFinishedCreatingVendorAttendeeImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -7309,6 +6191,8 @@ class __$$IsFinishedCreatingAttendeeImplCopyWithImpl<$Res>
       $Res Function(_$IsFinishedCreatingAttendeeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -7337,6 +6221,8 @@ class __$$IsFinishedCreatingAttendeeImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get profile {
@@ -7383,7 +6269,9 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
   int get hashCode =>
       Object.hash(runtimeType, profile, amount, currency, paymentMethod);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IsFinishedCreatingAttendeeImplCopyWith<_$IsFinishedCreatingAttendeeImpl>
@@ -7412,11 +6300,6 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -7471,10 +6354,6 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -7528,10 +6407,6 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -7589,10 +6464,6 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -7635,10 +6506,6 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -7677,10 +6544,6 @@ class _$IsFinishedCreatingAttendeeImpl implements _IsFinishedCreatingAttendee {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -7719,7 +6582,10 @@ abstract class _IsFinishedCreatingAttendee implements AttendeeFormEvent {
   String get amount;
   String get currency;
   String? get paymentMethod;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IsFinishedCreatingAttendeeImplCopyWith<_$IsFinishedCreatingAttendeeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -7741,6 +6607,9 @@ class __$$IsFinishedInvitingAttendeeImplCopyWithImpl<$Res>
       _$IsFinishedInvitingAttendeeImpl _value,
       $Res Function(_$IsFinishedInvitingAttendeeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -7785,11 +6654,6 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -7844,10 +6708,6 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -7900,10 +6760,6 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -7960,10 +6816,6 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -8006,10 +6858,6 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -8048,10 +6896,6 @@ class _$IsFinishedInvitingAttendeeImpl implements _IsFinishedInvitingAttendee {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -8098,6 +6942,9 @@ class __$$DidDeleteAttendeeImplCopyWithImpl<$Res>
   __$$DidDeleteAttendeeImplCopyWithImpl(_$DidDeleteAttendeeImpl _value,
       $Res Function(_$DidDeleteAttendeeImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -8141,11 +6988,6 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -8200,10 +7042,6 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -8256,10 +7094,6 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -8316,10 +7150,6 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -8362,10 +7192,6 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -8404,10 +7230,6 @@ class _$DidDeleteAttendeeImpl implements _DidDeleteAttendee {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -8458,6 +7280,8 @@ class __$$DidRejectAttendeesGroupImplCopyWithImpl<$Res>
       $Res Function(_$DidRejectAttendeesGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8504,7 +7328,9 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidRejectAttendeesGroupImplCopyWith<_$DidRejectAttendeesGroupImpl>
@@ -8533,11 +7359,6 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -8592,10 +7413,6 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -8648,10 +7465,6 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -8708,10 +7521,6 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -8754,10 +7563,6 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -8796,10 +7601,6 @@ class _$DidRejectAttendeesGroupImpl implements _DidRejectAttendeesGroup {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -8833,7 +7634,10 @@ abstract class _DidRejectAttendeesGroup implements AttendeeFormEvent {
       _$DidRejectAttendeesGroupImpl;
 
   List<VendorContactDetail> get attendees;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidRejectAttendeesGroupImplCopyWith<_$DidRejectAttendeesGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -8857,6 +7661,8 @@ class __$$DidCancelAttendeesGroupImplCopyWithImpl<$Res>
       $Res Function(_$DidCancelAttendeesGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -8903,7 +7709,9 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidCancelAttendeesGroupImplCopyWith<_$DidCancelAttendeesGroupImpl>
@@ -8932,11 +7740,6 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -8991,10 +7794,6 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -9047,10 +7846,6 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -9107,10 +7902,6 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -9153,10 +7944,6 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -9195,10 +7982,6 @@ class _$DidCancelAttendeesGroupImpl implements _DidCancelAttendeesGroup {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -9232,7 +8015,10 @@ abstract class _DidCancelAttendeesGroup implements AttendeeFormEvent {
       _$DidCancelAttendeesGroupImpl;
 
   List<VendorContactDetail> get attendees;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidCancelAttendeesGroupImplCopyWith<_$DidCancelAttendeesGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -9256,6 +8042,8 @@ class __$$DidRefundAttendeesGroupImplCopyWithImpl<$Res>
       $Res Function(_$DidRefundAttendeesGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9302,7 +8090,9 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidRefundAttendeesGroupImplCopyWith<_$DidRefundAttendeesGroupImpl>
@@ -9331,11 +8121,6 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -9390,10 +8175,6 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -9446,10 +8227,6 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -9506,10 +8283,6 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -9552,10 +8325,6 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -9594,10 +8363,6 @@ class _$DidRefundAttendeesGroupImpl implements _DidRefundAttendeesGroup {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -9631,7 +8396,10 @@ abstract class _DidRefundAttendeesGroup implements AttendeeFormEvent {
       _$DidRefundAttendeesGroupImpl;
 
   List<VendorContactDetail> get attendees;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidRefundAttendeesGroupImplCopyWith<_$DidRefundAttendeesGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -9655,6 +8423,8 @@ class __$$DidUpdateAttendeesGroupImplCopyWithImpl<$Res>
       $Res Function(_$DidUpdateAttendeesGroupImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -9701,7 +8471,9 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_attendees));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidUpdateAttendeesGroupImplCopyWith<_$DidUpdateAttendeesGroupImpl>
@@ -9730,11 +8502,6 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     required TResult Function(UniqueId? merchVendorProfile)
         updateMerchantVendorProfileId,
     required TResult Function(VendorMerchantForm? form) updateVendorForm,
-    required TResult Function(UserProfileModel profile, String amount,
-            String currency, String? paymentMethod)
-        createPaymentIntentForAttendee,
-    required TResult Function(String paymentIntentId)
-        createAttendeeFormForReservation,
     required TResult Function(UserProfileModel currentUserProfile)
         checkTicketLimits,
     required TResult Function() createTicketsOnHold,
@@ -9789,10 +8556,6 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     TResult? Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult? Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult? Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult? Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult? Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult? Function()? createTicketsOnHold,
     TResult? Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -9845,10 +8608,6 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     TResult Function(UniqueId? merchVendorProfile)?
         updateMerchantVendorProfileId,
     TResult Function(VendorMerchantForm? form)? updateVendorForm,
-    TResult Function(UserProfileModel profile, String amount, String currency,
-            String? paymentMethod)?
-        createPaymentIntentForAttendee,
-    TResult Function(String paymentIntentId)? createAttendeeFormForReservation,
     TResult Function(UserProfileModel currentUserProfile)? checkTicketLimits,
     TResult Function()? createTicketsOnHold,
     TResult Function(UserProfileModel currentUserProfile)? checkVendorLimits,
@@ -9905,10 +8664,6 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     required TResult Function(_UpdateMerchantVendorForm value)
         updateMerchantVendorProfileId,
     required TResult Function(_UpdateVendorForm value) updateVendorForm,
-    required TResult Function(_CreatePaymentIntentForAttendee value)
-        createPaymentIntentForAttendee,
-    required TResult Function(_CreateAttendeeFormForReservation value)
-        createAttendeeFormForReservation,
     required TResult Function(_CheckTicketLimits value) checkTicketLimits,
     required TResult Function(_CreateTicketsOnHold value) createTicketsOnHold,
     required TResult Function(_CheckVendorLimits value) checkVendorLimits,
@@ -9951,10 +8706,6 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     TResult? Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult? Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult? Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult? Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult? Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult? Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult? Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -9993,10 +8744,6 @@ class _$DidUpdateAttendeesGroupImpl implements _DidUpdateAttendeesGroup {
     TResult Function(_UpdateMerchantVendorForm value)?
         updateMerchantVendorProfileId,
     TResult Function(_UpdateVendorForm value)? updateVendorForm,
-    TResult Function(_CreatePaymentIntentForAttendee value)?
-        createPaymentIntentForAttendee,
-    TResult Function(_CreateAttendeeFormForReservation value)?
-        createAttendeeFormForReservation,
     TResult Function(_CheckTicketLimits value)? checkTicketLimits,
     TResult Function(_CreateTicketsOnHold value)? createTicketsOnHold,
     TResult Function(_CheckVendorLimits value)? checkVendorLimits,
@@ -10030,7 +8777,10 @@ abstract class _DidUpdateAttendeesGroup implements AttendeeFormEvent {
       _$DidUpdateAttendeesGroupImpl;
 
   List<VendorContactDetail> get attendees;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidUpdateAttendeesGroupImplCopyWith<_$DidUpdateAttendeesGroupImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -10062,7 +8812,9 @@ mixin _$AttendeeFormState {
   Option<Either<AttendeeFormFailure, Unit>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $AttendeeFormStateCopyWith<AttendeeFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -10109,6 +8861,8 @@ class _$AttendeeFormStateCopyWithImpl<$Res, $Val extends AttendeeFormState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10187,6 +8941,8 @@ class _$AttendeeFormStateCopyWithImpl<$Res, $Val extends AttendeeFormState>
     ) as $Val);
   }
 
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttendeeItemCopyWith<$Res> get attendeeItem {
@@ -10195,6 +8951,8 @@ class _$AttendeeFormStateCopyWithImpl<$Res, $Val extends AttendeeFormState>
     });
   }
 
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ReservationItemCopyWith<$Res> get reservation {
@@ -10203,6 +8961,8 @@ class _$AttendeeFormStateCopyWithImpl<$Res, $Val extends AttendeeFormState>
     });
   }
 
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $UserProfileModelCopyWith<$Res> get reservationOwner {
@@ -10211,6 +8971,8 @@ class _$AttendeeFormStateCopyWithImpl<$Res, $Val extends AttendeeFormState>
     });
   }
 
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ActivityManagerFormCopyWith<$Res> get activityForm {
@@ -10266,6 +9028,8 @@ class __$$AttendeeFormStateImplCopyWithImpl<$Res>
       $Res Function(_$AttendeeFormStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -10460,7 +9224,9 @@ class _$AttendeeFormStateImpl extends _AttendeeFormState {
       authRefundFailureOrSuccessOption,
       authFailureOrSuccessOption);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AttendeeFormStateImplCopyWith<_$AttendeeFormStateImpl> get copyWith =>
@@ -10525,8 +9291,11 @@ abstract class _AttendeeFormState extends AttendeeFormState {
       get authRefundFailureOrSuccessOption;
   @override
   Option<Either<AttendeeFormFailure, Unit>> get authFailureOrSuccessOption;
+
+  /// Create a copy of AttendeeFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AttendeeFormStateImplCopyWith<_$AttendeeFormStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

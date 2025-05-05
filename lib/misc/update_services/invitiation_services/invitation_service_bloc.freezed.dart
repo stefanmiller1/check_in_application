@@ -122,6 +122,9 @@ class _$InvitationFormEventCopyWithImpl<$Res, $Val extends InvitationFormEvent>
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -142,6 +145,8 @@ class __$$InitializedInviteFormImplCopyWithImpl<$Res>
       $Res Function(_$InitializedInviteFormImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -181,7 +186,9 @@ class _$InitializedInviteFormImpl implements _InitializedInviteForm {
   @override
   int get hashCode => Object.hash(runtimeType, initialContacts);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InitializedInviteFormImplCopyWith<_$InitializedInviteFormImpl>
@@ -307,7 +314,10 @@ abstract class _InitializedInviteForm implements InvitationFormEvent {
       _$InitializedInviteFormImpl;
 
   Option<List<ContactDetails>> get initialContacts;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InitializedInviteFormImplCopyWith<_$InitializedInviteFormImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -332,6 +342,8 @@ class __$$InviteIsSubmittingChangedImplCopyWithImpl<$Res>
       $Res Function(_$InviteIsSubmittingChangedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -371,7 +383,9 @@ class _$InviteIsSubmittingChangedImpl implements _InviteIsSubmittingChanged {
   @override
   int get hashCode => Object.hash(runtimeType, isEditing);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InviteIsSubmittingChangedImplCopyWith<_$InviteIsSubmittingChangedImpl>
@@ -496,7 +510,10 @@ abstract class _InviteIsSubmittingChanged implements InvitationFormEvent {
       _$InviteIsSubmittingChangedImpl;
 
   bool get isEditing;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InviteIsSubmittingChangedImplCopyWith<_$InviteIsSubmittingChangedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -518,6 +535,8 @@ class __$$UpdateInviteListImplCopyWithImpl<$Res>
       $Res Function(_$UpdateInviteListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -563,7 +582,9 @@ class _$UpdateInviteListImpl implements _UpdateInviteList {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_contacts));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UpdateInviteListImplCopyWith<_$UpdateInviteListImpl> get copyWith =>
@@ -688,7 +709,10 @@ abstract class _UpdateInviteList implements InvitationFormEvent {
       _$UpdateInviteListImpl;
 
   List<ContactDetails> get contacts;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateInviteListImplCopyWith<_$UpdateInviteListImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -718,6 +742,8 @@ class __$$FinishedSubmittingReservationInviteImplCopyWithImpl<$Res>
       $Res Function(_$FinishedSubmittingReservationInviteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -741,6 +767,8 @@ class __$$FinishedSubmittingReservationInviteImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $ActivityManagerFormCopyWith<$Res>? get activityForm {
@@ -796,7 +824,9 @@ class _$FinishedSubmittingReservationInviteImpl
   int get hashCode => Object.hash(runtimeType, reservationId, activityForm,
       const DeepCollectionEquality().hash(_attendees));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FinishedSubmittingReservationInviteImplCopyWith<
@@ -931,7 +961,10 @@ abstract class _FinishedSubmittingReservationInvite
   String get reservationId;
   ActivityManagerForm? get activityForm;
   List<AttendeeItem> get attendees;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FinishedSubmittingReservationInviteImplCopyWith<
           _$FinishedSubmittingReservationInviteImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -957,6 +990,8 @@ class __$$FinishedSubmittingInviteImplCopyWithImpl<$Res>
       $Res Function(_$FinishedSubmittingInviteImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1005,7 +1040,9 @@ class _$FinishedSubmittingInviteImpl implements _FinishedSubmittingInvite {
   @override
   int get hashCode => Object.hash(runtimeType, reservationId, inviteType);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FinishedSubmittingInviteImplCopyWith<_$FinishedSubmittingInviteImpl>
@@ -1132,7 +1169,10 @@ abstract class _FinishedSubmittingInvite implements InvitationFormEvent {
 
   String get reservationId;
   InvitationType get inviteType;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FinishedSubmittingInviteImplCopyWith<_$FinishedSubmittingInviteImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1157,6 +1197,8 @@ class __$$FinishedRemovingAttendeeImplCopyWithImpl<$Res>
       $Res Function(_$FinishedRemovingAttendeeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1207,7 +1249,9 @@ class _$FinishedRemovingAttendeeImpl implements _FinishedRemovingAttendee {
   int get hashCode =>
       Object.hash(runtimeType, reservationId, selectedAttendeeId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FinishedRemovingAttendeeImplCopyWith<_$FinishedRemovingAttendeeImpl>
@@ -1334,7 +1378,10 @@ abstract class _FinishedRemovingAttendee implements InvitationFormEvent {
 
   String get reservationId;
   UniqueId get selectedAttendeeId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of InvitationFormEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FinishedRemovingAttendeeImplCopyWith<_$FinishedRemovingAttendeeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1349,7 +1396,9 @@ mixin _$InvitationFormState {
       get authFailureRemoveAttendeeOrSuccess =>
           throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $InvitationFormStateCopyWith<InvitationFormState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1378,6 +1427,8 @@ class _$InvitationFormStateCopyWithImpl<$Res, $Val extends InvitationFormState>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of InvitationFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1432,6 +1483,8 @@ class __$$InvitationFormStateImplCopyWithImpl<$Res>
       $Res Function(_$InvitationFormStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of InvitationFormState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1512,7 +1565,9 @@ class _$InvitationFormStateImpl extends _InvitationFormState {
       authFailureOrSuccess,
       authFailureRemoveAttendeeOrSuccess);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of InvitationFormState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$InvitationFormStateImplCopyWith<_$InvitationFormStateImpl> get copyWith =>
@@ -1539,8 +1594,11 @@ abstract class _InvitationFormState extends InvitationFormState {
   @override
   Option<Either<AttendeeFormFailure, Unit>>
       get authFailureRemoveAttendeeOrSuccess;
+
+  /// Create a copy of InvitationFormState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$InvitationFormStateImplCopyWith<_$InvitationFormStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

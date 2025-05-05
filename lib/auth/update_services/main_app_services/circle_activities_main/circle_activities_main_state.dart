@@ -19,7 +19,7 @@ class CircleActivitiesMainState with _$CircleActivitiesMainState {
 
   factory CircleActivitiesMainState.initial() => CircleActivitiesMainState(
     calendarFilterTpe: CalendarFilterType.allTime,
-    filterBySlotState: [ReservationSlotState.current, ReservationSlotState.confirmed],
+    filterBySlotState: [ReservationSlotState.current, ReservationSlotState.confirmed, ReservationSlotState.completed],
     pageSize: 2,
     activityItems: [],
     attendeeItems: [],
@@ -28,5 +28,4 @@ class CircleActivitiesMainState with _$CircleActivitiesMainState {
     isInteresting: false,
     authFailureOrSuccessOption: none()
   );
-
 }

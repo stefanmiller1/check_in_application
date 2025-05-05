@@ -124,6 +124,9 @@ class _$CircleActivitiesMainEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -143,6 +146,9 @@ class __$$InitializeCircleActivityMainImplCopyWithImpl<$Res>
       _$InitializeCircleActivityMainImpl _value,
       $Res Function(_$InitializeCircleActivityMainImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -306,6 +312,8 @@ class __$$DidUpdateAttendingListImplCopyWithImpl<$Res>
       $Res Function(_$DidUpdateAttendingListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -353,7 +361,9 @@ class _$DidUpdateAttendingListImpl implements _DidUpdateAttendingList {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_attendingList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidUpdateAttendingListImplCopyWith<_$DidUpdateAttendingListImpl>
@@ -480,7 +490,10 @@ abstract class _DidUpdateAttendingList implements CircleActivitiesMainEvent {
       _$DidUpdateAttendingListImpl;
 
   List<ReservationPreviewer> get attendingList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidUpdateAttendingListImplCopyWith<_$DidUpdateAttendingListImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -505,6 +518,8 @@ class __$$DidUpdateActivityItemsListImplCopyWithImpl<$Res>
       $Res Function(_$DidUpdateActivityItemsListImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -552,7 +567,9 @@ class _$DidUpdateActivityItemsListImpl implements _DidUpdateActivityItemsList {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_itemsList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidUpdateActivityItemsListImplCopyWith<_$DidUpdateActivityItemsListImpl>
@@ -680,7 +697,10 @@ abstract class _DidUpdateActivityItemsList
       _$DidUpdateActivityItemsListImpl;
 
   List<ReservationPreviewer> get itemsList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidUpdateActivityItemsListImplCopyWith<_$DidUpdateActivityItemsListImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -705,6 +725,8 @@ class __$$DidChangeFilterSlotTypeImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeFilterSlotTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -752,7 +774,9 @@ class _$DidChangeFilterSlotTypeImpl implements _DidChangeFilterSlotType {
   int get hashCode => Object.hash(
       runtimeType, const DeepCollectionEquality().hash(_filterList));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeFilterSlotTypeImplCopyWith<_$DidChangeFilterSlotTypeImpl>
@@ -879,7 +903,10 @@ abstract class _DidChangeFilterSlotType implements CircleActivitiesMainEvent {
       _$DidChangeFilterSlotTypeImpl;
 
   List<ReservationSlotState> get filterList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeFilterSlotTypeImplCopyWith<_$DidChangeFilterSlotTypeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -904,6 +931,8 @@ class __$$DidChangeFilterCalendarTypeImplCopyWithImpl<$Res>
       $Res Function(_$DidChangeFilterCalendarTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -944,7 +973,9 @@ class _$DidChangeFilterCalendarTypeImpl
   @override
   int get hashCode => Object.hash(runtimeType, filterList);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidChangeFilterCalendarTypeImplCopyWith<_$DidChangeFilterCalendarTypeImpl>
@@ -1071,7 +1102,10 @@ abstract class _DidChangeFilterCalendarType
       final CalendarFilterType filterList) = _$DidChangeFilterCalendarTypeImpl;
 
   CalendarFilterType get filterList;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidChangeFilterCalendarTypeImplCopyWith<_$DidChangeFilterCalendarTypeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1096,6 +1130,8 @@ class __$$DidFinishSavingReservationImplCopyWithImpl<$Res>
       $Res Function(_$DidFinishSavingReservationImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1142,7 +1178,9 @@ class _$DidFinishSavingReservationImpl implements _DidFinishSavingReservation {
   @override
   int get hashCode => Object.hash(runtimeType, res, userId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$DidFinishSavingReservationImplCopyWith<_$DidFinishSavingReservationImpl>
@@ -1271,7 +1309,10 @@ abstract class _DidFinishSavingReservation
 
   String get res;
   String? get userId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of CircleActivitiesMainEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$DidFinishSavingReservationImplCopyWith<_$DidFinishSavingReservationImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1293,7 +1334,9 @@ mixin _$CircleActivitiesMainState {
   Option<Either<AttendeeFormFailure, Unit>> get authFailureOrSuccessOption =>
       throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircleActivitiesMainState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CircleActivitiesMainStateCopyWith<CircleActivitiesMainState> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1327,6 +1370,8 @@ class _$CircleActivitiesMainStateCopyWithImpl<$Res,
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of CircleActivitiesMainState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1412,6 +1457,8 @@ class __$$CircleActivitiesMainStateImplCopyWithImpl<$Res>
       $Res Function(_$CircleActivitiesMainStateImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of CircleActivitiesMainState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1567,7 +1614,9 @@ class _$CircleActivitiesMainStateImpl extends _CircleActivitiesMainState {
       isInteresting,
       authFailureOrSuccessOption);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of CircleActivitiesMainState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CircleActivitiesMainStateImplCopyWith<_$CircleActivitiesMainStateImpl>
@@ -1607,8 +1656,11 @@ abstract class _CircleActivitiesMainState extends CircleActivitiesMainState {
   bool get isInteresting;
   @override
   Option<Either<AttendeeFormFailure, Unit>> get authFailureOrSuccessOption;
+
+  /// Create a copy of CircleActivitiesMainState
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CircleActivitiesMainStateImplCopyWith<_$CircleActivitiesMainStateImpl>
       get copyWith => throw _privateConstructorUsedError;
 }

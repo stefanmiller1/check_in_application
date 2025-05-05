@@ -178,6 +178,9 @@ class _$AttendeeManagerWatcherEventCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -199,6 +202,8 @@ class __$$watchAttendanceByTypeImplCopyWithImpl<$Res>
       $Res Function(_$watchAttendanceByTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -247,7 +252,9 @@ class _$watchAttendanceByTypeImpl implements _watchAttendanceByType {
   @override
   int get hashCode => Object.hash(runtimeType, attendanceType, activityId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$watchAttendanceByTypeImplCopyWith<_$watchAttendanceByTypeImpl>
@@ -427,7 +434,10 @@ abstract class _watchAttendanceByType implements AttendeeManagerWatcherEvent {
 
   String get attendanceType;
   String get activityId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$watchAttendanceByTypeImplCopyWith<_$watchAttendanceByTypeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -452,6 +462,8 @@ class __$$AllAttendanceReceivedByTypeImplCopyWithImpl<$Res>
       $Res Function(_$AllAttendanceReceivedByTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -492,7 +504,9 @@ class _$AllAttendanceReceivedByTypeImpl
   @override
   int get hashCode => Object.hash(runtimeType, failedItems);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AllAttendanceReceivedByTypeImplCopyWith<_$AllAttendanceReceivedByTypeImpl>
@@ -672,7 +686,10 @@ abstract class _AllAttendanceReceivedByType
       _$AllAttendanceReceivedByTypeImpl;
 
   Either<AttendeeFormFailure, List<AttendeeItem>> get failedItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AllAttendanceReceivedByTypeImplCopyWith<_$AllAttendanceReceivedByTypeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -697,6 +714,8 @@ class __$$WatchAttendanceCountByTypeImplCopyWithImpl<$Res>
       $Res Function(_$WatchAttendanceCountByTypeImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -745,7 +764,9 @@ class _$WatchAttendanceCountByTypeImpl implements _WatchAttendanceCountByType {
   @override
   int get hashCode => Object.hash(runtimeType, attendanceType, activityId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WatchAttendanceCountByTypeImplCopyWith<_$WatchAttendanceCountByTypeImpl>
@@ -926,7 +947,10 @@ abstract class _WatchAttendanceCountByType
 
   String get attendanceType;
   String get activityId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WatchAttendanceCountByTypeImplCopyWith<_$WatchAttendanceCountByTypeImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -951,6 +975,8 @@ class __$$AttendanceCountByTypeReceivedImplCopyWithImpl<$Res>
       $Res Function(_$AttendanceCountByTypeReceivedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -991,7 +1017,9 @@ class _$AttendanceCountByTypeReceivedImpl
   @override
   int get hashCode => Object.hash(runtimeType, failedItem);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AttendanceCountByTypeReceivedImplCopyWith<
@@ -1172,7 +1200,10 @@ abstract class _AttendanceCountByTypeReceived
       _$AttendanceCountByTypeReceivedImpl;
 
   Either<AttendeeFormFailure, int> get failedItem;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AttendanceCountByTypeReceivedImplCopyWith<
           _$AttendanceCountByTypeReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -1196,6 +1227,8 @@ class __$$WatchAllAttendanceImplCopyWithImpl<$Res>
       $Res Function(_$WatchAllAttendanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1235,7 +1268,9 @@ class _$WatchAllAttendanceImpl implements _WatchAllAttendance {
   @override
   int get hashCode => Object.hash(runtimeType, activityId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WatchAllAttendanceImplCopyWith<_$WatchAllAttendanceImpl> get copyWith =>
@@ -1413,7 +1448,10 @@ abstract class _WatchAllAttendance implements AttendeeManagerWatcherEvent {
       _$WatchAllAttendanceImpl;
 
   String get activityId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WatchAllAttendanceImplCopyWith<_$WatchAllAttendanceImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1437,6 +1475,8 @@ class __$$AllAttendanceReceivedImplCopyWithImpl<$Res>
       $Res Function(_$AllAttendanceReceivedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1476,7 +1516,9 @@ class _$AllAttendanceReceivedImpl implements _AllAttendanceReceived {
   @override
   int get hashCode => Object.hash(runtimeType, failedItems);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AllAttendanceReceivedImplCopyWith<_$AllAttendanceReceivedImpl>
@@ -1655,7 +1697,10 @@ abstract class _AllAttendanceReceived implements AttendeeManagerWatcherEvent {
       _$AllAttendanceReceivedImpl;
 
   Either<AttendeeFormFailure, List<AttendeeItem>> get failedItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AllAttendanceReceivedImplCopyWith<_$AllAttendanceReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -1678,6 +1723,8 @@ class __$$WatchAttendeeItemImplCopyWithImpl<$Res>
       $Res Function(_$WatchAttendeeItemImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1726,7 +1773,9 @@ class _$WatchAttendeeItemImpl implements _WatchAttendeeItem {
   @override
   int get hashCode => Object.hash(runtimeType, activityId, attendeeId);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WatchAttendeeItemImplCopyWith<_$WatchAttendeeItemImpl> get copyWith =>
@@ -1906,7 +1955,10 @@ abstract class _WatchAttendeeItem implements AttendeeManagerWatcherEvent {
 
   String get activityId;
   String get attendeeId;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WatchAttendeeItemImplCopyWith<_$WatchAttendeeItemImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -1929,6 +1981,8 @@ class __$$AttendeeItemReceivedImplCopyWithImpl<$Res>
       $Res Function(_$AttendeeItemReceivedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -1968,7 +2022,9 @@ class _$AttendeeItemReceivedImpl implements _AttendeeItemReceived {
   @override
   int get hashCode => Object.hash(runtimeType, failedItem);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$AttendeeItemReceivedImplCopyWith<_$AttendeeItemReceivedImpl>
@@ -2148,7 +2204,10 @@ abstract class _AttendeeItemReceived implements AttendeeManagerWatcherEvent {
       _$AttendeeItemReceivedImpl;
 
   Either<AttendeeFormFailure, AttendeeItem> get failedItem;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$AttendeeItemReceivedImplCopyWith<_$AttendeeItemReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -2174,6 +2233,8 @@ class __$$WatchCurrentUsersResAttendanceImplCopyWithImpl<$Res>
       $Res Function(_$WatchCurrentUsersResAttendanceImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2238,7 +2299,9 @@ class _$WatchCurrentUsersResAttendanceImpl
   @override
   int get hashCode => Object.hash(runtimeType, userId, status, type, limit);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WatchCurrentUsersResAttendanceImplCopyWith<
@@ -2424,7 +2487,10 @@ abstract class _WatchCurrentUsersResAttendance
   ContactStatus get status;
   AttendeeType get type;
   int get limit;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WatchCurrentUsersResAttendanceImplCopyWith<
           _$WatchCurrentUsersResAttendanceImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2450,6 +2516,8 @@ class __$$CurrentUserAttendanceReceivedImplCopyWithImpl<$Res>
       $Res Function(_$CurrentUserAttendanceReceivedImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -2490,7 +2558,9 @@ class _$CurrentUserAttendanceReceivedImpl
   @override
   int get hashCode => Object.hash(runtimeType, failedItems);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CurrentUserAttendanceReceivedImplCopyWith<
@@ -2671,7 +2741,10 @@ abstract class _CurrentUserAttendanceReceived
       _$CurrentUserAttendanceReceivedImpl;
 
   Either<AttendeeFormFailure, List<AttendeeItem>> get failedItems;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherEvent
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CurrentUserAttendanceReceivedImplCopyWith<
           _$CurrentUserAttendanceReceivedImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -2842,6 +2915,9 @@ class _$AttendeeManagerWatcherStateCopyWithImpl<$Res,
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -2858,6 +2934,9 @@ class __$$AttInitialImplCopyWithImpl<$Res>
   __$$AttInitialImplCopyWithImpl(
       _$AttInitialImpl _value, $Res Function(_$AttInitialImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3065,6 +3144,9 @@ class __$$AttLoadInProgressImplCopyWithImpl<$Res>
   __$$AttLoadInProgressImplCopyWithImpl(_$AttLoadInProgressImpl _value,
       $Res Function(_$AttLoadInProgressImpl) _then)
       : super(_value, _then);
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
 }
 
 /// @nodoc
@@ -3277,6 +3359,8 @@ class __$$LoadAllAttendanceSuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllAttendanceSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3322,7 +3406,9 @@ class _$LoadAllAttendanceSuccessImpl implements _LoadAllAttendanceSuccess {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_item));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllAttendanceSuccessImplCopyWith<_$LoadAllAttendanceSuccessImpl>
@@ -3502,7 +3588,10 @@ abstract class _LoadAllAttendanceSuccess
       _$LoadAllAttendanceSuccessImpl;
 
   List<AttendeeItem> get item;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllAttendanceSuccessImplCopyWith<_$LoadAllAttendanceSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3529,6 +3618,8 @@ class __$$LoadAllAttendanceFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllAttendanceFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3542,6 +3633,8 @@ class __$$LoadAllAttendanceFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttendeeFormFailureCopyWith<dynamic, $Res> get failure {
@@ -3575,7 +3668,9 @@ class _$LoadAllAttendanceFailureImpl implements _LoadAllAttendanceFailure {
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllAttendanceFailureImplCopyWith<_$LoadAllAttendanceFailureImpl>
@@ -3756,7 +3851,10 @@ abstract class _LoadAllAttendanceFailure
       _$LoadAllAttendanceFailureImpl;
 
   AttendeeFormFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllAttendanceFailureImplCopyWith<_$LoadAllAttendanceFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -3781,6 +3879,8 @@ class __$$LoadAttendanceCountByTypeSuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadAttendanceCountByTypeSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -3820,7 +3920,9 @@ class _$LoadAttendanceCountByTypeSuccessImpl
   @override
   int get hashCode => Object.hash(runtimeType, item);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAttendanceCountByTypeSuccessImplCopyWith<
@@ -4001,7 +4103,10 @@ abstract class _LoadAttendanceCountByTypeSuccess
       _$LoadAttendanceCountByTypeSuccessImpl;
 
   int get item;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAttendanceCountByTypeSuccessImplCopyWith<
           _$LoadAttendanceCountByTypeSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4029,6 +4134,8 @@ class __$$LoadAttendanceCountByTypeFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadAttendanceCountByTypeFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4042,6 +4149,8 @@ class __$$LoadAttendanceCountByTypeFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttendeeFormFailureCopyWith<dynamic, $Res> get failure {
@@ -4076,7 +4185,9 @@ class _$LoadAttendanceCountByTypeFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAttendanceCountByTypeFailureImplCopyWith<
@@ -4258,7 +4369,10 @@ abstract class _LoadAttendanceCountByTypeFailure
       _$LoadAttendanceCountByTypeFailureImpl;
 
   AttendeeFormFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAttendanceCountByTypeFailureImplCopyWith<
           _$LoadAttendanceCountByTypeFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4284,6 +4398,8 @@ class __$$LoadAllAttendanceActivitySuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllAttendanceActivitySuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4330,7 +4446,9 @@ class _$LoadAllAttendanceActivitySuccessImpl
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_item));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllAttendanceActivitySuccessImplCopyWith<
@@ -4511,7 +4629,10 @@ abstract class _LoadAllAttendanceActivitySuccess
       final List<AttendeeItem> item) = _$LoadAllAttendanceActivitySuccessImpl;
 
   List<AttendeeItem> get item;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllAttendanceActivitySuccessImplCopyWith<
           _$LoadAllAttendanceActivitySuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4539,6 +4660,8 @@ class __$$LoadAllAttendanceActivityFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadAllAttendanceActivityFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4552,6 +4675,8 @@ class __$$LoadAllAttendanceActivityFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttendeeFormFailureCopyWith<dynamic, $Res> get failure {
@@ -4586,7 +4711,9 @@ class _$LoadAllAttendanceActivityFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAllAttendanceActivityFailureImplCopyWith<
@@ -4768,7 +4895,10 @@ abstract class _LoadAllAttendanceActivityFailure
       _$LoadAllAttendanceActivityFailureImpl;
 
   AttendeeFormFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAllAttendanceActivityFailureImplCopyWith<
           _$LoadAllAttendanceActivityFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -4796,6 +4926,8 @@ class __$$LoadAttendeeItemSuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadAttendeeItemSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -4809,6 +4941,8 @@ class __$$LoadAttendeeItemSuccessImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttendeeItemCopyWith<$Res> get item {
@@ -4842,7 +4976,9 @@ class _$LoadAttendeeItemSuccessImpl implements _LoadAttendeeItemSuccess {
   @override
   int get hashCode => Object.hash(runtimeType, item);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAttendeeItemSuccessImplCopyWith<_$LoadAttendeeItemSuccessImpl>
@@ -5021,7 +5157,10 @@ abstract class _LoadAttendeeItemSuccess implements AttendeeManagerWatcherState {
       _$LoadAttendeeItemSuccessImpl;
 
   AttendeeItem get item;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAttendeeItemSuccessImplCopyWith<_$LoadAttendeeItemSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5048,6 +5187,8 @@ class __$$LoadAttendeeItemFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadAttendeeItemFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5061,6 +5202,8 @@ class __$$LoadAttendeeItemFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttendeeFormFailureCopyWith<dynamic, $Res> get failure {
@@ -5094,7 +5237,9 @@ class _$LoadAttendeeItemFailureImpl implements _LoadAttendeeItemFailure {
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadAttendeeItemFailureImplCopyWith<_$LoadAttendeeItemFailureImpl>
@@ -5274,7 +5419,10 @@ abstract class _LoadAttendeeItemFailure implements AttendeeManagerWatcherState {
       _$LoadAttendeeItemFailureImpl;
 
   AttendeeFormFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadAttendeeItemFailureImplCopyWith<_$LoadAttendeeItemFailureImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
@@ -5299,6 +5447,8 @@ class __$$LoadCurrentUserAttendancesSuccessImplCopyWithImpl<$Res>
       $Res Function(_$LoadCurrentUserAttendancesSuccessImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5345,7 +5495,9 @@ class _$LoadCurrentUserAttendancesSuccessImpl
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_item));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadCurrentUserAttendancesSuccessImplCopyWith<
@@ -5526,7 +5678,10 @@ abstract class _LoadCurrentUserAttendancesSuccess
       final List<AttendeeItem> item) = _$LoadCurrentUserAttendancesSuccessImpl;
 
   List<AttendeeItem> get item;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadCurrentUserAttendancesSuccessImplCopyWith<
           _$LoadCurrentUserAttendancesSuccessImpl>
       get copyWith => throw _privateConstructorUsedError;
@@ -5554,6 +5709,8 @@ class __$$LoadCurrentUserAttendancesFailureImplCopyWithImpl<$Res>
       $Res Function(_$LoadCurrentUserAttendancesFailureImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -5567,6 +5724,8 @@ class __$$LoadCurrentUserAttendancesFailureImplCopyWithImpl<$Res>
     ));
   }
 
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
   @override
   @pragma('vm:prefer-inline')
   $AttendeeFormFailureCopyWith<dynamic, $Res> get failure {
@@ -5601,7 +5760,9 @@ class _$LoadCurrentUserAttendancesFailureImpl
   @override
   int get hashCode => Object.hash(runtimeType, failure);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$LoadCurrentUserAttendancesFailureImplCopyWith<
@@ -5783,7 +5944,10 @@ abstract class _LoadCurrentUserAttendancesFailure
       _$LoadCurrentUserAttendancesFailureImpl;
 
   AttendeeFormFailure<dynamic> get failure;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of AttendeeManagerWatcherState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$LoadCurrentUserAttendancesFailureImplCopyWith<
           _$LoadCurrentUserAttendancesFailureImpl>
       get copyWith => throw _privateConstructorUsedError;

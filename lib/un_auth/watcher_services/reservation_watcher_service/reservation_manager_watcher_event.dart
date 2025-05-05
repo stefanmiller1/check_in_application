@@ -8,7 +8,7 @@ class ReservationManagerWatcherEvent with _$ReservationManagerWatcherEvent {
   const factory ReservationManagerWatcherEvent.watchReservationsList(List<String> facilityId, String? activityTypeId, bool? isPublic, List<ReservationSlotState>? resState) = _WatchReservationsList;
   const factory ReservationManagerWatcherEvent.reservationListItemsReceived(Either<ReservationFormFailure, List<ReservationItem>> failedItems) = _ReservationListItemsReceived;
   const factory ReservationManagerWatcherEvent.reservationListStreamClosed() = _ReservationListStreamClosed;
-  const factory ReservationManagerWatcherEvent.watchCurrentUsersReservations(List<ReservationSlotState> resState, UserProfileModel currentUser, bool isResInvitation, int? limit, bool? isActivity) = _WatchCurrentUsersReservations;
+  const factory ReservationManagerWatcherEvent.watchCurrentUsersReservations(List<ReservationSlotState> resState, UserProfileModel currentUser, bool isResInvitation, int? limit, int? hoursTimeAhead, int? hoursTimeBefore, bool? isActivity, bool? isPrivate, bool? isReversedSort, List<FormStatus>? formState) = _WatchCurrentUsersReservations;
   const factory ReservationManagerWatcherEvent.currentUsersReservationsReceived(Either<ReservationFormFailure, List<ReservationItem>> failedItems) = _CurrentUsersReservationsReceived;
   const factory ReservationManagerWatcherEvent.watchCurrentReservationPosts(String reservationId) = _WatchCurrentReservationPosts;
   const factory ReservationManagerWatcherEvent.currentReservationPostsReceived(Either<ReservationFormFailure, List<Post>> failedItems) = _CurrentReservationPostsReceived;
