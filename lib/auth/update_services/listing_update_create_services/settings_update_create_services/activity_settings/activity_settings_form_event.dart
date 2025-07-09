@@ -58,6 +58,8 @@ class UpdateActivityFormEvent with _$UpdateActivityFormEvent {
   const factory UpdateActivityFormEvent.isPartnersInviteOnly(bool inviteBool) = _IsPartnersInviteOnly;
   const factory UpdateActivityFormEvent.isInstructorInviteOnly(bool inviteBool) = _IsInstructorInviteOnly;
 
+  // const factory UpdateActivityFormEvent.didChangeActivityReservationSlotItems(List<ReservationSlotItem> slotItem, String currency) = _UpdateReservationSlotItems;
+
   const factory UpdateActivityFormEvent.activityPostedOnBehalf(bool isPostBool) = _ActivityPostedOnBehalf;
   const factory UpdateActivityFormEvent.activityPostContactWebsite(String websiteStr) = _ActivityPostContactWebsite;
   const factory UpdateActivityFormEvent.activityPostContactEmail(String emailStr) = _ActivityPostContactEmail;
